@@ -155,7 +155,7 @@
         "strokeWidth": {
           "field": "arrivals",
           "type": "quantitative",
-          "title": "Arrivals in the year",
+          "title": "Number of Arrivals",
           "scale": {
             "type": "sqrt",
             "domain": [
