@@ -1,0 +1,610 @@
+[
+  {
+    "TR_CODE": "110",
+    "TR_NAME": "Sydney",
+    "category": "coastal",
+    "coastal_ratio": 0.222,
+    "area_threshold": 0.0678,
+    "state": "NSW"
+  },
+  {
+    "TR_CODE": "111",
+    "TR_NAME": "Blue Mountains",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.0855,
+    "state": "NSW"
+  },
+  {
+    "TR_CODE": "112",
+    "TR_NAME": "Southern Tablelands",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.1247,
+    "state": "NSW"
+  },
+  {
+    "TR_CODE": "113",
+    "TR_NAME": "Central Coast",
+    "category": "coastal",
+    "coastal_ratio": 0.504,
+    "area_threshold": 0.05,
+    "state": "NSW"
+  },
+  {
+    "TR_CODE": "114",
+    "TR_NAME": "Central NSW",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.1734,
+    "state": "NSW"
+  },
+  {
+    "TR_CODE": "115",
+    "TR_NAME": "Hunter",
+    "category": "coastal",
+    "coastal_ratio": 0.1722,
+    "area_threshold": 0.1164,
+    "state": "NSW"
+  },
+  {
+    "TR_CODE": "116",
+    "TR_NAME": "New England North West",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.1704,
+    "state": "NSW"
+  },
+  {
+    "TR_CODE": "117",
+    "TR_NAME": "North Coast NSW",
+    "category": "coastal",
+    "coastal_ratio": 0.4018,
+    "area_threshold": 0.1338,
+    "state": "NSW"
+  },
+  {
+    "TR_CODE": "119",
+    "TR_NAME": "Outback NSW",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.2147,
+    "state": "NSW"
+  },
+  {
+    "TR_CODE": "120",
+    "TR_NAME": "Riverina",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.1589,
+    "state": "NSW"
+  },
+  {
+    "TR_CODE": "121",
+    "TR_NAME": "Snowy Mountains",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.0958,
+    "state": "NSW"
+  },
+  {
+    "TR_CODE": "122",
+    "TR_NAME": "South Coast",
+    "category": "coastal",
+    "coastal_ratio": 0.4279,
+    "area_threshold": 0.0996,
+    "state": "NSW"
+  },
+  {
+    "TR_CODE": "123",
+    "TR_NAME": "The Murray",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.1656,
+    "state": "NSW"
+  },
+  {
+    "TR_CODE": "210",
+    "TR_NAME": "Melbourne",
+    "category": "coastal",
+    "coastal_ratio": 0.2393,
+    "area_threshold": 0.05,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "211",
+    "TR_NAME": "Greater Ballarat",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.0618,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "212",
+    "TR_NAME": "Greater Bendigo",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.0794,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "213",
+    "TR_NAME": "Central Highlands",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.0816,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "214",
+    "TR_NAME": "Central Murray",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.0753,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "215",
+    "TR_NAME": "Geelong and the Bellarine",
+    "category": "coastal",
+    "coastal_ratio": 0.2745,
+    "area_threshold": 0.05,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "216",
+    "TR_NAME": "Gippsland",
+    "category": "coastal",
+    "coastal_ratio": 0.4681,
+    "area_threshold": 0.1075,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "217",
+    "TR_NAME": "Goulburn",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.0748,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "218",
+    "TR_NAME": "Victoria's High Country",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.122,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "219",
+    "TR_NAME": "Lakes",
+    "category": "coastal",
+    "coastal_ratio": 0.2718,
+    "area_threshold": 0.113,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "220",
+    "TR_NAME": "Macedon",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.05,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "221",
+    "TR_NAME": "Mallee",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.1271,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "222",
+    "TR_NAME": "Yarra Valley and Dandenong Ranges",
+    "category": "inland",
+    "coastal_ratio": 0.0358,
+    "area_threshold": 0.05,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "223",
+    "TR_NAME": "Murray East",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.05,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "224",
+    "TR_NAME": "Mornington Peninsula",
+    "category": "coastal",
+    "coastal_ratio": 0.8364,
+    "area_threshold": 0.05,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "225",
+    "TR_NAME": "Phillip Island",
+    "category": "coastal",
+    "coastal_ratio": 0.7394,
+    "area_threshold": 0.05,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "226",
+    "TR_NAME": "Spa Country",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.0543,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "228",
+    "TR_NAME": "Great Ocean Road",
+    "category": "coastal",
+    "coastal_ratio": 0.3986,
+    "area_threshold": 0.1121,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "229",
+    "TR_NAME": "Western Grampians",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.086,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "230",
+    "TR_NAME": "Wimmera",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.1278,
+    "state": "VIC"
+  },
+  {
+    "TR_CODE": "310",
+    "TR_NAME": "Brisbane",
+    "category": "coastal",
+    "coastal_ratio": 0.4456,
+    "area_threshold": 0.0785,
+    "state": "QLD"
+  },
+  {
+    "TR_CODE": "311",
+    "TR_NAME": "Bundaberg",
+    "category": "coastal",
+    "coastal_ratio": 0.1291,
+    "area_threshold": 0.1153,
+    "state": "QLD"
+  },
+  {
+    "TR_CODE": "313",
+    "TR_NAME": "Queensland Country",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.1864,
+    "state": "QLD"
+  },
+  {
+    "TR_CODE": "314",
+    "TR_NAME": "Fraser Coast",
+    "category": "coastal",
+    "coastal_ratio": 0.636,
+    "area_threshold": 0.0626,
+    "state": "QLD"
+  },
+  {
+    "TR_CODE": "315",
+    "TR_NAME": "Gold Coast",
+    "category": "coastal",
+    "coastal_ratio": 0.4102,
+    "area_threshold": 0.05,
+    "state": "QLD"
+  },
+  {
+    "TR_CODE": "316",
+    "TR_NAME": "Mackay",
+    "category": "coastal",
+    "coastal_ratio": 0.1925,
+    "area_threshold": 0.1516,
+    "state": "QLD"
+  },
+  {
+    "TR_CODE": "317",
+    "TR_NAME": "Townsville",
+    "category": "coastal",
+    "coastal_ratio": 0.1883,
+    "area_threshold": 0.1586,
+    "state": "QLD"
+  },
+  {
+    "TR_CODE": "318",
+    "TR_NAME": "Outback Queensland",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.2582,
+    "state": "QLD"
+  },
+  {
+    "TR_CODE": "319",
+    "TR_NAME": "Sunshine Coast",
+    "category": "coastal",
+    "coastal_ratio": 0.2844,
+    "area_threshold": 0.0775,
+    "state": "QLD"
+  },
+  {
+    "TR_CODE": "320",
+    "TR_NAME": "Tropical North Queensland",
+    "category": "coastal",
+    "coastal_ratio": 0.6476,
+    "area_threshold": 0.2208,
+    "state": "QLD"
+  },
+  {
+    "TR_CODE": "321",
+    "TR_NAME": "Whitsundays",
+    "category": "coastal",
+    "coastal_ratio": 0.3793,
+    "area_threshold": 0.11,
+    "state": "QLD"
+  },
+  {
+    "TR_CODE": "322",
+    "TR_NAME": "Capricorn Coast",
+    "category": "coastal",
+    "coastal_ratio": 0.5696,
+    "area_threshold": 0.1004,
+    "state": "QLD"
+  },
+  {
+    "TR_CODE": "323",
+    "TR_NAME": "Gladstone",
+    "category": "coastal",
+    "coastal_ratio": 0.4938,
+    "area_threshold": 0.0785,
+    "state": "QLD"
+  },
+  {
+    "TR_CODE": "410",
+    "TR_NAME": "Adelaide",
+    "category": "coastal",
+    "coastal_ratio": 0.3355,
+    "area_threshold": 0.05,
+    "state": "SA"
+  },
+  {
+    "TR_CODE": "411",
+    "TR_NAME": "Adelaide Hills",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.05,
+    "state": "SA"
+  },
+  {
+    "TR_CODE": "412",
+    "TR_NAME": "Barossa",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.05,
+    "state": "SA"
+  },
+  {
+    "TR_CODE": "413",
+    "TR_NAME": "Clare Valley",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.0736,
+    "state": "SA"
+  },
+  {
+    "TR_CODE": "414",
+    "TR_NAME": "Eyre Peninsula",
+    "category": "coastal",
+    "coastal_ratio": 0.5814,
+    "area_threshold": 0.1554,
+    "state": "SA"
+  },
+  {
+    "TR_CODE": "415",
+    "TR_NAME": "Fleurieu Peninsula",
+    "category": "coastal",
+    "coastal_ratio": 0.4818,
+    "area_threshold": 0.05,
+    "state": "SA"
+  },
+  {
+    "TR_CODE": "416",
+    "TR_NAME": "Limestone Coast",
+    "category": "coastal",
+    "coastal_ratio": 0.4049,
+    "area_threshold": 0.112,
+    "state": "SA"
+  },
+  {
+    "TR_CODE": "417",
+    "TR_NAME": "Murray River, Lakes and Coorong",
+    "category": "coastal",
+    "coastal_ratio": 0.1367,
+    "area_threshold": 0.1168,
+    "state": "SA"
+  },
+  {
+    "TR_CODE": "418",
+    "TR_NAME": "Riverland",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.0887,
+    "state": "SA"
+  },
+  {
+    "TR_CODE": "419",
+    "TR_NAME": "Yorke Peninsula",
+    "category": "coastal",
+    "coastal_ratio": 0.7229,
+    "area_threshold": 0.0906,
+    "state": "SA"
+  },
+  {
+    "TR_CODE": "420",
+    "TR_NAME": "Flinders Ranges and Outback",
+    "category": "inland",
+    "coastal_ratio": 0.0363,
+    "area_threshold": 0.2549,
+    "state": "SA"
+  },
+  {
+    "TR_CODE": "421",
+    "TR_NAME": "Kangaroo Island",
+    "category": "coastal",
+    "coastal_ratio": 1.0,
+    "area_threshold": 0.05,
+    "state": "SA"
+  },
+  {
+    "TR_CODE": "510",
+    "TR_NAME": "Destination Perth",
+    "category": "coastal",
+    "coastal_ratio": 0.2543,
+    "area_threshold": 0.1182,
+    "state": "WA"
+  },
+  {
+    "TR_CODE": "511",
+    "TR_NAME": "Australia's Golden Outback",
+    "category": "inland",
+    "coastal_ratio": 0.1849,
+    "area_threshold": 0.2732,
+    "state": "WA"
+  },
+  {
+    "TR_CODE": "512",
+    "TR_NAME": "Australia's North West",
+    "category": "coastal",
+    "coastal_ratio": 0.6144,
+    "area_threshold": 0.2565,
+    "state": "WA"
+  },
+  {
+    "TR_CODE": "513",
+    "TR_NAME": "Australia's South West",
+    "category": "coastal",
+    "coastal_ratio": 0.5406,
+    "area_threshold": 0.1532,
+    "state": "WA"
+  },
+  {
+    "TR_CODE": "514",
+    "TR_NAME": "Australia's Coral Coast",
+    "category": "coastal",
+    "coastal_ratio": 0.4682,
+    "area_threshold": 0.1965,
+    "state": "WA"
+  },
+  {
+    "TR_CODE": "610",
+    "TR_NAME": "Hobart and the South",
+    "category": "coastal",
+    "coastal_ratio": 0.6277,
+    "area_threshold": 0.1183,
+    "state": "TAS"
+  },
+  {
+    "TR_CODE": "611",
+    "TR_NAME": "East Coast",
+    "category": "coastal",
+    "coastal_ratio": 0.5141,
+    "area_threshold": 0.0629,
+    "state": "TAS"
+  },
+  {
+    "TR_CODE": "612",
+    "TR_NAME": "Launceston and the North",
+    "category": "coastal",
+    "coastal_ratio": 0.448,
+    "area_threshold": 0.1045,
+    "state": "TAS"
+  },
+  {
+    "TR_CODE": "613",
+    "TR_NAME": "North West",
+    "category": "coastal",
+    "coastal_ratio": 0.7268,
+    "area_threshold": 0.0943,
+    "state": "TAS"
+  },
+  {
+    "TR_CODE": "614",
+    "TR_NAME": "West Coast",
+    "category": "coastal",
+    "coastal_ratio": 0.5443,
+    "area_threshold": 0.0832,
+    "state": "TAS"
+  },
+  {
+    "TR_CODE": "710",
+    "TR_NAME": "Darwin",
+    "category": "coastal",
+    "coastal_ratio": 0.5141,
+    "area_threshold": 0.05,
+    "state": "NT"
+  },
+  {
+    "TR_CODE": "711",
+    "TR_NAME": "Barkly",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.2117,
+    "state": "NT"
+  },
+  {
+    "TR_CODE": "712",
+    "TR_NAME": "Alice Springs",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.05,
+    "state": "NT"
+  },
+  {
+    "TR_CODE": "713",
+    "TR_NAME": "Litchfield Kakadu Arnhem",
+    "category": "coastal",
+    "coastal_ratio": 0.778,
+    "area_threshold": 0.1688,
+    "state": "NT"
+  },
+  {
+    "TR_CODE": "714",
+    "TR_NAME": "Katherine Daly",
+    "category": "coastal",
+    "coastal_ratio": 0.3148,
+    "area_threshold": 0.2183,
+    "state": "NT"
+  },
+  {
+    "TR_CODE": "715",
+    "TR_NAME": "Lasseter",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.1914,
+    "state": "NT"
+  },
+  {
+    "TR_CODE": "716",
+    "TR_NAME": "MacDonnell",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.2229,
+    "state": "NT"
+  },
+  {
+    "TR_CODE": "810",
+    "TR_NAME": "Canberra",
+    "category": "inland",
+    "coastal_ratio": 0.0,
+    "area_threshold": 0.05,
+    "state": "ACT"
+  }
+]

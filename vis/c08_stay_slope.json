@@ -1,0 +1,445 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Slope graph with two panels, coastal and inland regions. Each line shows how the share of international visits with one length of stay (1 to 7 nights, 8 to 14, 15 to 30, 31 or more) changed between 2019 and 2025.",
+  "title": {
+    "text": "Length Of Stay In 2019 VS 2025",
+    "subtitle": [
+      "Share of international visits by length of stay in 2019 and 2025"
+    ]
+  },
+  "data": {
+    "url": "data/used/length_of_stay_share.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "visitors": "number",
+        "share_pct": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.length_of_stay != 'Transit'"
+    },
+    {
+      "calculate": "datum.category + '|' + datum.length_of_stay",
+      "as": "key"
+    },
+    {
+      "calculate": "({\"coastal|1-7 nights\": \"#B3B9BD\", \"coastal|8-14 nights\": \"#B3B9BD\", \"coastal|15-30 nights\": \"#B3B9BD\", \"coastal|31 or more nights\": \"#0B5E8E\", \"inland|1-7 nights\": \"#B3B9BD\", \"inland|8-14 nights\": \"#B3B9BD\", \"inland|15-30 nights\": \"#B3B9BD\", \"inland|31 or more nights\": \"#C99A3B\"})[datum.key]",
+      "as": "hex"
+    },
+    {
+      "calculate": "({\"1-7 nights\": \"1\\u20137 nights\", \"8-14 nights\": \"8\\u201314 nights\", \"15-30 nights\": \"15\\u201330 nights\", \"31 or more nights\": \"31 or more nights\"})[datum.length_of_stay]",
+      "as": "band"
+    },
+    {
+      "calculate": "datum.category == 'coastal' ? 'Coastal regions' : 'Inland regions'",
+      "as": "panel"
+    },
+    {
+      "calculate": "({\"coastal|2019|8-14 nights\": -6, \"coastal|2019|31 or more nights\": 6, \"coastal|2025|8-14 nights\": 7, \"coastal|2025|31 or more nights\": -7, \"inland|2019|8-14 nights\": -6, \"inland|2019|15-30 nights\": 6, \"inland|2025|8-14 nights\": -4, \"inland|2025|15-30 nights\": 7})[datum.category + '|' + datum.year + '|' + datum.length_of_stay] || 0",
+      "as": "nudge"
+    },
+    {
+      "calculate": "format(datum.share_pct, '.0f') + '%'",
+      "as": "pct_text"
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 20,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "subtitleFontSize": 13,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "axis": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#5B6770",
+      "titleColor": "#1E2B34",
+      "gridColor": "#E3DED3",
+      "domainColor": "#A8AEB3",
+      "tickColor": "#A8AEB3"
+    },
+    "legend": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "header": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "labelFontWeight": 600
+    },
+    "text": {
+      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "fontSize": 12,
+      "color": "#1E2B34"
+    },
+    "concat": {
+      "spacing": 24
+    },
+    "facet": {
+      "spacing": 24
+    }
+  },
+  "facet": {
+    "column": {
+      "field": "panel",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "Coastal regions",
+        "Inland regions"
+      ],
+      "header": {
+        "labelFontSize": 15,
+        "labelFontWeight": 700,
+        "labelOrient": "top",
+        "labelPadding": 12
+      }
+    }
+  },
+  "spec": {
+    "width": 400,
+    "height": 300,
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "strokeWidth": 3.5,
+          "strokeCap": "round"
+        },
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative",
+            "title": null,
+            "scale": {
+              "domain": [
+                2018.0,
+                2028.3
+              ]
+            },
+            "axis": {
+              "values": [
+                2019,
+                2025
+              ],
+              "format": "d",
+              "labelFontSize": 14,
+              "labelFontWeight": 700,
+              "labelAngle": 0,
+              "labelPadding": 6,
+              "grid": false,
+              "orient": "top",
+              "domain": false,
+              "ticks": false
+            }
+          },
+          "y": {
+            "field": "share_pct",
+            "type": "quantitative",
+            "title": "Share of the group's visits (%)",
+            "scale": {
+              "domain": [
+                0,
+                80
+              ],
+              "nice": false
+            },
+            "axis": {
+              "values": [
+                0,
+                20,
+                40,
+                60,
+                80
+              ],
+              "grid": true,
+              "format": "d"
+            }
+          },
+          "color": {
+            "field": "hex",
+            "type": "nominal",
+            "scale": null,
+            "legend": null
+          },
+          "detail": {
+            "field": "length_of_stay",
+            "type": "nominal"
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "circle",
+          "size": 90,
+          "opacity": 1
+        },
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative",
+            "title": null,
+            "scale": {
+              "domain": [
+                2018.0,
+                2028.3
+              ]
+            },
+            "axis": {
+              "values": [
+                2019,
+                2025
+              ],
+              "format": "d",
+              "labelFontSize": 14,
+              "labelFontWeight": 700,
+              "labelAngle": 0,
+              "labelPadding": 6,
+              "grid": false,
+              "orient": "top",
+              "domain": false,
+              "ticks": false
+            }
+          },
+          "y": {
+            "field": "share_pct",
+            "type": "quantitative",
+            "title": "Share of the group's visits (%)",
+            "scale": {
+              "domain": [
+                0,
+                80
+              ],
+              "nice": false
+            },
+            "axis": {
+              "values": [
+                0,
+                20,
+                40,
+                60,
+                80
+              ],
+              "grid": true,
+              "format": "d"
+            }
+          },
+          "color": {
+            "field": "hex",
+            "type": "nominal",
+            "scale": null,
+            "legend": null
+          },
+          "tooltip": [
+            {
+              "field": "panel",
+              "type": "nominal",
+              "title": "Regions"
+            },
+            {
+              "field": "band",
+              "type": "nominal",
+              "title": "Length of stay"
+            },
+            {
+              "field": "year",
+              "type": "ordinal",
+              "title": "Year"
+            },
+            {
+              "field": "share_pct",
+              "type": "quantitative",
+              "title": "Share of visits (%)",
+              "format": ".1f"
+            },
+            {
+              "field": "visitors",
+              "type": "quantitative",
+              "title": "Visits",
+              "format": ","
+            }
+          ]
+        }
+      },
+      {
+        "transform": [
+          {
+            "filter": "datum.year == 2019"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "dx": -10,
+          "fontSize": 12,
+          "fontWeight": 700,
+          "baseline": "middle",
+          "dy": {
+            "expr": "datum.nudge"
+          }
+        },
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative",
+            "title": null,
+            "scale": {
+              "domain": [
+                2018.0,
+                2028.3
+              ]
+            },
+            "axis": {
+              "values": [
+                2019,
+                2025
+              ],
+              "format": "d",
+              "labelFontSize": 14,
+              "labelFontWeight": 700,
+              "labelAngle": 0,
+              "labelPadding": 6,
+              "grid": false,
+              "orient": "top",
+              "domain": false,
+              "ticks": false
+            }
+          },
+          "y": {
+            "field": "share_pct",
+            "type": "quantitative",
+            "title": "Share of the group's visits (%)",
+            "scale": {
+              "domain": [
+                0,
+                80
+              ],
+              "nice": false
+            },
+            "axis": {
+              "values": [
+                0,
+                20,
+                40,
+                60,
+                80
+              ],
+              "grid": true,
+              "format": "d"
+            }
+          },
+          "text": {
+            "field": "pct_text",
+            "type": "nominal"
+          }
+        }
+      },
+      {
+        "transform": [
+          {
+            "filter": "datum.year == 2025"
+          },
+          {
+            "calculate": "datum.pct_text + '  ' + datum.band",
+            "as": "end_label"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "dx": 10,
+          "fontSize": 12,
+          "fontWeight": 700,
+          "baseline": "middle",
+          "dy": {
+            "expr": "datum.nudge"
+          }
+        },
+        "encoding": {
+          "x": {
+            "field": "year",
+            "type": "quantitative",
+            "title": null,
+            "scale": {
+              "domain": [
+                2018.0,
+                2028.3
+              ]
+            },
+            "axis": {
+              "values": [
+                2019,
+                2025
+              ],
+              "format": "d",
+              "labelFontSize": 14,
+              "labelFontWeight": 700,
+              "labelAngle": 0,
+              "labelPadding": 6,
+              "grid": false,
+              "orient": "top",
+              "domain": false,
+              "ticks": false
+            }
+          },
+          "y": {
+            "field": "share_pct",
+            "type": "quantitative",
+            "title": "Share of the group's visits (%)",
+            "scale": {
+              "domain": [
+                0,
+                80
+              ],
+              "nice": false
+            },
+            "axis": {
+              "values": [
+                0,
+                20,
+                40,
+                60,
+                80
+              ],
+              "grid": true,
+              "format": "d"
+            }
+          },
+          "text": {
+            "field": "end_label",
+            "type": "nominal"
+          }
+        }
+      }
+    ]
+  }
+}

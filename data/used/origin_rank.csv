@@ -1,0 +1,71 @@
+country,year,rank,arrivals
+China,2019,1,1438670
+China,2020,2,207690
+China,2021,6,6550
+China,2022,7,89250
+China,2023,4,535790
+China,2024,2,891550
+China,2025,2,1040140
+New Zealand,2019,2,1433770
+New Zealand,2020,1,242440
+New Zealand,2021,1,96760
+New Zealand,2022,1,697630
+New Zealand,2023,1,1272140
+New Zealand,2024,1,1392960
+New Zealand,2025,1,1435050
+United States of America,2019,3,817990
+United States of America,2020,4,188680
+United States of America,2021,3,16760
+United States of America,2022,3,326030
+United States of America,2023,2,659740
+United States of America,2024,3,712380
+United States of America,2025,4,744970
+United Kingdom,2019,4,715820
+United Kingdom,2020,3,200800
+United Kingdom,2021,2,21890
+United Kingdom,2022,2,399190
+United Kingdom,2023,3,596880
+United Kingdom,2024,4,640760
+United Kingdom,2025,3,758290
+Japan,2019,5,498640
+Japan,2020,5,91720
+Japan,2021,18,1870
+Japan,2022,12,79390
+Japan,2023,7,297720
+Japan,2024,7,397330
+Japan,2025,7,423120
+Singapore,2019,6,478500
+Singapore,2020,8,58320
+Singapore,2021,4,15830
+Singapore,2022,5,295800
+Singapore,2023,6,364010
+Singapore,2024,6,417900
+Singapore,2025,6,443710
+India,2019,7,399300
+India,2020,6,83960
+India,2021,5,12960
+India,2022,4,303330
+India,2023,5,395560
+India,2024,5,443460
+India,2025,5,451530
+Malaysia,2019,8,384900
+Malaysia,2020,12,44790
+Malaysia,2021,15,2340
+Malaysia,2022,10,85260
+Malaysia,2023,11,175550
+Malaysia,2024,11,203080
+Malaysia,2025,11,213680
+Hong Kong,2019,9,315150
+Hong Kong,2020,7,60930
+Hong Kong,2021,11,3090
+Hong Kong,2022,16,53720
+Hong Kong,2023,10,183700
+Hong Kong,2024,10,216240
+Hong Kong,2025,9,249090
+South Korea,2019,10,280480
+South Korea,2020,9,53520
+South Korea,2021,16,2060
+South Korea,2022,13,72510
+South Korea,2023,8,288010
+South Korea,2024,8,374560
+South Korea,2025,8,398440

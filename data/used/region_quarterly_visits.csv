@@ -1,0 +1,1217 @@
+TR_CODE,year,quarter,visitors,TR_NAME,state,category,centre_lat
+110,2019,Q1,1149642.9,Sydney,NSW,coastal,-33.6819
+110,2019,Q2,872166.3,Sydney,NSW,coastal,-33.6819
+110,2019,Q3,920690.5,Sydney,NSW,coastal,-33.6819
+110,2019,Q4,1163545.2,Sydney,NSW,coastal,-33.6819
+110,2023,Q1,773387.7,Sydney,NSW,coastal,-33.6819
+110,2023,Q2,693171.6,Sydney,NSW,coastal,-33.6819
+110,2023,Q3,792316.4,Sydney,NSW,coastal,-33.6819
+110,2023,Q4,914813.6,Sydney,NSW,coastal,-33.6819
+110,2024,Q1,1016799.4,Sydney,NSW,coastal,-33.6819
+110,2024,Q2,722265.7,Sydney,NSW,coastal,-33.6819
+110,2024,Q3,785232.9,Sydney,NSW,coastal,-33.6819
+110,2024,Q4,1005101.9,Sydney,NSW,coastal,-33.6819
+110,2025,Q1,1057913.0,Sydney,NSW,coastal,-33.6819
+110,2025,Q2,757857.6,Sydney,NSW,coastal,-33.6819
+110,2025,Q3,898168.1,Sydney,NSW,coastal,-33.6819
+110,2025,Q4,1105919.3,Sydney,NSW,coastal,-33.6819
+111,2019,Q1,34621.9,Blue Mountains,NSW,inland,-33.527914
+111,2019,Q2,20596.4,Blue Mountains,NSW,inland,-33.527914
+111,2019,Q3,24144.4,Blue Mountains,NSW,inland,-33.527914
+111,2019,Q4,35883.1,Blue Mountains,NSW,inland,-33.527914
+111,2023,Q1,15318.3,Blue Mountains,NSW,inland,-33.527914
+111,2023,Q2,13630.4,Blue Mountains,NSW,inland,-33.527914
+111,2023,Q3,17276.8,Blue Mountains,NSW,inland,-33.527914
+111,2023,Q4,25965.2,Blue Mountains,NSW,inland,-33.527914
+111,2024,Q1,25911.8,Blue Mountains,NSW,inland,-33.527914
+111,2024,Q2,9162.5,Blue Mountains,NSW,inland,-33.527914
+111,2024,Q3,22553.5,Blue Mountains,NSW,inland,-33.527914
+111,2024,Q4,21766.5,Blue Mountains,NSW,inland,-33.527914
+111,2025,Q1,19516.4,Blue Mountains,NSW,inland,-33.527914
+111,2025,Q2,15649.8,Blue Mountains,NSW,inland,-33.527914
+111,2025,Q3,18471.4,Blue Mountains,NSW,inland,-33.527914
+111,2025,Q4,20913.8,Blue Mountains,NSW,inland,-33.527914
+112,2019,Q1,8490.6,Southern Tablelands,NSW,inland,-34.939614
+112,2019,Q2,7019.4,Southern Tablelands,NSW,inland,-34.939614
+112,2019,Q3,5568.7,Southern Tablelands,NSW,inland,-34.939614
+112,2019,Q4,12149.3,Southern Tablelands,NSW,inland,-34.939614
+112,2023,Q1,6478.9,Southern Tablelands,NSW,inland,-34.939614
+112,2023,Q2,3812.7,Southern Tablelands,NSW,inland,-34.939614
+112,2023,Q3,6550.3,Southern Tablelands,NSW,inland,-34.939614
+112,2023,Q4,11619.8,Southern Tablelands,NSW,inland,-34.939614
+112,2024,Q1,7866.0,Southern Tablelands,NSW,inland,-34.939614
+112,2024,Q2,4200.8,Southern Tablelands,NSW,inland,-34.939614
+112,2024,Q3,7856.1,Southern Tablelands,NSW,inland,-34.939614
+112,2024,Q4,7943.2,Southern Tablelands,NSW,inland,-34.939614
+112,2025,Q1,10147.4,Southern Tablelands,NSW,inland,-34.939614
+112,2025,Q2,5846.4,Southern Tablelands,NSW,inland,-34.939614
+112,2025,Q3,3671.7,Southern Tablelands,NSW,inland,-34.939614
+112,2025,Q4,2561.7,Southern Tablelands,NSW,inland,-34.939614
+113,2019,Q1,20393.1,Central Coast,NSW,coastal,-33.301349
+113,2019,Q2,11509.4,Central Coast,NSW,coastal,-33.301349
+113,2019,Q3,12846.7,Central Coast,NSW,coastal,-33.301349
+113,2019,Q4,18122.0,Central Coast,NSW,coastal,-33.301349
+113,2023,Q1,10597.9,Central Coast,NSW,coastal,-33.301349
+113,2023,Q2,8508.1,Central Coast,NSW,coastal,-33.301349
+113,2023,Q3,10189.6,Central Coast,NSW,coastal,-33.301349
+113,2023,Q4,13061.7,Central Coast,NSW,coastal,-33.301349
+113,2024,Q1,15026.9,Central Coast,NSW,coastal,-33.301349
+113,2024,Q2,7278.0,Central Coast,NSW,coastal,-33.301349
+113,2024,Q3,6964.9,Central Coast,NSW,coastal,-33.301349
+113,2024,Q4,11872.1,Central Coast,NSW,coastal,-33.301349
+113,2025,Q1,12167.2,Central Coast,NSW,coastal,-33.301349
+113,2025,Q2,13543.3,Central Coast,NSW,coastal,-33.301349
+113,2025,Q3,4526.3,Central Coast,NSW,coastal,-33.301349
+113,2025,Q4,17386.4,Central Coast,NSW,coastal,-33.301349
+114,2019,Q1,7484.5,Central NSW,NSW,inland,-32.317932
+114,2019,Q2,9563.7,Central NSW,NSW,inland,-32.317932
+114,2019,Q3,10491.8,Central NSW,NSW,inland,-32.317932
+114,2019,Q4,14215.7,Central NSW,NSW,inland,-32.317932
+114,2023,Q1,11408.6,Central NSW,NSW,inland,-32.317932
+114,2023,Q2,7328.8,Central NSW,NSW,inland,-32.317932
+114,2023,Q3,6495.4,Central NSW,NSW,inland,-32.317932
+114,2023,Q4,14890.8,Central NSW,NSW,inland,-32.317932
+114,2024,Q1,12163.5,Central NSW,NSW,inland,-32.317932
+114,2024,Q2,6998.4,Central NSW,NSW,inland,-32.317932
+114,2024,Q3,7453.6,Central NSW,NSW,inland,-32.317932
+114,2024,Q4,14247.3,Central NSW,NSW,inland,-32.317932
+114,2025,Q1,7487.0,Central NSW,NSW,inland,-32.317932
+114,2025,Q2,6421.9,Central NSW,NSW,inland,-32.317932
+114,2025,Q3,6177.1,Central NSW,NSW,inland,-32.317932
+114,2025,Q4,17254.7,Central NSW,NSW,inland,-32.317932
+115,2019,Q1,59641.7,Hunter,NSW,coastal,-32.382665
+115,2019,Q2,42420.4,Hunter,NSW,coastal,-32.382665
+115,2019,Q3,40934.1,Hunter,NSW,coastal,-32.382665
+115,2019,Q4,51978.8,Hunter,NSW,coastal,-32.382665
+115,2023,Q1,47213.8,Hunter,NSW,coastal,-32.382665
+115,2023,Q2,34327.5,Hunter,NSW,coastal,-32.382665
+115,2023,Q3,28234.6,Hunter,NSW,coastal,-32.382665
+115,2023,Q4,52971.0,Hunter,NSW,coastal,-32.382665
+115,2024,Q1,41219.7,Hunter,NSW,coastal,-32.382665
+115,2024,Q2,29895.8,Hunter,NSW,coastal,-32.382665
+115,2024,Q3,30936.2,Hunter,NSW,coastal,-32.382665
+115,2024,Q4,56255.0,Hunter,NSW,coastal,-32.382665
+115,2025,Q1,46843.9,Hunter,NSW,coastal,-32.382665
+115,2025,Q2,32970.6,Hunter,NSW,coastal,-32.382665
+115,2025,Q3,26727.7,Hunter,NSW,coastal,-32.382665
+115,2025,Q4,49028.1,Hunter,NSW,coastal,-32.382665
+116,2019,Q1,9736.5,New England North West,NSW,inland,-30.064705
+116,2019,Q2,7042.9,New England North West,NSW,inland,-30.064705
+116,2019,Q3,7441.3,New England North West,NSW,inland,-30.064705
+116,2019,Q4,13320.7,New England North West,NSW,inland,-30.064705
+116,2023,Q1,7330.0,New England North West,NSW,inland,-30.064705
+116,2023,Q2,8236.2,New England North West,NSW,inland,-30.064705
+116,2023,Q3,8300.9,New England North West,NSW,inland,-30.064705
+116,2023,Q4,7707.0,New England North West,NSW,inland,-30.064705
+116,2024,Q1,10592.9,New England North West,NSW,inland,-30.064705
+116,2024,Q2,5814.4,New England North West,NSW,inland,-30.064705
+116,2024,Q3,7118.4,New England North West,NSW,inland,-30.064705
+116,2024,Q4,15609.8,New England North West,NSW,inland,-30.064705
+116,2025,Q1,15202.9,New England North West,NSW,inland,-30.064705
+116,2025,Q2,8927.0,New England North West,NSW,inland,-30.064705
+116,2025,Q3,7780.5,New England North West,NSW,inland,-30.064705
+116,2025,Q4,9081.1,New England North West,NSW,inland,-30.064705
+117,2019,Q1,110082.5,North Coast NSW,NSW,coastal,-30.426293
+117,2019,Q2,71390.0,North Coast NSW,NSW,coastal,-30.426293
+117,2019,Q3,84538.4,North Coast NSW,NSW,coastal,-30.426293
+117,2019,Q4,108938.9,North Coast NSW,NSW,coastal,-30.426293
+117,2023,Q1,70816.7,North Coast NSW,NSW,coastal,-30.426293
+117,2023,Q2,54795.8,North Coast NSW,NSW,coastal,-30.426293
+117,2023,Q3,52366.9,North Coast NSW,NSW,coastal,-30.426293
+117,2023,Q4,81631.7,North Coast NSW,NSW,coastal,-30.426293
+117,2024,Q1,86595.0,North Coast NSW,NSW,coastal,-30.426293
+117,2024,Q2,55043.2,North Coast NSW,NSW,coastal,-30.426293
+117,2024,Q3,58858.6,North Coast NSW,NSW,coastal,-30.426293
+117,2024,Q4,91829.5,North Coast NSW,NSW,coastal,-30.426293
+117,2025,Q1,95939.7,North Coast NSW,NSW,coastal,-30.426293
+117,2025,Q2,60132.4,North Coast NSW,NSW,coastal,-30.426293
+117,2025,Q3,51345.9,North Coast NSW,NSW,coastal,-30.426293
+117,2025,Q4,83875.9,North Coast NSW,NSW,coastal,-30.426293
+119,2019,Q1,2654.8,Outback NSW,NSW,inland,-31.183145
+119,2019,Q2,1768.4,Outback NSW,NSW,inland,-31.183145
+119,2019,Q3,2626.6,Outback NSW,NSW,inland,-31.183145
+119,2019,Q4,4361.2,Outback NSW,NSW,inland,-31.183145
+119,2023,Q1,4021.3,Outback NSW,NSW,inland,-31.183145
+119,2023,Q2,4182.3,Outback NSW,NSW,inland,-31.183145
+119,2023,Q3,2030.9,Outback NSW,NSW,inland,-31.183145
+119,2023,Q4,1162.2,Outback NSW,NSW,inland,-31.183145
+119,2024,Q1,2249.9,Outback NSW,NSW,inland,-31.183145
+119,2024,Q2,2614.1,Outback NSW,NSW,inland,-31.183145
+119,2024,Q3,841.6,Outback NSW,NSW,inland,-31.183145
+119,2024,Q4,1952.6,Outback NSW,NSW,inland,-31.183145
+119,2025,Q1,2404.8,Outback NSW,NSW,inland,-31.183145
+119,2025,Q2,3796.7,Outback NSW,NSW,inland,-31.183145
+119,2025,Q3,3070.6,Outback NSW,NSW,inland,-31.183145
+119,2025,Q4,2283.7,Outback NSW,NSW,inland,-31.183145
+120,2019,Q1,5811.8,Riverina,NSW,inland,-34.735281
+120,2019,Q2,5162.5,Riverina,NSW,inland,-34.735281
+120,2019,Q3,6958.9,Riverina,NSW,inland,-34.735281
+120,2019,Q4,8861.2,Riverina,NSW,inland,-34.735281
+120,2023,Q1,9926.3,Riverina,NSW,inland,-34.735281
+120,2023,Q2,3210.6,Riverina,NSW,inland,-34.735281
+120,2023,Q3,8086.4,Riverina,NSW,inland,-34.735281
+120,2023,Q4,8392.5,Riverina,NSW,inland,-34.735281
+120,2024,Q1,10838.6,Riverina,NSW,inland,-34.735281
+120,2024,Q2,8912.4,Riverina,NSW,inland,-34.735281
+120,2024,Q3,5701.4,Riverina,NSW,inland,-34.735281
+120,2024,Q4,8281.6,Riverina,NSW,inland,-34.735281
+120,2025,Q1,7369.0,Riverina,NSW,inland,-34.735281
+120,2025,Q2,8436.3,Riverina,NSW,inland,-34.735281
+120,2025,Q3,6749.1,Riverina,NSW,inland,-34.735281
+120,2025,Q4,9733.5,Riverina,NSW,inland,-34.735281
+121,2019,Q1,7825.2,Snowy Mountains,NSW,inland,-36.468683
+121,2019,Q2,4604.4,Snowy Mountains,NSW,inland,-36.468683
+121,2019,Q3,5769.6,Snowy Mountains,NSW,inland,-36.468683
+121,2019,Q4,7272.5,Snowy Mountains,NSW,inland,-36.468683
+121,2023,Q1,4180.7,Snowy Mountains,NSW,inland,-36.468683
+121,2023,Q2,2696.4,Snowy Mountains,NSW,inland,-36.468683
+121,2023,Q3,5918.2,Snowy Mountains,NSW,inland,-36.468683
+121,2023,Q4,4128.9,Snowy Mountains,NSW,inland,-36.468683
+121,2024,Q1,4516.7,Snowy Mountains,NSW,inland,-36.468683
+121,2024,Q2,5140.6,Snowy Mountains,NSW,inland,-36.468683
+121,2024,Q3,4720.2,Snowy Mountains,NSW,inland,-36.468683
+121,2024,Q4,1837.6,Snowy Mountains,NSW,inland,-36.468683
+121,2025,Q1,5377.0,Snowy Mountains,NSW,inland,-36.468683
+121,2025,Q2,636.3,Snowy Mountains,NSW,inland,-36.468683
+121,2025,Q3,3191.4,Snowy Mountains,NSW,inland,-36.468683
+121,2025,Q4,6598.3,Snowy Mountains,NSW,inland,-36.468683
+122,2019,Q1,67990.5,South Coast,NSW,coastal,-35.80795
+122,2019,Q2,33712.1,South Coast,NSW,coastal,-35.80795
+122,2019,Q3,31288.4,South Coast,NSW,coastal,-35.80795
+122,2019,Q4,51581.9,South Coast,NSW,coastal,-35.80795
+122,2023,Q1,47662.4,South Coast,NSW,coastal,-35.80795
+122,2023,Q2,22781.5,South Coast,NSW,coastal,-35.80795
+122,2023,Q3,29705.8,South Coast,NSW,coastal,-35.80795
+122,2023,Q4,38259.0,South Coast,NSW,coastal,-35.80795
+122,2024,Q1,49407.8,South Coast,NSW,coastal,-35.80795
+122,2024,Q2,28480.8,South Coast,NSW,coastal,-35.80795
+122,2024,Q3,28458.8,South Coast,NSW,coastal,-35.80795
+122,2024,Q4,41487.1,South Coast,NSW,coastal,-35.80795
+122,2025,Q1,53008.5,South Coast,NSW,coastal,-35.80795
+122,2025,Q2,30150.8,South Coast,NSW,coastal,-35.80795
+122,2025,Q3,18536.8,South Coast,NSW,coastal,-35.80795
+122,2025,Q4,42294.9,South Coast,NSW,coastal,-35.80795
+123,2019,Q1,9725.5,The Murray,NSW,inland,-34.433521
+123,2019,Q2,6370.9,The Murray,NSW,inland,-34.433521
+123,2019,Q3,6782.0,The Murray,NSW,inland,-34.433521
+123,2019,Q4,9859.5,The Murray,NSW,inland,-34.433521
+123,2023,Q1,6165.0,The Murray,NSW,inland,-34.433521
+123,2023,Q2,4850.4,The Murray,NSW,inland,-34.433521
+123,2023,Q3,4688.5,The Murray,NSW,inland,-34.433521
+123,2023,Q4,7442.2,The Murray,NSW,inland,-34.433521
+123,2024,Q1,6825.8,The Murray,NSW,inland,-34.433521
+123,2024,Q2,5142.2,The Murray,NSW,inland,-34.433521
+123,2024,Q3,6817.2,The Murray,NSW,inland,-34.433521
+123,2024,Q4,10816.1,The Murray,NSW,inland,-34.433521
+123,2025,Q1,9081.7,The Murray,NSW,inland,-34.433521
+123,2025,Q2,8524.2,The Murray,NSW,inland,-34.433521
+123,2025,Q3,5399.6,The Murray,NSW,inland,-34.433521
+123,2025,Q4,5139.2,The Murray,NSW,inland,-34.433521
+210,2019,Q1,864675.7,Melbourne,VIC,coastal,-37.807804
+210,2019,Q2,600298.0,Melbourne,VIC,coastal,-37.807804
+210,2019,Q3,664059.0,Melbourne,VIC,coastal,-37.807804
+210,2019,Q4,838174.4,Melbourne,VIC,coastal,-37.807804
+210,2023,Q1,433394.7,Melbourne,VIC,coastal,-37.807804
+210,2023,Q2,412939.6,Melbourne,VIC,coastal,-37.807804
+210,2023,Q3,437847.6,Melbourne,VIC,coastal,-37.807804
+210,2023,Q4,633319.4,Melbourne,VIC,coastal,-37.807804
+210,2024,Q1,761496.6,Melbourne,VIC,coastal,-37.807804
+210,2024,Q2,503855.2,Melbourne,VIC,coastal,-37.807804
+210,2024,Q3,548826.1,Melbourne,VIC,coastal,-37.807804
+210,2024,Q4,737813.1,Melbourne,VIC,coastal,-37.807804
+210,2025,Q1,734835.6,Melbourne,VIC,coastal,-37.807804
+210,2025,Q2,592493.8,Melbourne,VIC,coastal,-37.807804
+210,2025,Q3,574702.5,Melbourne,VIC,coastal,-37.807804
+210,2025,Q4,750561.2,Melbourne,VIC,coastal,-37.807804
+211,2019,Q1,8036.9,Greater Ballarat,VIC,inland,-37.376252
+211,2019,Q2,4895.2,Greater Ballarat,VIC,inland,-37.376252
+211,2019,Q3,8614.7,Greater Ballarat,VIC,inland,-37.376252
+211,2019,Q4,9717.5,Greater Ballarat,VIC,inland,-37.376252
+211,2023,Q1,5605.4,Greater Ballarat,VIC,inland,-37.376252
+211,2023,Q2,4881.7,Greater Ballarat,VIC,inland,-37.376252
+211,2023,Q3,4801.1,Greater Ballarat,VIC,inland,-37.376252
+211,2023,Q4,5202.4,Greater Ballarat,VIC,inland,-37.376252
+211,2024,Q1,8987.2,Greater Ballarat,VIC,inland,-37.376252
+211,2024,Q2,4542.7,Greater Ballarat,VIC,inland,-37.376252
+211,2024,Q3,5057.5,Greater Ballarat,VIC,inland,-37.376252
+211,2024,Q4,13909.8,Greater Ballarat,VIC,inland,-37.376252
+211,2025,Q1,7052.6,Greater Ballarat,VIC,inland,-37.376252
+211,2025,Q2,4673.8,Greater Ballarat,VIC,inland,-37.376252
+211,2025,Q3,6299.8,Greater Ballarat,VIC,inland,-37.376252
+211,2025,Q4,7302.6,Greater Ballarat,VIC,inland,-37.376252
+212,2019,Q1,6272.1,Greater Bendigo,VIC,inland,-36.458549
+212,2019,Q2,4508.0,Greater Bendigo,VIC,inland,-36.458549
+212,2019,Q3,4524.9,Greater Bendigo,VIC,inland,-36.458549
+212,2019,Q4,8132.9,Greater Bendigo,VIC,inland,-36.458549
+212,2023,Q1,2102.2,Greater Bendigo,VIC,inland,-36.458549
+212,2023,Q2,4347.0,Greater Bendigo,VIC,inland,-36.458549
+212,2023,Q3,2535.2,Greater Bendigo,VIC,inland,-36.458549
+212,2023,Q4,4018.6,Greater Bendigo,VIC,inland,-36.458549
+212,2024,Q1,3540.0,Greater Bendigo,VIC,inland,-36.458549
+212,2024,Q2,2531.3,Greater Bendigo,VIC,inland,-36.458549
+212,2024,Q3,4225.2,Greater Bendigo,VIC,inland,-36.458549
+212,2024,Q4,9634.1,Greater Bendigo,VIC,inland,-36.458549
+212,2025,Q1,5392.6,Greater Bendigo,VIC,inland,-36.458549
+212,2025,Q2,2695.3,Greater Bendigo,VIC,inland,-36.458549
+212,2025,Q3,4304.3,Greater Bendigo,VIC,inland,-36.458549
+212,2025,Q4,2628.3,Greater Bendigo,VIC,inland,-36.458549
+213,2019,Q1,16605.8,Central Highlands,VIC,inland,-37.127455
+213,2019,Q2,9834.3,Central Highlands,VIC,inland,-37.127455
+213,2019,Q3,6314.8,Central Highlands,VIC,inland,-37.127455
+213,2019,Q4,14873.4,Central Highlands,VIC,inland,-37.127455
+213,2023,Q1,4561.3,Central Highlands,VIC,inland,-37.127455
+213,2023,Q2,2774.1,Central Highlands,VIC,inland,-37.127455
+213,2023,Q3,2754.5,Central Highlands,VIC,inland,-37.127455
+213,2023,Q4,10732.9,Central Highlands,VIC,inland,-37.127455
+213,2024,Q1,7229.8,Central Highlands,VIC,inland,-37.127455
+213,2024,Q2,5211.2,Central Highlands,VIC,inland,-37.127455
+213,2024,Q3,3027.8,Central Highlands,VIC,inland,-37.127455
+213,2024,Q4,9271.3,Central Highlands,VIC,inland,-37.127455
+213,2025,Q1,4405.7,Central Highlands,VIC,inland,-37.127455
+213,2025,Q2,2936.9,Central Highlands,VIC,inland,-37.127455
+213,2025,Q3,1329.8,Central Highlands,VIC,inland,-37.127455
+213,2025,Q4,2243.1,Central Highlands,VIC,inland,-37.127455
+214,2019,Q1,7672.3,Central Murray,VIC,inland,-36.273504
+214,2019,Q2,2227.7,Central Murray,VIC,inland,-36.273504
+214,2019,Q3,2418.1,Central Murray,VIC,inland,-36.273504
+214,2019,Q4,2106.9,Central Murray,VIC,inland,-36.273504
+214,2023,Q1,3689.1,Central Murray,VIC,inland,-36.273504
+214,2023,Q2,916.7,Central Murray,VIC,inland,-36.273504
+214,2023,Q3,2625.4,Central Murray,VIC,inland,-36.273504
+214,2023,Q4,2768.5,Central Murray,VIC,inland,-36.273504
+214,2024,Q1,2865.5,Central Murray,VIC,inland,-36.273504
+214,2024,Q2,2100.8,Central Murray,VIC,inland,-36.273504
+214,2024,Q3,2006.1,Central Murray,VIC,inland,-36.273504
+214,2024,Q4,3237.2,Central Murray,VIC,inland,-36.273504
+214,2025,Q1,1625.2,Central Murray,VIC,inland,-36.273504
+214,2025,Q2,4000.5,Central Murray,VIC,inland,-36.273504
+214,2025,Q3,3065.2,Central Murray,VIC,inland,-36.273504
+214,2025,Q4,1573.4,Central Murray,VIC,inland,-36.273504
+215,2019,Q1,22588.4,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2019,Q2,14174.3,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2019,Q3,13256.9,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2019,Q4,14581.0,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2023,Q1,16178.2,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2023,Q2,8383.8,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2023,Q3,9329.3,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2023,Q4,15825.3,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2024,Q1,20728.5,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2024,Q2,9538.5,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2024,Q3,10643.2,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2024,Q4,32607.7,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2025,Q1,27279.4,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2025,Q2,10605.9,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2025,Q3,7520.8,Geelong and the Bellarine,VIC,coastal,-37.920596
+215,2025,Q4,20333.3,Geelong and the Bellarine,VIC,coastal,-37.920596
+216,2019,Q1,19068.6,Gippsland,VIC,coastal,-38.125584
+216,2019,Q2,7529.2,Gippsland,VIC,coastal,-38.125584
+216,2019,Q3,9306.3,Gippsland,VIC,coastal,-38.125584
+216,2019,Q4,16843.0,Gippsland,VIC,coastal,-38.125584
+216,2023,Q1,8509.3,Gippsland,VIC,coastal,-38.125584
+216,2023,Q2,2238.5,Gippsland,VIC,coastal,-38.125584
+216,2023,Q3,4129.2,Gippsland,VIC,coastal,-38.125584
+216,2023,Q4,9821.8,Gippsland,VIC,coastal,-38.125584
+216,2024,Q1,13413.3,Gippsland,VIC,coastal,-38.125584
+216,2024,Q2,7317.8,Gippsland,VIC,coastal,-38.125584
+216,2024,Q3,4527.1,Gippsland,VIC,coastal,-38.125584
+216,2024,Q4,10358.2,Gippsland,VIC,coastal,-38.125584
+216,2025,Q1,11840.4,Gippsland,VIC,coastal,-38.125584
+216,2025,Q2,9302.4,Gippsland,VIC,coastal,-38.125584
+216,2025,Q3,4813.3,Gippsland,VIC,coastal,-38.125584
+216,2025,Q4,7449.3,Gippsland,VIC,coastal,-38.125584
+217,2019,Q1,4827.5,Goulburn,VIC,inland,-36.852504
+217,2019,Q2,2820.9,Goulburn,VIC,inland,-36.852504
+217,2019,Q3,6310.7,Goulburn,VIC,inland,-36.852504
+217,2019,Q4,4001.9,Goulburn,VIC,inland,-36.852504
+217,2023,Q1,3652.3,Goulburn,VIC,inland,-36.852504
+217,2023,Q2,4636.6,Goulburn,VIC,inland,-36.852504
+217,2023,Q3,4073.9,Goulburn,VIC,inland,-36.852504
+217,2023,Q4,3210.3,Goulburn,VIC,inland,-36.852504
+217,2024,Q1,6002.0,Goulburn,VIC,inland,-36.852504
+217,2024,Q2,4664.7,Goulburn,VIC,inland,-36.852504
+217,2024,Q3,2912.3,Goulburn,VIC,inland,-36.852504
+217,2024,Q4,4727.9,Goulburn,VIC,inland,-36.852504
+217,2025,Q1,11190.6,Goulburn,VIC,inland,-36.852504
+217,2025,Q2,5156.9,Goulburn,VIC,inland,-36.852504
+217,2025,Q3,4288.2,Goulburn,VIC,inland,-36.852504
+217,2025,Q4,2983.3,Goulburn,VIC,inland,-36.852504
+218,2019,Q1,8689.2,Victoria's High Country,VIC,inland,-36.780251
+218,2019,Q2,7240.8,Victoria's High Country,VIC,inland,-36.780251
+218,2019,Q3,8944.3,Victoria's High Country,VIC,inland,-36.780251
+218,2019,Q4,11090.9,Victoria's High Country,VIC,inland,-36.780251
+218,2023,Q1,9537.9,Victoria's High Country,VIC,inland,-36.780251
+218,2023,Q2,4099.0,Victoria's High Country,VIC,inland,-36.780251
+218,2023,Q3,6708.9,Victoria's High Country,VIC,inland,-36.780251
+218,2023,Q4,4828.8,Victoria's High Country,VIC,inland,-36.780251
+218,2024,Q1,8625.1,Victoria's High Country,VIC,inland,-36.780251
+218,2024,Q2,5943.1,Victoria's High Country,VIC,inland,-36.780251
+218,2024,Q3,10152.0,Victoria's High Country,VIC,inland,-36.780251
+218,2024,Q4,5270.1,Victoria's High Country,VIC,inland,-36.780251
+218,2025,Q1,10002.2,Victoria's High Country,VIC,inland,-36.780251
+218,2025,Q2,7087.5,Victoria's High Country,VIC,inland,-36.780251
+218,2025,Q3,5662.5,Victoria's High Country,VIC,inland,-36.780251
+218,2025,Q4,4228.7,Victoria's High Country,VIC,inland,-36.780251
+219,2019,Q1,18519.7,Lakes,VIC,coastal,-37.327212
+219,2019,Q2,6147.6,Lakes,VIC,coastal,-37.327212
+219,2019,Q3,7034.5,Lakes,VIC,coastal,-37.327212
+219,2019,Q4,14396.2,Lakes,VIC,coastal,-37.327212
+219,2023,Q1,8129.7,Lakes,VIC,coastal,-37.327212
+219,2023,Q2,2312.7,Lakes,VIC,coastal,-37.327212
+219,2023,Q3,5605.4,Lakes,VIC,coastal,-37.327212
+219,2023,Q4,4692.1,Lakes,VIC,coastal,-37.327212
+219,2024,Q1,7629.9,Lakes,VIC,coastal,-37.327212
+219,2024,Q2,8418.4,Lakes,VIC,coastal,-37.327212
+219,2024,Q3,3360.3,Lakes,VIC,coastal,-37.327212
+219,2024,Q4,7021.5,Lakes,VIC,coastal,-37.327212
+219,2025,Q1,13910.5,Lakes,VIC,coastal,-37.327212
+219,2025,Q2,8202.6,Lakes,VIC,coastal,-37.327212
+219,2025,Q3,2694.7,Lakes,VIC,coastal,-37.327212
+219,2025,Q4,4460.5,Lakes,VIC,coastal,-37.327212
+220,2019,Q1,1318.6,Macedon,VIC,inland,-37.338327
+220,2019,Q2,2167.6,Macedon,VIC,inland,-37.338327
+220,2019,Q3,1381.9,Macedon,VIC,inland,-37.338327
+220,2019,Q4,2493.7,Macedon,VIC,inland,-37.338327
+220,2023,Q1,1491.3,Macedon,VIC,inland,-37.338327
+220,2023,Q2,379.5,Macedon,VIC,inland,-37.338327
+220,2023,Q3,1093.3,Macedon,VIC,inland,-37.338327
+220,2023,Q4,1034.1,Macedon,VIC,inland,-37.338327
+220,2024,Q1,3976.2,Macedon,VIC,inland,-37.338327
+220,2024,Q2,1481.5,Macedon,VIC,inland,-37.338327
+220,2024,Q3,3076.5,Macedon,VIC,inland,-37.338327
+220,2024,Q4,984.9,Macedon,VIC,inland,-37.338327
+220,2025,Q1,1319.4,Macedon,VIC,inland,-37.338327
+220,2025,Q2,877.5,Macedon,VIC,inland,-37.338327
+220,2025,Q3,1743.3,Macedon,VIC,inland,-37.338327
+220,2025,Q4,791.8,Macedon,VIC,inland,-37.338327
+221,2019,Q1,6652.9,Mallee,VIC,inland,-34.997481
+221,2019,Q2,4932.2,Mallee,VIC,inland,-34.997481
+221,2019,Q3,4443.7,Mallee,VIC,inland,-34.997481
+221,2019,Q4,9530.4,Mallee,VIC,inland,-34.997481
+221,2023,Q1,2544.5,Mallee,VIC,inland,-34.997481
+221,2023,Q2,3197.7,Mallee,VIC,inland,-34.997481
+221,2023,Q3,9004.4,Mallee,VIC,inland,-34.997481
+221,2023,Q4,5332.5,Mallee,VIC,inland,-34.997481
+221,2024,Q1,5285.4,Mallee,VIC,inland,-34.997481
+221,2024,Q2,6407.2,Mallee,VIC,inland,-34.997481
+221,2024,Q3,7125.3,Mallee,VIC,inland,-34.997481
+221,2024,Q4,6736.5,Mallee,VIC,inland,-34.997481
+221,2025,Q1,5634.7,Mallee,VIC,inland,-34.997481
+221,2025,Q2,7168.0,Mallee,VIC,inland,-34.997481
+221,2025,Q3,4351.2,Mallee,VIC,inland,-34.997481
+221,2025,Q4,9003.1,Mallee,VIC,inland,-34.997481
+222,2019,Q1,17658.8,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2019,Q2,11838.2,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2019,Q3,9369.6,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2019,Q4,23492.4,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2023,Q1,9941.3,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2023,Q2,8621.9,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2023,Q3,3179.0,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2023,Q4,11659.6,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2024,Q1,10050.7,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2024,Q2,9140.4,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2024,Q3,7171.1,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2024,Q4,9465.9,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2025,Q1,13459.9,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2025,Q2,10465.0,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2025,Q3,7023.8,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+222,2025,Q4,17133.1,Yarra Valley and Dandenong Ranges,VIC,inland,-37.9
+223,2019,Q1,2268.8,Murray East,VIC,inland,-36.146
+223,2019,Q2,560.4,Murray East,VIC,inland,-36.146
+223,2019,Q3,957.0,Murray East,VIC,inland,-36.146
+223,2019,Q4,1445.9,Murray East,VIC,inland,-36.146
+223,2023,Q1,28.0,Murray East,VIC,inland,-36.146
+223,2023,Q2,2004.0,Murray East,VIC,inland,-36.146
+223,2023,Q3,1015.9,Murray East,VIC,inland,-36.146
+223,2023,Q4,421.2,Murray East,VIC,inland,-36.146
+223,2024,Q1,1633.9,Murray East,VIC,inland,-36.146
+223,2024,Q2,238.3,Murray East,VIC,inland,-36.146
+223,2024,Q3,741.0,Murray East,VIC,inland,-36.146
+223,2024,Q4,1648.0,Murray East,VIC,inland,-36.146
+223,2025,Q1,1215.5,Murray East,VIC,inland,-36.146
+223,2025,Q2,282.3,Murray East,VIC,inland,-36.146
+223,2025,Q3,516.4,Murray East,VIC,inland,-36.146
+223,2025,Q4,0.0,Murray East,VIC,inland,-36.146
+224,2019,Q1,26021.3,Mornington Peninsula,VIC,coastal,-38.268781
+224,2019,Q2,13979.9,Mornington Peninsula,VIC,coastal,-38.268781
+224,2019,Q3,9096.6,Mornington Peninsula,VIC,coastal,-38.268781
+224,2019,Q4,23921.8,Mornington Peninsula,VIC,coastal,-38.268781
+224,2023,Q1,13272.8,Mornington Peninsula,VIC,coastal,-38.268781
+224,2023,Q2,8600.8,Mornington Peninsula,VIC,coastal,-38.268781
+224,2023,Q3,4834.9,Mornington Peninsula,VIC,coastal,-38.268781
+224,2023,Q4,13456.8,Mornington Peninsula,VIC,coastal,-38.268781
+224,2024,Q1,15576.5,Mornington Peninsula,VIC,coastal,-38.268781
+224,2024,Q2,10834.2,Mornington Peninsula,VIC,coastal,-38.268781
+224,2024,Q3,13236.3,Mornington Peninsula,VIC,coastal,-38.268781
+224,2024,Q4,19328.0,Mornington Peninsula,VIC,coastal,-38.268781
+224,2025,Q1,17013.2,Mornington Peninsula,VIC,coastal,-38.268781
+224,2025,Q2,9455.5,Mornington Peninsula,VIC,coastal,-38.268781
+224,2025,Q3,5818.3,Mornington Peninsula,VIC,coastal,-38.268781
+224,2025,Q4,12678.0,Mornington Peninsula,VIC,coastal,-38.268781
+225,2019,Q1,23053.0,Phillip Island,VIC,coastal,-38.479653
+225,2019,Q2,7071.5,Phillip Island,VIC,coastal,-38.479653
+225,2019,Q3,7473.8,Phillip Island,VIC,coastal,-38.479653
+225,2019,Q4,18972.1,Phillip Island,VIC,coastal,-38.479653
+225,2023,Q1,7432.5,Phillip Island,VIC,coastal,-38.479653
+225,2023,Q2,8171.7,Phillip Island,VIC,coastal,-38.479653
+225,2023,Q3,4564.0,Phillip Island,VIC,coastal,-38.479653
+225,2023,Q4,7905.1,Phillip Island,VIC,coastal,-38.479653
+225,2024,Q1,14461.7,Phillip Island,VIC,coastal,-38.479653
+225,2024,Q2,7619.5,Phillip Island,VIC,coastal,-38.479653
+225,2024,Q3,3819.5,Phillip Island,VIC,coastal,-38.479653
+225,2024,Q4,14176.5,Phillip Island,VIC,coastal,-38.479653
+225,2025,Q1,14802.5,Phillip Island,VIC,coastal,-38.479653
+225,2025,Q2,8070.8,Phillip Island,VIC,coastal,-38.479653
+225,2025,Q3,5279.5,Phillip Island,VIC,coastal,-38.479653
+225,2025,Q4,5958.8,Phillip Island,VIC,coastal,-38.479653
+226,2019,Q1,4415.3,Spa Country,VIC,inland,-37.10457
+226,2019,Q2,2905.1,Spa Country,VIC,inland,-37.10457
+226,2019,Q3,2662.3,Spa Country,VIC,inland,-37.10457
+226,2019,Q4,5865.7,Spa Country,VIC,inland,-37.10457
+226,2023,Q1,1133.7,Spa Country,VIC,inland,-37.10457
+226,2023,Q2,1030.4,Spa Country,VIC,inland,-37.10457
+226,2023,Q3,1931.4,Spa Country,VIC,inland,-37.10457
+226,2023,Q4,5796.0,Spa Country,VIC,inland,-37.10457
+226,2024,Q1,7544.3,Spa Country,VIC,inland,-37.10457
+226,2024,Q2,1943.1,Spa Country,VIC,inland,-37.10457
+226,2024,Q3,2395.0,Spa Country,VIC,inland,-37.10457
+226,2024,Q4,3812.3,Spa Country,VIC,inland,-37.10457
+226,2025,Q1,3545.9,Spa Country,VIC,inland,-37.10457
+226,2025,Q2,3003.5,Spa Country,VIC,inland,-37.10457
+226,2025,Q3,1849.0,Spa Country,VIC,inland,-37.10457
+226,2025,Q4,3104.6,Spa Country,VIC,inland,-37.10457
+228,2019,Q1,88014.2,Great Ocean Road,VIC,coastal,-38.092564
+228,2019,Q2,43601.4,Great Ocean Road,VIC,coastal,-38.092564
+228,2019,Q3,33269.4,Great Ocean Road,VIC,coastal,-38.092564
+228,2019,Q4,78021.3,Great Ocean Road,VIC,coastal,-38.092564
+228,2023,Q1,40083.8,Great Ocean Road,VIC,coastal,-38.092564
+228,2023,Q2,20097.9,Great Ocean Road,VIC,coastal,-38.092564
+228,2023,Q3,23877.6,Great Ocean Road,VIC,coastal,-38.092564
+228,2023,Q4,44751.9,Great Ocean Road,VIC,coastal,-38.092564
+228,2024,Q1,46793.6,Great Ocean Road,VIC,coastal,-38.092564
+228,2024,Q2,33843.6,Great Ocean Road,VIC,coastal,-38.092564
+228,2024,Q3,25542.4,Great Ocean Road,VIC,coastal,-38.092564
+228,2024,Q4,46940.9,Great Ocean Road,VIC,coastal,-38.092564
+228,2025,Q1,46277.2,Great Ocean Road,VIC,coastal,-38.092564
+228,2025,Q2,28811.9,Great Ocean Road,VIC,coastal,-38.092564
+228,2025,Q3,15584.3,Great Ocean Road,VIC,coastal,-38.092564
+228,2025,Q4,36738.0,Great Ocean Road,VIC,coastal,-38.092564
+229,2019,Q1,1645.2,Western Grampians,VIC,inland,-37.204284
+229,2019,Q2,1574.6,Western Grampians,VIC,inland,-37.204284
+229,2019,Q3,967.3,Western Grampians,VIC,inland,-37.204284
+229,2019,Q4,2034.5,Western Grampians,VIC,inland,-37.204284
+229,2023,Q1,1191.2,Western Grampians,VIC,inland,-37.204284
+229,2023,Q2,2932.9,Western Grampians,VIC,inland,-37.204284
+229,2023,Q3,982.0,Western Grampians,VIC,inland,-37.204284
+229,2023,Q4,4426.2,Western Grampians,VIC,inland,-37.204284
+229,2024,Q1,1956.1,Western Grampians,VIC,inland,-37.204284
+229,2024,Q2,1776.7,Western Grampians,VIC,inland,-37.204284
+229,2024,Q3,1072.7,Western Grampians,VIC,inland,-37.204284
+229,2024,Q4,710.8,Western Grampians,VIC,inland,-37.204284
+229,2025,Q1,2100.5,Western Grampians,VIC,inland,-37.204284
+229,2025,Q2,651.4,Western Grampians,VIC,inland,-37.204284
+229,2025,Q3,714.3,Western Grampians,VIC,inland,-37.204284
+229,2025,Q4,604.6,Western Grampians,VIC,inland,-37.204284
+230,2019,Q1,2248.7,Wimmera,VIC,inland,-36.335294
+230,2019,Q2,1229.1,Wimmera,VIC,inland,-36.335294
+230,2019,Q3,271.9,Wimmera,VIC,inland,-36.335294
+230,2019,Q4,2429.5,Wimmera,VIC,inland,-36.335294
+230,2023,Q1,1353.5,Wimmera,VIC,inland,-36.335294
+230,2023,Q2,484.2,Wimmera,VIC,inland,-36.335294
+230,2023,Q3,109.3,Wimmera,VIC,inland,-36.335294
+230,2023,Q4,23.1,Wimmera,VIC,inland,-36.335294
+230,2024,Q1,1202.0,Wimmera,VIC,inland,-36.335294
+230,2024,Q2,504.0,Wimmera,VIC,inland,-36.335294
+230,2024,Q3,772.2,Wimmera,VIC,inland,-36.335294
+230,2024,Q4,1839.7,Wimmera,VIC,inland,-36.335294
+230,2025,Q1,710.3,Wimmera,VIC,inland,-36.335294
+230,2025,Q2,814.1,Wimmera,VIC,inland,-36.335294
+230,2025,Q3,993.9,Wimmera,VIC,inland,-36.335294
+230,2025,Q4,664.4,Wimmera,VIC,inland,-36.335294
+310,2019,Q1,379913.6,Brisbane,QLD,coastal,-27.586546
+310,2019,Q2,308598.6,Brisbane,QLD,coastal,-27.586546
+310,2019,Q3,369293.0,Brisbane,QLD,coastal,-27.586546
+310,2019,Q4,419788.3,Brisbane,QLD,coastal,-27.586546
+310,2023,Q1,247618.7,Brisbane,QLD,coastal,-27.586546
+310,2023,Q2,254869.7,Brisbane,QLD,coastal,-27.586546
+310,2023,Q3,307538.2,Brisbane,QLD,coastal,-27.586546
+310,2023,Q4,344034.9,Brisbane,QLD,coastal,-27.586546
+310,2024,Q1,319040.8,Brisbane,QLD,coastal,-27.586546
+310,2024,Q2,274603.0,Brisbane,QLD,coastal,-27.586546
+310,2024,Q3,313629.0,Brisbane,QLD,coastal,-27.586546
+310,2024,Q4,367754.4,Brisbane,QLD,coastal,-27.586546
+310,2025,Q1,327985.7,Brisbane,QLD,coastal,-27.586546
+310,2025,Q2,270299.7,Brisbane,QLD,coastal,-27.586546
+310,2025,Q3,345529.9,Brisbane,QLD,coastal,-27.586546
+310,2025,Q4,384314.1,Brisbane,QLD,coastal,-27.586546
+311,2019,Q1,10343.7,Bundaberg,QLD,coastal,-25.254855
+311,2019,Q2,9657.7,Bundaberg,QLD,coastal,-25.254855
+311,2019,Q3,11214.6,Bundaberg,QLD,coastal,-25.254855
+311,2019,Q4,11679.1,Bundaberg,QLD,coastal,-25.254855
+311,2023,Q1,12391.4,Bundaberg,QLD,coastal,-25.254855
+311,2023,Q2,7002.7,Bundaberg,QLD,coastal,-25.254855
+311,2023,Q3,6938.0,Bundaberg,QLD,coastal,-25.254855
+311,2023,Q4,5832.5,Bundaberg,QLD,coastal,-25.254855
+311,2024,Q1,8917.9,Bundaberg,QLD,coastal,-25.254855
+311,2024,Q2,3405.7,Bundaberg,QLD,coastal,-25.254855
+311,2024,Q3,6842.9,Bundaberg,QLD,coastal,-25.254855
+311,2024,Q4,10281.4,Bundaberg,QLD,coastal,-25.254855
+311,2025,Q1,6055.7,Bundaberg,QLD,coastal,-25.254855
+311,2025,Q2,3476.2,Bundaberg,QLD,coastal,-25.254855
+311,2025,Q3,4358.0,Bundaberg,QLD,coastal,-25.254855
+311,2025,Q4,8529.7,Bundaberg,QLD,coastal,-25.254855
+313,2019,Q1,19900.0,Queensland Country,QLD,inland,-27.383521
+313,2019,Q2,14810.2,Queensland Country,QLD,inland,-27.383521
+313,2019,Q3,20348.3,Queensland Country,QLD,inland,-27.383521
+313,2019,Q4,21292.8,Queensland Country,QLD,inland,-27.383521
+313,2023,Q1,8106.9,Queensland Country,QLD,inland,-27.383521
+313,2023,Q2,17190.1,Queensland Country,QLD,inland,-27.383521
+313,2023,Q3,13328.7,Queensland Country,QLD,inland,-27.383521
+313,2023,Q4,10386.1,Queensland Country,QLD,inland,-27.383521
+313,2024,Q1,13807.4,Queensland Country,QLD,inland,-27.383521
+313,2024,Q2,14558.5,Queensland Country,QLD,inland,-27.383521
+313,2024,Q3,13996.2,Queensland Country,QLD,inland,-27.383521
+313,2024,Q4,8295.5,Queensland Country,QLD,inland,-27.383521
+313,2025,Q1,9732.7,Queensland Country,QLD,inland,-27.383521
+313,2025,Q2,11751.4,Queensland Country,QLD,inland,-27.383521
+313,2025,Q3,11834.1,Queensland Country,QLD,inland,-27.383521
+313,2025,Q4,8389.0,Queensland Country,QLD,inland,-27.383521
+314,2019,Q1,34606.8,Fraser Coast,QLD,coastal,-25.586366
+314,2019,Q2,22702.2,Fraser Coast,QLD,coastal,-25.586366
+314,2019,Q3,33335.8,Fraser Coast,QLD,coastal,-25.586366
+314,2019,Q4,40247.6,Fraser Coast,QLD,coastal,-25.586366
+314,2023,Q1,15879.8,Fraser Coast,QLD,coastal,-25.586366
+314,2023,Q2,17644.3,Fraser Coast,QLD,coastal,-25.586366
+314,2023,Q3,21454.7,Fraser Coast,QLD,coastal,-25.586366
+314,2023,Q4,30425.4,Fraser Coast,QLD,coastal,-25.586366
+314,2024,Q1,26037.1,Fraser Coast,QLD,coastal,-25.586366
+314,2024,Q2,17749.0,Fraser Coast,QLD,coastal,-25.586366
+314,2024,Q3,18332.9,Fraser Coast,QLD,coastal,-25.586366
+314,2024,Q4,25576.3,Fraser Coast,QLD,coastal,-25.586366
+314,2025,Q1,21572.1,Fraser Coast,QLD,coastal,-25.586366
+314,2025,Q2,14782.7,Fraser Coast,QLD,coastal,-25.586366
+314,2025,Q3,15017.9,Fraser Coast,QLD,coastal,-25.586366
+314,2025,Q4,22822.0,Fraser Coast,QLD,coastal,-25.586366
+315,2019,Q1,263299.5,Gold Coast,QLD,coastal,-27.964482
+315,2019,Q2,255729.4,Gold Coast,QLD,coastal,-27.964482
+315,2019,Q3,257675.3,Gold Coast,QLD,coastal,-27.964482
+315,2019,Q4,303173.8,Gold Coast,QLD,coastal,-27.964482
+315,2023,Q1,130163.3,Gold Coast,QLD,coastal,-27.964482
+315,2023,Q2,148652.2,Gold Coast,QLD,coastal,-27.964482
+315,2023,Q3,158428.2,Gold Coast,QLD,coastal,-27.964482
+315,2023,Q4,182456.7,Gold Coast,QLD,coastal,-27.964482
+315,2024,Q1,161758.9,Gold Coast,QLD,coastal,-27.964482
+315,2024,Q2,144398.4,Gold Coast,QLD,coastal,-27.964482
+315,2024,Q3,160628.0,Gold Coast,QLD,coastal,-27.964482
+315,2024,Q4,167898.4,Gold Coast,QLD,coastal,-27.964482
+315,2025,Q1,160883.9,Gold Coast,QLD,coastal,-27.964482
+315,2025,Q2,146930.6,Gold Coast,QLD,coastal,-27.964482
+315,2025,Q3,174958.5,Gold Coast,QLD,coastal,-27.964482
+315,2025,Q4,199416.1,Gold Coast,QLD,coastal,-27.964482
+316,2019,Q1,10880.2,Mackay,QLD,coastal,-22.052538
+316,2019,Q2,10762.5,Mackay,QLD,coastal,-22.052538
+316,2019,Q3,13770.7,Mackay,QLD,coastal,-22.052538
+316,2019,Q4,12116.9,Mackay,QLD,coastal,-22.052538
+316,2023,Q1,6318.6,Mackay,QLD,coastal,-22.052538
+316,2023,Q2,7699.9,Mackay,QLD,coastal,-22.052538
+316,2023,Q3,11618.4,Mackay,QLD,coastal,-22.052538
+316,2023,Q4,7247.6,Mackay,QLD,coastal,-22.052538
+316,2024,Q1,4135.8,Mackay,QLD,coastal,-22.052538
+316,2024,Q2,7192.1,Mackay,QLD,coastal,-22.052538
+316,2024,Q3,9978.9,Mackay,QLD,coastal,-22.052538
+316,2024,Q4,15383.0,Mackay,QLD,coastal,-22.052538
+316,2025,Q1,6939.9,Mackay,QLD,coastal,-22.052538
+316,2025,Q2,4561.3,Mackay,QLD,coastal,-22.052538
+316,2025,Q3,6545.1,Mackay,QLD,coastal,-22.052538
+316,2025,Q4,6558.0,Mackay,QLD,coastal,-22.052538
+317,2019,Q1,29725.8,Townsville,QLD,coastal,-20.210266
+317,2019,Q2,23599.0,Townsville,QLD,coastal,-20.210266
+317,2019,Q3,35312.5,Townsville,QLD,coastal,-20.210266
+317,2019,Q4,37630.3,Townsville,QLD,coastal,-20.210266
+317,2023,Q1,28521.2,Townsville,QLD,coastal,-20.210266
+317,2023,Q2,25802.8,Townsville,QLD,coastal,-20.210266
+317,2023,Q3,28652.3,Townsville,QLD,coastal,-20.210266
+317,2023,Q4,28386.1,Townsville,QLD,coastal,-20.210266
+317,2024,Q1,29962.0,Townsville,QLD,coastal,-20.210266
+317,2024,Q2,18117.0,Townsville,QLD,coastal,-20.210266
+317,2024,Q3,20333.2,Townsville,QLD,coastal,-20.210266
+317,2024,Q4,39531.6,Townsville,QLD,coastal,-20.210266
+317,2025,Q1,20756.3,Townsville,QLD,coastal,-20.210266
+317,2025,Q2,13994.1,Townsville,QLD,coastal,-20.210266
+317,2025,Q3,22048.9,Townsville,QLD,coastal,-20.210266
+317,2025,Q4,27221.3,Townsville,QLD,coastal,-20.210266
+318,2019,Q1,5039.9,Outback Queensland,QLD,inland,-24.014468
+318,2019,Q2,4406.3,Outback Queensland,QLD,inland,-24.014468
+318,2019,Q3,8555.2,Outback Queensland,QLD,inland,-24.014468
+318,2019,Q4,8105.7,Outback Queensland,QLD,inland,-24.014468
+318,2023,Q1,2661.5,Outback Queensland,QLD,inland,-24.014468
+318,2023,Q2,5141.3,Outback Queensland,QLD,inland,-24.014468
+318,2023,Q3,7443.9,Outback Queensland,QLD,inland,-24.014468
+318,2023,Q4,3664.9,Outback Queensland,QLD,inland,-24.014468
+318,2024,Q1,1763.3,Outback Queensland,QLD,inland,-24.014468
+318,2024,Q2,6261.2,Outback Queensland,QLD,inland,-24.014468
+318,2024,Q3,4840.9,Outback Queensland,QLD,inland,-24.014468
+318,2024,Q4,7493.4,Outback Queensland,QLD,inland,-24.014468
+318,2025,Q1,1671.7,Outback Queensland,QLD,inland,-24.014468
+318,2025,Q2,3614.8,Outback Queensland,QLD,inland,-24.014468
+318,2025,Q3,5043.5,Outback Queensland,QLD,inland,-24.014468
+318,2025,Q4,3964.7,Outback Queensland,QLD,inland,-24.014468
+319,2019,Q1,75562.2,Sunshine Coast,QLD,coastal,-26.36741
+319,2019,Q2,75022.9,Sunshine Coast,QLD,coastal,-26.36741
+319,2019,Q3,84623.8,Sunshine Coast,QLD,coastal,-26.36741
+319,2019,Q4,94868.9,Sunshine Coast,QLD,coastal,-26.36741
+319,2023,Q1,71494.6,Sunshine Coast,QLD,coastal,-26.36741
+319,2023,Q2,70194.8,Sunshine Coast,QLD,coastal,-26.36741
+319,2023,Q3,72771.0,Sunshine Coast,QLD,coastal,-26.36741
+319,2023,Q4,90904.6,Sunshine Coast,QLD,coastal,-26.36741
+319,2024,Q1,77238.7,Sunshine Coast,QLD,coastal,-26.36741
+319,2024,Q2,60945.9,Sunshine Coast,QLD,coastal,-26.36741
+319,2024,Q3,79653.3,Sunshine Coast,QLD,coastal,-26.36741
+319,2024,Q4,96514.9,Sunshine Coast,QLD,coastal,-26.36741
+319,2025,Q1,80875.4,Sunshine Coast,QLD,coastal,-26.36741
+319,2025,Q2,68175.9,Sunshine Coast,QLD,coastal,-26.36741
+319,2025,Q3,70364.0,Sunshine Coast,QLD,coastal,-26.36741
+319,2025,Q4,82063.3,Sunshine Coast,QLD,coastal,-26.36741
+320,2019,Q1,214633.6,Tropical North Queensland,QLD,coastal,-15.178755
+320,2019,Q2,159134.5,Tropical North Queensland,QLD,coastal,-15.178755
+320,2019,Q3,203530.5,Tropical North Queensland,QLD,coastal,-15.178755
+320,2019,Q4,231179.6,Tropical North Queensland,QLD,coastal,-15.178755
+320,2023,Q1,101107.1,Tropical North Queensland,QLD,coastal,-15.178755
+320,2023,Q2,93815.9,Tropical North Queensland,QLD,coastal,-15.178755
+320,2023,Q3,119761.4,Tropical North Queensland,QLD,coastal,-15.178755
+320,2023,Q4,144608.3,Tropical North Queensland,QLD,coastal,-15.178755
+320,2024,Q1,133252.4,Tropical North Queensland,QLD,coastal,-15.178755
+320,2024,Q2,99768.4,Tropical North Queensland,QLD,coastal,-15.178755
+320,2024,Q3,141779.7,Tropical North Queensland,QLD,coastal,-15.178755
+320,2024,Q4,168494.0,Tropical North Queensland,QLD,coastal,-15.178755
+320,2025,Q1,147086.5,Tropical North Queensland,QLD,coastal,-15.178755
+320,2025,Q2,110648.9,Tropical North Queensland,QLD,coastal,-15.178755
+320,2025,Q3,168965.3,Tropical North Queensland,QLD,coastal,-15.178755
+320,2025,Q4,195274.1,Tropical North Queensland,QLD,coastal,-15.178755
+321,2019,Q1,58961.1,Whitsundays,QLD,coastal,-20.699686
+321,2019,Q2,40549.9,Whitsundays,QLD,coastal,-20.699686
+321,2019,Q3,52044.8,Whitsundays,QLD,coastal,-20.699686
+321,2019,Q4,68684.4,Whitsundays,QLD,coastal,-20.699686
+321,2023,Q1,37208.1,Whitsundays,QLD,coastal,-20.699686
+321,2023,Q2,30902.4,Whitsundays,QLD,coastal,-20.699686
+321,2023,Q3,34158.8,Whitsundays,QLD,coastal,-20.699686
+321,2023,Q4,53892.8,Whitsundays,QLD,coastal,-20.699686
+321,2024,Q1,58064.7,Whitsundays,QLD,coastal,-20.699686
+321,2024,Q2,35120.1,Whitsundays,QLD,coastal,-20.699686
+321,2024,Q3,40810.3,Whitsundays,QLD,coastal,-20.699686
+321,2024,Q4,53882.7,Whitsundays,QLD,coastal,-20.699686
+321,2025,Q1,48554.1,Whitsundays,QLD,coastal,-20.699686
+321,2025,Q2,27979.2,Whitsundays,QLD,coastal,-20.699686
+321,2025,Q3,32069.2,Whitsundays,QLD,coastal,-20.699686
+321,2025,Q4,67262.4,Whitsundays,QLD,coastal,-20.699686
+322,2019,Q1,14681.0,Capricorn Coast,QLD,coastal,-23.010781
+322,2019,Q2,10084.9,Capricorn Coast,QLD,coastal,-23.010781
+322,2019,Q3,19184.6,Capricorn Coast,QLD,coastal,-23.010781
+322,2019,Q4,16287.1,Capricorn Coast,QLD,coastal,-23.010781
+322,2023,Q1,6637.3,Capricorn Coast,QLD,coastal,-23.010781
+322,2023,Q2,8992.3,Capricorn Coast,QLD,coastal,-23.010781
+322,2023,Q3,10040.1,Capricorn Coast,QLD,coastal,-23.010781
+322,2023,Q4,10915.1,Capricorn Coast,QLD,coastal,-23.010781
+322,2024,Q1,11196.1,Capricorn Coast,QLD,coastal,-23.010781
+322,2024,Q2,4617.7,Capricorn Coast,QLD,coastal,-23.010781
+322,2024,Q3,11951.1,Capricorn Coast,QLD,coastal,-23.010781
+322,2024,Q4,13409.0,Capricorn Coast,QLD,coastal,-23.010781
+322,2025,Q1,7409.3,Capricorn Coast,QLD,coastal,-23.010781
+322,2025,Q2,9001.9,Capricorn Coast,QLD,coastal,-23.010781
+322,2025,Q3,10515.1,Capricorn Coast,QLD,coastal,-23.010781
+322,2025,Q4,10622.6,Capricorn Coast,QLD,coastal,-23.010781
+323,2019,Q1,14619.8,Gladstone,QLD,coastal,-24.156684
+323,2019,Q2,13654.1,Gladstone,QLD,coastal,-24.156684
+323,2019,Q3,13430.8,Gladstone,QLD,coastal,-24.156684
+323,2019,Q4,17278.3,Gladstone,QLD,coastal,-24.156684
+323,2023,Q1,7224.4,Gladstone,QLD,coastal,-24.156684
+323,2023,Q2,7815.2,Gladstone,QLD,coastal,-24.156684
+323,2023,Q3,7720.1,Gladstone,QLD,coastal,-24.156684
+323,2023,Q4,10248.0,Gladstone,QLD,coastal,-24.156684
+323,2024,Q1,8508.8,Gladstone,QLD,coastal,-24.156684
+323,2024,Q2,6118.4,Gladstone,QLD,coastal,-24.156684
+323,2024,Q3,7698.2,Gladstone,QLD,coastal,-24.156684
+323,2024,Q4,16085.5,Gladstone,QLD,coastal,-24.156684
+323,2025,Q1,6929.5,Gladstone,QLD,coastal,-24.156684
+323,2025,Q2,4276.8,Gladstone,QLD,coastal,-24.156684
+323,2025,Q3,5655.0,Gladstone,QLD,coastal,-24.156684
+323,2025,Q4,7222.9,Gladstone,QLD,coastal,-24.156684
+410,2019,Q1,137001.6,Adelaide,SA,coastal,-34.870631
+410,2019,Q2,75630.3,Adelaide,SA,coastal,-34.870631
+410,2019,Q3,85397.0,Adelaide,SA,coastal,-34.870631
+410,2019,Q4,138572.8,Adelaide,SA,coastal,-34.870631
+410,2023,Q1,105852.8,Adelaide,SA,coastal,-34.870631
+410,2023,Q2,92799.2,Adelaide,SA,coastal,-34.870631
+410,2023,Q3,96446.7,Adelaide,SA,coastal,-34.870631
+410,2023,Q4,116610.3,Adelaide,SA,coastal,-34.870631
+410,2024,Q1,112479.4,Adelaide,SA,coastal,-34.870631
+410,2024,Q2,81025.1,Adelaide,SA,coastal,-34.870631
+410,2024,Q3,85716.5,Adelaide,SA,coastal,-34.870631
+410,2024,Q4,122575.3,Adelaide,SA,coastal,-34.870631
+410,2025,Q1,111733.2,Adelaide,SA,coastal,-34.870631
+410,2025,Q2,80754.1,Adelaide,SA,coastal,-34.870631
+410,2025,Q3,86744.7,Adelaide,SA,coastal,-34.870631
+410,2025,Q4,124878.9,Adelaide,SA,coastal,-34.870631
+411,2019,Q1,4002.4,Adelaide Hills,SA,inland,-34.962826
+411,2019,Q2,2202.4,Adelaide Hills,SA,inland,-34.962826
+411,2019,Q3,764.9,Adelaide Hills,SA,inland,-34.962826
+411,2019,Q4,4437.2,Adelaide Hills,SA,inland,-34.962826
+411,2023,Q1,5032.0,Adelaide Hills,SA,inland,-34.962826
+411,2023,Q2,1987.0,Adelaide Hills,SA,inland,-34.962826
+411,2023,Q3,2449.6,Adelaide Hills,SA,inland,-34.962826
+411,2023,Q4,6376.9,Adelaide Hills,SA,inland,-34.962826
+411,2024,Q1,2999.9,Adelaide Hills,SA,inland,-34.962826
+411,2024,Q2,2040.2,Adelaide Hills,SA,inland,-34.962826
+411,2024,Q3,1621.4,Adelaide Hills,SA,inland,-34.962826
+411,2024,Q4,2014.8,Adelaide Hills,SA,inland,-34.962826
+411,2025,Q1,4275.5,Adelaide Hills,SA,inland,-34.962826
+411,2025,Q2,1582.8,Adelaide Hills,SA,inland,-34.962826
+411,2025,Q3,2525.5,Adelaide Hills,SA,inland,-34.962826
+411,2025,Q4,5382.9,Adelaide Hills,SA,inland,-34.962826
+412,2019,Q1,3929.7,Barossa,SA,inland,-34.509042
+412,2019,Q2,3069.5,Barossa,SA,inland,-34.509042
+412,2019,Q3,1535.1,Barossa,SA,inland,-34.509042
+412,2019,Q4,5067.1,Barossa,SA,inland,-34.509042
+412,2023,Q1,3342.6,Barossa,SA,inland,-34.509042
+412,2023,Q2,2918.7,Barossa,SA,inland,-34.509042
+412,2023,Q3,991.5,Barossa,SA,inland,-34.509042
+412,2023,Q4,2193.3,Barossa,SA,inland,-34.509042
+412,2024,Q1,5316.0,Barossa,SA,inland,-34.509042
+412,2024,Q2,1993.9,Barossa,SA,inland,-34.509042
+412,2024,Q3,1811.0,Barossa,SA,inland,-34.509042
+412,2024,Q4,3296.0,Barossa,SA,inland,-34.509042
+412,2025,Q1,1818.6,Barossa,SA,inland,-34.509042
+412,2025,Q2,1680.7,Barossa,SA,inland,-34.509042
+412,2025,Q3,2090.9,Barossa,SA,inland,-34.509042
+412,2025,Q4,2329.7,Barossa,SA,inland,-34.509042
+413,2019,Q1,1862.4,Clare Valley,SA,inland,-33.754806
+413,2019,Q2,1005.5,Clare Valley,SA,inland,-33.754806
+413,2019,Q3,834.9,Clare Valley,SA,inland,-33.754806
+413,2019,Q4,1788.6,Clare Valley,SA,inland,-33.754806
+413,2023,Q1,687.1,Clare Valley,SA,inland,-33.754806
+413,2023,Q2,520.4,Clare Valley,SA,inland,-33.754806
+413,2023,Q3,2510.0,Clare Valley,SA,inland,-33.754806
+413,2023,Q4,505.6,Clare Valley,SA,inland,-33.754806
+413,2024,Q1,828.4,Clare Valley,SA,inland,-33.754806
+413,2024,Q2,172.7,Clare Valley,SA,inland,-33.754806
+413,2024,Q3,863.9,Clare Valley,SA,inland,-33.754806
+413,2024,Q4,2652.1,Clare Valley,SA,inland,-33.754806
+413,2025,Q1,358.4,Clare Valley,SA,inland,-33.754806
+413,2025,Q2,352.7,Clare Valley,SA,inland,-33.754806
+413,2025,Q3,1581.3,Clare Valley,SA,inland,-33.754806
+413,2025,Q4,2903.4,Clare Valley,SA,inland,-33.754806
+414,2019,Q1,6143.6,Eyre Peninsula,SA,coastal,-33.133632
+414,2019,Q2,3294.3,Eyre Peninsula,SA,coastal,-33.133632
+414,2019,Q3,1911.3,Eyre Peninsula,SA,coastal,-33.133632
+414,2019,Q4,11386.0,Eyre Peninsula,SA,coastal,-33.133632
+414,2023,Q1,3828.8,Eyre Peninsula,SA,coastal,-33.133632
+414,2023,Q2,3584.2,Eyre Peninsula,SA,coastal,-33.133632
+414,2023,Q3,4667.3,Eyre Peninsula,SA,coastal,-33.133632
+414,2023,Q4,5998.1,Eyre Peninsula,SA,coastal,-33.133632
+414,2024,Q1,4795.5,Eyre Peninsula,SA,coastal,-33.133632
+414,2024,Q2,2565.8,Eyre Peninsula,SA,coastal,-33.133632
+414,2024,Q3,2252.7,Eyre Peninsula,SA,coastal,-33.133632
+414,2024,Q4,3457.4,Eyre Peninsula,SA,coastal,-33.133632
+414,2025,Q1,3662.5,Eyre Peninsula,SA,coastal,-33.133632
+414,2025,Q2,6199.0,Eyre Peninsula,SA,coastal,-33.133632
+414,2025,Q3,2542.4,Eyre Peninsula,SA,coastal,-33.133632
+414,2025,Q4,1844.2,Eyre Peninsula,SA,coastal,-33.133632
+415,2019,Q1,11048.3,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2019,Q2,4323.5,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2019,Q3,5127.8,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2019,Q4,11409.2,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2023,Q1,8927.8,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2023,Q2,6525.9,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2023,Q3,8100.0,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2023,Q4,4138.0,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2024,Q1,11528.5,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2024,Q2,3416.9,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2024,Q3,3344.5,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2024,Q4,9975.1,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2025,Q1,8712.1,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2025,Q2,4545.8,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2025,Q3,3562.0,Fleurieu Peninsula,SA,coastal,-35.311011
+415,2025,Q4,7968.1,Fleurieu Peninsula,SA,coastal,-35.311011
+416,2019,Q1,17910.9,Limestone Coast,SA,coastal,-36.904159
+416,2019,Q2,5642.0,Limestone Coast,SA,coastal,-36.904159
+416,2019,Q3,5600.0,Limestone Coast,SA,coastal,-36.904159
+416,2019,Q4,15831.6,Limestone Coast,SA,coastal,-36.904159
+416,2023,Q1,16072.4,Limestone Coast,SA,coastal,-36.904159
+416,2023,Q2,5555.7,Limestone Coast,SA,coastal,-36.904159
+416,2023,Q3,5844.8,Limestone Coast,SA,coastal,-36.904159
+416,2023,Q4,8090.7,Limestone Coast,SA,coastal,-36.904159
+416,2024,Q1,10057.0,Limestone Coast,SA,coastal,-36.904159
+416,2024,Q2,5156.9,Limestone Coast,SA,coastal,-36.904159
+416,2024,Q3,6577.3,Limestone Coast,SA,coastal,-36.904159
+416,2024,Q4,9990.2,Limestone Coast,SA,coastal,-36.904159
+416,2025,Q1,13256.9,Limestone Coast,SA,coastal,-36.904159
+416,2025,Q2,6361.8,Limestone Coast,SA,coastal,-36.904159
+416,2025,Q3,4247.3,Limestone Coast,SA,coastal,-36.904159
+416,2025,Q4,8472.1,Limestone Coast,SA,coastal,-36.904159
+417,2019,Q1,2707.6,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2019,Q2,879.2,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2019,Q3,450.9,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2019,Q4,3340.5,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2023,Q1,3034.9,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2023,Q2,1403.6,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2023,Q3,814.1,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2023,Q4,1677.1,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2024,Q1,4520.2,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2024,Q2,4267.9,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2024,Q3,2599.2,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2024,Q4,3170.9,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2025,Q1,1358.7,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2025,Q2,1519.7,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2025,Q3,1363.0,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+417,2025,Q4,3138.0,"Murray River, Lakes and Coorong",SA,coastal,-35.321146
+418,2019,Q1,3473.2,Riverland,SA,inland,-34.415212
+418,2019,Q2,1766.0,Riverland,SA,inland,-34.415212
+418,2019,Q3,927.9,Riverland,SA,inland,-34.415212
+418,2019,Q4,3352.0,Riverland,SA,inland,-34.415212
+418,2023,Q1,1894.5,Riverland,SA,inland,-34.415212
+418,2023,Q2,983.4,Riverland,SA,inland,-34.415212
+418,2023,Q3,1700.0,Riverland,SA,inland,-34.415212
+418,2023,Q4,1009.1,Riverland,SA,inland,-34.415212
+418,2024,Q1,3452.4,Riverland,SA,inland,-34.415212
+418,2024,Q2,964.7,Riverland,SA,inland,-34.415212
+418,2024,Q3,1717.1,Riverland,SA,inland,-34.415212
+418,2024,Q4,1048.4,Riverland,SA,inland,-34.415212
+418,2025,Q1,1178.9,Riverland,SA,inland,-34.415212
+418,2025,Q2,3193.3,Riverland,SA,inland,-34.415212
+418,2025,Q3,1209.4,Riverland,SA,inland,-34.415212
+418,2025,Q4,902.5,Riverland,SA,inland,-34.415212
+419,2019,Q1,4893.7,Yorke Peninsula,SA,coastal,-34.377942
+419,2019,Q2,1106.8,Yorke Peninsula,SA,coastal,-34.377942
+419,2019,Q3,278.4,Yorke Peninsula,SA,coastal,-34.377942
+419,2019,Q4,2417.0,Yorke Peninsula,SA,coastal,-34.377942
+419,2023,Q1,2503.7,Yorke Peninsula,SA,coastal,-34.377942
+419,2023,Q2,2086.3,Yorke Peninsula,SA,coastal,-34.377942
+419,2023,Q3,975.1,Yorke Peninsula,SA,coastal,-34.377942
+419,2023,Q4,2510.5,Yorke Peninsula,SA,coastal,-34.377942
+419,2024,Q1,2217.9,Yorke Peninsula,SA,coastal,-34.377942
+419,2024,Q2,885.9,Yorke Peninsula,SA,coastal,-34.377942
+419,2024,Q3,1531.0,Yorke Peninsula,SA,coastal,-34.377942
+419,2024,Q4,3704.2,Yorke Peninsula,SA,coastal,-34.377942
+419,2025,Q1,2886.8,Yorke Peninsula,SA,coastal,-34.377942
+419,2025,Q2,1668.0,Yorke Peninsula,SA,coastal,-34.377942
+419,2025,Q3,1477.6,Yorke Peninsula,SA,coastal,-34.377942
+419,2025,Q4,3361.4,Yorke Peninsula,SA,coastal,-34.377942
+420,2019,Q1,9994.4,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2019,Q2,8704.7,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2019,Q3,8413.4,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2019,Q4,20008.0,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2023,Q1,4751.5,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2023,Q2,3218.8,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2023,Q3,9245.9,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2023,Q4,9033.6,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2024,Q1,7721.0,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2024,Q2,6652.4,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2024,Q3,10381.1,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2024,Q4,12290.2,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2025,Q1,4442.2,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2025,Q2,5008.7,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2025,Q3,3319.8,Flinders Ranges and Outback,SA,inland,-29.999318
+420,2025,Q4,6844.4,Flinders Ranges and Outback,SA,inland,-29.999318
+421,2019,Q1,17276.8,Kangaroo Island,SA,coastal,-35.809258
+421,2019,Q2,6807.4,Kangaroo Island,SA,coastal,-35.809258
+421,2019,Q3,5151.4,Kangaroo Island,SA,coastal,-35.809258
+421,2019,Q4,23463.9,Kangaroo Island,SA,coastal,-35.809258
+421,2023,Q1,6888.9,Kangaroo Island,SA,coastal,-35.809258
+421,2023,Q2,4823.8,Kangaroo Island,SA,coastal,-35.809258
+421,2023,Q3,3299.3,Kangaroo Island,SA,coastal,-35.809258
+421,2023,Q4,10665.7,Kangaroo Island,SA,coastal,-35.809258
+421,2024,Q1,8671.2,Kangaroo Island,SA,coastal,-35.809258
+421,2024,Q2,4375.4,Kangaroo Island,SA,coastal,-35.809258
+421,2024,Q3,3141.8,Kangaroo Island,SA,coastal,-35.809258
+421,2024,Q4,13752.2,Kangaroo Island,SA,coastal,-35.809258
+421,2025,Q1,5916.4,Kangaroo Island,SA,coastal,-35.809258
+421,2025,Q2,1946.5,Kangaroo Island,SA,coastal,-35.809258
+421,2025,Q3,3234.1,Kangaroo Island,SA,coastal,-35.809258
+421,2025,Q4,9192.9,Kangaroo Island,SA,coastal,-35.809258
+510,2019,Q1,240870.9,Destination Perth,WA,coastal,-32.074366
+510,2019,Q2,200921.4,Destination Perth,WA,coastal,-32.074366
+510,2019,Q3,223141.2,Destination Perth,WA,coastal,-32.074366
+510,2019,Q4,288612.5,Destination Perth,WA,coastal,-32.074366
+510,2023,Q1,190983.9,Destination Perth,WA,coastal,-32.074366
+510,2023,Q2,172308.0,Destination Perth,WA,coastal,-32.074366
+510,2023,Q3,162204.4,Destination Perth,WA,coastal,-32.074366
+510,2023,Q4,217174.8,Destination Perth,WA,coastal,-32.074366
+510,2024,Q1,207788.1,Destination Perth,WA,coastal,-32.074366
+510,2024,Q2,180092.3,Destination Perth,WA,coastal,-32.074366
+510,2024,Q3,189696.4,Destination Perth,WA,coastal,-32.074366
+510,2024,Q4,235280.1,Destination Perth,WA,coastal,-32.074366
+510,2025,Q1,248739.7,Destination Perth,WA,coastal,-32.074366
+510,2025,Q2,216942.4,Destination Perth,WA,coastal,-32.074366
+510,2025,Q3,234350.5,Destination Perth,WA,coastal,-32.074366
+510,2025,Q4,306806.5,Destination Perth,WA,coastal,-32.074366
+511,2019,Q1,17785.7,Australia's Golden Outback,WA,inland,-28.856357
+511,2019,Q2,12082.7,Australia's Golden Outback,WA,inland,-28.856357
+511,2019,Q3,9314.4,Australia's Golden Outback,WA,inland,-28.856357
+511,2019,Q4,26785.2,Australia's Golden Outback,WA,inland,-28.856357
+511,2023,Q1,20429.8,Australia's Golden Outback,WA,inland,-28.856357
+511,2023,Q2,15376.4,Australia's Golden Outback,WA,inland,-28.856357
+511,2023,Q3,7641.9,Australia's Golden Outback,WA,inland,-28.856357
+511,2023,Q4,11049.4,Australia's Golden Outback,WA,inland,-28.856357
+511,2024,Q1,14057.3,Australia's Golden Outback,WA,inland,-28.856357
+511,2024,Q2,8879.5,Australia's Golden Outback,WA,inland,-28.856357
+511,2024,Q3,6517.6,Australia's Golden Outback,WA,inland,-28.856357
+511,2024,Q4,8835.1,Australia's Golden Outback,WA,inland,-28.856357
+511,2025,Q1,15625.2,Australia's Golden Outback,WA,inland,-28.856357
+511,2025,Q2,13491.9,Australia's Golden Outback,WA,inland,-28.856357
+511,2025,Q3,8583.9,Australia's Golden Outback,WA,inland,-28.856357
+511,2025,Q4,14407.5,Australia's Golden Outback,WA,inland,-28.856357
+512,2019,Q1,8313.4,Australia's North West,WA,coastal,-18.828644
+512,2019,Q2,16672.5,Australia's North West,WA,coastal,-18.828644
+512,2019,Q3,22424.0,Australia's North West,WA,coastal,-18.828644
+512,2019,Q4,18341.9,Australia's North West,WA,coastal,-18.828644
+512,2023,Q1,15836.2,Australia's North West,WA,coastal,-18.828644
+512,2023,Q2,13115.8,Australia's North West,WA,coastal,-18.828644
+512,2023,Q3,9694.1,Australia's North West,WA,coastal,-18.828644
+512,2023,Q4,8923.9,Australia's North West,WA,coastal,-18.828644
+512,2024,Q1,7105.6,Australia's North West,WA,coastal,-18.828644
+512,2024,Q2,12962.2,Australia's North West,WA,coastal,-18.828644
+512,2024,Q3,9198.6,Australia's North West,WA,coastal,-18.828644
+512,2024,Q4,13233.7,Australia's North West,WA,coastal,-18.828644
+512,2025,Q1,7603.7,Australia's North West,WA,coastal,-18.828644
+512,2025,Q2,10917.8,Australia's North West,WA,coastal,-18.828644
+512,2025,Q3,15776.4,Australia's North West,WA,coastal,-18.828644
+512,2025,Q4,13587.5,Australia's North West,WA,coastal,-18.828644
+513,2019,Q1,58527.3,Australia's South West,WA,coastal,-34.058855
+513,2019,Q2,35546.1,Australia's South West,WA,coastal,-34.058855
+513,2019,Q3,32604.0,Australia's South West,WA,coastal,-34.058855
+513,2019,Q4,66782.5,Australia's South West,WA,coastal,-34.058855
+513,2023,Q1,40394.1,Australia's South West,WA,coastal,-34.058855
+513,2023,Q2,29669.1,Australia's South West,WA,coastal,-34.058855
+513,2023,Q3,17025.7,Australia's South West,WA,coastal,-34.058855
+513,2023,Q4,38218.2,Australia's South West,WA,coastal,-34.058855
+513,2024,Q1,39394.1,Australia's South West,WA,coastal,-34.058855
+513,2024,Q2,33581.7,Australia's South West,WA,coastal,-34.058855
+513,2024,Q3,25723.5,Australia's South West,WA,coastal,-34.058855
+513,2024,Q4,39841.7,Australia's South West,WA,coastal,-34.058855
+513,2025,Q1,30689.5,Australia's South West,WA,coastal,-34.058855
+513,2025,Q2,38540.7,Australia's South West,WA,coastal,-34.058855
+513,2025,Q3,39477.5,Australia's South West,WA,coastal,-34.058855
+513,2025,Q4,41212.1,Australia's South West,WA,coastal,-34.058855
+514,2019,Q1,24043.0,Australia's Coral Coast,WA,coastal,-26.625688
+514,2019,Q2,19409.7,Australia's Coral Coast,WA,coastal,-26.625688
+514,2019,Q3,29122.8,Australia's Coral Coast,WA,coastal,-26.625688
+514,2019,Q4,39497.5,Australia's Coral Coast,WA,coastal,-26.625688
+514,2023,Q1,18388.0,Australia's Coral Coast,WA,coastal,-26.625688
+514,2023,Q2,14538.3,Australia's Coral Coast,WA,coastal,-26.625688
+514,2023,Q3,9725.6,Australia's Coral Coast,WA,coastal,-26.625688
+514,2023,Q4,13629.3,Australia's Coral Coast,WA,coastal,-26.625688
+514,2024,Q1,12250.2,Australia's Coral Coast,WA,coastal,-26.625688
+514,2024,Q2,12270.5,Australia's Coral Coast,WA,coastal,-26.625688
+514,2024,Q3,17436.8,Australia's Coral Coast,WA,coastal,-26.625688
+514,2024,Q4,21739.1,Australia's Coral Coast,WA,coastal,-26.625688
+514,2025,Q1,19778.1,Australia's Coral Coast,WA,coastal,-26.625688
+514,2025,Q2,15184.6,Australia's Coral Coast,WA,coastal,-26.625688
+514,2025,Q3,18865.4,Australia's Coral Coast,WA,coastal,-26.625688
+514,2025,Q4,18733.6,Australia's Coral Coast,WA,coastal,-26.625688
+610,2019,Q1,95739.0,Hobart and the South,TAS,coastal,-42.671271
+610,2019,Q2,42524.3,Hobart and the South,TAS,coastal,-42.671271
+610,2019,Q3,35436.0,Hobart and the South,TAS,coastal,-42.671271
+610,2019,Q4,69712.8,Hobart and the South,TAS,coastal,-42.671271
+610,2023,Q1,54993.2,Hobart and the South,TAS,coastal,-42.671271
+610,2023,Q2,28538.9,Hobart and the South,TAS,coastal,-42.671271
+610,2023,Q3,31496.3,Hobart and the South,TAS,coastal,-42.671271
+610,2023,Q4,60895.4,Hobart and the South,TAS,coastal,-42.671271
+610,2024,Q1,75767.3,Hobart and the South,TAS,coastal,-42.671271
+610,2024,Q2,40215.9,Hobart and the South,TAS,coastal,-42.671271
+610,2024,Q3,36717.6,Hobart and the South,TAS,coastal,-42.671271
+610,2024,Q4,58485.6,Hobart and the South,TAS,coastal,-42.671271
+610,2025,Q1,77507.1,Hobart and the South,TAS,coastal,-42.671271
+610,2025,Q2,47950.5,Hobart and the South,TAS,coastal,-42.671271
+610,2025,Q3,35982.8,Hobart and the South,TAS,coastal,-42.671271
+610,2025,Q4,73920.1,Hobart and the South,TAS,coastal,-42.671271
+611,2019,Q1,28275.6,East Coast,TAS,coastal,-41.785608
+611,2019,Q2,12778.1,East Coast,TAS,coastal,-41.785608
+611,2019,Q3,5996.9,East Coast,TAS,coastal,-41.785608
+611,2019,Q4,19842.1,East Coast,TAS,coastal,-41.785608
+611,2023,Q1,9178.2,East Coast,TAS,coastal,-41.785608
+611,2023,Q2,5584.1,East Coast,TAS,coastal,-41.785608
+611,2023,Q3,7170.4,East Coast,TAS,coastal,-41.785608
+611,2023,Q4,12576.3,East Coast,TAS,coastal,-41.785608
+611,2024,Q1,12122.7,East Coast,TAS,coastal,-41.785608
+611,2024,Q2,10965.7,East Coast,TAS,coastal,-41.785608
+611,2024,Q3,4548.2,East Coast,TAS,coastal,-41.785608
+611,2024,Q4,10976.4,East Coast,TAS,coastal,-41.785608
+611,2025,Q1,17279.1,East Coast,TAS,coastal,-41.785608
+611,2025,Q2,12772.6,East Coast,TAS,coastal,-41.785608
+611,2025,Q3,3574.5,East Coast,TAS,coastal,-41.785608
+611,2025,Q4,4362.6,East Coast,TAS,coastal,-41.785608
+612,2019,Q1,42220.8,Launceston and the North,TAS,coastal,-41.509022
+612,2019,Q2,25111.1,Launceston and the North,TAS,coastal,-41.509022
+612,2019,Q3,16266.2,Launceston and the North,TAS,coastal,-41.509022
+612,2019,Q4,32481.8,Launceston and the North,TAS,coastal,-41.509022
+612,2023,Q1,19528.2,Launceston and the North,TAS,coastal,-41.509022
+612,2023,Q2,10288.4,Launceston and the North,TAS,coastal,-41.509022
+612,2023,Q3,8888.6,Launceston and the North,TAS,coastal,-41.509022
+612,2023,Q4,16186.8,Launceston and the North,TAS,coastal,-41.509022
+612,2024,Q1,24985.3,Launceston and the North,TAS,coastal,-41.509022
+612,2024,Q2,18563.9,Launceston and the North,TAS,coastal,-41.509022
+612,2024,Q3,12804.5,Launceston and the North,TAS,coastal,-41.509022
+612,2024,Q4,24119.8,Launceston and the North,TAS,coastal,-41.509022
+612,2025,Q1,31876.9,Launceston and the North,TAS,coastal,-41.509022
+612,2025,Q2,14461.9,Launceston and the North,TAS,coastal,-41.509022
+612,2025,Q3,13029.2,Launceston and the North,TAS,coastal,-41.509022
+612,2025,Q4,34907.4,Launceston and the North,TAS,coastal,-41.509022
+613,2019,Q1,25523.5,North West,TAS,coastal,-41.188953
+613,2019,Q2,17597.1,North West,TAS,coastal,-41.188953
+613,2019,Q3,10115.7,North West,TAS,coastal,-41.188953
+613,2019,Q4,23577.5,North West,TAS,coastal,-41.188953
+613,2023,Q1,15107.9,North West,TAS,coastal,-41.188953
+613,2023,Q2,6317.2,North West,TAS,coastal,-41.188953
+613,2023,Q3,6118.7,North West,TAS,coastal,-41.188953
+613,2023,Q4,17785.9,North West,TAS,coastal,-41.188953
+613,2024,Q1,22792.0,North West,TAS,coastal,-41.188953
+613,2024,Q2,14992.4,North West,TAS,coastal,-41.188953
+613,2024,Q3,7702.7,North West,TAS,coastal,-41.188953
+613,2024,Q4,13342.1,North West,TAS,coastal,-41.188953
+613,2025,Q1,23480.0,North West,TAS,coastal,-41.188953
+613,2025,Q2,8670.5,North West,TAS,coastal,-41.188953
+613,2025,Q3,10132.1,North West,TAS,coastal,-41.188953
+613,2025,Q4,12162.6,North West,TAS,coastal,-41.188953
+614,2019,Q1,11207.6,West Coast,TAS,coastal,-42.460399
+614,2019,Q2,2284.3,West Coast,TAS,coastal,-42.460399
+614,2019,Q3,1133.1,West Coast,TAS,coastal,-42.460399
+614,2019,Q4,7906.6,West Coast,TAS,coastal,-42.460399
+614,2023,Q1,5667.7,West Coast,TAS,coastal,-42.460399
+614,2023,Q2,2018.3,West Coast,TAS,coastal,-42.460399
+614,2023,Q3,3058.6,West Coast,TAS,coastal,-42.460399
+614,2023,Q4,3573.8,West Coast,TAS,coastal,-42.460399
+614,2024,Q1,5735.9,West Coast,TAS,coastal,-42.460399
+614,2024,Q2,3283.8,West Coast,TAS,coastal,-42.460399
+614,2024,Q3,818.8,West Coast,TAS,coastal,-42.460399
+614,2024,Q4,7504.6,West Coast,TAS,coastal,-42.460399
+614,2025,Q1,8182.5,West Coast,TAS,coastal,-42.460399
+614,2025,Q2,2223.7,West Coast,TAS,coastal,-42.460399
+614,2025,Q3,1167.2,West Coast,TAS,coastal,-42.460399
+614,2025,Q4,3010.6,West Coast,TAS,coastal,-42.460399
+710,2019,Q1,22402.2,Darwin,NT,coastal,-12.498225
+710,2019,Q2,26453.1,Darwin,NT,coastal,-12.498225
+710,2019,Q3,46763.9,Darwin,NT,coastal,-12.498225
+710,2019,Q4,41369.3,Darwin,NT,coastal,-12.498225
+710,2023,Q1,14704.7,Darwin,NT,coastal,-12.498225
+710,2023,Q2,15039.5,Darwin,NT,coastal,-12.498225
+710,2023,Q3,33369.0,Darwin,NT,coastal,-12.498225
+710,2023,Q4,33139.3,Darwin,NT,coastal,-12.498225
+710,2024,Q1,20602.1,Darwin,NT,coastal,-12.498225
+710,2024,Q2,24890.6,Darwin,NT,coastal,-12.498225
+710,2024,Q3,40590.9,Darwin,NT,coastal,-12.498225
+710,2024,Q4,39675.7,Darwin,NT,coastal,-12.498225
+710,2025,Q1,15490.1,Darwin,NT,coastal,-12.498225
+710,2025,Q2,29822.2,Darwin,NT,coastal,-12.498225
+710,2025,Q3,51309.6,Darwin,NT,coastal,-12.498225
+710,2025,Q4,46825.4,Darwin,NT,coastal,-12.498225
+711,2019,Q1,1901.0,Barkly,NT,inland,-19.28439
+711,2019,Q2,1857.4,Barkly,NT,inland,-19.28439
+711,2019,Q3,3931.0,Barkly,NT,inland,-19.28439
+711,2019,Q4,4524.2,Barkly,NT,inland,-19.28439
+711,2023,Q1,381.2,Barkly,NT,inland,-19.28439
+711,2023,Q2,1454.6,Barkly,NT,inland,-19.28439
+711,2023,Q3,4908.4,Barkly,NT,inland,-19.28439
+711,2023,Q4,2641.9,Barkly,NT,inland,-19.28439
+711,2024,Q1,3236.7,Barkly,NT,inland,-19.28439
+711,2024,Q2,1424.4,Barkly,NT,inland,-19.28439
+711,2024,Q3,2432.3,Barkly,NT,inland,-19.28439
+711,2024,Q4,252.7,Barkly,NT,inland,-19.28439
+711,2025,Q1,0.0,Barkly,NT,inland,-19.28439
+711,2025,Q2,2025.5,Barkly,NT,inland,-19.28439
+711,2025,Q3,813.6,Barkly,NT,inland,-19.28439
+711,2025,Q4,1999.3,Barkly,NT,inland,-19.28439
+712,2019,Q1,18349.3,Alice Springs,NT,inland,-23.735593
+712,2019,Q2,13904.1,Alice Springs,NT,inland,-23.735593
+712,2019,Q3,27232.7,Alice Springs,NT,inland,-23.735593
+712,2019,Q4,38138.7,Alice Springs,NT,inland,-23.735593
+712,2023,Q1,11024.2,Alice Springs,NT,inland,-23.735593
+712,2023,Q2,11979.0,Alice Springs,NT,inland,-23.735593
+712,2023,Q3,14371.4,Alice Springs,NT,inland,-23.735593
+712,2023,Q4,14987.6,Alice Springs,NT,inland,-23.735593
+712,2024,Q1,14088.1,Alice Springs,NT,inland,-23.735593
+712,2024,Q2,9893.0,Alice Springs,NT,inland,-23.735593
+712,2024,Q3,13244.9,Alice Springs,NT,inland,-23.735593
+712,2024,Q4,14131.8,Alice Springs,NT,inland,-23.735593
+712,2025,Q1,9264.4,Alice Springs,NT,inland,-23.735593
+712,2025,Q2,9305.8,Alice Springs,NT,inland,-23.735593
+712,2025,Q3,11895.1,Alice Springs,NT,inland,-23.735593
+712,2025,Q4,22088.3,Alice Springs,NT,inland,-23.735593
+713,2019,Q1,3503.3,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2019,Q2,6966.3,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2019,Q3,15133.9,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2019,Q4,14290.9,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2023,Q1,365.6,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2023,Q2,3664.3,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2023,Q3,8762.6,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2023,Q4,5016.3,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2024,Q1,1935.0,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2024,Q2,2357.1,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2024,Q3,7135.2,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2024,Q4,4425.4,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2025,Q1,1773.8,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2025,Q2,3833.4,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2025,Q3,8293.6,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+713,2025,Q4,2662.1,Litchfield Kakadu Arnhem,NT,coastal,-12.729368
+714,2019,Q1,2348.7,Katherine Daly,NT,coastal,-15.83295
+714,2019,Q2,5664.1,Katherine Daly,NT,coastal,-15.83295
+714,2019,Q3,13857.1,Katherine Daly,NT,coastal,-15.83295
+714,2019,Q4,11019.7,Katherine Daly,NT,coastal,-15.83295
+714,2023,Q1,771.9,Katherine Daly,NT,coastal,-15.83295
+714,2023,Q2,3855.7,Katherine Daly,NT,coastal,-15.83295
+714,2023,Q3,8027.8,Katherine Daly,NT,coastal,-15.83295
+714,2023,Q4,3695.6,Katherine Daly,NT,coastal,-15.83295
+714,2024,Q1,1938.1,Katherine Daly,NT,coastal,-15.83295
+714,2024,Q2,4709.0,Katherine Daly,NT,coastal,-15.83295
+714,2024,Q3,10135.1,Katherine Daly,NT,coastal,-15.83295
+714,2024,Q4,4083.3,Katherine Daly,NT,coastal,-15.83295
+714,2025,Q1,1273.8,Katherine Daly,NT,coastal,-15.83295
+714,2025,Q2,3225.6,Katherine Daly,NT,coastal,-15.83295
+714,2025,Q3,11543.8,Katherine Daly,NT,coastal,-15.83295
+714,2025,Q4,5763.7,Katherine Daly,NT,coastal,-15.83295
+715,2019,Q1,41406.7,Lasseter,NT,inland,-24.92694
+715,2019,Q2,25422.4,Lasseter,NT,inland,-24.92694
+715,2019,Q3,48684.6,Lasseter,NT,inland,-24.92694
+715,2019,Q4,51952.4,Lasseter,NT,inland,-24.92694
+715,2023,Q1,16335.8,Lasseter,NT,inland,-24.92694
+715,2023,Q2,20888.9,Lasseter,NT,inland,-24.92694
+715,2023,Q3,22630.5,Lasseter,NT,inland,-24.92694
+715,2023,Q4,26643.5,Lasseter,NT,inland,-24.92694
+715,2024,Q1,26237.2,Lasseter,NT,inland,-24.92694
+715,2024,Q2,15530.2,Lasseter,NT,inland,-24.92694
+715,2024,Q3,22292.8,Lasseter,NT,inland,-24.92694
+715,2024,Q4,31150.8,Lasseter,NT,inland,-24.92694
+715,2025,Q1,27510.5,Lasseter,NT,inland,-24.92694
+715,2025,Q2,20431.4,Lasseter,NT,inland,-24.92694
+715,2025,Q3,28543.7,Lasseter,NT,inland,-24.92694
+715,2025,Q4,34551.8,Lasseter,NT,inland,-24.92694
+716,2019,Q1,1433.3,MacDonnell,NT,inland,-21.50852
+716,2019,Q2,1950.1,MacDonnell,NT,inland,-21.50852
+716,2019,Q3,3176.6,MacDonnell,NT,inland,-21.50852
+716,2019,Q4,6224.2,MacDonnell,NT,inland,-21.50852
+716,2023,Q1,187.8,MacDonnell,NT,inland,-21.50852
+716,2023,Q2,586.7,MacDonnell,NT,inland,-21.50852
+716,2023,Q3,112.3,MacDonnell,NT,inland,-21.50852
+716,2023,Q4,115.8,MacDonnell,NT,inland,-21.50852
+716,2024,Q1,0.0,MacDonnell,NT,inland,-21.50852
+716,2024,Q2,741.0,MacDonnell,NT,inland,-21.50852
+716,2024,Q3,1337.2,MacDonnell,NT,inland,-21.50852
+716,2024,Q4,0.0,MacDonnell,NT,inland,-21.50852
+716,2025,Q1,0.0,MacDonnell,NT,inland,-21.50852
+716,2025,Q2,36.1,MacDonnell,NT,inland,-21.50852
+716,2025,Q3,794.8,MacDonnell,NT,inland,-21.50852
+716,2025,Q4,197.4,MacDonnell,NT,inland,-21.50852
+810,2019,Q1,78260.1,Canberra,ACT,inland,-35.52221
+810,2019,Q2,55627.7,Canberra,ACT,inland,-35.52221
+810,2019,Q3,61293.4,Canberra,ACT,inland,-35.52221
+810,2019,Q4,74656.6,Canberra,ACT,inland,-35.52221
+810,2023,Q1,47383.9,Canberra,ACT,inland,-35.52221
+810,2023,Q2,48569.0,Canberra,ACT,inland,-35.52221
+810,2023,Q3,35233.5,Canberra,ACT,inland,-35.52221
+810,2023,Q4,48075.1,Canberra,ACT,inland,-35.52221
+810,2024,Q1,58423.8,Canberra,ACT,inland,-35.52221
+810,2024,Q2,42008.0,Canberra,ACT,inland,-35.52221
+810,2024,Q3,49139.3,Canberra,ACT,inland,-35.52221
+810,2024,Q4,65092.3,Canberra,ACT,inland,-35.52221
+810,2025,Q1,58156.9,Canberra,ACT,inland,-35.52221
+810,2025,Q2,44771.8,Canberra,ACT,inland,-35.52221
+810,2025,Q3,40281.9,Canberra,ACT,inland,-35.52221
+810,2025,Q4,55332.8,Canberra,ACT,inland,-35.52221

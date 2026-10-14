@@ -1,0 +1,155 @@
+country,iso_a3,region,year,arrivals,lon,lat,dest_lon,dest_lat,pct_of_2019
+China,CHN,North-East Asia,2019,1438670,104.2,35.9,134,-25,100.0
+China,CHN,North-East Asia,2020,207690,104.2,35.9,134,-25,14.44
+China,CHN,North-East Asia,2021,6550,104.2,35.9,134,-25,0.46
+China,CHN,North-East Asia,2022,89250,104.2,35.9,134,-25,6.2
+China,CHN,North-East Asia,2023,535790,104.2,35.9,134,-25,37.24
+China,CHN,North-East Asia,2024,891550,104.2,35.9,134,-25,61.97
+China,CHN,North-East Asia,2025,1040140,104.2,35.9,134,-25,72.3
+New Zealand,NZL,Oceania and Antarctica,2019,1433770,174.8,-41.3,134,-25,100.0
+New Zealand,NZL,Oceania and Antarctica,2020,242440,174.8,-41.3,134,-25,16.91
+New Zealand,NZL,Oceania and Antarctica,2021,96760,174.8,-41.3,134,-25,6.75
+New Zealand,NZL,Oceania and Antarctica,2022,697630,174.8,-41.3,134,-25,48.66
+New Zealand,NZL,Oceania and Antarctica,2023,1272140,174.8,-41.3,134,-25,88.73
+New Zealand,NZL,Oceania and Antarctica,2024,1392960,174.8,-41.3,134,-25,97.15
+New Zealand,NZL,Oceania and Antarctica,2025,1435050,174.8,-41.3,134,-25,100.09
+United States of America,USA,Americas,2019,817990,-98.6,39.8,134,-25,100.0
+United States of America,USA,Americas,2020,188680,-98.6,39.8,134,-25,23.07
+United States of America,USA,Americas,2021,16760,-98.6,39.8,134,-25,2.05
+United States of America,USA,Americas,2022,326030,-98.6,39.8,134,-25,39.86
+United States of America,USA,Americas,2023,659740,-98.6,39.8,134,-25,80.65
+United States of America,USA,Americas,2024,712380,-98.6,39.8,134,-25,87.09
+United States of America,USA,Americas,2025,744970,-98.6,39.8,134,-25,91.07
+United Kingdom,GBR,North-West Europe,2019,715820,-2.0,54.0,134,-25,100.0
+United Kingdom,GBR,North-West Europe,2020,200800,-2.0,54.0,134,-25,28.05
+United Kingdom,GBR,North-West Europe,2021,21890,-2.0,54.0,134,-25,3.06
+United Kingdom,GBR,North-West Europe,2022,399190,-2.0,54.0,134,-25,55.77
+United Kingdom,GBR,North-West Europe,2023,596880,-2.0,54.0,134,-25,83.38
+United Kingdom,GBR,North-West Europe,2024,640760,-2.0,54.0,134,-25,89.51
+United Kingdom,GBR,North-West Europe,2025,758290,-2.0,54.0,134,-25,105.93
+Japan,JPN,North-East Asia,2019,498640,138.3,36.2,134,-25,100.0
+Japan,JPN,North-East Asia,2020,91720,138.3,36.2,134,-25,18.39
+Japan,JPN,North-East Asia,2021,1870,138.3,36.2,134,-25,0.38
+Japan,JPN,North-East Asia,2022,79390,138.3,36.2,134,-25,15.92
+Japan,JPN,North-East Asia,2023,297720,138.3,36.2,134,-25,59.71
+Japan,JPN,North-East Asia,2024,397330,138.3,36.2,134,-25,79.68
+Japan,JPN,North-East Asia,2025,423120,138.3,36.2,134,-25,84.85
+Singapore,SGP,South-East Asia,2019,478500,103.82,1.35,134,-25,100.0
+Singapore,SGP,South-East Asia,2020,58320,103.82,1.35,134,-25,12.19
+Singapore,SGP,South-East Asia,2021,15830,103.82,1.35,134,-25,3.31
+Singapore,SGP,South-East Asia,2022,295800,103.82,1.35,134,-25,61.82
+Singapore,SGP,South-East Asia,2023,364010,103.82,1.35,134,-25,76.07
+Singapore,SGP,South-East Asia,2024,417900,103.82,1.35,134,-25,87.34
+Singapore,SGP,South-East Asia,2025,443710,103.82,1.35,134,-25,92.73
+India,IND,Southern and Central Asia,2019,399300,79.0,22.0,134,-25,100.0
+India,IND,Southern and Central Asia,2020,83960,79.0,22.0,134,-25,21.03
+India,IND,Southern and Central Asia,2021,12960,79.0,22.0,134,-25,3.25
+India,IND,Southern and Central Asia,2022,303330,79.0,22.0,134,-25,75.97
+India,IND,Southern and Central Asia,2023,395560,79.0,22.0,134,-25,99.06
+India,IND,Southern and Central Asia,2024,443460,79.0,22.0,134,-25,111.06
+India,IND,Southern and Central Asia,2025,451530,79.0,22.0,134,-25,113.08
+Malaysia,MYS,South-East Asia,2019,384900,101.69,3.14,134,-25,100.0
+Malaysia,MYS,South-East Asia,2020,44790,101.69,3.14,134,-25,11.64
+Malaysia,MYS,South-East Asia,2021,2340,101.69,3.14,134,-25,0.61
+Malaysia,MYS,South-East Asia,2022,85260,101.69,3.14,134,-25,22.15
+Malaysia,MYS,South-East Asia,2023,175550,101.69,3.14,134,-25,45.61
+Malaysia,MYS,South-East Asia,2024,203080,101.69,3.14,134,-25,52.76
+Malaysia,MYS,South-East Asia,2025,213680,101.69,3.14,134,-25,55.52
+Hong Kong,HKG,North-East Asia,2019,315150,114.17,22.32,134,-25,100.0
+Hong Kong,HKG,North-East Asia,2020,60930,114.17,22.32,134,-25,19.33
+Hong Kong,HKG,North-East Asia,2021,3090,114.17,22.32,134,-25,0.98
+Hong Kong,HKG,North-East Asia,2022,53720,114.17,22.32,134,-25,17.05
+Hong Kong,HKG,North-East Asia,2023,183700,114.17,22.32,134,-25,58.29
+Hong Kong,HKG,North-East Asia,2024,216240,114.17,22.32,134,-25,68.61
+Hong Kong,HKG,North-East Asia,2025,249090,114.17,22.32,134,-25,79.04
+South Korea,KOR,North-East Asia,2019,280480,127.8,36.3,134,-25,100.0
+South Korea,KOR,North-East Asia,2020,53520,127.8,36.3,134,-25,19.08
+South Korea,KOR,North-East Asia,2021,2060,127.8,36.3,134,-25,0.73
+South Korea,KOR,North-East Asia,2022,72510,127.8,36.3,134,-25,25.85
+South Korea,KOR,North-East Asia,2023,288010,127.8,36.3,134,-25,102.68
+South Korea,KOR,North-East Asia,2024,374560,127.8,36.3,134,-25,133.54
+South Korea,KOR,North-East Asia,2025,398440,127.8,36.3,134,-25,142.06
+Indonesia,IDN,South-East Asia,2019,221730,113.9,-0.8,134,-25,100.0
+Indonesia,IDN,South-East Asia,2020,34360,113.9,-0.8,134,-25,15.5
+Indonesia,IDN,South-East Asia,2021,2830,113.9,-0.8,134,-25,1.28
+Indonesia,IDN,South-East Asia,2022,90840,113.9,-0.8,134,-25,40.97
+Indonesia,IDN,South-East Asia,2023,201500,113.9,-0.8,134,-25,90.88
+Indonesia,IDN,South-East Asia,2024,224250,113.9,-0.8,134,-25,101.14
+Indonesia,IDN,South-East Asia,2025,242080,113.9,-0.8,134,-25,109.18
+Germany,DEU,North-West Europe,2019,207090,10.4,51.1,134,-25,100.0
+Germany,DEU,North-West Europe,2020,53030,10.4,51.1,134,-25,25.61
+Germany,DEU,North-West Europe,2021,3120,10.4,51.1,134,-25,1.51
+Germany,DEU,North-West Europe,2022,85350,10.4,51.1,134,-25,41.21
+Germany,DEU,North-West Europe,2023,151870,10.4,51.1,134,-25,73.34
+Germany,DEU,North-West Europe,2024,168580,10.4,51.1,134,-25,81.4
+Germany,DEU,North-West Europe,2025,179500,10.4,51.1,134,-25,86.68
+Taiwan,TWN,North-East Asia,2019,194610,121.0,23.7,134,-25,100.0
+Taiwan,TWN,North-East Asia,2020,35950,121.0,23.7,134,-25,18.47
+Taiwan,TWN,North-East Asia,2021,480,121.0,23.7,134,-25,0.25
+Taiwan,TWN,North-East Asia,2022,26160,121.0,23.7,134,-25,13.44
+Taiwan,TWN,North-East Asia,2023,122790,121.0,23.7,134,-25,63.1
+Taiwan,TWN,North-East Asia,2024,164470,121.0,23.7,134,-25,84.51
+Taiwan,TWN,North-East Asia,2025,193490,121.0,23.7,134,-25,99.42
+Canada,CAN,Americas,2019,189610,-100.0,56.0,134,-25,100.0
+Canada,CAN,Americas,2020,52290,-100.0,56.0,134,-25,27.58
+Canada,CAN,Americas,2021,3280,-100.0,56.0,134,-25,1.73
+Canada,CAN,Americas,2022,88010,-100.0,56.0,134,-25,46.42
+Canada,CAN,Americas,2023,157190,-100.0,56.0,134,-25,82.9
+Canada,CAN,Americas,2024,165010,-100.0,56.0,134,-25,87.03
+Canada,CAN,Americas,2025,171620,-100.0,56.0,134,-25,90.51
+Philippines,PHL,South-East Asia,2019,158550,122.0,12.9,134,-25,100.0
+Philippines,PHL,South-East Asia,2020,26530,122.0,12.9,134,-25,16.73
+Philippines,PHL,South-East Asia,2021,4460,122.0,12.9,134,-25,2.81
+Philippines,PHL,South-East Asia,2022,80290,122.0,12.9,134,-25,50.64
+Philippines,PHL,South-East Asia,2023,157570,122.0,12.9,134,-25,99.38
+Philippines,PHL,South-East Asia,2024,174790,122.0,12.9,134,-25,110.24
+Philippines,PHL,South-East Asia,2025,190660,122.0,12.9,134,-25,120.25
+France,FRA,North-West Europe,2019,143730,2.5,46.6,134,-25,100.0
+France,FRA,North-West Europe,2020,34710,2.5,46.6,134,-25,24.15
+France,FRA,North-West Europe,2021,2980,2.5,46.6,134,-25,2.07
+France,FRA,North-West Europe,2022,60520,2.5,46.6,134,-25,42.11
+France,FRA,North-West Europe,2023,114160,2.5,46.6,134,-25,79.43
+France,FRA,North-West Europe,2024,127860,2.5,46.6,134,-25,88.96
+France,FRA,North-West Europe,2025,145300,2.5,46.6,134,-25,101.09
+Vietnam,VNM,South-East Asia,2019,123460,108.2,16.05,134,-25,100.0
+Vietnam,VNM,South-East Asia,2020,28470,108.2,16.05,134,-25,23.06
+Vietnam,VNM,South-East Asia,2021,1300,108.2,16.05,134,-25,1.05
+Vietnam,VNM,South-East Asia,2022,69820,108.2,16.05,134,-25,56.55
+Vietnam,VNM,South-East Asia,2023,166630,108.2,16.05,134,-25,134.97
+Vietnam,VNM,South-East Asia,2024,173100,108.2,16.05,134,-25,140.21
+Vietnam,VNM,South-East Asia,2025,164990,108.2,16.05,134,-25,133.64
+Thailand,THA,South-East Asia,2019,102700,101.0,15.0,134,-25,100.0
+Thailand,THA,South-East Asia,2020,15100,101.0,15.0,134,-25,14.7
+Thailand,THA,South-East Asia,2021,1390,101.0,15.0,134,-25,1.35
+Thailand,THA,South-East Asia,2022,52660,101.0,15.0,134,-25,51.28
+Thailand,THA,South-East Asia,2023,96710,101.0,15.0,134,-25,94.17
+Thailand,THA,South-East Asia,2024,96430,101.0,15.0,134,-25,93.89
+Thailand,THA,South-East Asia,2025,98410,101.0,15.0,134,-25,95.82
+Italy,ITA,Southern and Eastern Europe,2019,75210,12.5,42.5,134,-25,100.0
+Italy,ITA,Southern and Eastern Europe,2020,14980,12.5,42.5,134,-25,19.92
+Italy,ITA,Southern and Eastern Europe,2021,1770,12.5,42.5,134,-25,2.35
+Italy,ITA,Southern and Eastern Europe,2022,36320,12.5,42.5,134,-25,48.29
+Italy,ITA,Southern and Eastern Europe,2023,62300,12.5,42.5,134,-25,82.83
+Italy,ITA,Southern and Eastern Europe,2024,65950,12.5,42.5,134,-25,87.69
+Italy,ITA,Southern and Eastern Europe,2025,76860,12.5,42.5,134,-25,102.19
+Ireland,IRL,North-West Europe,2019,67280,-8.0,53.2,134,-25,100.0
+Ireland,IRL,North-West Europe,2020,17080,-8.0,53.2,134,-25,25.39
+Ireland,IRL,North-West Europe,2021,1890,-8.0,53.2,134,-25,2.81
+Ireland,IRL,North-West Europe,2022,46240,-8.0,53.2,134,-25,68.73
+Ireland,IRL,North-West Europe,2023,79190,-8.0,53.2,134,-25,117.7
+Ireland,IRL,North-West Europe,2024,86500,-8.0,53.2,134,-25,128.57
+Ireland,IRL,North-West Europe,2025,95890,-8.0,53.2,134,-25,142.52
+Netherlands,NLD,North-West Europe,2019,64750,5.3,52.2,134,-25,100.0
+Netherlands,NLD,North-West Europe,2020,15260,5.3,52.2,134,-25,23.57
+Netherlands,NLD,North-West Europe,2021,1670,5.3,52.2,134,-25,2.58
+Netherlands,NLD,North-West Europe,2022,31400,5.3,52.2,134,-25,48.49
+Netherlands,NLD,North-West Europe,2023,51920,5.3,52.2,134,-25,80.19
+Netherlands,NLD,North-West Europe,2024,51610,5.3,52.2,134,-25,79.71
+Netherlands,NLD,North-West Europe,2025,55150,5.3,52.2,134,-25,85.17
+South Africa,ZAF,Sub-Saharan Africa,2019,61310,24.7,-29.0,134,-25,100.0
+South Africa,ZAF,Sub-Saharan Africa,2020,11220,24.7,-29.0,134,-25,18.3
+South Africa,ZAF,Sub-Saharan Africa,2021,830,24.7,-29.0,134,-25,1.35
+South Africa,ZAF,Sub-Saharan Africa,2022,36260,24.7,-29.0,134,-25,59.14
+South Africa,ZAF,Sub-Saharan Africa,2023,46110,24.7,-29.0,134,-25,75.21
+South Africa,ZAF,Sub-Saharan Africa,2024,48440,24.7,-29.0,134,-25,79.01
+South Africa,ZAF,Sub-Saharan Africa,2025,50320,24.7,-29.0,134,-25,82.07

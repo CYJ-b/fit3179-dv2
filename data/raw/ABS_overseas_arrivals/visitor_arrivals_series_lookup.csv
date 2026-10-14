@@ -1,0 +1,70 @@
+country,region,row_type,iso_a3,series_id_original,series_id_seasonally_adjusted,series_id_trend
+New Zealand,Oceania and Antarctica,country,NZL,A85375607R,A85375293K,A85376235F
+New Caledonia,Oceania and Antarctica,country,NCL,A85375691T,A85375377V,A85376319R
+Papua New Guinea,Oceania and Antarctica,country,PNG,A85375845W,A85375531F,A85376473L
+Vanuatu,Oceania and Antarctica,country,VUT,A85375692V,A85375378W,A85376320X
+Fiji,Oceania and Antarctica,country,FJI,A85375605K,A85375291F,A85376233A
+Other Oceania and Antarctica,Oceania and Antarctica,other,,A85375645C,A85375331L,A85376273V
+Total Oceania and Antarctica,Oceania and Antarctica,region_total,,A85375602C,A85375288T,A85376230V
+"UK, CIs & IOM",North-West Europe,country,GBR,A85375641V,A85375327W,A85376269C
+Ireland,North-West Europe,country,IRL,A85375568K,A85375254V,A85376196A
+Austria,North-West Europe,country,AUT,A85375693W,A85375379X,A85376321A
+Belgium,North-West Europe,country,BEL,A85375569L,A85375255W,A85376197C
+France,North-West Europe,country,FRA,A85375772V,A85375458W,A85376400X
+Germany,North-West Europe,country,DEU,A85375808K,A85375494F,A85376436A
+Netherlands,North-West Europe,country,NLD,A85375768C,A85375454L,A85376396V
+Switzerland,North-West Europe,country,CHE,A85375642W,A85375328X,A85376270L
+Denmark,North-West Europe,country,DNK,A85375810W,A85375496K,A85376438F
+Finland,North-West Europe,country,FIN,A85375570W,A85375256X,A85376198F
+Norway,North-West Europe,country,NOR,A85375736K,A85375422V,A85376364A
+Sweden,North-West Europe,country,SWE,A85375646F,A85375332R,A85376274W
+Other North-West Europe,North-West Europe,other,,A85375842R,A85375528T,A85376470F
+Total North-West Europe,North-West Europe,region_total,,A85375731X,A85375417A,A85376359J
+Italy,Southern and Eastern Europe,country,ITA,A85375689F,A85375375R,A85376317K
+Spain,Southern and Eastern Europe,country,ESP,A85375649L,A85375335W,A85376277C
+Poland,Southern and Eastern Europe,country,POL,A85375737L,A85375423W,A85376365C
+Russian Federation,Southern and Eastern Europe,country,RUS,A85375773W,A85375459X,A85376401A
+Other Southern and Eastern Europe,Southern and Eastern Europe,other,,A85375771T,A85375457V,A85376399A
+Total Southern and Eastern Europe,Southern and Eastern Europe,region_total,,A85375603F,A85375289V,A85376231W
+Iran,North Africa and the Middle East,country,IRN,A85375839A,A85375525K,A85376467T
+Israel,North Africa and the Middle East,country,ISR,A85375809L,A85375495J,A85376437C
+Saudi Arabia,North Africa and the Middle East,country,SAU,A85375734F,A85375420R,A85376362W
+United Arab Emirates,North Africa and the Middle East,country,ARE,A85375608T,A85375294L,A85376236J
+Other North Africa and the Middle East,North Africa and the Middle East,other,,A85375812A,A85375498R,A85376440T
+Total North Africa and the Middle East,North Africa and the Middle East,region_total,,A85375639J,A85375325T,A85376267X
+Cambodia,South-East Asia,country,KHM,A85375690R,A85375376T,A85376318L
+Thailand,South-East Asia,country,THA,A85375609V,A85375295R,A85376237K
+Vietnam,South-East Asia,country,VNM,A85375766X,A85375452J,A85376394R
+Indonesia,South-East Asia,country,IDN,A85375840K,A85375526L,A85376468V
+Malaysia,South-East Asia,country,MYS,A85375694X,A85375380J,A85376322C
+Philippines,South-East Asia,country,PHL,A85375571X,A85375257A,A85376199J
+Singapore,South-East Asia,country,SGP,A85375697F,A85375383R,A85376325K
+Other South-East Asia,South-East Asia,other,,A85375643X,A85375329A,A85376271R
+Total South-East Asia,South-East Asia,region_total,,A85375732A,A85375418C,A85376360T
+China,North-East Asia,country,CHN,A85375770R,A85375456T,A85376398X
+Hong Kong,North-East Asia,country,HKG,A85375769F,A85375455R,A85376397W
+Taiwan,North-East Asia,country,TWN,A85375647J,A85375333T,A85376275X
+Japan,North-East Asia,country,JPN,A85375565C,A85375251L,A85376193V
+"Korea, South",North-East Asia,country,KOR,A85375566F,A85375252R,A85376194W
+Other North-East Asia,North-East Asia,other,,A85375841L,A85375527R,A85376469W
+Total North-East Asia,North-East Asia,region_total,,A85375837W,A85375523F,A85376465L
+Bangladesh,Southern and Central Asia,country,BGD,A85375604J,A85375290C,A85376232X
+India,Southern and Central Asia,country,IND,A85375843T,A85375529V,A85376471J
+Nepal,Southern and Central Asia,country,NPL,A85375846X,A85375532J,A85376474R
+Pakistan,Southern and Central Asia,country,PAK,A85375606L,A85375292J,A85376234C
+Sri Lanka,Southern and Central Asia,country,LKA,A85375567J,A85375253T,A85376195X
+Other Southern and Central Asia,Southern and Central Asia,other,,A85375644A,A85375330K,A85376272T
+Total Southern and Central Asia,Southern and Central Asia,region_total,,A85375836V,A85375522C,A85376464K
+Canada,Americas,country,CAN,A85375695A,A85375381K,A85376323F
+United States of America,Americas,country,USA,A85375650W,A85375336X,A85376278F
+Argentina,Americas,country,ARG,A85375767A,A85375453K,A85376395T
+Brazil,Americas,country,BRA,A85375651X,A85375337A,A85376279J
+Chile,Americas,country,CHL,A85375648K,A85375334V,A85376276A
+Colombia,Americas,country,COL,A85375696C,A85375382L,A85376324J
+Mexico,Americas,country,MEX,A85375844V,A85375530C,A85376472K
+Other Americas,Americas,other,,A85375733C,A85375419F,A85376361V
+Total Americas,Americas,region_total,,A85375838X,A85375524J,A85376466R
+South Africa,Sub-Saharan Africa,country,ZAF,A85375811X,A85375497L,A85376439J
+Other Sub-Saharan Africa,Sub-Saharan Africa,other,,A85375735J,A85375421T,A85376363X
+Total Sub-Saharan Africa,Sub-Saharan Africa,region_total,,A85375564A,A85375250K,A85376192T
+Total (Country of stay/residence),All regions,grand_total,,A85375847A,A85375533K,A85376475T

@@ -1,0 +1,392 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Proportional symbol map of international visits to each of Australia's 76 tourism regions. Circle area is the number of visits in the selected year and circle colour shows whether the region is coastal (blue) or inland (sand). A year slider moves between 2019 and 2025.",
+  "title": {
+    "text": "Number Of Visits For Each Tourism Region",
+    "subtitle": "International visits to each tourism region, by year. A visit is one trip counted once per region visited. Drag the slider to change the year."
+  },
+  "width": 960,
+  "height": 480,
+  "projection": {
+    "type": "albers",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -132,
+      0,
+      0
+    ],
+    "center": [
+      0,
+      -27.5
+    ],
+    "scale": 740,
+    "translate": [
+      489.6,
+      240
+    ]
+  },
+  "params": [
+    {
+      "name": "year_selected",
+      "value": 2025,
+      "bind": {
+        "input": "range",
+        "min": 2019,
+        "max": 2025,
+        "step": 1,
+        "name": "Year: "
+      }
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 20,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "subtitleFontSize": 13,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "axis": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#5B6770",
+      "titleColor": "#1E2B34",
+      "gridColor": "#E3DED3",
+      "domainColor": "#A8AEB3",
+      "tickColor": "#A8AEB3"
+    },
+    "legend": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "header": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "labelFontWeight": 600
+    },
+    "text": {
+      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "fontSize": 12,
+      "color": "#1E2B34"
+    },
+    "concat": {
+      "spacing": 24
+    },
+    "facet": {
+      "spacing": 24
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/used/map_data/states_map.json",
+        "format": {
+          "type": "topojson",
+          "feature": "geoBoundaries-AUS-ADM1_simplified"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.shapeName != 'Other Territories'"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#E9E4D8",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.2
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 122.0,
+            "lat": -26.0,
+            "t": "WESTERN AUSTRALIA"
+          },
+          {
+            "lon": 133.5,
+            "lat": -19.8,
+            "t": "NORTHERN TERRITORY"
+          },
+          {
+            "lon": 143.4,
+            "lat": -22.5,
+            "t": "QUEENSLAND"
+          },
+          {
+            "lon": 135.2,
+            "lat": -30.2,
+            "t": "SOUTH AUSTRALIA"
+          },
+          {
+            "lon": 146.6,
+            "lat": -31.6,
+            "t": "NEW SOUTH WALES"
+          },
+          {
+            "lon": 140.6,
+            "lat": -39.6,
+            "t": "VICTORIA"
+          },
+          {
+            "lon": 146.6,
+            "lat": -43.8,
+            "t": "TASMANIA"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#9A9486",
+        "opacity": 0.9
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/used/region_visits.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "TR_CODE": "number",
+            "coastal_ratio": "number",
+            "area_km2": "number",
+            "centre_lon": "number",
+            "centre_lat": "number",
+            "year": "number",
+            "visitors": "number",
+            "pct_of_2019": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year_selected"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "opacity": 0.72,
+        "strokeWidth": 1.3,
+        "stroke": "#FFFFFF"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "centre_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "centre_lat",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "visitors",
+          "type": "quantitative",
+          "title": "Visits in the year",
+          "scale": {
+            "type": "linear",
+            "domain": [
+              0,
+              4200000
+            ],
+            "range": [
+              0,
+              3600
+            ],
+            "zero": true
+          },
+          "legend": {
+            "values": [
+              100000,
+              500000,
+              1000000,
+              3000000
+            ],
+            "labelExpr": "format(datum.value, ',')",
+            "orient": "none",
+            "legendX": 100,
+            "legendY": 300,
+            "symbolFillColor": "#FFFFFF00",
+            "symbolStrokeColor": "#1E2B34",
+            "rowPadding": 6
+          }
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "title": "Region type",
+          "scale": {
+            "domain": [
+              "coastal",
+              "inland"
+            ],
+            "range": [
+              "#0B5E8E",
+              "#C99A3B"
+            ]
+          },
+          "legend": {
+            "orient": "none",
+            "legendX": 100,
+            "legendY": 90,
+            "labelExpr": "datum.value == 'coastal' ? 'Coastal region' : 'Inland region'"
+          }
+        },
+        "order": {
+          "field": "visitors",
+          "type": "quantitative",
+          "sort": "descending"
+        },
+        "tooltip": [
+          {
+            "field": "TR_NAME",
+            "type": "nominal",
+            "title": "Region"
+          },
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "category",
+            "type": "nominal",
+            "title": "Type"
+          },
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "visitors",
+            "type": "quantitative",
+            "title": "Visits",
+            "format": ","
+          },
+          {
+            "field": "pct_of_2019",
+            "type": "quantitative",
+            "title": "% of 2019 visits",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/used/region_visits.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "TR_CODE": "number",
+            "coastal_ratio": "number",
+            "area_km2": "number",
+            "centre_lon": "number",
+            "centre_lat": "number",
+            "year": "number",
+            "visitors": "number",
+            "pct_of_2019": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year_selected"
+        },
+        {
+          "filter": "indexof([\"Sydney\", \"Melbourne\", \"Brisbane\", \"Destination Perth\", \"Gold Coast\"], datum.TR_NAME) >= 0"
+        },
+        {
+          "calculate": "({\"Sydney\": \"Sydney\", \"Melbourne\": \"Melbourne\", \"Brisbane\": \"Brisbane\", \"Destination Perth\": \"Perth\", \"Gold Coast\": \"Gold Coast\"})[datum.TR_NAME] + ' ' + format(datum.visitors / 1000000, '.1f') + 'm'",
+          "as": "label"
+        },
+        {
+          "calculate": "({\"Sydney\": 22, \"Melbourne\": 24, \"Brisbane\": 22, \"Destination Perth\": -16, \"Gold Coast\": 24})[datum.TR_NAME]",
+          "as": "lab_dx"
+        },
+        {
+          "calculate": "({\"Sydney\": 0, \"Melbourne\": 18, \"Brisbane\": -4, \"Destination Perth\": 0, \"Gold Coast\": 14})[datum.TR_NAME]",
+          "as": "lab_dy"
+        },
+        {
+          "calculate": "({\"Sydney\": \"left\", \"Melbourne\": \"left\", \"Brisbane\": \"left\", \"Destination Perth\": \"right\", \"Gold Coast\": \"left\"})[datum.TR_NAME]",
+          "as": "lab_align"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": 600,
+        "color": "#1E2B34",
+        "baseline": "middle",
+        "dx": {
+          "expr": "datum.lab_dx"
+        },
+        "dy": {
+          "expr": "datum.lab_dy"
+        },
+        "align": {
+          "expr": "datum.lab_align"
+        }
+      },
+      "encoding": {
+        "longitude": {
+          "field": "centre_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "centre_lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+year,quarter,period,main_reason,visitors
+2018,Q1,2018-Q1,Business,311245.1
+2018,Q1,2018-Q1,Education,372707.1
+2018,Q1,2018-Q1,Employment,106142.7
+2018,Q1,2018-Q1,Holiday,2462963.4
+2018,Q1,2018-Q1,Other reason,107798.3
+2018,Q1,2018-Q1,Visiting friends and relatives,1010524.2
+2018,Q2,2018-Q2,Business,312826.0
+2018,Q2,2018-Q2,Education,137128.0
+2018,Q2,2018-Q2,Employment,77572.2
+2018,Q2,2018-Q2,Holiday,1626299.8
+2018,Q2,2018-Q2,Other reason,85608.0
+2018,Q2,2018-Q2,Visiting friends and relatives,772671.4
+2018,Q3,2018-Q3,Business,341249.3
+2018,Q3,2018-Q3,Education,291586.3
+2018,Q3,2018-Q3,Employment,81406.2
+2018,Q3,2018-Q3,Holiday,1844199.0
+2018,Q3,2018-Q3,Other reason,91487.4
+2018,Q3,2018-Q3,Visiting friends and relatives,797047.0
+2018,Q4,2018-Q4,Business,335079.0
+2018,Q4,2018-Q4,Education,134409.6
+2018,Q4,2018-Q4,Employment,78866.8
+2018,Q4,2018-Q4,Holiday,2566781.9
+2018,Q4,2018-Q4,Other reason,98946.8
+2018,Q4,2018-Q4,Visiting friends and relatives,1194995.2
+2019,Q1,2019-Q1,Business,319253.7
+2019,Q1,2019-Q1,Education,337743.1
+2019,Q1,2019-Q1,Employment,108849.8
+2019,Q1,2019-Q1,Holiday,2530761.6
+2019,Q1,2019-Q1,Other reason,95295.4
+2019,Q1,2019-Q1,Visiting friends and relatives,944973.0
+2019,Q2,2019-Q2,Business,296933.0
+2019,Q2,2019-Q2,Education,134385.9
+2019,Q2,2019-Q2,Employment,77191.3
+2019,Q2,2019-Q2,Holiday,1752421.0
+2019,Q2,2019-Q2,Other reason,79655.8
+2019,Q2,2019-Q2,Visiting friends and relatives,822520.4
+2019,Q3,2019-Q3,Business,339772.5
+2019,Q3,2019-Q3,Education,275933.1
+2019,Q3,2019-Q3,Employment,94261.3
+2019,Q3,2019-Q3,Holiday,1861146.3
+2019,Q3,2019-Q3,Other reason,102918.8
+2019,Q3,2019-Q3,Visiting friends and relatives,809090.7
+2019,Q4,2019-Q4,Business,349558.0
+2019,Q4,2019-Q4,Education,135659.3
+2019,Q4,2019-Q4,Employment,89874.6
+2019,Q4,2019-Q4,Holiday,2592137.9
+2019,Q4,2019-Q4,Other reason,90064.2
+2019,Q4,2019-Q4,Visiting friends and relatives,1234573.2
+2020,Q1,2020-Q1,Business,199199.8
+2020,Q1,2020-Q1,Education,256959.4
+2020,Q1,2020-Q1,Employment,112604.6
+2020,Q1,2020-Q1,Holiday,1557576.9
+2020,Q1,2020-Q1,Other reason,78227.8
+2020,Q1,2020-Q1,Visiting friends and relatives,754537.7
+2020,Q2,2020-Q2,Business,1004.8
+2020,Q2,2020-Q2,Education,150.8
+2020,Q2,2020-Q2,Employment,974.6
+2020,Q2,2020-Q2,Holiday,353.8
+2020,Q2,2020-Q2,Other reason,3885.1
+2020,Q2,2020-Q2,Visiting friends and relatives,3520.7
+2020,Q3,2020-Q3,Business,1368.4
+2020,Q3,2020-Q3,Education,225.7
+2020,Q3,2020-Q3,Employment,1711.3
+2020,Q3,2020-Q3,Holiday,193.9
+2020,Q3,2020-Q3,Other reason,2424.2
+2020,Q3,2020-Q3,Visiting friends and relatives,3386.1
+2020,Q4,2020-Q4,Business,2384.7
+2020,Q4,2020-Q4,Education,368.5
+2020,Q4,2020-Q4,Employment,3376.0
+2020,Q4,2020-Q4,Holiday,752.4
+2020,Q4,2020-Q4,Other reason,3129.9
+2020,Q4,2020-Q4,Visiting friends and relatives,10298.3
+2021,Q1,2021-Q1,Business,3425.4
+2021,Q1,2021-Q1,Education,982.6
+2021,Q1,2021-Q1,Employment,4375.3
+2021,Q1,2021-Q1,Holiday,588.4
+2021,Q1,2021-Q1,Other reason,3598.6
+2021,Q1,2021-Q1,Visiting friends and relatives,7671.9
+2021,Q2,2021-Q2,Business,15800.2
+2021,Q2,2021-Q2,Education,736.8
+2021,Q2,2021-Q2,Employment,7982.9
+2021,Q2,2021-Q2,Holiday,13547.7
+2021,Q2,2021-Q2,Other reason,5722.4
+2021,Q2,2021-Q2,Visiting friends and relatives,68310.9
+2021,Q3,2021-Q3,Business,2733.8
+2021,Q3,2021-Q3,Education,651.1
+2021,Q3,2021-Q3,Employment,4755.5
+2021,Q3,2021-Q3,Holiday,2369.8
+2021,Q3,2021-Q3,Other reason,4140.1
+2021,Q3,2021-Q3,Visiting friends and relatives,11741.1
+2021,Q4,2021-Q4,Business,4251.2
+2021,Q4,2021-Q4,Education,5532.3
+2021,Q4,2021-Q4,Employment,6260.9
+2021,Q4,2021-Q4,Holiday,5265.7
+2021,Q4,2021-Q4,Other reason,6655.6
+2021,Q4,2021-Q4,Visiting friends and relatives,60836.5
+2022,Q1,2022-Q1,Business,27592.2
+2022,Q1,2022-Q1,Education,40353.0
+2022,Q1,2022-Q1,Employment,20204.0
+2022,Q1,2022-Q1,Holiday,41990.4
+2022,Q1,2022-Q1,Other reason,14017.8
+2022,Q1,2022-Q1,Visiting friends and relatives,212608.4
+2022,Q2,2022-Q2,Business,95841.3
+2022,Q2,2022-Q2,Education,42646.3
+2022,Q2,2022-Q2,Employment,37516.8
+2022,Q2,2022-Q2,Holiday,215510.9
+2022,Q2,2022-Q2,Other reason,25295.6
+2022,Q2,2022-Q2,Visiting friends and relatives,459290.0
+2022,Q3,2022-Q3,Business,175720.7
+2022,Q3,2022-Q3,Education,103850.7
+2022,Q3,2022-Q3,Employment,60186.5
+2022,Q3,2022-Q3,Holiday,497237.2
+2022,Q3,2022-Q3,Other reason,41502.3
+2022,Q3,2022-Q3,Visiting friends and relatives,596673.5
+2022,Q4,2022-Q4,Business,230340.8
+2022,Q4,2022-Q4,Education,88621.0
+2022,Q4,2022-Q4,Employment,75088.8
+2022,Q4,2022-Q4,Holiday,974902.1
+2022,Q4,2022-Q4,Other reason,57129.5
+2022,Q4,2022-Q4,Visiting friends and relatives,925289.8
+2023,Q1,2023-Q1,Business,204326.4
+2023,Q1,2023-Q1,Education,198630.6
+2023,Q1,2023-Q1,Employment,103496.7
+2023,Q1,2023-Q1,Holiday,1227926.1
+2023,Q1,2023-Q1,Other reason,74211.7
+2023,Q1,2023-Q1,Visiting friends and relatives,865681.7
+2023,Q2,2023-Q2,Business,233749.9
+2023,Q2,2023-Q2,Education,113924.4
+2023,Q2,2023-Q2,Employment,91346.9
+2023,Q2,2023-Q2,Holiday,1062522.8
+2023,Q2,2023-Q2,Other reason,55546.2
+2023,Q2,2023-Q2,Visiting friends and relatives,814347.7
+2023,Q3,2023-Q3,Business,270195.3
+2023,Q3,2023-Q3,Education,193887.6
+2023,Q3,2023-Q3,Employment,91253.1
+2023,Q3,2023-Q3,Holiday,1215120.1
+2023,Q3,2023-Q3,Other reason,74521.0
+2023,Q3,2023-Q3,Visiting friends and relatives,762794.1
+2023,Q4,2023-Q4,Business,268076.8
+2023,Q4,2023-Q4,Education,87898.8
+2023,Q4,2023-Q4,Employment,122068.6
+2023,Q4,2023-Q4,Holiday,1649270.0
+2023,Q4,2023-Q4,Other reason,87461.0
+2023,Q4,2023-Q4,Visiting friends and relatives,1105192.2
+2024,Q1,2024-Q1,Business,224216.1
+2024,Q1,2024-Q1,Education,224917.1
+2024,Q1,2024-Q1,Employment,134413.3
+2024,Q1,2024-Q1,Holiday,1884969.0
+2024,Q1,2024-Q1,Other reason,88300.5
+2024,Q1,2024-Q1,Visiting friends and relatives,957132.0
+2024,Q2,2024-Q2,Business,282091.7
+2024,Q2,2024-Q2,Education,111137.2
+2024,Q2,2024-Q2,Employment,106808.5
+2024,Q2,2024-Q2,Holiday,1276774.5
+2024,Q2,2024-Q2,Other reason,49307.8
+2024,Q2,2024-Q2,Visiting friends and relatives,730885.7
+2024,Q3,2024-Q3,Business,265024.2
+2024,Q3,2024-Q3,Education,199585.8
+2024,Q3,2024-Q3,Employment,117807.2
+2024,Q3,2024-Q3,Holiday,1399938.3
+2024,Q3,2024-Q3,Other reason,55423.8
+2024,Q3,2024-Q3,Visiting friends and relatives,761936.0
+2024,Q4,2024-Q4,Business,273592.9
+2024,Q4,2024-Q4,Education,108873.2
+2024,Q4,2024-Q4,Employment,112715.9
+2024,Q4,2024-Q4,Holiday,1875621.6
+2024,Q4,2024-Q4,Other reason,61201.5
+2024,Q4,2024-Q4,Visiting friends and relatives,1256930.4
+2025,Q1,2025-Q1,Business,211224.1
+2025,Q1,2025-Q1,Education,249256.0
+2025,Q1,2025-Q1,Employment,155628.8
+2025,Q1,2025-Q1,Holiday,1917928.6
+2025,Q1,2025-Q1,Other reason,100143.0
+2025,Q1,2025-Q1,Visiting friends and relatives,963899.8
+2025,Q2,2025-Q2,Business,238990.6
+2025,Q2,2025-Q2,Education,109175.8
+2025,Q2,2025-Q2,Employment,110763.1
+2025,Q2,2025-Q2,Holiday,1371046.8
+2025,Q2,2025-Q2,Other reason,66961.2
+2025,Q2,2025-Q2,Visiting friends and relatives,846328.0
+2025,Q3,2025-Q3,Business,263647.6
+2025,Q3,2025-Q3,Education,210169.3
+2025,Q3,2025-Q3,Employment,112438.4
+2025,Q3,2025-Q3,Holiday,1569843.5
+2025,Q3,2025-Q3,Other reason,72418.2
+2025,Q3,2025-Q3,Visiting friends and relatives,789902.0
+2025,Q4,2025-Q4,Business,266198.1
+2025,Q4,2025-Q4,Education,111038.6
+2025,Q4,2025-Q4,Employment,119250.1
+2025,Q4,2025-Q4,Holiday,2079525.6
+2025,Q4,2025-Q4,Other reason,77323.0
+2025,Q4,2025-Q4,Visiting friends and relatives,1217464.6
+2026,Q1,2026-Q1,Business,228458.9
+2026,Q1,2026-Q1,Education,264097.3
+2026,Q1,2026-Q1,Employment,150582.7
+2026,Q1,2026-Q1,Holiday,2016063.6
+2026,Q1,2026-Q1,Other reason,85796.5
+2026,Q1,2026-Q1,Visiting friends and relatives,950175.2

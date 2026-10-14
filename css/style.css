@@ -1,0 +1,59 @@
+body {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 1rem;
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #1e2b34;
+  background: #fbf8f2;
+}
+
+h1, h2 { font-family: "Fraunces", Georgia, serif; }
+
+section { margin-top: 4rem; }
+.block { margin: 2.5rem 0; }
+.block > p { margin-bottom: 0.5rem; }
+p { max-width: 40em; }
+
+.chart { overflow-x: auto; margin: 0.5rem 0; }
+
+/* charts with the paragraph beneath are centred on the page */
+/* the embed element is the .chart div itself (inline-block), so centre it with auto margins */
+.block:not(.side) > .chart {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* paragraph box centred under the chart, text stays left-aligned */
+.block:not(.side) > p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* intro paragraph under the main title, box centred, text left-aligned */
+h1 + p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer { margin-top: 4rem; font-size: 0.9rem; color: #5b6770; }
+
+/* chart on the left, paragraph on the right (stacks on narrow screens) */
+.block.side {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  grid-template-areas: "chart text";
+  gap: 0 2rem;
+  align-items: center;
+}
+.block.side > p { grid-area: text; margin: 0; }
+.block.side > .chart { grid-area: chart; }
+
+@media (max-width: 900px) {
+  .block.side { grid-template-columns: minmax(0, 1fr); grid-template-areas: "text" "chart"; }
+  .block.side > p { margin-top: 0; }
+}

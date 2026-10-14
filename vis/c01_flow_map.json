@@ -1,0 +1,353 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Flow map of international visitor arrivals to Australia from the 22 largest origin countries. Line width is the number of arrivals in the selected year. A year slider moves between 2019 and 2025.",
+  "title": {
+    "text": "How Did The Number of Visitors Change Over Time?",
+    "subtitle": "Overseas arrivals to Australia by country of residence. Drag the slider to change the year (starts on 2021, the low point)."
+  },
+  "width": 900,
+  "height": 420,
+  "projection": {
+    "type": "equalEarth",
+    "rotate": [
+      -150,
+      0,
+      0
+    ]
+  },
+  "params": [
+    {
+      "name": "year_selected",
+      "value": 2021,
+      "bind": {
+        "input": "range",
+        "min": 2019,
+        "max": 2025,
+        "step": 1,
+        "name": "Year: "
+      }
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 20,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "subtitleFontSize": 13,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "axis": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#5B6770",
+      "titleColor": "#1E2B34",
+      "gridColor": "#E3DED3",
+      "domainColor": "#A8AEB3",
+      "tickColor": "#A8AEB3"
+    },
+    "legend": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "header": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "labelFontWeight": 600
+    },
+    "text": {
+      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "fontSize": 12,
+      "color": "#1E2B34"
+    },
+    "concat": {
+      "spacing": 24
+    },
+    "facet": {
+      "spacing": 24
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/used/map_data/world_map_countries.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_admin_0_countries"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.NAME != 'Antarctica'"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#E9E4D8",
+        "stroke": "#FBF8F2",
+        "strokeWidth": 0.6
+      }
+    },
+    {
+      "data": {
+        "url": "data/used/flow_arrivals.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "number",
+            "arrivals": "number",
+            "lon": "number",
+            "lat": "number",
+            "dest_lon": "number",
+            "dest_lat": "number",
+            "pct_of_2019": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year_selected"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "strokeCap": "round",
+        "opacity": 0.9,
+        "color": "#5B6770"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "dest_lon"
+        },
+        "latitude2": {
+          "field": "dest_lat"
+        },
+        "strokeWidth": {
+          "field": "arrivals",
+          "type": "quantitative",
+          "title": "Arrivals in the year",
+          "scale": {
+            "type": "sqrt",
+            "domain": [
+              0,
+              1450000
+            ],
+            "range": [
+              0.8,
+              11
+            ]
+          },
+          "legend": {
+            "values": [
+              10000,
+              100000,
+              500000,
+              1000000
+            ],
+            "labelExpr": "format(datum.value, ',')",
+            "symbolType": "stroke",
+            "symbolSize": 400,
+            "orient": "none",
+            "legendX": 6,
+            "legendY": 292,
+            "direction": "vertical",
+            "rowPadding": 3,
+            "symbolStrokeColor": "#5B6770"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "country",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "arrivals",
+            "type": "quantitative",
+            "title": "Arrivals",
+            "format": ","
+          },
+          {
+            "field": "pct_of_2019",
+            "type": "quantitative",
+            "title": "% of 2019 arrivals",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/used/flow_arrivals.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "number",
+            "arrivals": "number",
+            "lon": "number",
+            "lat": "number",
+            "dest_lon": "number",
+            "dest_lat": "number",
+            "pct_of_2019": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year_selected"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 55,
+        "stroke": "white",
+        "strokeWidth": 1,
+        "color": "#5B6770"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "country",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "arrivals",
+            "type": "quantitative",
+            "title": "Arrivals",
+            "format": ","
+          },
+          {
+            "field": "pct_of_2019",
+            "type": "quantitative",
+            "title": "% of 2019 arrivals",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/used/flow_arrivals.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "number",
+            "arrivals": "number",
+            "lon": "number",
+            "lat": "number",
+            "dest_lon": "number",
+            "dest_lat": "number",
+            "pct_of_2019": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year_selected"
+        },
+        {
+          "calculate": "datum.country == 'United States of America' ? 'USA' : datum.country",
+          "as": "short"
+        },
+        {
+          "calculate": "indexof([\"China\", \"New Zealand\", \"United States of America\", \"United Kingdom\", \"Japan\", \"Singapore\", \"India\", \"Malaysia\", \"Hong Kong\", \"South Korea\"], datum.country) >= 0",
+          "as": "is_top10"
+        },
+        {
+          "filter": "datum.is_top10"
+        },
+        {
+          "calculate": "({\"China\": -9, \"New Zealand\": 10, \"USA\": 0, \"United Kingdom\": -9, \"Japan\": 10, \"Singapore\": -8, \"India\": -9, \"Malaysia\": -9, \"Hong Kong\": -9, \"South Korea\": 0})[datum.short]",
+          "as": "lab_dx"
+        },
+        {
+          "calculate": "({\"China\": -8, \"New Zealand\": 8, \"USA\": -12, \"United Kingdom\": -6, \"Japan\": 2, \"Singapore\": 12, \"India\": 0, \"Malaysia\": 2, \"Hong Kong\": 4, \"South Korea\": -14})[datum.short]",
+          "as": "lab_dy"
+        },
+        {
+          "calculate": "({\"China\": \"right\", \"New Zealand\": \"left\", \"USA\": \"center\", \"United Kingdom\": \"right\", \"Japan\": \"left\", \"Singapore\": \"right\", \"India\": \"right\", \"Malaysia\": \"right\", \"Hong Kong\": \"right\", \"South Korea\": \"center\"})[datum.short]",
+          "as": "lab_align"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": 600,
+        "color": "#1E2B34",
+        "dx": {
+          "expr": "datum.lab_dx"
+        },
+        "dy": {
+          "expr": "datum.lab_dy"
+        },
+        "align": {
+          "expr": "datum.lab_align"
+        },
+        "baseline": "middle"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "short",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}

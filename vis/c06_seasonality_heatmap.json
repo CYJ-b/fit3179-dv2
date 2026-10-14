@@ -1,0 +1,319 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Heatmap of seasonality. Each row is one of the 20 coastal tourism regions with the most international visits in 2025, ordered from north to south. Each column is a quarter of the year and each cell shows the share of the region's yearly visits that fall in that quarter, 2023 to 2025 combined.",
+  "title": {
+    "text": [
+      "Seasonality Of Amount Of Visits For The Top 20 Coastal Regions"
+    ],
+    "subtitle": [
+      "Share of each region's yearly visits that fall in each quarter (2023–2025 combined)"
+    ]
+  },
+  "width": 480,
+  "height": 400,
+  "padding": {
+    "left": 5,
+    "right": 10,
+    "top": 5,
+    "bottom": 5
+  },
+  "data": {
+    "url": "data/used/region_quarterly_visits.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "TR_CODE": "number",
+        "year": "number",
+        "visitors": "number",
+        "centre_lat": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.category == 'coastal'"
+    },
+    {
+      "calculate": "datum.year == 2025 ? datum.visitors : 0",
+      "as": "v2025"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "v2025",
+          "as": "total2025"
+        }
+      ],
+      "groupby": [
+        "TR_CODE"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "dense_rank",
+          "as": "rank2025"
+        }
+      ],
+      "sort": [
+        {
+          "field": "total2025",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.rank2025 <= 20 && datum.year >= 2023"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "visitors",
+          "as": "visits"
+        },
+        {
+          "op": "max",
+          "field": "centre_lat",
+          "as": "lat"
+        }
+      ],
+      "groupby": [
+        "TR_NAME",
+        "quarter"
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "visits",
+          "as": "total"
+        }
+      ],
+      "groupby": [
+        "TR_NAME"
+      ]
+    },
+    {
+      "calculate": "datum.visits / datum.total * 100",
+      "as": "share"
+    },
+    {
+      "calculate": "({'Q1': 'Jan–Mar', 'Q2': 'Apr–Jun', 'Q3': 'Jul–Sep', 'Q4': 'Oct–Dec'})[datum.quarter]",
+      "as": "qlabel"
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 20,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "subtitleFontSize": 13,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "axis": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#5B6770",
+      "titleColor": "#1E2B34",
+      "gridColor": "#E3DED3",
+      "domainColor": "#A8AEB3",
+      "tickColor": "#A8AEB3"
+    },
+    "legend": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "header": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "labelFontWeight": 600
+    },
+    "text": {
+      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "fontSize": 12,
+      "color": "#1E2B34"
+    },
+    "concat": {
+      "spacing": 24
+    },
+    "facet": {
+      "spacing": 24
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "#FBF8F2",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "qlabel",
+          "type": "ordinal",
+          "title": "Quarter (Australian summer is Dec–Feb)",
+          "sort": [
+            "Jan–Mar",
+            "Apr–Jun",
+            "Jul–Sep",
+            "Oct–Dec"
+          ],
+          "axis": {
+            "orient": "top",
+            "labelAngle": 0,
+            "labelFontSize": 13,
+            "labelPadding": 6,
+            "ticks": false,
+            "domain": false,
+            "titleFontWeight": 400,
+            "titleColor": "#5B6770"
+          }
+        },
+        "y": {
+          "field": "TR_NAME",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "lat",
+            "op": "max",
+            "order": "descending"
+          },
+          "axis": {
+            "labelFontSize": 12.5,
+            "labelColor": "#1E2B34",
+            "ticks": false,
+            "domain": false,
+            "labelLimit": 170
+          }
+        },
+        "color": {
+          "field": "share",
+          "type": "quantitative",
+          "title": "Share of visits (%)",
+          "scale": {
+            "scheme": "blues",
+            "domain": [
+              10,
+              38
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 260,
+            "format": "d",
+            "titleAnchor": "start"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "TR_NAME",
+            "type": "nominal",
+            "title": "Region"
+          },
+          {
+            "field": "qlabel",
+            "type": "nominal",
+            "title": "Quarter"
+          },
+          {
+            "field": "share",
+            "type": "quantitative",
+            "title": "Share of yearly visits (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "visits",
+            "type": "quantitative",
+            "title": "Visits, 2023–2025",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12
+      },
+      "encoding": {
+        "x": {
+          "field": "qlabel",
+          "type": "ordinal",
+          "title": "Quarter (Australian summer is Dec–Feb)",
+          "sort": [
+            "Jan–Mar",
+            "Apr–Jun",
+            "Jul–Sep",
+            "Oct–Dec"
+          ],
+          "axis": {
+            "orient": "top",
+            "labelAngle": 0,
+            "labelFontSize": 13,
+            "labelPadding": 6,
+            "ticks": false,
+            "domain": false,
+            "titleFontWeight": 400,
+            "titleColor": "#5B6770"
+          }
+        },
+        "y": {
+          "field": "TR_NAME",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "lat",
+            "op": "max",
+            "order": "descending"
+          },
+          "axis": {
+            "labelFontSize": 12.5,
+            "labelColor": "#1E2B34",
+            "ticks": false,
+            "domain": false,
+            "labelLimit": 170
+          }
+        },
+        "text": {
+          "field": "share",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.share > 26",
+            "value": "white"
+          },
+          "value": "#1E2B34"
+        }
+      }
+    }
+  ]
+}

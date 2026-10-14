@@ -1,0 +1,2281 @@
+TR_CODE,TR_NAME,state,category,area_km2,year,size_band,businesses
+110,Sydney,NSW,coastal,7352.7988,2021,All businesses,76972
+110,Sydney,NSW,coastal,7352.7988,2021,Non-employing,36358
+110,Sydney,NSW,coastal,7352.7988,2021,Micro,26808
+110,Sydney,NSW,coastal,7352.7988,2021,Small,10938
+110,Sydney,NSW,coastal,7352.7988,2021,Medium,2717
+110,Sydney,NSW,coastal,7352.7988,2021,Large,151
+110,Sydney,NSW,coastal,7352.7988,2022,All businesses,77996
+110,Sydney,NSW,coastal,7352.7988,2022,Non-employing,37200
+110,Sydney,NSW,coastal,7352.7988,2022,Micro,26947
+110,Sydney,NSW,coastal,7352.7988,2022,Small,11026
+110,Sydney,NSW,coastal,7352.7988,2022,Medium,2686
+110,Sydney,NSW,coastal,7352.7988,2022,Large,137
+110,Sydney,NSW,coastal,7352.7988,2023,All businesses,77882
+110,Sydney,NSW,coastal,7352.7988,2023,Non-employing,38715
+110,Sydney,NSW,coastal,7352.7988,2023,Micro,24958
+110,Sydney,NSW,coastal,7352.7988,2023,Small,11130
+110,Sydney,NSW,coastal,7352.7988,2023,Medium,2922
+110,Sydney,NSW,coastal,7352.7988,2023,Large,157
+110,Sydney,NSW,coastal,7352.7988,2024,All businesses,79597
+110,Sydney,NSW,coastal,7352.7988,2024,Non-employing,41166
+110,Sydney,NSW,coastal,7352.7988,2024,Micro,23866
+110,Sydney,NSW,coastal,7352.7988,2024,Small,11022
+110,Sydney,NSW,coastal,7352.7988,2024,Medium,3341
+110,Sydney,NSW,coastal,7352.7988,2024,Large,202
+110,Sydney,NSW,coastal,7352.7988,2025,All businesses,80522
+110,Sydney,NSW,coastal,7352.7988,2025,Non-employing,42082
+110,Sydney,NSW,coastal,7352.7988,2025,Micro,23720
+110,Sydney,NSW,coastal,7352.7988,2025,Small,11276
+110,Sydney,NSW,coastal,7352.7988,2025,Medium,3234
+110,Sydney,NSW,coastal,7352.7988,2025,Large,210
+111,Blue Mountains,NSW,inland,11428.7283,2021,All businesses,1218
+111,Blue Mountains,NSW,inland,11428.7283,2021,Non-employing,524
+111,Blue Mountains,NSW,inland,11428.7283,2021,Micro,426
+111,Blue Mountains,NSW,inland,11428.7283,2021,Small,225
+111,Blue Mountains,NSW,inland,11428.7283,2021,Medium,41
+111,Blue Mountains,NSW,inland,11428.7283,2021,Large,3
+111,Blue Mountains,NSW,inland,11428.7283,2022,All businesses,1252
+111,Blue Mountains,NSW,inland,11428.7283,2022,Non-employing,552
+111,Blue Mountains,NSW,inland,11428.7283,2022,Micro,424
+111,Blue Mountains,NSW,inland,11428.7283,2022,Small,230
+111,Blue Mountains,NSW,inland,11428.7283,2022,Medium,45
+111,Blue Mountains,NSW,inland,11428.7283,2022,Large,0
+111,Blue Mountains,NSW,inland,11428.7283,2023,All businesses,1210
+111,Blue Mountains,NSW,inland,11428.7283,2023,Non-employing,555
+111,Blue Mountains,NSW,inland,11428.7283,2023,Micro,379
+111,Blue Mountains,NSW,inland,11428.7283,2023,Small,221
+111,Blue Mountains,NSW,inland,11428.7283,2023,Medium,54
+111,Blue Mountains,NSW,inland,11428.7283,2023,Large,0
+111,Blue Mountains,NSW,inland,11428.7283,2024,All businesses,1184
+111,Blue Mountains,NSW,inland,11428.7283,2024,Non-employing,531
+111,Blue Mountains,NSW,inland,11428.7283,2024,Micro,383
+111,Blue Mountains,NSW,inland,11428.7283,2024,Small,212
+111,Blue Mountains,NSW,inland,11428.7283,2024,Medium,58
+111,Blue Mountains,NSW,inland,11428.7283,2024,Large,0
+111,Blue Mountains,NSW,inland,11428.7283,2025,All businesses,1152
+111,Blue Mountains,NSW,inland,11428.7283,2025,Non-employing,516
+111,Blue Mountains,NSW,inland,11428.7283,2025,Micro,383
+111,Blue Mountains,NSW,inland,11428.7283,2025,Small,199
+111,Blue Mountains,NSW,inland,11428.7283,2025,Medium,52
+111,Blue Mountains,NSW,inland,11428.7283,2025,Large,3
+112,Southern Tablelands,NSW,inland,30065.6448,2021,All businesses,2296
+112,Southern Tablelands,NSW,inland,30065.6448,2021,Non-employing,974
+112,Southern Tablelands,NSW,inland,30065.6448,2021,Micro,780
+112,Southern Tablelands,NSW,inland,30065.6448,2021,Small,451
+112,Southern Tablelands,NSW,inland,30065.6448,2021,Medium,90
+112,Southern Tablelands,NSW,inland,30065.6448,2021,Large,0
+112,Southern Tablelands,NSW,inland,30065.6448,2022,All businesses,2426
+112,Southern Tablelands,NSW,inland,30065.6448,2022,Non-employing,1093
+112,Southern Tablelands,NSW,inland,30065.6448,2022,Micro,770
+112,Southern Tablelands,NSW,inland,30065.6448,2022,Small,459
+112,Southern Tablelands,NSW,inland,30065.6448,2022,Medium,102
+112,Southern Tablelands,NSW,inland,30065.6448,2022,Large,3
+112,Southern Tablelands,NSW,inland,30065.6448,2023,All businesses,2400
+112,Southern Tablelands,NSW,inland,30065.6448,2023,Non-employing,1095
+112,Southern Tablelands,NSW,inland,30065.6448,2023,Micro,743
+112,Southern Tablelands,NSW,inland,30065.6448,2023,Small,455
+112,Southern Tablelands,NSW,inland,30065.6448,2023,Medium,105
+112,Southern Tablelands,NSW,inland,30065.6448,2023,Large,3
+112,Southern Tablelands,NSW,inland,30065.6448,2024,All businesses,2355
+112,Southern Tablelands,NSW,inland,30065.6448,2024,Non-employing,1086
+112,Southern Tablelands,NSW,inland,30065.6448,2024,Micro,700
+112,Southern Tablelands,NSW,inland,30065.6448,2024,Small,462
+112,Southern Tablelands,NSW,inland,30065.6448,2024,Medium,105
+112,Southern Tablelands,NSW,inland,30065.6448,2024,Large,3
+112,Southern Tablelands,NSW,inland,30065.6448,2025,All businesses,2375
+112,Southern Tablelands,NSW,inland,30065.6448,2025,Non-employing,1115
+112,Southern Tablelands,NSW,inland,30065.6448,2025,Micro,699
+112,Southern Tablelands,NSW,inland,30065.6448,2025,Small,452
+112,Southern Tablelands,NSW,inland,30065.6448,2025,Medium,109
+112,Southern Tablelands,NSW,inland,30065.6448,2025,Large,0
+113,Central Coast,NSW,coastal,1672.5325,2021,All businesses,3603
+113,Central Coast,NSW,coastal,1672.5325,2021,Non-employing,1475
+113,Central Coast,NSW,coastal,1672.5325,2021,Micro,1303
+113,Central Coast,NSW,coastal,1672.5325,2021,Small,669
+113,Central Coast,NSW,coastal,1672.5325,2021,Medium,149
+113,Central Coast,NSW,coastal,1672.5325,2021,Large,7
+113,Central Coast,NSW,coastal,1672.5325,2022,All businesses,3615
+113,Central Coast,NSW,coastal,1672.5325,2022,Non-employing,1502
+113,Central Coast,NSW,coastal,1672.5325,2022,Micro,1231
+113,Central Coast,NSW,coastal,1672.5325,2022,Small,710
+113,Central Coast,NSW,coastal,1672.5325,2022,Medium,164
+113,Central Coast,NSW,coastal,1672.5325,2022,Large,8
+113,Central Coast,NSW,coastal,1672.5325,2023,All businesses,3663
+113,Central Coast,NSW,coastal,1672.5325,2023,Non-employing,1591
+113,Central Coast,NSW,coastal,1672.5325,2023,Micro,1172
+113,Central Coast,NSW,coastal,1672.5325,2023,Small,725
+113,Central Coast,NSW,coastal,1672.5325,2023,Medium,167
+113,Central Coast,NSW,coastal,1672.5325,2023,Large,8
+113,Central Coast,NSW,coastal,1672.5325,2024,All businesses,3665
+113,Central Coast,NSW,coastal,1672.5325,2024,Non-employing,1649
+113,Central Coast,NSW,coastal,1672.5325,2024,Micro,1138
+113,Central Coast,NSW,coastal,1672.5325,2024,Small,689
+113,Central Coast,NSW,coastal,1672.5325,2024,Medium,180
+113,Central Coast,NSW,coastal,1672.5325,2024,Large,9
+113,Central Coast,NSW,coastal,1672.5325,2025,All businesses,3644
+113,Central Coast,NSW,coastal,1672.5325,2025,Non-employing,1635
+113,Central Coast,NSW,coastal,1672.5325,2025,Micro,1128
+113,Central Coast,NSW,coastal,1672.5325,2025,Small,693
+113,Central Coast,NSW,coastal,1672.5325,2025,Medium,180
+113,Central Coast,NSW,coastal,1672.5325,2025,Large,8
+114,Central NSW,NSW,inland,104141.6056,2021,All businesses,3146
+114,Central NSW,NSW,inland,104141.6056,2021,Non-employing,1168
+114,Central NSW,NSW,inland,104141.6056,2021,Micro,1142
+114,Central NSW,NSW,inland,104141.6056,2021,Small,693
+114,Central NSW,NSW,inland,104141.6056,2021,Medium,138
+114,Central NSW,NSW,inland,104141.6056,2021,Large,5
+114,Central NSW,NSW,inland,104141.6056,2022,All businesses,3276
+114,Central NSW,NSW,inland,104141.6056,2022,Non-employing,1284
+114,Central NSW,NSW,inland,104141.6056,2022,Micro,1126
+114,Central NSW,NSW,inland,104141.6056,2022,Small,707
+114,Central NSW,NSW,inland,104141.6056,2022,Medium,155
+114,Central NSW,NSW,inland,104141.6056,2022,Large,4
+114,Central NSW,NSW,inland,104141.6056,2023,All businesses,3236
+114,Central NSW,NSW,inland,104141.6056,2023,Non-employing,1330
+114,Central NSW,NSW,inland,104141.6056,2023,Micro,1075
+114,Central NSW,NSW,inland,104141.6056,2023,Small,657
+114,Central NSW,NSW,inland,104141.6056,2023,Medium,171
+114,Central NSW,NSW,inland,104141.6056,2023,Large,3
+114,Central NSW,NSW,inland,104141.6056,2024,All businesses,3168
+114,Central NSW,NSW,inland,104141.6056,2024,Non-employing,1323
+114,Central NSW,NSW,inland,104141.6056,2024,Micro,993
+114,Central NSW,NSW,inland,104141.6056,2024,Small,680
+114,Central NSW,NSW,inland,104141.6056,2024,Medium,166
+114,Central NSW,NSW,inland,104141.6056,2024,Large,6
+114,Central NSW,NSW,inland,104141.6056,2025,All businesses,3100
+114,Central NSW,NSW,inland,104141.6056,2025,Non-employing,1314
+114,Central NSW,NSW,inland,104141.6056,2025,Micro,971
+114,Central NSW,NSW,inland,104141.6056,2025,Small,656
+114,Central NSW,NSW,inland,104141.6056,2025,Medium,154
+114,Central NSW,NSW,inland,104141.6056,2025,Large,5
+115,Hunter,NSW,coastal,25106.2504,2021,All businesses,6868
+115,Hunter,NSW,coastal,25106.2504,2021,Non-employing,2680
+115,Hunter,NSW,coastal,25106.2504,2021,Micro,2292
+115,Hunter,NSW,coastal,25106.2504,2021,Small,1513
+115,Hunter,NSW,coastal,25106.2504,2021,Medium,379
+115,Hunter,NSW,coastal,25106.2504,2021,Large,4
+115,Hunter,NSW,coastal,25106.2504,2022,All businesses,7044
+115,Hunter,NSW,coastal,25106.2504,2022,Non-employing,2784
+115,Hunter,NSW,coastal,25106.2504,2022,Micro,2273
+115,Hunter,NSW,coastal,25106.2504,2022,Small,1558
+115,Hunter,NSW,coastal,25106.2504,2022,Medium,424
+115,Hunter,NSW,coastal,25106.2504,2022,Large,5
+115,Hunter,NSW,coastal,25106.2504,2023,All businesses,7064
+115,Hunter,NSW,coastal,25106.2504,2023,Non-employing,2898
+115,Hunter,NSW,coastal,25106.2504,2023,Micro,2202
+115,Hunter,NSW,coastal,25106.2504,2023,Small,1517
+115,Hunter,NSW,coastal,25106.2504,2023,Medium,439
+115,Hunter,NSW,coastal,25106.2504,2023,Large,8
+115,Hunter,NSW,coastal,25106.2504,2024,All businesses,7099
+115,Hunter,NSW,coastal,25106.2504,2024,Non-employing,2986
+115,Hunter,NSW,coastal,25106.2504,2024,Micro,2101
+115,Hunter,NSW,coastal,25106.2504,2024,Small,1525
+115,Hunter,NSW,coastal,25106.2504,2024,Medium,478
+115,Hunter,NSW,coastal,25106.2504,2024,Large,9
+115,Hunter,NSW,coastal,25106.2504,2025,All businesses,7002
+115,Hunter,NSW,coastal,25106.2504,2025,Non-employing,3082
+115,Hunter,NSW,coastal,25106.2504,2025,Micro,1996
+115,Hunter,NSW,coastal,25106.2504,2025,Small,1459
+115,Hunter,NSW,coastal,25106.2504,2025,Medium,456
+115,Hunter,NSW,coastal,25106.2504,2025,Large,9
+116,New England North West,NSW,inland,99113.9601,2021,All businesses,2137
+116,New England North West,NSW,inland,99113.9601,2021,Non-employing,809
+116,New England North West,NSW,inland,99113.9601,2021,Micro,774
+116,New England North West,NSW,inland,99113.9601,2021,Small,477
+116,New England North West,NSW,inland,99113.9601,2021,Medium,75
+116,New England North West,NSW,inland,99113.9601,2021,Large,3
+116,New England North West,NSW,inland,99113.9601,2022,All businesses,2175
+116,New England North West,NSW,inland,99113.9601,2022,Non-employing,846
+116,New England North West,NSW,inland,99113.9601,2022,Micro,755
+116,New England North West,NSW,inland,99113.9601,2022,Small,492
+116,New England North West,NSW,inland,99113.9601,2022,Medium,80
+116,New England North West,NSW,inland,99113.9601,2022,Large,3
+116,New England North West,NSW,inland,99113.9601,2023,All businesses,2124
+116,New England North West,NSW,inland,99113.9601,2023,Non-employing,836
+116,New England North West,NSW,inland,99113.9601,2023,Micro,685
+116,New England North West,NSW,inland,99113.9601,2023,Small,501
+116,New England North West,NSW,inland,99113.9601,2023,Medium,98
+116,New England North West,NSW,inland,99113.9601,2023,Large,4
+116,New England North West,NSW,inland,99113.9601,2024,All businesses,2090
+116,New England North West,NSW,inland,99113.9601,2024,Non-employing,831
+116,New England North West,NSW,inland,99113.9601,2024,Micro,664
+116,New England North West,NSW,inland,99113.9601,2024,Small,490
+116,New England North West,NSW,inland,99113.9601,2024,Medium,100
+116,New England North West,NSW,inland,99113.9601,2024,Large,5
+116,New England North West,NSW,inland,99113.9601,2025,All businesses,2076
+116,New England North West,NSW,inland,99113.9601,2025,Non-employing,849
+116,New England North West,NSW,inland,99113.9601,2025,Micro,679
+116,New England North West,NSW,inland,99113.9601,2025,Small,452
+116,New England North West,NSW,inland,99113.9601,2025,Medium,93
+116,New England North West,NSW,inland,99113.9601,2025,Large,3
+117,North Coast NSW,NSW,coastal,39708.5996,2021,All businesses,8105
+117,North Coast NSW,NSW,coastal,39708.5996,2021,Non-employing,3073
+117,North Coast NSW,NSW,coastal,39708.5996,2021,Micro,2860
+117,North Coast NSW,NSW,coastal,39708.5996,2021,Small,1776
+117,North Coast NSW,NSW,coastal,39708.5996,2021,Medium,391
+117,North Coast NSW,NSW,coastal,39708.5996,2021,Large,5
+117,North Coast NSW,NSW,coastal,39708.5996,2022,All businesses,8386
+117,North Coast NSW,NSW,coastal,39708.5996,2022,Non-employing,3307
+117,North Coast NSW,NSW,coastal,39708.5996,2022,Micro,2760
+117,North Coast NSW,NSW,coastal,39708.5996,2022,Small,1844
+117,North Coast NSW,NSW,coastal,39708.5996,2022,Medium,467
+117,North Coast NSW,NSW,coastal,39708.5996,2022,Large,8
+117,North Coast NSW,NSW,coastal,39708.5996,2023,All businesses,8333
+117,North Coast NSW,NSW,coastal,39708.5996,2023,Non-employing,3417
+117,North Coast NSW,NSW,coastal,39708.5996,2023,Micro,2558
+117,North Coast NSW,NSW,coastal,39708.5996,2023,Small,1852
+117,North Coast NSW,NSW,coastal,39708.5996,2023,Medium,499
+117,North Coast NSW,NSW,coastal,39708.5996,2023,Large,7
+117,North Coast NSW,NSW,coastal,39708.5996,2024,All businesses,8289
+117,North Coast NSW,NSW,coastal,39708.5996,2024,Non-employing,3554
+117,North Coast NSW,NSW,coastal,39708.5996,2024,Micro,2402
+117,North Coast NSW,NSW,coastal,39708.5996,2024,Small,1806
+117,North Coast NSW,NSW,coastal,39708.5996,2024,Medium,521
+117,North Coast NSW,NSW,coastal,39708.5996,2024,Large,6
+117,North Coast NSW,NSW,coastal,39708.5996,2025,All businesses,8163
+117,North Coast NSW,NSW,coastal,39708.5996,2025,Non-employing,3610
+117,North Coast NSW,NSW,coastal,39708.5996,2025,Micro,2285
+117,North Coast NSW,NSW,coastal,39708.5996,2025,Small,1764
+117,North Coast NSW,NSW,coastal,39708.5996,2025,Medium,498
+117,North Coast NSW,NSW,coastal,39708.5996,2025,Large,6
+119,Outback NSW,NSW,inland,297514.6714,2021,All businesses,509
+119,Outback NSW,NSW,inland,297514.6714,2021,Non-employing,192
+119,Outback NSW,NSW,inland,297514.6714,2021,Micro,173
+119,Outback NSW,NSW,inland,297514.6714,2021,Small,120
+119,Outback NSW,NSW,inland,297514.6714,2021,Medium,24
+119,Outback NSW,NSW,inland,297514.6714,2021,Large,0
+119,Outback NSW,NSW,inland,297514.6714,2022,All businesses,516
+119,Outback NSW,NSW,inland,297514.6714,2022,Non-employing,180
+119,Outback NSW,NSW,inland,297514.6714,2022,Micro,183
+119,Outback NSW,NSW,inland,297514.6714,2022,Small,121
+119,Outback NSW,NSW,inland,297514.6714,2022,Medium,32
+119,Outback NSW,NSW,inland,297514.6714,2022,Large,0
+119,Outback NSW,NSW,inland,297514.6714,2023,All businesses,518
+119,Outback NSW,NSW,inland,297514.6714,2023,Non-employing,192
+119,Outback NSW,NSW,inland,297514.6714,2023,Micro,169
+119,Outback NSW,NSW,inland,297514.6714,2023,Small,127
+119,Outback NSW,NSW,inland,297514.6714,2023,Medium,30
+119,Outback NSW,NSW,inland,297514.6714,2023,Large,0
+119,Outback NSW,NSW,inland,297514.6714,2024,All businesses,514
+119,Outback NSW,NSW,inland,297514.6714,2024,Non-employing,190
+119,Outback NSW,NSW,inland,297514.6714,2024,Micro,161
+119,Outback NSW,NSW,inland,297514.6714,2024,Small,133
+119,Outback NSW,NSW,inland,297514.6714,2024,Medium,30
+119,Outback NSW,NSW,inland,297514.6714,2024,Large,0
+119,Outback NSW,NSW,inland,297514.6714,2025,All businesses,488
+119,Outback NSW,NSW,inland,297514.6714,2025,Non-employing,175
+119,Outback NSW,NSW,inland,297514.6714,2025,Micro,160
+119,Outback NSW,NSW,inland,297514.6714,2025,Small,121
+119,Outback NSW,NSW,inland,297514.6714,2025,Medium,32
+119,Outback NSW,NSW,inland,297514.6714,2025,Large,0
+120,Riverina,NSW,inland,70884.1262,2021,All businesses,1655
+120,Riverina,NSW,inland,70884.1262,2021,Non-employing,548
+120,Riverina,NSW,inland,70884.1262,2021,Micro,608
+120,Riverina,NSW,inland,70884.1262,2021,Small,407
+120,Riverina,NSW,inland,70884.1262,2021,Medium,91
+120,Riverina,NSW,inland,70884.1262,2021,Large,3
+120,Riverina,NSW,inland,70884.1262,2022,All businesses,1774
+120,Riverina,NSW,inland,70884.1262,2022,Non-employing,634
+120,Riverina,NSW,inland,70884.1262,2022,Micro,618
+120,Riverina,NSW,inland,70884.1262,2022,Small,416
+120,Riverina,NSW,inland,70884.1262,2022,Medium,104
+120,Riverina,NSW,inland,70884.1262,2022,Large,0
+120,Riverina,NSW,inland,70884.1262,2023,All businesses,1745
+120,Riverina,NSW,inland,70884.1262,2023,Non-employing,642
+120,Riverina,NSW,inland,70884.1262,2023,Micro,565
+120,Riverina,NSW,inland,70884.1262,2023,Small,426
+120,Riverina,NSW,inland,70884.1262,2023,Medium,110
+120,Riverina,NSW,inland,70884.1262,2023,Large,0
+120,Riverina,NSW,inland,70884.1262,2024,All businesses,1719
+120,Riverina,NSW,inland,70884.1262,2024,Non-employing,646
+120,Riverina,NSW,inland,70884.1262,2024,Micro,568
+120,Riverina,NSW,inland,70884.1262,2024,Small,388
+120,Riverina,NSW,inland,70884.1262,2024,Medium,116
+120,Riverina,NSW,inland,70884.1262,2024,Large,3
+120,Riverina,NSW,inland,70884.1262,2025,All businesses,1714
+120,Riverina,NSW,inland,70884.1262,2025,Non-employing,670
+120,Riverina,NSW,inland,70884.1262,2025,Micro,544
+120,Riverina,NSW,inland,70884.1262,2025,Small,388
+120,Riverina,NSW,inland,70884.1262,2025,Medium,110
+120,Riverina,NSW,inland,70884.1262,2025,Large,0
+121,Snowy Mountains,NSW,inland,14289.9983,2021,All businesses,689
+121,Snowy Mountains,NSW,inland,14289.9983,2021,Non-employing,259
+121,Snowy Mountains,NSW,inland,14289.9983,2021,Micro,228
+121,Snowy Mountains,NSW,inland,14289.9983,2021,Small,168
+121,Snowy Mountains,NSW,inland,14289.9983,2021,Medium,33
+121,Snowy Mountains,NSW,inland,14289.9983,2021,Large,3
+121,Snowy Mountains,NSW,inland,14289.9983,2022,All businesses,735
+121,Snowy Mountains,NSW,inland,14289.9983,2022,Non-employing,278
+121,Snowy Mountains,NSW,inland,14289.9983,2022,Micro,224
+121,Snowy Mountains,NSW,inland,14289.9983,2022,Small,197
+121,Snowy Mountains,NSW,inland,14289.9983,2022,Medium,35
+121,Snowy Mountains,NSW,inland,14289.9983,2022,Large,3
+121,Snowy Mountains,NSW,inland,14289.9983,2023,All businesses,722
+121,Snowy Mountains,NSW,inland,14289.9983,2023,Non-employing,278
+121,Snowy Mountains,NSW,inland,14289.9983,2023,Micro,213
+121,Snowy Mountains,NSW,inland,14289.9983,2023,Small,182
+121,Snowy Mountains,NSW,inland,14289.9983,2023,Medium,48
+121,Snowy Mountains,NSW,inland,14289.9983,2023,Large,3
+121,Snowy Mountains,NSW,inland,14289.9983,2024,All businesses,703
+121,Snowy Mountains,NSW,inland,14289.9983,2024,Non-employing,270
+121,Snowy Mountains,NSW,inland,14289.9983,2024,Micro,198
+121,Snowy Mountains,NSW,inland,14289.9983,2024,Small,178
+121,Snowy Mountains,NSW,inland,14289.9983,2024,Medium,56
+121,Snowy Mountains,NSW,inland,14289.9983,2024,Large,3
+121,Snowy Mountains,NSW,inland,14289.9983,2025,All businesses,700
+121,Snowy Mountains,NSW,inland,14289.9983,2025,Non-employing,277
+121,Snowy Mountains,NSW,inland,14289.9983,2025,Micro,205
+121,Snowy Mountains,NSW,inland,14289.9983,2025,Small,173
+121,Snowy Mountains,NSW,inland,14289.9983,2025,Medium,44
+121,Snowy Mountains,NSW,inland,14289.9983,2025,Large,3
+122,South Coast,NSW,coastal,15853.1178,2021,All businesses,5564
+122,South Coast,NSW,coastal,15853.1178,2021,Non-employing,2055
+122,South Coast,NSW,coastal,15853.1178,2021,Micro,2028
+122,South Coast,NSW,coastal,15853.1178,2021,Small,1202
+122,South Coast,NSW,coastal,15853.1178,2021,Medium,274
+122,South Coast,NSW,coastal,15853.1178,2021,Large,5
+122,South Coast,NSW,coastal,15853.1178,2022,All businesses,5727
+122,South Coast,NSW,coastal,15853.1178,2022,Non-employing,2148
+122,South Coast,NSW,coastal,15853.1178,2022,Micro,2030
+122,South Coast,NSW,coastal,15853.1178,2022,Small,1246
+122,South Coast,NSW,coastal,15853.1178,2022,Medium,297
+122,South Coast,NSW,coastal,15853.1178,2022,Large,6
+122,South Coast,NSW,coastal,15853.1178,2023,All businesses,5644
+122,South Coast,NSW,coastal,15853.1178,2023,Non-employing,2215
+122,South Coast,NSW,coastal,15853.1178,2023,Micro,1863
+122,South Coast,NSW,coastal,15853.1178,2023,Small,1231
+122,South Coast,NSW,coastal,15853.1178,2023,Medium,330
+122,South Coast,NSW,coastal,15853.1178,2023,Large,5
+122,South Coast,NSW,coastal,15853.1178,2024,All businesses,5643
+122,South Coast,NSW,coastal,15853.1178,2024,Non-employing,2288
+122,South Coast,NSW,coastal,15853.1178,2024,Micro,1802
+122,South Coast,NSW,coastal,15853.1178,2024,Small,1202
+122,South Coast,NSW,coastal,15853.1178,2024,Medium,344
+122,South Coast,NSW,coastal,15853.1178,2024,Large,7
+122,South Coast,NSW,coastal,15853.1178,2025,All businesses,5530
+122,South Coast,NSW,coastal,15853.1178,2025,Non-employing,2281
+122,South Coast,NSW,coastal,15853.1178,2025,Micro,1745
+122,South Coast,NSW,coastal,15853.1178,2025,Small,1169
+122,South Coast,NSW,coastal,15853.1178,2025,Medium,329
+122,South Coast,NSW,coastal,15853.1178,2025,Large,6
+123,The Murray,NSW,inland,83893.3525,2021,All businesses,1412
+123,The Murray,NSW,inland,83893.3525,2021,Non-employing,475
+123,The Murray,NSW,inland,83893.3525,2021,Micro,529
+123,The Murray,NSW,inland,83893.3525,2021,Small,320
+123,The Murray,NSW,inland,83893.3525,2021,Medium,87
+123,The Murray,NSW,inland,83893.3525,2021,Large,0
+123,The Murray,NSW,inland,83893.3525,2022,All businesses,1447
+123,The Murray,NSW,inland,83893.3525,2022,Non-employing,518
+123,The Murray,NSW,inland,83893.3525,2022,Micro,496
+123,The Murray,NSW,inland,83893.3525,2022,Small,340
+123,The Murray,NSW,inland,83893.3525,2022,Medium,92
+123,The Murray,NSW,inland,83893.3525,2022,Large,0
+123,The Murray,NSW,inland,83893.3525,2023,All businesses,1454
+123,The Murray,NSW,inland,83893.3525,2023,Non-employing,550
+123,The Murray,NSW,inland,83893.3525,2023,Micro,464
+123,The Murray,NSW,inland,83893.3525,2023,Small,341
+123,The Murray,NSW,inland,83893.3525,2023,Medium,97
+123,The Murray,NSW,inland,83893.3525,2023,Large,3
+123,The Murray,NSW,inland,83893.3525,2024,All businesses,1452
+123,The Murray,NSW,inland,83893.3525,2024,Non-employing,559
+123,The Murray,NSW,inland,83893.3525,2024,Micro,462
+123,The Murray,NSW,inland,83893.3525,2024,Small,323
+123,The Murray,NSW,inland,83893.3525,2024,Medium,106
+123,The Murray,NSW,inland,83893.3525,2024,Large,3
+123,The Murray,NSW,inland,83893.3525,2025,All businesses,1415
+123,The Murray,NSW,inland,83893.3525,2025,Non-employing,562
+123,The Murray,NSW,inland,83893.3525,2025,Micro,435
+123,The Murray,NSW,inland,83893.3525,2025,Small,318
+123,The Murray,NSW,inland,83893.3525,2025,Medium,98
+123,The Murray,NSW,inland,83893.3525,2025,Large,3
+210,Melbourne,VIC,coastal,3790.5389,2021,All businesses,76235
+210,Melbourne,VIC,coastal,3790.5389,2021,Non-employing,37568
+210,Melbourne,VIC,coastal,3790.5389,2021,Micro,25189
+210,Melbourne,VIC,coastal,3790.5389,2021,Small,10764
+210,Melbourne,VIC,coastal,3790.5389,2021,Medium,2592
+210,Melbourne,VIC,coastal,3790.5389,2021,Large,122
+210,Melbourne,VIC,coastal,3790.5389,2022,All businesses,83957
+210,Melbourne,VIC,coastal,3790.5389,2022,Non-employing,45076
+210,Melbourne,VIC,coastal,3790.5389,2022,Micro,25545
+210,Melbourne,VIC,coastal,3790.5389,2022,Small,10717
+210,Melbourne,VIC,coastal,3790.5389,2022,Medium,2505
+210,Melbourne,VIC,coastal,3790.5389,2022,Large,114
+210,Melbourne,VIC,coastal,3790.5389,2023,All businesses,80964
+210,Melbourne,VIC,coastal,3790.5389,2023,Non-employing,43988
+210,Melbourne,VIC,coastal,3790.5389,2023,Micro,22839
+210,Melbourne,VIC,coastal,3790.5389,2023,Small,10919
+210,Melbourne,VIC,coastal,3790.5389,2023,Medium,3096
+210,Melbourne,VIC,coastal,3790.5389,2023,Large,122
+210,Melbourne,VIC,coastal,3790.5389,2024,All businesses,80699
+210,Melbourne,VIC,coastal,3790.5389,2024,Non-employing,44716
+210,Melbourne,VIC,coastal,3790.5389,2024,Micro,21689
+210,Melbourne,VIC,coastal,3790.5389,2024,Small,10741
+210,Melbourne,VIC,coastal,3790.5389,2024,Medium,3409
+210,Melbourne,VIC,coastal,3790.5389,2024,Large,144
+210,Melbourne,VIC,coastal,3790.5389,2025,All businesses,80021
+210,Melbourne,VIC,coastal,3790.5389,2025,Non-employing,45034
+210,Melbourne,VIC,coastal,3790.5389,2025,Micro,20810
+210,Melbourne,VIC,coastal,3790.5389,2025,Small,10852
+210,Melbourne,VIC,coastal,3790.5389,2025,Medium,3177
+210,Melbourne,VIC,coastal,3790.5389,2025,Large,148
+211,Greater Ballarat,VIC,inland,6039.6782,2021,All businesses,1570
+211,Greater Ballarat,VIC,inland,6039.6782,2021,Non-employing,607
+211,Greater Ballarat,VIC,inland,6039.6782,2021,Micro,543
+211,Greater Ballarat,VIC,inland,6039.6782,2021,Small,340
+211,Greater Ballarat,VIC,inland,6039.6782,2021,Medium,77
+211,Greater Ballarat,VIC,inland,6039.6782,2021,Large,3
+211,Greater Ballarat,VIC,inland,6039.6782,2022,All businesses,1634
+211,Greater Ballarat,VIC,inland,6039.6782,2022,Non-employing,689
+211,Greater Ballarat,VIC,inland,6039.6782,2022,Micro,519
+211,Greater Ballarat,VIC,inland,6039.6782,2022,Small,330
+211,Greater Ballarat,VIC,inland,6039.6782,2022,Medium,93
+211,Greater Ballarat,VIC,inland,6039.6782,2022,Large,3
+211,Greater Ballarat,VIC,inland,6039.6782,2023,All businesses,1679
+211,Greater Ballarat,VIC,inland,6039.6782,2023,Non-employing,713
+211,Greater Ballarat,VIC,inland,6039.6782,2023,Micro,518
+211,Greater Ballarat,VIC,inland,6039.6782,2023,Small,345
+211,Greater Ballarat,VIC,inland,6039.6782,2023,Medium,100
+211,Greater Ballarat,VIC,inland,6039.6782,2023,Large,3
+211,Greater Ballarat,VIC,inland,6039.6782,2024,All businesses,1661
+211,Greater Ballarat,VIC,inland,6039.6782,2024,Non-employing,725
+211,Greater Ballarat,VIC,inland,6039.6782,2024,Micro,482
+211,Greater Ballarat,VIC,inland,6039.6782,2024,Small,339
+211,Greater Ballarat,VIC,inland,6039.6782,2024,Medium,111
+211,Greater Ballarat,VIC,inland,6039.6782,2024,Large,4
+211,Greater Ballarat,VIC,inland,6039.6782,2025,All businesses,1587
+211,Greater Ballarat,VIC,inland,6039.6782,2025,Non-employing,690
+211,Greater Ballarat,VIC,inland,6039.6782,2025,Micro,471
+211,Greater Ballarat,VIC,inland,6039.6782,2025,Small,332
+211,Greater Ballarat,VIC,inland,6039.6782,2025,Medium,91
+211,Greater Ballarat,VIC,inland,6039.6782,2025,Large,3
+212,Greater Bendigo,VIC,inland,9491.0883,2021,All businesses,1814
+212,Greater Bendigo,VIC,inland,9491.0883,2021,Non-employing,715
+212,Greater Bendigo,VIC,inland,9491.0883,2021,Micro,616
+212,Greater Bendigo,VIC,inland,9491.0883,2021,Small,387
+212,Greater Bendigo,VIC,inland,9491.0883,2021,Medium,94
+212,Greater Bendigo,VIC,inland,9491.0883,2021,Large,3
+212,Greater Bendigo,VIC,inland,9491.0883,2022,All businesses,1914
+212,Greater Bendigo,VIC,inland,9491.0883,2022,Non-employing,806
+212,Greater Bendigo,VIC,inland,9491.0883,2022,Micro,620
+212,Greater Bendigo,VIC,inland,9491.0883,2022,Small,389
+212,Greater Bendigo,VIC,inland,9491.0883,2022,Medium,98
+212,Greater Bendigo,VIC,inland,9491.0883,2022,Large,0
+212,Greater Bendigo,VIC,inland,9491.0883,2023,All businesses,1921
+212,Greater Bendigo,VIC,inland,9491.0883,2023,Non-employing,829
+212,Greater Bendigo,VIC,inland,9491.0883,2023,Micro,575
+212,Greater Bendigo,VIC,inland,9491.0883,2023,Small,408
+212,Greater Bendigo,VIC,inland,9491.0883,2023,Medium,108
+212,Greater Bendigo,VIC,inland,9491.0883,2023,Large,0
+212,Greater Bendigo,VIC,inland,9491.0883,2024,All businesses,1863
+212,Greater Bendigo,VIC,inland,9491.0883,2024,Non-employing,804
+212,Greater Bendigo,VIC,inland,9491.0883,2024,Micro,535
+212,Greater Bendigo,VIC,inland,9491.0883,2024,Small,407
+212,Greater Bendigo,VIC,inland,9491.0883,2024,Medium,116
+212,Greater Bendigo,VIC,inland,9491.0883,2024,Large,0
+212,Greater Bendigo,VIC,inland,9491.0883,2025,All businesses,1797
+212,Greater Bendigo,VIC,inland,9491.0883,2025,Non-employing,787
+212,Greater Bendigo,VIC,inland,9491.0883,2025,Micro,520
+212,Greater Bendigo,VIC,inland,9491.0883,2025,Small,379
+212,Greater Bendigo,VIC,inland,9491.0883,2025,Medium,110
+212,Greater Bendigo,VIC,inland,9491.0883,2025,Large,0
+213,Central Highlands,VIC,inland,9943.4207,2021,All businesses,317
+213,Central Highlands,VIC,inland,9943.4207,2021,Non-employing,122
+213,Central Highlands,VIC,inland,9943.4207,2021,Micro,123
+213,Central Highlands,VIC,inland,9943.4207,2021,Small,66
+213,Central Highlands,VIC,inland,9943.4207,2021,Medium,6
+213,Central Highlands,VIC,inland,9943.4207,2021,Large,0
+213,Central Highlands,VIC,inland,9943.4207,2022,All businesses,343
+213,Central Highlands,VIC,inland,9943.4207,2022,Non-employing,129
+213,Central Highlands,VIC,inland,9943.4207,2022,Micro,142
+213,Central Highlands,VIC,inland,9943.4207,2022,Small,65
+213,Central Highlands,VIC,inland,9943.4207,2022,Medium,7
+213,Central Highlands,VIC,inland,9943.4207,2022,Large,0
+213,Central Highlands,VIC,inland,9943.4207,2023,All businesses,333
+213,Central Highlands,VIC,inland,9943.4207,2023,Non-employing,128
+213,Central Highlands,VIC,inland,9943.4207,2023,Micro,127
+213,Central Highlands,VIC,inland,9943.4207,2023,Small,68
+213,Central Highlands,VIC,inland,9943.4207,2023,Medium,10
+213,Central Highlands,VIC,inland,9943.4207,2023,Large,0
+213,Central Highlands,VIC,inland,9943.4207,2024,All businesses,323
+213,Central Highlands,VIC,inland,9943.4207,2024,Non-employing,123
+213,Central Highlands,VIC,inland,9943.4207,2024,Micro,127
+213,Central Highlands,VIC,inland,9943.4207,2024,Small,66
+213,Central Highlands,VIC,inland,9943.4207,2024,Medium,7
+213,Central Highlands,VIC,inland,9943.4207,2024,Large,0
+213,Central Highlands,VIC,inland,9943.4207,2025,All businesses,304
+213,Central Highlands,VIC,inland,9943.4207,2025,Non-employing,133
+213,Central Highlands,VIC,inland,9943.4207,2025,Micro,111
+213,Central Highlands,VIC,inland,9943.4207,2025,Small,52
+213,Central Highlands,VIC,inland,9943.4207,2025,Medium,8
+213,Central Highlands,VIC,inland,9943.4207,2025,Large,0
+214,Central Murray,VIC,inland,8587.1925,2021,All businesses,900
+214,Central Murray,VIC,inland,8587.1925,2021,Non-employing,310
+214,Central Murray,VIC,inland,8587.1925,2021,Micro,351
+214,Central Murray,VIC,inland,8587.1925,2021,Small,210
+214,Central Murray,VIC,inland,8587.1925,2021,Medium,27
+214,Central Murray,VIC,inland,8587.1925,2021,Large,3
+214,Central Murray,VIC,inland,8587.1925,2022,All businesses,939
+214,Central Murray,VIC,inland,8587.1925,2022,Non-employing,346
+214,Central Murray,VIC,inland,8587.1925,2022,Micro,335
+214,Central Murray,VIC,inland,8587.1925,2022,Small,225
+214,Central Murray,VIC,inland,8587.1925,2022,Medium,31
+214,Central Murray,VIC,inland,8587.1925,2022,Large,3
+214,Central Murray,VIC,inland,8587.1925,2023,All businesses,940
+214,Central Murray,VIC,inland,8587.1925,2023,Non-employing,367
+214,Central Murray,VIC,inland,8587.1925,2023,Micro,317
+214,Central Murray,VIC,inland,8587.1925,2023,Small,210
+214,Central Murray,VIC,inland,8587.1925,2023,Medium,44
+214,Central Murray,VIC,inland,8587.1925,2023,Large,3
+214,Central Murray,VIC,inland,8587.1925,2024,All businesses,903
+214,Central Murray,VIC,inland,8587.1925,2024,Non-employing,361
+214,Central Murray,VIC,inland,8587.1925,2024,Micro,285
+214,Central Murray,VIC,inland,8587.1925,2024,Small,215
+214,Central Murray,VIC,inland,8587.1925,2024,Medium,40
+214,Central Murray,VIC,inland,8587.1925,2024,Large,3
+214,Central Murray,VIC,inland,8587.1925,2025,All businesses,889
+214,Central Murray,VIC,inland,8587.1925,2025,Non-employing,366
+214,Central Murray,VIC,inland,8587.1925,2025,Micro,282
+214,Central Murray,VIC,inland,8587.1925,2025,Small,197
+214,Central Murray,VIC,inland,8587.1925,2025,Medium,42
+214,Central Murray,VIC,inland,8587.1925,2025,Large,3
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2021,All businesses,3411
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2021,Non-employing,1461
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2021,Micro,1129
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2021,Small,656
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2021,Medium,154
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2021,Large,11
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2022,All businesses,3673
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2022,Non-employing,1688
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2022,Micro,1091
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2022,Small,722
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2022,Medium,161
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2022,Large,11
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2023,All businesses,3672
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2023,Non-employing,1734
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2023,Micro,1005
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2023,Small,729
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2023,Medium,192
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2023,Large,12
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2024,All businesses,3643
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2024,Non-employing,1779
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2024,Micro,981
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2024,Small,686
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2024,Medium,185
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2024,Large,12
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2025,All businesses,3640
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2025,Non-employing,1823
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2025,Micro,949
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2025,Small,682
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2025,Medium,171
+215,Geelong and the Bellarine,VIC,coastal,3973.387,2025,Large,15
+216,Gippsland,VIC,coastal,18760.6244,2021,All businesses,2243
+216,Gippsland,VIC,coastal,18760.6244,2021,Non-employing,841
+216,Gippsland,VIC,coastal,18760.6244,2021,Micro,856
+216,Gippsland,VIC,coastal,18760.6244,2021,Small,459
+216,Gippsland,VIC,coastal,18760.6244,2021,Medium,83
+216,Gippsland,VIC,coastal,18760.6244,2021,Large,4
+216,Gippsland,VIC,coastal,18760.6244,2022,All businesses,2357
+216,Gippsland,VIC,coastal,18760.6244,2022,Non-employing,923
+216,Gippsland,VIC,coastal,18760.6244,2022,Micro,896
+216,Gippsland,VIC,coastal,18760.6244,2022,Small,440
+216,Gippsland,VIC,coastal,18760.6244,2022,Medium,94
+216,Gippsland,VIC,coastal,18760.6244,2022,Large,4
+216,Gippsland,VIC,coastal,18760.6244,2023,All businesses,2325
+216,Gippsland,VIC,coastal,18760.6244,2023,Non-employing,927
+216,Gippsland,VIC,coastal,18760.6244,2023,Micro,824
+216,Gippsland,VIC,coastal,18760.6244,2023,Small,453
+216,Gippsland,VIC,coastal,18760.6244,2023,Medium,118
+216,Gippsland,VIC,coastal,18760.6244,2023,Large,3
+216,Gippsland,VIC,coastal,18760.6244,2024,All businesses,2310
+216,Gippsland,VIC,coastal,18760.6244,2024,Non-employing,964
+216,Gippsland,VIC,coastal,18760.6244,2024,Micro,775
+216,Gippsland,VIC,coastal,18760.6244,2024,Small,458
+216,Gippsland,VIC,coastal,18760.6244,2024,Medium,109
+216,Gippsland,VIC,coastal,18760.6244,2024,Large,4
+216,Gippsland,VIC,coastal,18760.6244,2025,All businesses,2280
+216,Gippsland,VIC,coastal,18760.6244,2025,Non-employing,972
+216,Gippsland,VIC,coastal,18760.6244,2025,Micro,725
+216,Gippsland,VIC,coastal,18760.6244,2025,Small,462
+216,Gippsland,VIC,coastal,18760.6244,2025,Medium,117
+216,Gippsland,VIC,coastal,18760.6244,2025,Large,4
+217,Goulburn,VIC,inland,8424.2221,2021,All businesses,1348
+217,Goulburn,VIC,inland,8424.2221,2021,Non-employing,546
+217,Goulburn,VIC,inland,8424.2221,2021,Micro,487
+217,Goulburn,VIC,inland,8424.2221,2021,Small,265
+217,Goulburn,VIC,inland,8424.2221,2021,Medium,47
+217,Goulburn,VIC,inland,8424.2221,2021,Large,3
+217,Goulburn,VIC,inland,8424.2221,2022,All businesses,1433
+217,Goulburn,VIC,inland,8424.2221,2022,Non-employing,623
+217,Goulburn,VIC,inland,8424.2221,2022,Micro,488
+217,Goulburn,VIC,inland,8424.2221,2022,Small,264
+217,Goulburn,VIC,inland,8424.2221,2022,Medium,55
+217,Goulburn,VIC,inland,8424.2221,2022,Large,3
+217,Goulburn,VIC,inland,8424.2221,2023,All businesses,1474
+217,Goulburn,VIC,inland,8424.2221,2023,Non-employing,673
+217,Goulburn,VIC,inland,8424.2221,2023,Micro,460
+217,Goulburn,VIC,inland,8424.2221,2023,Small,278
+217,Goulburn,VIC,inland,8424.2221,2023,Medium,60
+217,Goulburn,VIC,inland,8424.2221,2023,Large,3
+217,Goulburn,VIC,inland,8424.2221,2024,All businesses,1506
+217,Goulburn,VIC,inland,8424.2221,2024,Non-employing,716
+217,Goulburn,VIC,inland,8424.2221,2024,Micro,446
+217,Goulburn,VIC,inland,8424.2221,2024,Small,282
+217,Goulburn,VIC,inland,8424.2221,2024,Medium,60
+217,Goulburn,VIC,inland,8424.2221,2024,Large,3
+217,Goulburn,VIC,inland,8424.2221,2025,All businesses,1506
+217,Goulburn,VIC,inland,8424.2221,2025,Non-employing,756
+217,Goulburn,VIC,inland,8424.2221,2025,Micro,421
+217,Goulburn,VIC,inland,8424.2221,2025,Small,269
+217,Goulburn,VIC,inland,8424.2221,2025,Medium,58
+217,Goulburn,VIC,inland,8424.2221,2025,Large,3
+218,Victoria's High Country,VIC,inland,27453.6969,2021,All businesses,1812
+218,Victoria's High Country,VIC,inland,27453.6969,2021,Non-employing,681
+218,Victoria's High Country,VIC,inland,27453.6969,2021,Micro,688
+218,Victoria's High Country,VIC,inland,27453.6969,2021,Small,379
+218,Victoria's High Country,VIC,inland,27453.6969,2021,Medium,62
+218,Victoria's High Country,VIC,inland,27453.6969,2021,Large,3
+218,Victoria's High Country,VIC,inland,27453.6969,2022,All businesses,1918
+218,Victoria's High Country,VIC,inland,27453.6969,2022,Non-employing,748
+218,Victoria's High Country,VIC,inland,27453.6969,2022,Micro,699
+218,Victoria's High Country,VIC,inland,27453.6969,2022,Small,392
+218,Victoria's High Country,VIC,inland,27453.6969,2022,Medium,77
+218,Victoria's High Country,VIC,inland,27453.6969,2022,Large,3
+218,Victoria's High Country,VIC,inland,27453.6969,2023,All businesses,1922
+218,Victoria's High Country,VIC,inland,27453.6969,2023,Non-employing,782
+218,Victoria's High Country,VIC,inland,27453.6969,2023,Micro,651
+218,Victoria's High Country,VIC,inland,27453.6969,2023,Small,395
+218,Victoria's High Country,VIC,inland,27453.6969,2023,Medium,91
+218,Victoria's High Country,VIC,inland,27453.6969,2023,Large,3
+218,Victoria's High Country,VIC,inland,27453.6969,2024,All businesses,1898
+218,Victoria's High Country,VIC,inland,27453.6969,2024,Non-employing,809
+218,Victoria's High Country,VIC,inland,27453.6969,2024,Micro,606
+218,Victoria's High Country,VIC,inland,27453.6969,2024,Small,376
+218,Victoria's High Country,VIC,inland,27453.6969,2024,Medium,104
+218,Victoria's High Country,VIC,inland,27453.6969,2024,Large,3
+218,Victoria's High Country,VIC,inland,27453.6969,2025,All businesses,1862
+218,Victoria's High Country,VIC,inland,27453.6969,2025,Non-employing,798
+218,Victoria's High Country,VIC,inland,27453.6969,2025,Micro,592
+218,Victoria's High Country,VIC,inland,27453.6969,2025,Small,376
+218,Victoria's High Country,VIC,inland,27453.6969,2025,Medium,93
+218,Victoria's High Country,VIC,inland,27453.6969,2025,Large,3
+219,Lakes,VIC,coastal,21734.8332,2021,All businesses,753
+219,Lakes,VIC,coastal,21734.8332,2021,Non-employing,271
+219,Lakes,VIC,coastal,21734.8332,2021,Micro,279
+219,Lakes,VIC,coastal,21734.8332,2021,Small,179
+219,Lakes,VIC,coastal,21734.8332,2021,Medium,23
+219,Lakes,VIC,coastal,21734.8332,2021,Large,0
+219,Lakes,VIC,coastal,21734.8332,2022,All businesses,766
+219,Lakes,VIC,coastal,21734.8332,2022,Non-employing,282
+219,Lakes,VIC,coastal,21734.8332,2022,Micro,280
+219,Lakes,VIC,coastal,21734.8332,2022,Small,175
+219,Lakes,VIC,coastal,21734.8332,2022,Medium,28
+219,Lakes,VIC,coastal,21734.8332,2022,Large,0
+219,Lakes,VIC,coastal,21734.8332,2023,All businesses,737
+219,Lakes,VIC,coastal,21734.8332,2023,Non-employing,288
+219,Lakes,VIC,coastal,21734.8332,2023,Micro,240
+219,Lakes,VIC,coastal,21734.8332,2023,Small,174
+219,Lakes,VIC,coastal,21734.8332,2023,Medium,34
+219,Lakes,VIC,coastal,21734.8332,2023,Large,0
+219,Lakes,VIC,coastal,21734.8332,2024,All businesses,711
+219,Lakes,VIC,coastal,21734.8332,2024,Non-employing,281
+219,Lakes,VIC,coastal,21734.8332,2024,Micro,230
+219,Lakes,VIC,coastal,21734.8332,2024,Small,160
+219,Lakes,VIC,coastal,21734.8332,2024,Medium,40
+219,Lakes,VIC,coastal,21734.8332,2024,Large,0
+219,Lakes,VIC,coastal,21734.8332,2025,All businesses,700
+219,Lakes,VIC,coastal,21734.8332,2025,Non-employing,286
+219,Lakes,VIC,coastal,21734.8332,2025,Micro,213
+219,Lakes,VIC,coastal,21734.8332,2025,Small,163
+219,Lakes,VIC,coastal,21734.8332,2025,Medium,38
+219,Lakes,VIC,coastal,21734.8332,2025,Large,0
+220,Macedon,VIC,inland,1742.1506,2021,All businesses,971
+220,Macedon,VIC,inland,1742.1506,2021,Non-employing,410
+220,Macedon,VIC,inland,1742.1506,2021,Micro,370
+220,Macedon,VIC,inland,1742.1506,2021,Small,157
+220,Macedon,VIC,inland,1742.1506,2021,Medium,34
+220,Macedon,VIC,inland,1742.1506,2021,Large,0
+220,Macedon,VIC,inland,1742.1506,2022,All businesses,1052
+220,Macedon,VIC,inland,1742.1506,2022,Non-employing,494
+220,Macedon,VIC,inland,1742.1506,2022,Micro,343
+220,Macedon,VIC,inland,1742.1506,2022,Small,178
+220,Macedon,VIC,inland,1742.1506,2022,Medium,36
+220,Macedon,VIC,inland,1742.1506,2022,Large,3
+220,Macedon,VIC,inland,1742.1506,2023,All businesses,1083
+220,Macedon,VIC,inland,1742.1506,2023,Non-employing,525
+220,Macedon,VIC,inland,1742.1506,2023,Micro,331
+220,Macedon,VIC,inland,1742.1506,2023,Small,188
+220,Macedon,VIC,inland,1742.1506,2023,Medium,38
+220,Macedon,VIC,inland,1742.1506,2023,Large,3
+220,Macedon,VIC,inland,1742.1506,2024,All businesses,1078
+220,Macedon,VIC,inland,1742.1506,2024,Non-employing,546
+220,Macedon,VIC,inland,1742.1506,2024,Micro,295
+220,Macedon,VIC,inland,1742.1506,2024,Small,188
+220,Macedon,VIC,inland,1742.1506,2024,Medium,48
+220,Macedon,VIC,inland,1742.1506,2024,Large,3
+220,Macedon,VIC,inland,1742.1506,2025,All businesses,1079
+220,Macedon,VIC,inland,1742.1506,2025,Non-employing,569
+220,Macedon,VIC,inland,1742.1506,2025,Micro,281
+220,Macedon,VIC,inland,1742.1506,2025,Small,180
+220,Macedon,VIC,inland,1742.1506,2025,Medium,48
+220,Macedon,VIC,inland,1742.1506,2025,Large,3
+221,Mallee,VIC,inland,31860.0368,2021,All businesses,1127
+221,Mallee,VIC,inland,31860.0368,2021,Non-employing,419
+221,Mallee,VIC,inland,31860.0368,2021,Micro,436
+221,Mallee,VIC,inland,31860.0368,2021,Small,224
+221,Mallee,VIC,inland,31860.0368,2021,Medium,48
+221,Mallee,VIC,inland,31860.0368,2021,Large,0
+221,Mallee,VIC,inland,31860.0368,2022,All businesses,1179
+221,Mallee,VIC,inland,31860.0368,2022,Non-employing,461
+221,Mallee,VIC,inland,31860.0368,2022,Micro,427
+221,Mallee,VIC,inland,31860.0368,2022,Small,244
+221,Mallee,VIC,inland,31860.0368,2022,Medium,47
+221,Mallee,VIC,inland,31860.0368,2022,Large,0
+221,Mallee,VIC,inland,31860.0368,2023,All businesses,1150
+221,Mallee,VIC,inland,31860.0368,2023,Non-employing,451
+221,Mallee,VIC,inland,31860.0368,2023,Micro,392
+221,Mallee,VIC,inland,31860.0368,2023,Small,252
+221,Mallee,VIC,inland,31860.0368,2023,Medium,55
+221,Mallee,VIC,inland,31860.0368,2023,Large,0
+221,Mallee,VIC,inland,31860.0368,2024,All businesses,1130
+221,Mallee,VIC,inland,31860.0368,2024,Non-employing,430
+221,Mallee,VIC,inland,31860.0368,2024,Micro,385
+221,Mallee,VIC,inland,31860.0368,2024,Small,255
+221,Mallee,VIC,inland,31860.0368,2024,Medium,58
+221,Mallee,VIC,inland,31860.0368,2024,Large,0
+221,Mallee,VIC,inland,31860.0368,2025,All businesses,1107
+221,Mallee,VIC,inland,31860.0368,2025,Non-employing,427
+221,Mallee,VIC,inland,31860.0368,2025,Micro,377
+221,Mallee,VIC,inland,31860.0368,2025,Small,248
+221,Mallee,VIC,inland,31860.0368,2025,Medium,53
+221,Mallee,VIC,inland,31860.0368,2025,Large,0
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2021,All businesses,3708
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2021,Non-employing,1719
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2021,Micro,1297
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2021,Small,572
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2021,Medium,116
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2021,Large,4
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2022,All businesses,4014
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2022,Non-employing,1994
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2022,Micro,1301
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2022,Small,598
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2022,Medium,118
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2022,Large,3
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2023,All businesses,4012
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2023,Non-employing,2039
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2023,Micro,1199
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2023,Small,618
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2023,Medium,152
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2023,Large,4
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2024,All businesses,4015
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2024,Non-employing,2124
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2024,Micro,1123
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2024,Small,603
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2024,Medium,161
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2024,Large,4
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2025,All businesses,3949
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2025,Non-employing,2151
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2025,Micro,1074
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2025,Small,589
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2025,Medium,131
+222,Yarra Valley and Dandenong Ranges,VIC,inland,4198.2551,2025,Large,4
+223,Murray East,VIC,inland,437.7658,2021,All businesses,369
+223,Murray East,VIC,inland,437.7658,2021,Non-employing,129
+223,Murray East,VIC,inland,437.7658,2021,Micro,131
+223,Murray East,VIC,inland,437.7658,2021,Small,89
+223,Murray East,VIC,inland,437.7658,2021,Medium,19
+223,Murray East,VIC,inland,437.7658,2021,Large,0
+223,Murray East,VIC,inland,437.7658,2022,All businesses,392
+223,Murray East,VIC,inland,437.7658,2022,Non-employing,143
+223,Murray East,VIC,inland,437.7658,2022,Micro,140
+223,Murray East,VIC,inland,437.7658,2022,Small,82
+223,Murray East,VIC,inland,437.7658,2022,Medium,25
+223,Murray East,VIC,inland,437.7658,2022,Large,3
+223,Murray East,VIC,inland,437.7658,2023,All businesses,397
+223,Murray East,VIC,inland,437.7658,2023,Non-employing,148
+223,Murray East,VIC,inland,437.7658,2023,Micro,127
+223,Murray East,VIC,inland,437.7658,2023,Small,91
+223,Murray East,VIC,inland,437.7658,2023,Medium,29
+223,Murray East,VIC,inland,437.7658,2023,Large,3
+223,Murray East,VIC,inland,437.7658,2024,All businesses,389
+223,Murray East,VIC,inland,437.7658,2024,Non-employing,152
+223,Murray East,VIC,inland,437.7658,2024,Micro,115
+223,Murray East,VIC,inland,437.7658,2024,Small,95
+223,Murray East,VIC,inland,437.7658,2024,Medium,26
+223,Murray East,VIC,inland,437.7658,2024,Large,0
+223,Murray East,VIC,inland,437.7658,2025,All businesses,388
+223,Murray East,VIC,inland,437.7658,2025,Non-employing,146
+223,Murray East,VIC,inland,437.7658,2025,Micro,115
+223,Murray East,VIC,inland,437.7658,2025,Small,100
+223,Murray East,VIC,inland,437.7658,2025,Medium,25
+223,Murray East,VIC,inland,437.7658,2025,Large,3
+224,Mornington Peninsula,VIC,coastal,868.1109,2021,All businesses,3809
+224,Mornington Peninsula,VIC,coastal,868.1109,2021,Non-employing,1605
+224,Mornington Peninsula,VIC,coastal,868.1109,2021,Micro,1355
+224,Mornington Peninsula,VIC,coastal,868.1109,2021,Small,682
+224,Mornington Peninsula,VIC,coastal,868.1109,2021,Medium,163
+224,Mornington Peninsula,VIC,coastal,868.1109,2021,Large,4
+224,Mornington Peninsula,VIC,coastal,868.1109,2022,All businesses,4041
+224,Mornington Peninsula,VIC,coastal,868.1109,2022,Non-employing,1796
+224,Mornington Peninsula,VIC,coastal,868.1109,2022,Micro,1392
+224,Mornington Peninsula,VIC,coastal,868.1109,2022,Small,683
+224,Mornington Peninsula,VIC,coastal,868.1109,2022,Medium,165
+224,Mornington Peninsula,VIC,coastal,868.1109,2022,Large,5
+224,Mornington Peninsula,VIC,coastal,868.1109,2023,All businesses,3992
+224,Mornington Peninsula,VIC,coastal,868.1109,2023,Non-employing,1846
+224,Mornington Peninsula,VIC,coastal,868.1109,2023,Micro,1249
+224,Mornington Peninsula,VIC,coastal,868.1109,2023,Small,729
+224,Mornington Peninsula,VIC,coastal,868.1109,2023,Medium,163
+224,Mornington Peninsula,VIC,coastal,868.1109,2023,Large,5
+224,Mornington Peninsula,VIC,coastal,868.1109,2024,All businesses,3886
+224,Mornington Peninsula,VIC,coastal,868.1109,2024,Non-employing,1847
+224,Mornington Peninsula,VIC,coastal,868.1109,2024,Micro,1164
+224,Mornington Peninsula,VIC,coastal,868.1109,2024,Small,690
+224,Mornington Peninsula,VIC,coastal,868.1109,2024,Medium,178
+224,Mornington Peninsula,VIC,coastal,868.1109,2024,Large,7
+224,Mornington Peninsula,VIC,coastal,868.1109,2025,All businesses,3844
+224,Mornington Peninsula,VIC,coastal,868.1109,2025,Non-employing,1880
+224,Mornington Peninsula,VIC,coastal,868.1109,2025,Micro,1123
+224,Mornington Peninsula,VIC,coastal,868.1109,2025,Small,673
+224,Mornington Peninsula,VIC,coastal,868.1109,2025,Medium,162
+224,Mornington Peninsula,VIC,coastal,868.1109,2025,Large,6
+225,Phillip Island,VIC,coastal,1014.0502,2021,All businesses,575
+225,Phillip Island,VIC,coastal,1014.0502,2021,Non-employing,220
+225,Phillip Island,VIC,coastal,1014.0502,2021,Micro,206
+225,Phillip Island,VIC,coastal,1014.0502,2021,Small,126
+225,Phillip Island,VIC,coastal,1014.0502,2021,Medium,23
+225,Phillip Island,VIC,coastal,1014.0502,2021,Large,0
+225,Phillip Island,VIC,coastal,1014.0502,2022,All businesses,643
+225,Phillip Island,VIC,coastal,1014.0502,2022,Non-employing,259
+225,Phillip Island,VIC,coastal,1014.0502,2022,Micro,235
+225,Phillip Island,VIC,coastal,1014.0502,2022,Small,124
+225,Phillip Island,VIC,coastal,1014.0502,2022,Medium,25
+225,Phillip Island,VIC,coastal,1014.0502,2022,Large,0
+225,Phillip Island,VIC,coastal,1014.0502,2023,All businesses,643
+225,Phillip Island,VIC,coastal,1014.0502,2023,Non-employing,266
+225,Phillip Island,VIC,coastal,1014.0502,2023,Micro,214
+225,Phillip Island,VIC,coastal,1014.0502,2023,Small,131
+225,Phillip Island,VIC,coastal,1014.0502,2023,Medium,32
+225,Phillip Island,VIC,coastal,1014.0502,2023,Large,0
+225,Phillip Island,VIC,coastal,1014.0502,2024,All businesses,640
+225,Phillip Island,VIC,coastal,1014.0502,2024,Non-employing,260
+225,Phillip Island,VIC,coastal,1014.0502,2024,Micro,214
+225,Phillip Island,VIC,coastal,1014.0502,2024,Small,133
+225,Phillip Island,VIC,coastal,1014.0502,2024,Medium,33
+225,Phillip Island,VIC,coastal,1014.0502,2024,Large,0
+225,Phillip Island,VIC,coastal,1014.0502,2025,All businesses,628
+225,Phillip Island,VIC,coastal,1014.0502,2025,Non-employing,262
+225,Phillip Island,VIC,coastal,1014.0502,2025,Micro,194
+225,Phillip Island,VIC,coastal,1014.0502,2025,Small,139
+225,Phillip Island,VIC,coastal,1014.0502,2025,Medium,33
+225,Phillip Island,VIC,coastal,1014.0502,2025,Large,0
+226,Spa Country,VIC,inland,5031.3032,2021,All businesses,325
+226,Spa Country,VIC,inland,5031.3032,2021,Non-employing,136
+226,Spa Country,VIC,inland,5031.3032,2021,Micro,104
+226,Spa Country,VIC,inland,5031.3032,2021,Small,77
+226,Spa Country,VIC,inland,5031.3032,2021,Medium,8
+226,Spa Country,VIC,inland,5031.3032,2021,Large,0
+226,Spa Country,VIC,inland,5031.3032,2022,All businesses,363
+226,Spa Country,VIC,inland,5031.3032,2022,Non-employing,155
+226,Spa Country,VIC,inland,5031.3032,2022,Micro,111
+226,Spa Country,VIC,inland,5031.3032,2022,Small,84
+226,Spa Country,VIC,inland,5031.3032,2022,Medium,13
+226,Spa Country,VIC,inland,5031.3032,2022,Large,0
+226,Spa Country,VIC,inland,5031.3032,2023,All businesses,351
+226,Spa Country,VIC,inland,5031.3032,2023,Non-employing,156
+226,Spa Country,VIC,inland,5031.3032,2023,Micro,101
+226,Spa Country,VIC,inland,5031.3032,2023,Small,79
+226,Spa Country,VIC,inland,5031.3032,2023,Medium,15
+226,Spa Country,VIC,inland,5031.3032,2023,Large,0
+226,Spa Country,VIC,inland,5031.3032,2024,All businesses,350
+226,Spa Country,VIC,inland,5031.3032,2024,Non-employing,153
+226,Spa Country,VIC,inland,5031.3032,2024,Micro,102
+226,Spa Country,VIC,inland,5031.3032,2024,Small,78
+226,Spa Country,VIC,inland,5031.3032,2024,Medium,17
+226,Spa Country,VIC,inland,5031.3032,2024,Large,0
+226,Spa Country,VIC,inland,5031.3032,2025,All businesses,322
+226,Spa Country,VIC,inland,5031.3032,2025,Non-employing,155
+226,Spa Country,VIC,inland,5031.3032,2025,Micro,81
+226,Spa Country,VIC,inland,5031.3032,2025,Small,74
+226,Spa Country,VIC,inland,5031.3032,2025,Medium,12
+226,Spa Country,VIC,inland,5031.3032,2025,Large,0
+228,Great Ocean Road,VIC,coastal,21051.4643,2021,All businesses,2195
+228,Great Ocean Road,VIC,coastal,21051.4643,2021,Non-employing,803
+228,Great Ocean Road,VIC,coastal,21051.4643,2021,Micro,800
+228,Great Ocean Road,VIC,coastal,21051.4643,2021,Small,477
+228,Great Ocean Road,VIC,coastal,21051.4643,2021,Medium,115
+228,Great Ocean Road,VIC,coastal,21051.4643,2021,Large,0
+228,Great Ocean Road,VIC,coastal,21051.4643,2022,All businesses,2266
+228,Great Ocean Road,VIC,coastal,21051.4643,2022,Non-employing,846
+228,Great Ocean Road,VIC,coastal,21051.4643,2022,Micro,755
+228,Great Ocean Road,VIC,coastal,21051.4643,2022,Small,539
+228,Great Ocean Road,VIC,coastal,21051.4643,2022,Medium,125
+228,Great Ocean Road,VIC,coastal,21051.4643,2022,Large,3
+228,Great Ocean Road,VIC,coastal,21051.4643,2023,All businesses,2258
+228,Great Ocean Road,VIC,coastal,21051.4643,2023,Non-employing,856
+228,Great Ocean Road,VIC,coastal,21051.4643,2023,Micro,722
+228,Great Ocean Road,VIC,coastal,21051.4643,2023,Small,531
+228,Great Ocean Road,VIC,coastal,21051.4643,2023,Medium,149
+228,Great Ocean Road,VIC,coastal,21051.4643,2023,Large,0
+228,Great Ocean Road,VIC,coastal,21051.4643,2024,All businesses,2204
+228,Great Ocean Road,VIC,coastal,21051.4643,2024,Non-employing,888
+228,Great Ocean Road,VIC,coastal,21051.4643,2024,Micro,673
+228,Great Ocean Road,VIC,coastal,21051.4643,2024,Small,504
+228,Great Ocean Road,VIC,coastal,21051.4643,2024,Medium,138
+228,Great Ocean Road,VIC,coastal,21051.4643,2024,Large,3
+228,Great Ocean Road,VIC,coastal,21051.4643,2025,All businesses,2141
+228,Great Ocean Road,VIC,coastal,21051.4643,2025,Non-employing,876
+228,Great Ocean Road,VIC,coastal,21051.4643,2025,Micro,648
+228,Great Ocean Road,VIC,coastal,21051.4643,2025,Small,477
+228,Great Ocean Road,VIC,coastal,21051.4643,2025,Medium,139
+228,Great Ocean Road,VIC,coastal,21051.4643,2025,Large,3
+229,Western Grampians,VIC,inland,11087.7627,2021,All businesses,551
+229,Western Grampians,VIC,inland,11087.7627,2021,Non-employing,192
+229,Western Grampians,VIC,inland,11087.7627,2021,Micro,205
+229,Western Grampians,VIC,inland,11087.7627,2021,Small,132
+229,Western Grampians,VIC,inland,11087.7627,2021,Medium,22
+229,Western Grampians,VIC,inland,11087.7627,2021,Large,0
+229,Western Grampians,VIC,inland,11087.7627,2022,All businesses,565
+229,Western Grampians,VIC,inland,11087.7627,2022,Non-employing,208
+229,Western Grampians,VIC,inland,11087.7627,2022,Micro,205
+229,Western Grampians,VIC,inland,11087.7627,2022,Small,130
+229,Western Grampians,VIC,inland,11087.7627,2022,Medium,22
+229,Western Grampians,VIC,inland,11087.7627,2022,Large,0
+229,Western Grampians,VIC,inland,11087.7627,2023,All businesses,535
+229,Western Grampians,VIC,inland,11087.7627,2023,Non-employing,196
+229,Western Grampians,VIC,inland,11087.7627,2023,Micro,188
+229,Western Grampians,VIC,inland,11087.7627,2023,Small,129
+229,Western Grampians,VIC,inland,11087.7627,2023,Medium,22
+229,Western Grampians,VIC,inland,11087.7627,2023,Large,0
+229,Western Grampians,VIC,inland,11087.7627,2024,All businesses,533
+229,Western Grampians,VIC,inland,11087.7627,2024,Non-employing,197
+229,Western Grampians,VIC,inland,11087.7627,2024,Micro,187
+229,Western Grampians,VIC,inland,11087.7627,2024,Small,126
+229,Western Grampians,VIC,inland,11087.7627,2024,Medium,23
+229,Western Grampians,VIC,inland,11087.7627,2024,Large,0
+229,Western Grampians,VIC,inland,11087.7627,2025,All businesses,509
+229,Western Grampians,VIC,inland,11087.7627,2025,Non-employing,195
+229,Western Grampians,VIC,inland,11087.7627,2025,Micro,163
+229,Western Grampians,VIC,inland,11087.7627,2025,Small,128
+229,Western Grampians,VIC,inland,11087.7627,2025,Medium,23
+229,Western Grampians,VIC,inland,11087.7627,2025,Large,0
+230,Wimmera,VIC,inland,31948.2315,2021,All businesses,249
+230,Wimmera,VIC,inland,31948.2315,2021,Non-employing,100
+230,Wimmera,VIC,inland,31948.2315,2021,Micro,109
+230,Wimmera,VIC,inland,31948.2315,2021,Small,33
+230,Wimmera,VIC,inland,31948.2315,2021,Medium,7
+230,Wimmera,VIC,inland,31948.2315,2021,Large,0
+230,Wimmera,VIC,inland,31948.2315,2022,All businesses,251
+230,Wimmera,VIC,inland,31948.2315,2022,Non-employing,98
+230,Wimmera,VIC,inland,31948.2315,2022,Micro,108
+230,Wimmera,VIC,inland,31948.2315,2022,Small,40
+230,Wimmera,VIC,inland,31948.2315,2022,Medium,5
+230,Wimmera,VIC,inland,31948.2315,2022,Large,0
+230,Wimmera,VIC,inland,31948.2315,2023,All businesses,246
+230,Wimmera,VIC,inland,31948.2315,2023,Non-employing,96
+230,Wimmera,VIC,inland,31948.2315,2023,Micro,108
+230,Wimmera,VIC,inland,31948.2315,2023,Small,37
+230,Wimmera,VIC,inland,31948.2315,2023,Medium,5
+230,Wimmera,VIC,inland,31948.2315,2023,Large,0
+230,Wimmera,VIC,inland,31948.2315,2024,All businesses,239
+230,Wimmera,VIC,inland,31948.2315,2024,Non-employing,100
+230,Wimmera,VIC,inland,31948.2315,2024,Micro,93
+230,Wimmera,VIC,inland,31948.2315,2024,Small,42
+230,Wimmera,VIC,inland,31948.2315,2024,Medium,4
+230,Wimmera,VIC,inland,31948.2315,2024,Large,0
+230,Wimmera,VIC,inland,31948.2315,2025,All businesses,229
+230,Wimmera,VIC,inland,31948.2315,2025,Non-employing,95
+230,Wimmera,VIC,inland,31948.2315,2025,Micro,89
+230,Wimmera,VIC,inland,31948.2315,2025,Small,39
+230,Wimmera,VIC,inland,31948.2315,2025,Medium,6
+230,Wimmera,VIC,inland,31948.2315,2025,Large,0
+310,Brisbane,QLD,coastal,10193.9153,2021,All businesses,28963
+310,Brisbane,QLD,coastal,10193.9153,2021,Non-employing,14071
+310,Brisbane,QLD,coastal,10193.9153,2021,Micro,8451
+310,Brisbane,QLD,coastal,10193.9153,2021,Small,5081
+310,Brisbane,QLD,coastal,10193.9153,2021,Medium,1318
+310,Brisbane,QLD,coastal,10193.9153,2021,Large,42
+310,Brisbane,QLD,coastal,10193.9153,2022,All businesses,29611
+310,Brisbane,QLD,coastal,10193.9153,2022,Non-employing,14350
+310,Brisbane,QLD,coastal,10193.9153,2022,Micro,8512
+310,Brisbane,QLD,coastal,10193.9153,2022,Small,5314
+310,Brisbane,QLD,coastal,10193.9153,2022,Medium,1387
+310,Brisbane,QLD,coastal,10193.9153,2022,Large,48
+310,Brisbane,QLD,coastal,10193.9153,2023,All businesses,30061
+310,Brisbane,QLD,coastal,10193.9153,2023,Non-employing,14830
+310,Brisbane,QLD,coastal,10193.9153,2023,Micro,8179
+310,Brisbane,QLD,coastal,10193.9153,2023,Small,5387
+310,Brisbane,QLD,coastal,10193.9153,2023,Medium,1605
+310,Brisbane,QLD,coastal,10193.9153,2023,Large,60
+310,Brisbane,QLD,coastal,10193.9153,2024,All businesses,30751
+310,Brisbane,QLD,coastal,10193.9153,2024,Non-employing,15506
+310,Brisbane,QLD,coastal,10193.9153,2024,Micro,8072
+310,Brisbane,QLD,coastal,10193.9153,2024,Small,5416
+310,Brisbane,QLD,coastal,10193.9153,2024,Medium,1693
+310,Brisbane,QLD,coastal,10193.9153,2024,Large,64
+310,Brisbane,QLD,coastal,10193.9153,2025,All businesses,31088
+310,Brisbane,QLD,coastal,10193.9153,2025,Non-employing,15815
+310,Brisbane,QLD,coastal,10193.9153,2025,Micro,7949
+310,Brisbane,QLD,coastal,10193.9153,2025,Small,5591
+310,Brisbane,QLD,coastal,10193.9153,2025,Medium,1666
+310,Brisbane,QLD,coastal,10193.9153,2025,Large,67
+311,Bundaberg,QLD,coastal,26141.1482,2021,All businesses,966
+311,Bundaberg,QLD,coastal,26141.1482,2021,Non-employing,367
+311,Bundaberg,QLD,coastal,26141.1482,2021,Micro,324
+311,Bundaberg,QLD,coastal,26141.1482,2021,Small,233
+311,Bundaberg,QLD,coastal,26141.1482,2021,Medium,40
+311,Bundaberg,QLD,coastal,26141.1482,2021,Large,3
+311,Bundaberg,QLD,coastal,26141.1482,2022,All businesses,1020
+311,Bundaberg,QLD,coastal,26141.1482,2022,Non-employing,415
+311,Bundaberg,QLD,coastal,26141.1482,2022,Micro,304
+311,Bundaberg,QLD,coastal,26141.1482,2022,Small,252
+311,Bundaberg,QLD,coastal,26141.1482,2022,Medium,46
+311,Bundaberg,QLD,coastal,26141.1482,2022,Large,3
+311,Bundaberg,QLD,coastal,26141.1482,2023,All businesses,1003
+311,Bundaberg,QLD,coastal,26141.1482,2023,Non-employing,431
+311,Bundaberg,QLD,coastal,26141.1482,2023,Micro,265
+311,Bundaberg,QLD,coastal,26141.1482,2023,Small,248
+311,Bundaberg,QLD,coastal,26141.1482,2023,Medium,56
+311,Bundaberg,QLD,coastal,26141.1482,2023,Large,3
+311,Bundaberg,QLD,coastal,26141.1482,2024,All businesses,990
+311,Bundaberg,QLD,coastal,26141.1482,2024,Non-employing,432
+311,Bundaberg,QLD,coastal,26141.1482,2024,Micro,257
+311,Bundaberg,QLD,coastal,26141.1482,2024,Small,237
+311,Bundaberg,QLD,coastal,26141.1482,2024,Medium,62
+311,Bundaberg,QLD,coastal,26141.1482,2024,Large,3
+311,Bundaberg,QLD,coastal,26141.1482,2025,All businesses,995
+311,Bundaberg,QLD,coastal,26141.1482,2025,Non-employing,441
+311,Bundaberg,QLD,coastal,26141.1482,2025,Micro,260
+311,Bundaberg,QLD,coastal,26141.1482,2025,Small,237
+311,Bundaberg,QLD,coastal,26141.1482,2025,Medium,53
+311,Bundaberg,QLD,coastal,26141.1482,2025,Large,4
+313,Queensland Country,QLD,inland,153574.1586,2021,All businesses,3329
+313,Queensland Country,QLD,inland,153574.1586,2021,Non-employing,1429
+313,Queensland Country,QLD,inland,153574.1586,2021,Micro,1030
+313,Queensland Country,QLD,inland,153574.1586,2021,Small,720
+313,Queensland Country,QLD,inland,153574.1586,2021,Medium,147
+313,Queensland Country,QLD,inland,153574.1586,2021,Large,3
+313,Queensland Country,QLD,inland,153574.1586,2022,All businesses,3502
+313,Queensland Country,QLD,inland,153574.1586,2022,Non-employing,1556
+313,Queensland Country,QLD,inland,153574.1586,2022,Micro,1055
+313,Queensland Country,QLD,inland,153574.1586,2022,Small,722
+313,Queensland Country,QLD,inland,153574.1586,2022,Medium,166
+313,Queensland Country,QLD,inland,153574.1586,2022,Large,3
+313,Queensland Country,QLD,inland,153574.1586,2023,All businesses,3518
+313,Queensland Country,QLD,inland,153574.1586,2023,Non-employing,1597
+313,Queensland Country,QLD,inland,153574.1586,2023,Micro,983
+313,Queensland Country,QLD,inland,153574.1586,2023,Small,747
+313,Queensland Country,QLD,inland,153574.1586,2023,Medium,188
+313,Queensland Country,QLD,inland,153574.1586,2023,Large,3
+313,Queensland Country,QLD,inland,153574.1586,2024,All businesses,3496
+313,Queensland Country,QLD,inland,153574.1586,2024,Non-employing,1615
+313,Queensland Country,QLD,inland,153574.1586,2024,Micro,933
+313,Queensland Country,QLD,inland,153574.1586,2024,Small,751
+313,Queensland Country,QLD,inland,153574.1586,2024,Medium,195
+313,Queensland Country,QLD,inland,153574.1586,2024,Large,3
+313,Queensland Country,QLD,inland,153574.1586,2025,All businesses,3494
+313,Queensland Country,QLD,inland,153574.1586,2025,Non-employing,1638
+313,Queensland Country,QLD,inland,153574.1586,2025,Micro,936
+313,Queensland Country,QLD,inland,153574.1586,2025,Small,728
+313,Queensland Country,QLD,inland,153574.1586,2025,Medium,190
+313,Queensland Country,QLD,inland,153574.1586,2025,Large,3
+314,Fraser Coast,QLD,coastal,6974.0371,2021,All businesses,926
+314,Fraser Coast,QLD,coastal,6974.0371,2021,Non-employing,359
+314,Fraser Coast,QLD,coastal,6974.0371,2021,Micro,315
+314,Fraser Coast,QLD,coastal,6974.0371,2021,Small,215
+314,Fraser Coast,QLD,coastal,6974.0371,2021,Medium,37
+314,Fraser Coast,QLD,coastal,6974.0371,2021,Large,0
+314,Fraser Coast,QLD,coastal,6974.0371,2022,All businesses,942
+314,Fraser Coast,QLD,coastal,6974.0371,2022,Non-employing,360
+314,Fraser Coast,QLD,coastal,6974.0371,2022,Micro,316
+314,Fraser Coast,QLD,coastal,6974.0371,2022,Small,227
+314,Fraser Coast,QLD,coastal,6974.0371,2022,Medium,38
+314,Fraser Coast,QLD,coastal,6974.0371,2022,Large,0
+314,Fraser Coast,QLD,coastal,6974.0371,2023,All businesses,942
+314,Fraser Coast,QLD,coastal,6974.0371,2023,Non-employing,381
+314,Fraser Coast,QLD,coastal,6974.0371,2023,Micro,286
+314,Fraser Coast,QLD,coastal,6974.0371,2023,Small,230
+314,Fraser Coast,QLD,coastal,6974.0371,2023,Medium,44
+314,Fraser Coast,QLD,coastal,6974.0371,2023,Large,0
+314,Fraser Coast,QLD,coastal,6974.0371,2024,All businesses,943
+314,Fraser Coast,QLD,coastal,6974.0371,2024,Non-employing,397
+314,Fraser Coast,QLD,coastal,6974.0371,2024,Micro,272
+314,Fraser Coast,QLD,coastal,6974.0371,2024,Small,224
+314,Fraser Coast,QLD,coastal,6974.0371,2024,Medium,49
+314,Fraser Coast,QLD,coastal,6974.0371,2024,Large,0
+314,Fraser Coast,QLD,coastal,6974.0371,2025,All businesses,966
+314,Fraser Coast,QLD,coastal,6974.0371,2025,Non-employing,405
+314,Fraser Coast,QLD,coastal,6974.0371,2025,Micro,283
+314,Fraser Coast,QLD,coastal,6974.0371,2025,Small,227
+314,Fraser Coast,QLD,coastal,6974.0371,2025,Medium,50
+314,Fraser Coast,QLD,coastal,6974.0371,2025,Large,0
+315,Gold Coast,QLD,coastal,1308.3008,2021,All businesses,10333
+315,Gold Coast,QLD,coastal,1308.3008,2021,Non-employing,4965
+315,Gold Coast,QLD,coastal,1308.3008,2021,Micro,3261
+315,Gold Coast,QLD,coastal,1308.3008,2021,Small,1649
+315,Gold Coast,QLD,coastal,1308.3008,2021,Medium,441
+315,Gold Coast,QLD,coastal,1308.3008,2021,Large,17
+315,Gold Coast,QLD,coastal,1308.3008,2022,All businesses,10753
+315,Gold Coast,QLD,coastal,1308.3008,2022,Non-employing,5162
+315,Gold Coast,QLD,coastal,1308.3008,2022,Micro,3425
+315,Gold Coast,QLD,coastal,1308.3008,2022,Small,1670
+315,Gold Coast,QLD,coastal,1308.3008,2022,Medium,476
+315,Gold Coast,QLD,coastal,1308.3008,2022,Large,20
+315,Gold Coast,QLD,coastal,1308.3008,2023,All businesses,11101
+315,Gold Coast,QLD,coastal,1308.3008,2023,Non-employing,5479
+315,Gold Coast,QLD,coastal,1308.3008,2023,Micro,3239
+315,Gold Coast,QLD,coastal,1308.3008,2023,Small,1810
+315,Gold Coast,QLD,coastal,1308.3008,2023,Medium,551
+315,Gold Coast,QLD,coastal,1308.3008,2023,Large,22
+315,Gold Coast,QLD,coastal,1308.3008,2024,All businesses,11329
+315,Gold Coast,QLD,coastal,1308.3008,2024,Non-employing,5734
+315,Gold Coast,QLD,coastal,1308.3008,2024,Micro,3180
+315,Gold Coast,QLD,coastal,1308.3008,2024,Small,1786
+315,Gold Coast,QLD,coastal,1308.3008,2024,Medium,603
+315,Gold Coast,QLD,coastal,1308.3008,2024,Large,26
+315,Gold Coast,QLD,coastal,1308.3008,2025,All businesses,11409
+315,Gold Coast,QLD,coastal,1308.3008,2025,Non-employing,5904
+315,Gold Coast,QLD,coastal,1308.3008,2025,Micro,3100
+315,Gold Coast,QLD,coastal,1308.3008,2025,Small,1808
+315,Gold Coast,QLD,coastal,1308.3008,2025,Medium,570
+315,Gold Coast,QLD,coastal,1308.3008,2025,Large,27
+316,Mackay,QLD,coastal,66215.7433,2021,All businesses,1093
+316,Mackay,QLD,coastal,66215.7433,2021,Non-employing,416
+316,Mackay,QLD,coastal,66215.7433,2021,Micro,314
+316,Mackay,QLD,coastal,66215.7433,2021,Small,285
+316,Mackay,QLD,coastal,66215.7433,2021,Medium,77
+316,Mackay,QLD,coastal,66215.7433,2021,Large,3
+316,Mackay,QLD,coastal,66215.7433,2022,All businesses,1128
+316,Mackay,QLD,coastal,66215.7433,2022,Non-employing,460
+316,Mackay,QLD,coastal,66215.7433,2022,Micro,307
+316,Mackay,QLD,coastal,66215.7433,2022,Small,265
+316,Mackay,QLD,coastal,66215.7433,2022,Medium,95
+316,Mackay,QLD,coastal,66215.7433,2022,Large,3
+316,Mackay,QLD,coastal,66215.7433,2023,All businesses,1166
+316,Mackay,QLD,coastal,66215.7433,2023,Non-employing,498
+316,Mackay,QLD,coastal,66215.7433,2023,Micro,289
+316,Mackay,QLD,coastal,66215.7433,2023,Small,285
+316,Mackay,QLD,coastal,66215.7433,2023,Medium,93
+316,Mackay,QLD,coastal,66215.7433,2023,Large,3
+316,Mackay,QLD,coastal,66215.7433,2024,All businesses,1181
+316,Mackay,QLD,coastal,66215.7433,2024,Non-employing,510
+316,Mackay,QLD,coastal,66215.7433,2024,Micro,293
+316,Mackay,QLD,coastal,66215.7433,2024,Small,276
+316,Mackay,QLD,coastal,66215.7433,2024,Medium,101
+316,Mackay,QLD,coastal,66215.7433,2024,Large,3
+316,Mackay,QLD,coastal,66215.7433,2025,All businesses,1201
+316,Mackay,QLD,coastal,66215.7433,2025,Non-employing,514
+316,Mackay,QLD,coastal,66215.7433,2025,Micro,289
+316,Mackay,QLD,coastal,66215.7433,2025,Small,282
+316,Mackay,QLD,coastal,66215.7433,2025,Medium,114
+316,Mackay,QLD,coastal,66215.7433,2025,Large,0
+317,Townsville,QLD,coastal,80006.9205,2021,All businesses,2183
+317,Townsville,QLD,coastal,80006.9205,2021,Non-employing,893
+317,Townsville,QLD,coastal,80006.9205,2021,Micro,663
+317,Townsville,QLD,coastal,80006.9205,2021,Small,494
+317,Townsville,QLD,coastal,80006.9205,2021,Medium,129
+317,Townsville,QLD,coastal,80006.9205,2021,Large,4
+317,Townsville,QLD,coastal,80006.9205,2022,All businesses,2207
+317,Townsville,QLD,coastal,80006.9205,2022,Non-employing,917
+317,Townsville,QLD,coastal,80006.9205,2022,Micro,636
+317,Townsville,QLD,coastal,80006.9205,2022,Small,499
+317,Townsville,QLD,coastal,80006.9205,2022,Medium,151
+317,Townsville,QLD,coastal,80006.9205,2022,Large,4
+317,Townsville,QLD,coastal,80006.9205,2023,All businesses,2210
+317,Townsville,QLD,coastal,80006.9205,2023,Non-employing,938
+317,Townsville,QLD,coastal,80006.9205,2023,Micro,590
+317,Townsville,QLD,coastal,80006.9205,2023,Small,510
+317,Townsville,QLD,coastal,80006.9205,2023,Medium,166
+317,Townsville,QLD,coastal,80006.9205,2023,Large,6
+317,Townsville,QLD,coastal,80006.9205,2024,All businesses,2143
+317,Townsville,QLD,coastal,80006.9205,2024,Non-employing,917
+317,Townsville,QLD,coastal,80006.9205,2024,Micro,553
+317,Townsville,QLD,coastal,80006.9205,2024,Small,505
+317,Townsville,QLD,coastal,80006.9205,2024,Medium,160
+317,Townsville,QLD,coastal,80006.9205,2024,Large,8
+317,Townsville,QLD,coastal,80006.9205,2025,All businesses,2152
+317,Townsville,QLD,coastal,80006.9205,2025,Non-employing,931
+317,Townsville,QLD,coastal,80006.9205,2025,Micro,558
+317,Townsville,QLD,coastal,80006.9205,2025,Small,485
+317,Townsville,QLD,coastal,80006.9205,2025,Medium,168
+317,Townsville,QLD,coastal,80006.9205,2025,Large,10
+318,Outback Queensland,QLD,inland,936140.8268,2021,All businesses,1000
+318,Outback Queensland,QLD,inland,936140.8268,2021,Non-employing,386
+318,Outback Queensland,QLD,inland,936140.8268,2021,Micro,346
+318,Outback Queensland,QLD,inland,936140.8268,2021,Small,232
+318,Outback Queensland,QLD,inland,936140.8268,2021,Medium,35
+318,Outback Queensland,QLD,inland,936140.8268,2021,Large,0
+318,Outback Queensland,QLD,inland,936140.8268,2022,All businesses,1013
+318,Outback Queensland,QLD,inland,936140.8268,2022,Non-employing,413
+318,Outback Queensland,QLD,inland,936140.8268,2022,Micro,326
+318,Outback Queensland,QLD,inland,936140.8268,2022,Small,219
+318,Outback Queensland,QLD,inland,936140.8268,2022,Medium,54
+318,Outback Queensland,QLD,inland,936140.8268,2022,Large,0
+318,Outback Queensland,QLD,inland,936140.8268,2023,All businesses,1031
+318,Outback Queensland,QLD,inland,936140.8268,2023,Non-employing,439
+318,Outback Queensland,QLD,inland,936140.8268,2023,Micro,310
+318,Outback Queensland,QLD,inland,936140.8268,2023,Small,226
+318,Outback Queensland,QLD,inland,936140.8268,2023,Medium,56
+318,Outback Queensland,QLD,inland,936140.8268,2023,Large,0
+318,Outback Queensland,QLD,inland,936140.8268,2024,All businesses,1030
+318,Outback Queensland,QLD,inland,936140.8268,2024,Non-employing,437
+318,Outback Queensland,QLD,inland,936140.8268,2024,Micro,307
+318,Outback Queensland,QLD,inland,936140.8268,2024,Small,238
+318,Outback Queensland,QLD,inland,936140.8268,2024,Medium,48
+318,Outback Queensland,QLD,inland,936140.8268,2024,Large,0
+318,Outback Queensland,QLD,inland,936140.8268,2025,All businesses,1002
+318,Outback Queensland,QLD,inland,936140.8268,2025,Non-employing,429
+318,Outback Queensland,QLD,inland,936140.8268,2025,Micro,298
+318,Outback Queensland,QLD,inland,936140.8268,2025,Small,227
+318,Outback Queensland,QLD,inland,936140.8268,2025,Medium,48
+318,Outback Queensland,QLD,inland,936140.8268,2025,Large,0
+319,Sunshine Coast,QLD,coastal,10062.78,2021,All businesses,6291
+319,Sunshine Coast,QLD,coastal,10062.78,2021,Non-employing,2725
+319,Sunshine Coast,QLD,coastal,10062.78,2021,Micro,2098
+319,Sunshine Coast,QLD,coastal,10062.78,2021,Small,1189
+319,Sunshine Coast,QLD,coastal,10062.78,2021,Medium,273
+319,Sunshine Coast,QLD,coastal,10062.78,2021,Large,6
+319,Sunshine Coast,QLD,coastal,10062.78,2022,All businesses,6537
+319,Sunshine Coast,QLD,coastal,10062.78,2022,Non-employing,2885
+319,Sunshine Coast,QLD,coastal,10062.78,2022,Micro,2080
+319,Sunshine Coast,QLD,coastal,10062.78,2022,Small,1244
+319,Sunshine Coast,QLD,coastal,10062.78,2022,Medium,322
+319,Sunshine Coast,QLD,coastal,10062.78,2022,Large,6
+319,Sunshine Coast,QLD,coastal,10062.78,2023,All businesses,6600
+319,Sunshine Coast,QLD,coastal,10062.78,2023,Non-employing,3071
+319,Sunshine Coast,QLD,coastal,10062.78,2023,Micro,1901
+319,Sunshine Coast,QLD,coastal,10062.78,2023,Small,1246
+319,Sunshine Coast,QLD,coastal,10062.78,2023,Medium,374
+319,Sunshine Coast,QLD,coastal,10062.78,2023,Large,8
+319,Sunshine Coast,QLD,coastal,10062.78,2024,All businesses,6711
+319,Sunshine Coast,QLD,coastal,10062.78,2024,Non-employing,3209
+319,Sunshine Coast,QLD,coastal,10062.78,2024,Micro,1812
+319,Sunshine Coast,QLD,coastal,10062.78,2024,Small,1283
+319,Sunshine Coast,QLD,coastal,10062.78,2024,Medium,399
+319,Sunshine Coast,QLD,coastal,10062.78,2024,Large,8
+319,Sunshine Coast,QLD,coastal,10062.78,2025,All businesses,6766
+319,Sunshine Coast,QLD,coastal,10062.78,2025,Non-employing,3276
+319,Sunshine Coast,QLD,coastal,10062.78,2025,Micro,1822
+319,Sunshine Coast,QLD,coastal,10062.78,2025,Small,1273
+319,Sunshine Coast,QLD,coastal,10062.78,2025,Medium,386
+319,Sunshine Coast,QLD,coastal,10062.78,2025,Large,9
+320,Tropical North Queensland,QLD,coastal,386377.9462,2021,All businesses,3961
+320,Tropical North Queensland,QLD,coastal,386377.9462,2021,Non-employing,1610
+320,Tropical North Queensland,QLD,coastal,386377.9462,2021,Micro,1346
+320,Tropical North Queensland,QLD,coastal,386377.9462,2021,Small,785
+320,Tropical North Queensland,QLD,coastal,386377.9462,2021,Medium,214
+320,Tropical North Queensland,QLD,coastal,386377.9462,2021,Large,6
+320,Tropical North Queensland,QLD,coastal,386377.9462,2022,All businesses,4040
+320,Tropical North Queensland,QLD,coastal,386377.9462,2022,Non-employing,1629
+320,Tropical North Queensland,QLD,coastal,386377.9462,2022,Micro,1315
+320,Tropical North Queensland,QLD,coastal,386377.9462,2022,Small,857
+320,Tropical North Queensland,QLD,coastal,386377.9462,2022,Medium,232
+320,Tropical North Queensland,QLD,coastal,386377.9462,2022,Large,7
+320,Tropical North Queensland,QLD,coastal,386377.9462,2023,All businesses,4047
+320,Tropical North Queensland,QLD,coastal,386377.9462,2023,Non-employing,1758
+320,Tropical North Queensland,QLD,coastal,386377.9462,2023,Micro,1207
+320,Tropical North Queensland,QLD,coastal,386377.9462,2023,Small,813
+320,Tropical North Queensland,QLD,coastal,386377.9462,2023,Medium,260
+320,Tropical North Queensland,QLD,coastal,386377.9462,2023,Large,9
+320,Tropical North Queensland,QLD,coastal,386377.9462,2024,All businesses,4071
+320,Tropical North Queensland,QLD,coastal,386377.9462,2024,Non-employing,1814
+320,Tropical North Queensland,QLD,coastal,386377.9462,2024,Micro,1119
+320,Tropical North Queensland,QLD,coastal,386377.9462,2024,Small,839
+320,Tropical North Queensland,QLD,coastal,386377.9462,2024,Medium,287
+320,Tropical North Queensland,QLD,coastal,386377.9462,2024,Large,12
+320,Tropical North Queensland,QLD,coastal,386377.9462,2025,All businesses,4049
+320,Tropical North Queensland,QLD,coastal,386377.9462,2025,Non-employing,1847
+320,Tropical North Queensland,QLD,coastal,386377.9462,2025,Micro,1089
+320,Tropical North Queensland,QLD,coastal,386377.9462,2025,Small,824
+320,Tropical North Queensland,QLD,coastal,386377.9462,2025,Medium,279
+320,Tropical North Queensland,QLD,coastal,386377.9462,2025,Large,10
+321,Whitsundays,QLD,coastal,23684.2134,2021,All businesses,606
+321,Whitsundays,QLD,coastal,23684.2134,2021,Non-employing,240
+321,Whitsundays,QLD,coastal,23684.2134,2021,Micro,183
+321,Whitsundays,QLD,coastal,23684.2134,2021,Small,140
+321,Whitsundays,QLD,coastal,23684.2134,2021,Medium,42
+321,Whitsundays,QLD,coastal,23684.2134,2021,Large,0
+321,Whitsundays,QLD,coastal,23684.2134,2022,All businesses,631
+321,Whitsundays,QLD,coastal,23684.2134,2022,Non-employing,250
+321,Whitsundays,QLD,coastal,23684.2134,2022,Micro,207
+321,Whitsundays,QLD,coastal,23684.2134,2022,Small,134
+321,Whitsundays,QLD,coastal,23684.2134,2022,Medium,39
+321,Whitsundays,QLD,coastal,23684.2134,2022,Large,0
+321,Whitsundays,QLD,coastal,23684.2134,2023,All businesses,664
+321,Whitsundays,QLD,coastal,23684.2134,2023,Non-employing,279
+321,Whitsundays,QLD,coastal,23684.2134,2023,Micro,197
+321,Whitsundays,QLD,coastal,23684.2134,2023,Small,141
+321,Whitsundays,QLD,coastal,23684.2134,2023,Medium,45
+321,Whitsundays,QLD,coastal,23684.2134,2023,Large,3
+321,Whitsundays,QLD,coastal,23684.2134,2024,All businesses,666
+321,Whitsundays,QLD,coastal,23684.2134,2024,Non-employing,287
+321,Whitsundays,QLD,coastal,23684.2134,2024,Micro,174
+321,Whitsundays,QLD,coastal,23684.2134,2024,Small,147
+321,Whitsundays,QLD,coastal,23684.2134,2024,Medium,56
+321,Whitsundays,QLD,coastal,23684.2134,2024,Large,3
+321,Whitsundays,QLD,coastal,23684.2134,2025,All businesses,665
+321,Whitsundays,QLD,coastal,23684.2134,2025,Non-employing,279
+321,Whitsundays,QLD,coastal,23684.2134,2025,Micro,183
+321,Whitsundays,QLD,coastal,23684.2134,2025,Small,145
+321,Whitsundays,QLD,coastal,23684.2134,2025,Medium,56
+321,Whitsundays,QLD,coastal,23684.2134,2025,Large,3
+322,Capricorn Coast,QLD,coastal,18290.2309,2021,All businesses,1344
+322,Capricorn Coast,QLD,coastal,18290.2309,2021,Non-employing,549
+322,Capricorn Coast,QLD,coastal,18290.2309,2021,Micro,378
+322,Capricorn Coast,QLD,coastal,18290.2309,2021,Small,324
+322,Capricorn Coast,QLD,coastal,18290.2309,2021,Medium,92
+322,Capricorn Coast,QLD,coastal,18290.2309,2021,Large,3
+322,Capricorn Coast,QLD,coastal,18290.2309,2022,All businesses,1378
+322,Capricorn Coast,QLD,coastal,18290.2309,2022,Non-employing,587
+322,Capricorn Coast,QLD,coastal,18290.2309,2022,Micro,381
+322,Capricorn Coast,QLD,coastal,18290.2309,2022,Small,313
+322,Capricorn Coast,QLD,coastal,18290.2309,2022,Medium,95
+322,Capricorn Coast,QLD,coastal,18290.2309,2022,Large,0
+322,Capricorn Coast,QLD,coastal,18290.2309,2023,All businesses,1408
+322,Capricorn Coast,QLD,coastal,18290.2309,2023,Non-employing,616
+322,Capricorn Coast,QLD,coastal,18290.2309,2023,Micro,347
+322,Capricorn Coast,QLD,coastal,18290.2309,2023,Small,349
+322,Capricorn Coast,QLD,coastal,18290.2309,2023,Medium,93
+322,Capricorn Coast,QLD,coastal,18290.2309,2023,Large,3
+322,Capricorn Coast,QLD,coastal,18290.2309,2024,All businesses,1405
+322,Capricorn Coast,QLD,coastal,18290.2309,2024,Non-employing,623
+322,Capricorn Coast,QLD,coastal,18290.2309,2024,Micro,356
+322,Capricorn Coast,QLD,coastal,18290.2309,2024,Small,330
+322,Capricorn Coast,QLD,coastal,18290.2309,2024,Medium,94
+322,Capricorn Coast,QLD,coastal,18290.2309,2024,Large,0
+322,Capricorn Coast,QLD,coastal,18290.2309,2025,All businesses,1311
+322,Capricorn Coast,QLD,coastal,18290.2309,2025,Non-employing,545
+322,Capricorn Coast,QLD,coastal,18290.2309,2025,Micro,329
+322,Capricorn Coast,QLD,coastal,18290.2309,2025,Small,331
+322,Capricorn Coast,QLD,coastal,18290.2309,2025,Medium,104
+322,Capricorn Coast,QLD,coastal,18290.2309,2025,Large,0
+323,Gladstone,QLD,coastal,10504.6589,2021,All businesses,505
+323,Gladstone,QLD,coastal,10504.6589,2021,Non-employing,198
+323,Gladstone,QLD,coastal,10504.6589,2021,Micro,159
+323,Gladstone,QLD,coastal,10504.6589,2021,Small,125
+323,Gladstone,QLD,coastal,10504.6589,2021,Medium,23
+323,Gladstone,QLD,coastal,10504.6589,2021,Large,0
+323,Gladstone,QLD,coastal,10504.6589,2022,All businesses,527
+323,Gladstone,QLD,coastal,10504.6589,2022,Non-employing,215
+323,Gladstone,QLD,coastal,10504.6589,2022,Micro,149
+323,Gladstone,QLD,coastal,10504.6589,2022,Small,133
+323,Gladstone,QLD,coastal,10504.6589,2022,Medium,30
+323,Gladstone,QLD,coastal,10504.6589,2022,Large,0
+323,Gladstone,QLD,coastal,10504.6589,2023,All businesses,529
+323,Gladstone,QLD,coastal,10504.6589,2023,Non-employing,229
+323,Gladstone,QLD,coastal,10504.6589,2023,Micro,143
+323,Gladstone,QLD,coastal,10504.6589,2023,Small,119
+323,Gladstone,QLD,coastal,10504.6589,2023,Medium,38
+323,Gladstone,QLD,coastal,10504.6589,2023,Large,0
+323,Gladstone,QLD,coastal,10504.6589,2024,All businesses,526
+323,Gladstone,QLD,coastal,10504.6589,2024,Non-employing,235
+323,Gladstone,QLD,coastal,10504.6589,2024,Micro,131
+323,Gladstone,QLD,coastal,10504.6589,2024,Small,125
+323,Gladstone,QLD,coastal,10504.6589,2024,Medium,35
+323,Gladstone,QLD,coastal,10504.6589,2024,Large,0
+323,Gladstone,QLD,coastal,10504.6589,2025,All businesses,523
+323,Gladstone,QLD,coastal,10504.6589,2025,Non-employing,229
+323,Gladstone,QLD,coastal,10504.6589,2025,Micro,124
+323,Gladstone,QLD,coastal,10504.6589,2025,Small,133
+323,Gladstone,QLD,coastal,10504.6589,2025,Medium,37
+323,Gladstone,QLD,coastal,10504.6589,2025,Large,0
+410,Adelaide,SA,coastal,1257.0608,2021,All businesses,13753
+410,Adelaide,SA,coastal,1257.0608,2021,Non-employing,6431
+410,Adelaide,SA,coastal,1257.0608,2021,Micro,4049
+410,Adelaide,SA,coastal,1257.0608,2021,Small,2599
+410,Adelaide,SA,coastal,1257.0608,2021,Medium,652
+410,Adelaide,SA,coastal,1257.0608,2021,Large,22
+410,Adelaide,SA,coastal,1257.0608,2022,All businesses,14297
+410,Adelaide,SA,coastal,1257.0608,2022,Non-employing,6695
+410,Adelaide,SA,coastal,1257.0608,2022,Micro,4209
+410,Adelaide,SA,coastal,1257.0608,2022,Small,2676
+410,Adelaide,SA,coastal,1257.0608,2022,Medium,690
+410,Adelaide,SA,coastal,1257.0608,2022,Large,27
+410,Adelaide,SA,coastal,1257.0608,2023,All businesses,14314
+410,Adelaide,SA,coastal,1257.0608,2023,Non-employing,6926
+410,Adelaide,SA,coastal,1257.0608,2023,Micro,3852
+410,Adelaide,SA,coastal,1257.0608,2023,Small,2695
+410,Adelaide,SA,coastal,1257.0608,2023,Medium,809
+410,Adelaide,SA,coastal,1257.0608,2023,Large,32
+410,Adelaide,SA,coastal,1257.0608,2024,All businesses,14477
+410,Adelaide,SA,coastal,1257.0608,2024,Non-employing,7150
+410,Adelaide,SA,coastal,1257.0608,2024,Micro,3673
+410,Adelaide,SA,coastal,1257.0608,2024,Small,2804
+410,Adelaide,SA,coastal,1257.0608,2024,Medium,818
+410,Adelaide,SA,coastal,1257.0608,2024,Large,32
+410,Adelaide,SA,coastal,1257.0608,2025,All businesses,14457
+410,Adelaide,SA,coastal,1257.0608,2025,Non-employing,7344
+410,Adelaide,SA,coastal,1257.0608,2025,Micro,3534
+410,Adelaide,SA,coastal,1257.0608,2025,Small,2734
+410,Adelaide,SA,coastal,1257.0608,2025,Medium,813
+410,Adelaide,SA,coastal,1257.0608,2025,Large,32
+411,Adelaide Hills,SA,inland,1383.3226,2021,All businesses,854
+411,Adelaide Hills,SA,inland,1383.3226,2021,Non-employing,396
+411,Adelaide Hills,SA,inland,1383.3226,2021,Micro,245
+411,Adelaide Hills,SA,inland,1383.3226,2021,Small,173
+411,Adelaide Hills,SA,inland,1383.3226,2021,Medium,39
+411,Adelaide Hills,SA,inland,1383.3226,2021,Large,0
+411,Adelaide Hills,SA,inland,1383.3226,2022,All businesses,894
+411,Adelaide Hills,SA,inland,1383.3226,2022,Non-employing,411
+411,Adelaide Hills,SA,inland,1383.3226,2022,Micro,260
+411,Adelaide Hills,SA,inland,1383.3226,2022,Small,176
+411,Adelaide Hills,SA,inland,1383.3226,2022,Medium,46
+411,Adelaide Hills,SA,inland,1383.3226,2022,Large,0
+411,Adelaide Hills,SA,inland,1383.3226,2023,All businesses,888
+411,Adelaide Hills,SA,inland,1383.3226,2023,Non-employing,427
+411,Adelaide Hills,SA,inland,1383.3226,2023,Micro,230
+411,Adelaide Hills,SA,inland,1383.3226,2023,Small,181
+411,Adelaide Hills,SA,inland,1383.3226,2023,Medium,49
+411,Adelaide Hills,SA,inland,1383.3226,2023,Large,0
+411,Adelaide Hills,SA,inland,1383.3226,2024,All businesses,891
+411,Adelaide Hills,SA,inland,1383.3226,2024,Non-employing,449
+411,Adelaide Hills,SA,inland,1383.3226,2024,Micro,215
+411,Adelaide Hills,SA,inland,1383.3226,2024,Small,177
+411,Adelaide Hills,SA,inland,1383.3226,2024,Medium,49
+411,Adelaide Hills,SA,inland,1383.3226,2024,Large,0
+411,Adelaide Hills,SA,inland,1383.3226,2025,All businesses,897
+411,Adelaide Hills,SA,inland,1383.3226,2025,Non-employing,462
+411,Adelaide Hills,SA,inland,1383.3226,2025,Micro,207
+411,Adelaide Hills,SA,inland,1383.3226,2025,Small,184
+411,Adelaide Hills,SA,inland,1383.3226,2025,Medium,44
+411,Adelaide Hills,SA,inland,1383.3226,2025,Large,0
+412,Barossa,SA,inland,2127.5167,2021,All businesses,404
+412,Barossa,SA,inland,2127.5167,2021,Non-employing,186
+412,Barossa,SA,inland,2127.5167,2021,Micro,117
+412,Barossa,SA,inland,2127.5167,2021,Small,84
+412,Barossa,SA,inland,2127.5167,2021,Medium,15
+412,Barossa,SA,inland,2127.5167,2021,Large,3
+412,Barossa,SA,inland,2127.5167,2022,All businesses,396
+412,Barossa,SA,inland,2127.5167,2022,Non-employing,185
+412,Barossa,SA,inland,2127.5167,2022,Micro,108
+412,Barossa,SA,inland,2127.5167,2022,Small,80
+412,Barossa,SA,inland,2127.5167,2022,Medium,21
+412,Barossa,SA,inland,2127.5167,2022,Large,3
+412,Barossa,SA,inland,2127.5167,2023,All businesses,406
+412,Barossa,SA,inland,2127.5167,2023,Non-employing,200
+412,Barossa,SA,inland,2127.5167,2023,Micro,102
+412,Barossa,SA,inland,2127.5167,2023,Small,85
+412,Barossa,SA,inland,2127.5167,2023,Medium,17
+412,Barossa,SA,inland,2127.5167,2023,Large,3
+412,Barossa,SA,inland,2127.5167,2024,All businesses,392
+412,Barossa,SA,inland,2127.5167,2024,Non-employing,190
+412,Barossa,SA,inland,2127.5167,2024,Micro,104
+412,Barossa,SA,inland,2127.5167,2024,Small,75
+412,Barossa,SA,inland,2127.5167,2024,Medium,21
+412,Barossa,SA,inland,2127.5167,2024,Large,3
+412,Barossa,SA,inland,2127.5167,2025,All businesses,408
+412,Barossa,SA,inland,2127.5167,2025,Non-employing,201
+412,Barossa,SA,inland,2127.5167,2025,Micro,107
+412,Barossa,SA,inland,2127.5167,2025,Small,78
+412,Barossa,SA,inland,2127.5167,2025,Medium,19
+412,Barossa,SA,inland,2127.5167,2025,Large,3
+413,Clare Valley,SA,inland,8491.4705,2021,All businesses,202
+413,Clare Valley,SA,inland,8491.4705,2021,Non-employing,86
+413,Clare Valley,SA,inland,8491.4705,2021,Micro,73
+413,Clare Valley,SA,inland,8491.4705,2021,Small,40
+413,Clare Valley,SA,inland,8491.4705,2021,Medium,3
+413,Clare Valley,SA,inland,8491.4705,2021,Large,0
+413,Clare Valley,SA,inland,8491.4705,2022,All businesses,195
+413,Clare Valley,SA,inland,8491.4705,2022,Non-employing,85
+413,Clare Valley,SA,inland,8491.4705,2022,Micro,65
+413,Clare Valley,SA,inland,8491.4705,2022,Small,40
+413,Clare Valley,SA,inland,8491.4705,2022,Medium,5
+413,Clare Valley,SA,inland,8491.4705,2022,Large,0
+413,Clare Valley,SA,inland,8491.4705,2023,All businesses,201
+413,Clare Valley,SA,inland,8491.4705,2023,Non-employing,85
+413,Clare Valley,SA,inland,8491.4705,2023,Micro,67
+413,Clare Valley,SA,inland,8491.4705,2023,Small,42
+413,Clare Valley,SA,inland,8491.4705,2023,Medium,7
+413,Clare Valley,SA,inland,8491.4705,2023,Large,0
+413,Clare Valley,SA,inland,8491.4705,2024,All businesses,195
+413,Clare Valley,SA,inland,8491.4705,2024,Non-employing,87
+413,Clare Valley,SA,inland,8491.4705,2024,Micro,58
+413,Clare Valley,SA,inland,8491.4705,2024,Small,44
+413,Clare Valley,SA,inland,8491.4705,2024,Medium,6
+413,Clare Valley,SA,inland,8491.4705,2024,Large,0
+413,Clare Valley,SA,inland,8491.4705,2025,All businesses,196
+413,Clare Valley,SA,inland,8491.4705,2025,Non-employing,83
+413,Clare Valley,SA,inland,8491.4705,2025,Micro,60
+413,Clare Valley,SA,inland,8491.4705,2025,Small,50
+413,Clare Valley,SA,inland,8491.4705,2025,Medium,3
+413,Clare Valley,SA,inland,8491.4705,2025,Large,0
+414,Eyre Peninsula,SA,coastal,66224.4528,2021,All businesses,613
+414,Eyre Peninsula,SA,coastal,66224.4528,2021,Non-employing,229
+414,Eyre Peninsula,SA,coastal,66224.4528,2021,Micro,207
+414,Eyre Peninsula,SA,coastal,66224.4528,2021,Small,147
+414,Eyre Peninsula,SA,coastal,66224.4528,2021,Medium,30
+414,Eyre Peninsula,SA,coastal,66224.4528,2021,Large,0
+414,Eyre Peninsula,SA,coastal,66224.4528,2022,All businesses,621
+414,Eyre Peninsula,SA,coastal,66224.4528,2022,Non-employing,227
+414,Eyre Peninsula,SA,coastal,66224.4528,2022,Micro,211
+414,Eyre Peninsula,SA,coastal,66224.4528,2022,Small,157
+414,Eyre Peninsula,SA,coastal,66224.4528,2022,Medium,26
+414,Eyre Peninsula,SA,coastal,66224.4528,2022,Large,0
+414,Eyre Peninsula,SA,coastal,66224.4528,2023,All businesses,597
+414,Eyre Peninsula,SA,coastal,66224.4528,2023,Non-employing,213
+414,Eyre Peninsula,SA,coastal,66224.4528,2023,Micro,195
+414,Eyre Peninsula,SA,coastal,66224.4528,2023,Small,160
+414,Eyre Peninsula,SA,coastal,66224.4528,2023,Medium,29
+414,Eyre Peninsula,SA,coastal,66224.4528,2023,Large,0
+414,Eyre Peninsula,SA,coastal,66224.4528,2024,All businesses,610
+414,Eyre Peninsula,SA,coastal,66224.4528,2024,Non-employing,230
+414,Eyre Peninsula,SA,coastal,66224.4528,2024,Micro,184
+414,Eyre Peninsula,SA,coastal,66224.4528,2024,Small,158
+414,Eyre Peninsula,SA,coastal,66224.4528,2024,Medium,38
+414,Eyre Peninsula,SA,coastal,66224.4528,2024,Large,0
+414,Eyre Peninsula,SA,coastal,66224.4528,2025,All businesses,574
+414,Eyre Peninsula,SA,coastal,66224.4528,2025,Non-employing,215
+414,Eyre Peninsula,SA,coastal,66224.4528,2025,Micro,169
+414,Eyre Peninsula,SA,coastal,66224.4528,2025,Small,156
+414,Eyre Peninsula,SA,coastal,66224.4528,2025,Medium,34
+414,Eyre Peninsula,SA,coastal,66224.4528,2025,Large,0
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2021,All businesses,861
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2021,Non-employing,384
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2021,Micro,271
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2021,Small,183
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2021,Medium,23
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2021,Large,0
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2022,All businesses,904
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2022,Non-employing,407
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2022,Micro,274
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2022,Small,184
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2022,Medium,39
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2022,Large,0
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2023,All businesses,893
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2023,Non-employing,410
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2023,Micro,258
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2023,Small,185
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2023,Medium,40
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2023,Large,0
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2024,All businesses,914
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2024,Non-employing,430
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2024,Micro,251
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2024,Small,189
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2024,Medium,44
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2024,Large,0
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2025,All businesses,946
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2025,Non-employing,446
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2025,Micro,244
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2025,Small,213
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2025,Medium,43
+415,Fleurieu Peninsula,SA,coastal,3356.5739,2025,Large,0
+416,Limestone Coast,SA,coastal,21337.6397,2021,All businesses,778
+416,Limestone Coast,SA,coastal,21337.6397,2021,Non-employing,266
+416,Limestone Coast,SA,coastal,21337.6397,2021,Micro,285
+416,Limestone Coast,SA,coastal,21337.6397,2021,Small,186
+416,Limestone Coast,SA,coastal,21337.6397,2021,Medium,40
+416,Limestone Coast,SA,coastal,21337.6397,2021,Large,3
+416,Limestone Coast,SA,coastal,21337.6397,2022,All businesses,811
+416,Limestone Coast,SA,coastal,21337.6397,2022,Non-employing,279
+416,Limestone Coast,SA,coastal,21337.6397,2022,Micro,312
+416,Limestone Coast,SA,coastal,21337.6397,2022,Small,171
+416,Limestone Coast,SA,coastal,21337.6397,2022,Medium,48
+416,Limestone Coast,SA,coastal,21337.6397,2022,Large,3
+416,Limestone Coast,SA,coastal,21337.6397,2023,All businesses,788
+416,Limestone Coast,SA,coastal,21337.6397,2023,Non-employing,287
+416,Limestone Coast,SA,coastal,21337.6397,2023,Micro,281
+416,Limestone Coast,SA,coastal,21337.6397,2023,Small,174
+416,Limestone Coast,SA,coastal,21337.6397,2023,Medium,45
+416,Limestone Coast,SA,coastal,21337.6397,2023,Large,3
+416,Limestone Coast,SA,coastal,21337.6397,2024,All businesses,787
+416,Limestone Coast,SA,coastal,21337.6397,2024,Non-employing,291
+416,Limestone Coast,SA,coastal,21337.6397,2024,Micro,265
+416,Limestone Coast,SA,coastal,21337.6397,2024,Small,186
+416,Limestone Coast,SA,coastal,21337.6397,2024,Medium,44
+416,Limestone Coast,SA,coastal,21337.6397,2024,Large,3
+416,Limestone Coast,SA,coastal,21337.6397,2025,All businesses,756
+416,Limestone Coast,SA,coastal,21337.6397,2025,Non-employing,280
+416,Limestone Coast,SA,coastal,21337.6397,2025,Micro,248
+416,Limestone Coast,SA,coastal,21337.6397,2025,Small,181
+416,Limestone Coast,SA,coastal,21337.6397,2025,Medium,46
+416,Limestone Coast,SA,coastal,21337.6397,2025,Large,3
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2021,All businesses,330
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2021,Non-employing,132
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2021,Micro,118
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2021,Small,71
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2021,Medium,9
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2021,Large,0
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2022,All businesses,339
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2022,Non-employing,146
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2022,Micro,112
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2022,Small,67
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2022,Medium,14
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2022,Large,0
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2023,All businesses,332
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2023,Non-employing,158
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2023,Micro,94
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2023,Small,67
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2023,Medium,13
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2023,Large,0
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2024,All businesses,338
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2024,Non-employing,156
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2024,Micro,101
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2024,Small,70
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2024,Medium,11
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2024,Large,0
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2025,All businesses,371
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2025,Non-employing,183
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2025,Micro,102
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2025,Small,70
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2025,Medium,16
+417,"Murray River, Lakes and Coorong",SA,coastal,24504.8937,2025,Large,0
+418,Riverland,SA,inland,12281.8636,2021,All businesses,342
+418,Riverland,SA,inland,12281.8636,2021,Non-employing,118
+418,Riverland,SA,inland,12281.8636,2021,Micro,137
+418,Riverland,SA,inland,12281.8636,2021,Small,69
+418,Riverland,SA,inland,12281.8636,2021,Medium,18
+418,Riverland,SA,inland,12281.8636,2021,Large,0
+418,Riverland,SA,inland,12281.8636,2022,All businesses,348
+418,Riverland,SA,inland,12281.8636,2022,Non-employing,122
+418,Riverland,SA,inland,12281.8636,2022,Micro,131
+418,Riverland,SA,inland,12281.8636,2022,Small,75
+418,Riverland,SA,inland,12281.8636,2022,Medium,20
+418,Riverland,SA,inland,12281.8636,2022,Large,0
+418,Riverland,SA,inland,12281.8636,2023,All businesses,355
+418,Riverland,SA,inland,12281.8636,2023,Non-employing,130
+418,Riverland,SA,inland,12281.8636,2023,Micro,117
+418,Riverland,SA,inland,12281.8636,2023,Small,86
+418,Riverland,SA,inland,12281.8636,2023,Medium,22
+418,Riverland,SA,inland,12281.8636,2023,Large,0
+418,Riverland,SA,inland,12281.8636,2024,All businesses,345
+418,Riverland,SA,inland,12281.8636,2024,Non-employing,129
+418,Riverland,SA,inland,12281.8636,2024,Micro,111
+418,Riverland,SA,inland,12281.8636,2024,Small,86
+418,Riverland,SA,inland,12281.8636,2024,Medium,19
+418,Riverland,SA,inland,12281.8636,2024,Large,0
+418,Riverland,SA,inland,12281.8636,2025,All businesses,342
+418,Riverland,SA,inland,12281.8636,2025,Non-employing,128
+418,Riverland,SA,inland,12281.8636,2025,Micro,105
+418,Riverland,SA,inland,12281.8636,2025,Small,91
+418,Riverland,SA,inland,12281.8636,2025,Medium,17
+418,Riverland,SA,inland,12281.8636,2025,Large,3
+419,Yorke Peninsula,SA,coastal,12896.957,2021,All businesses,447
+419,Yorke Peninsula,SA,coastal,12896.957,2021,Non-employing,179
+419,Yorke Peninsula,SA,coastal,12896.957,2021,Micro,168
+419,Yorke Peninsula,SA,coastal,12896.957,2021,Small,87
+419,Yorke Peninsula,SA,coastal,12896.957,2021,Medium,13
+419,Yorke Peninsula,SA,coastal,12896.957,2021,Large,0
+419,Yorke Peninsula,SA,coastal,12896.957,2022,All businesses,451
+419,Yorke Peninsula,SA,coastal,12896.957,2022,Non-employing,176
+419,Yorke Peninsula,SA,coastal,12896.957,2022,Micro,166
+419,Yorke Peninsula,SA,coastal,12896.957,2022,Small,93
+419,Yorke Peninsula,SA,coastal,12896.957,2022,Medium,16
+419,Yorke Peninsula,SA,coastal,12896.957,2022,Large,0
+419,Yorke Peninsula,SA,coastal,12896.957,2023,All businesses,468
+419,Yorke Peninsula,SA,coastal,12896.957,2023,Non-employing,199
+419,Yorke Peninsula,SA,coastal,12896.957,2023,Micro,167
+419,Yorke Peninsula,SA,coastal,12896.957,2023,Small,85
+419,Yorke Peninsula,SA,coastal,12896.957,2023,Medium,17
+419,Yorke Peninsula,SA,coastal,12896.957,2023,Large,0
+419,Yorke Peninsula,SA,coastal,12896.957,2024,All businesses,471
+419,Yorke Peninsula,SA,coastal,12896.957,2024,Non-employing,201
+419,Yorke Peninsula,SA,coastal,12896.957,2024,Micro,155
+419,Yorke Peninsula,SA,coastal,12896.957,2024,Small,100
+419,Yorke Peninsula,SA,coastal,12896.957,2024,Medium,15
+419,Yorke Peninsula,SA,coastal,12896.957,2024,Large,0
+419,Yorke Peninsula,SA,coastal,12896.957,2025,All businesses,476
+419,Yorke Peninsula,SA,coastal,12896.957,2025,Non-employing,214
+419,Yorke Peninsula,SA,coastal,12896.957,2025,Micro,151
+419,Yorke Peninsula,SA,coastal,12896.957,2025,Small,90
+419,Yorke Peninsula,SA,coastal,12896.957,2025,Medium,21
+419,Yorke Peninsula,SA,coastal,12896.957,2025,Large,0
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2021,All businesses,496
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2021,Non-employing,199
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2021,Micro,160
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2021,Small,114
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2021,Medium,23
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2021,Large,0
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2022,All businesses,516
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2022,Non-employing,212
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2022,Micro,156
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2022,Small,120
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2022,Medium,28
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2022,Large,0
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2023,All businesses,516
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2023,Non-employing,230
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2023,Micro,141
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2023,Small,120
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2023,Medium,25
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2023,Large,0
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2024,All businesses,496
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2024,Non-employing,216
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2024,Micro,125
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2024,Small,120
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2024,Medium,35
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2024,Large,0
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2025,All businesses,478
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2025,Non-employing,201
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2025,Micro,133
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2025,Small,120
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2025,Medium,24
+420,Flinders Ranges and Outback,SA,inland,825842.5007,2025,Large,0
+421,Kangaroo Island,SA,coastal,4420.8272,2021,All businesses,114
+421,Kangaroo Island,SA,coastal,4420.8272,2021,Non-employing,45
+421,Kangaroo Island,SA,coastal,4420.8272,2021,Micro,35
+421,Kangaroo Island,SA,coastal,4420.8272,2021,Small,29
+421,Kangaroo Island,SA,coastal,4420.8272,2021,Medium,5
+421,Kangaroo Island,SA,coastal,4420.8272,2021,Large,0
+421,Kangaroo Island,SA,coastal,4420.8272,2022,All businesses,111
+421,Kangaroo Island,SA,coastal,4420.8272,2022,Non-employing,51
+421,Kangaroo Island,SA,coastal,4420.8272,2022,Micro,31
+421,Kangaroo Island,SA,coastal,4420.8272,2022,Small,25
+421,Kangaroo Island,SA,coastal,4420.8272,2022,Medium,4
+421,Kangaroo Island,SA,coastal,4420.8272,2022,Large,0
+421,Kangaroo Island,SA,coastal,4420.8272,2023,All businesses,112
+421,Kangaroo Island,SA,coastal,4420.8272,2023,Non-employing,52
+421,Kangaroo Island,SA,coastal,4420.8272,2023,Micro,35
+421,Kangaroo Island,SA,coastal,4420.8272,2023,Small,22
+421,Kangaroo Island,SA,coastal,4420.8272,2023,Medium,3
+421,Kangaroo Island,SA,coastal,4420.8272,2023,Large,0
+421,Kangaroo Island,SA,coastal,4420.8272,2024,All businesses,111
+421,Kangaroo Island,SA,coastal,4420.8272,2024,Non-employing,55
+421,Kangaroo Island,SA,coastal,4420.8272,2024,Micro,32
+421,Kangaroo Island,SA,coastal,4420.8272,2024,Small,20
+421,Kangaroo Island,SA,coastal,4420.8272,2024,Medium,4
+421,Kangaroo Island,SA,coastal,4420.8272,2024,Large,0
+421,Kangaroo Island,SA,coastal,4420.8272,2025,All businesses,110
+421,Kangaroo Island,SA,coastal,4420.8272,2025,Non-employing,49
+421,Kangaroo Island,SA,coastal,4420.8272,2025,Micro,29
+421,Kangaroo Island,SA,coastal,4420.8272,2025,Small,29
+421,Kangaroo Island,SA,coastal,4420.8272,2025,Medium,3
+421,Kangaroo Island,SA,coastal,4420.8272,2025,Large,0
+510,Destination Perth,WA,coastal,26309.2486,2021,All businesses,24557
+510,Destination Perth,WA,coastal,26309.2486,2021,Non-employing,11786
+510,Destination Perth,WA,coastal,26309.2486,2021,Micro,6898
+510,Destination Perth,WA,coastal,26309.2486,2021,Small,4582
+510,Destination Perth,WA,coastal,26309.2486,2021,Medium,1264
+510,Destination Perth,WA,coastal,26309.2486,2021,Large,27
+510,Destination Perth,WA,coastal,26309.2486,2022,All businesses,24866
+510,Destination Perth,WA,coastal,26309.2486,2022,Non-employing,11973
+510,Destination Perth,WA,coastal,26309.2486,2022,Micro,6718
+510,Destination Perth,WA,coastal,26309.2486,2022,Small,4717
+510,Destination Perth,WA,coastal,26309.2486,2022,Medium,1426
+510,Destination Perth,WA,coastal,26309.2486,2022,Large,32
+510,Destination Perth,WA,coastal,26309.2486,2023,All businesses,25098
+510,Destination Perth,WA,coastal,26309.2486,2023,Non-employing,12396
+510,Destination Perth,WA,coastal,26309.2486,2023,Micro,6327
+510,Destination Perth,WA,coastal,26309.2486,2023,Small,4734
+510,Destination Perth,WA,coastal,26309.2486,2023,Medium,1600
+510,Destination Perth,WA,coastal,26309.2486,2023,Large,41
+510,Destination Perth,WA,coastal,26309.2486,2024,All businesses,25563
+510,Destination Perth,WA,coastal,26309.2486,2024,Non-employing,12957
+510,Destination Perth,WA,coastal,26309.2486,2024,Micro,6176
+510,Destination Perth,WA,coastal,26309.2486,2024,Small,4666
+510,Destination Perth,WA,coastal,26309.2486,2024,Medium,1715
+510,Destination Perth,WA,coastal,26309.2486,2024,Large,49
+510,Destination Perth,WA,coastal,26309.2486,2025,All businesses,26054
+510,Destination Perth,WA,coastal,26309.2486,2025,Non-employing,13188
+510,Destination Perth,WA,coastal,26309.2486,2025,Micro,6283
+510,Destination Perth,WA,coastal,26309.2486,2025,Small,4891
+510,Destination Perth,WA,coastal,26309.2486,2025,Medium,1650
+510,Destination Perth,WA,coastal,26309.2486,2025,Large,42
+511,Australia's Golden Outback,WA,inland,1315123.1459,2021,All businesses,1016
+511,Australia's Golden Outback,WA,inland,1315123.1459,2021,Non-employing,361
+511,Australia's Golden Outback,WA,inland,1315123.1459,2021,Micro,366
+511,Australia's Golden Outback,WA,inland,1315123.1459,2021,Small,232
+511,Australia's Golden Outback,WA,inland,1315123.1459,2021,Medium,56
+511,Australia's Golden Outback,WA,inland,1315123.1459,2021,Large,0
+511,Australia's Golden Outback,WA,inland,1315123.1459,2022,All businesses,1044
+511,Australia's Golden Outback,WA,inland,1315123.1459,2022,Non-employing,394
+511,Australia's Golden Outback,WA,inland,1315123.1459,2022,Micro,341
+511,Australia's Golden Outback,WA,inland,1315123.1459,2022,Small,252
+511,Australia's Golden Outback,WA,inland,1315123.1459,2022,Medium,57
+511,Australia's Golden Outback,WA,inland,1315123.1459,2022,Large,0
+511,Australia's Golden Outback,WA,inland,1315123.1459,2023,All businesses,1051
+511,Australia's Golden Outback,WA,inland,1315123.1459,2023,Non-employing,423
+511,Australia's Golden Outback,WA,inland,1315123.1459,2023,Micro,333
+511,Australia's Golden Outback,WA,inland,1315123.1459,2023,Small,234
+511,Australia's Golden Outback,WA,inland,1315123.1459,2023,Medium,61
+511,Australia's Golden Outback,WA,inland,1315123.1459,2023,Large,0
+511,Australia's Golden Outback,WA,inland,1315123.1459,2024,All businesses,1026
+511,Australia's Golden Outback,WA,inland,1315123.1459,2024,Non-employing,422
+511,Australia's Golden Outback,WA,inland,1315123.1459,2024,Micro,325
+511,Australia's Golden Outback,WA,inland,1315123.1459,2024,Small,224
+511,Australia's Golden Outback,WA,inland,1315123.1459,2024,Medium,55
+511,Australia's Golden Outback,WA,inland,1315123.1459,2024,Large,0
+511,Australia's Golden Outback,WA,inland,1315123.1459,2025,All businesses,983
+511,Australia's Golden Outback,WA,inland,1315123.1459,2025,Non-employing,387
+511,Australia's Golden Outback,WA,inland,1315123.1459,2025,Micro,307
+511,Australia's Golden Outback,WA,inland,1315123.1459,2025,Small,228
+511,Australia's Golden Outback,WA,inland,1315123.1459,2025,Medium,61
+511,Australia's Golden Outback,WA,inland,1315123.1459,2025,Large,0
+512,Australia's North West,WA,coastal,925288.0533,2021,All businesses,792
+512,Australia's North West,WA,coastal,925288.0533,2021,Non-employing,308
+512,Australia's North West,WA,coastal,925288.0533,2021,Micro,222
+512,Australia's North West,WA,coastal,925288.0533,2021,Small,206
+512,Australia's North West,WA,coastal,925288.0533,2021,Medium,56
+512,Australia's North West,WA,coastal,925288.0533,2021,Large,0
+512,Australia's North West,WA,coastal,925288.0533,2022,All businesses,832
+512,Australia's North West,WA,coastal,925288.0533,2022,Non-employing,330
+512,Australia's North West,WA,coastal,925288.0533,2022,Micro,240
+512,Australia's North West,WA,coastal,925288.0533,2022,Small,192
+512,Australia's North West,WA,coastal,925288.0533,2022,Medium,70
+512,Australia's North West,WA,coastal,925288.0533,2022,Large,0
+512,Australia's North West,WA,coastal,925288.0533,2023,All businesses,837
+512,Australia's North West,WA,coastal,925288.0533,2023,Non-employing,342
+512,Australia's North West,WA,coastal,925288.0533,2023,Micro,211
+512,Australia's North West,WA,coastal,925288.0533,2023,Small,205
+512,Australia's North West,WA,coastal,925288.0533,2023,Medium,77
+512,Australia's North West,WA,coastal,925288.0533,2023,Large,3
+512,Australia's North West,WA,coastal,925288.0533,2024,All businesses,818
+512,Australia's North West,WA,coastal,925288.0533,2024,Non-employing,357
+512,Australia's North West,WA,coastal,925288.0533,2024,Micro,195
+512,Australia's North West,WA,coastal,925288.0533,2024,Small,185
+512,Australia's North West,WA,coastal,925288.0533,2024,Medium,78
+512,Australia's North West,WA,coastal,925288.0533,2024,Large,3
+512,Australia's North West,WA,coastal,925288.0533,2025,All businesses,822
+512,Australia's North West,WA,coastal,925288.0533,2025,Non-employing,363
+512,Australia's North West,WA,coastal,925288.0533,2025,Micro,182
+512,Australia's North West,WA,coastal,925288.0533,2025,Small,200
+512,Australia's North West,WA,coastal,925288.0533,2025,Medium,74
+512,Australia's North West,WA,coastal,925288.0533,2025,Large,3
+513,Australia's South West,WA,coastal,61835.5044,2021,All businesses,2830
+513,Australia's South West,WA,coastal,61835.5044,2021,Non-employing,1047
+513,Australia's South West,WA,coastal,61835.5044,2021,Micro,950
+513,Australia's South West,WA,coastal,61835.5044,2021,Small,693
+513,Australia's South West,WA,coastal,61835.5044,2021,Medium,138
+513,Australia's South West,WA,coastal,61835.5044,2021,Large,3
+513,Australia's South West,WA,coastal,61835.5044,2022,All businesses,2966
+513,Australia's South West,WA,coastal,61835.5044,2022,Non-employing,1155
+513,Australia's South West,WA,coastal,61835.5044,2022,Micro,933
+513,Australia's South West,WA,coastal,61835.5044,2022,Small,705
+513,Australia's South West,WA,coastal,61835.5044,2022,Medium,168
+513,Australia's South West,WA,coastal,61835.5044,2022,Large,5
+513,Australia's South West,WA,coastal,61835.5044,2023,All businesses,2974
+513,Australia's South West,WA,coastal,61835.5044,2023,Non-employing,1165
+513,Australia's South West,WA,coastal,61835.5044,2023,Micro,872
+513,Australia's South West,WA,coastal,61835.5044,2023,Small,755
+513,Australia's South West,WA,coastal,61835.5044,2023,Medium,177
+513,Australia's South West,WA,coastal,61835.5044,2023,Large,5
+513,Australia's South West,WA,coastal,61835.5044,2024,All businesses,3009
+513,Australia's South West,WA,coastal,61835.5044,2024,Non-employing,1214
+513,Australia's South West,WA,coastal,61835.5044,2024,Micro,858
+513,Australia's South West,WA,coastal,61835.5044,2024,Small,736
+513,Australia's South West,WA,coastal,61835.5044,2024,Medium,198
+513,Australia's South West,WA,coastal,61835.5044,2024,Large,3
+513,Australia's South West,WA,coastal,61835.5044,2025,All businesses,3055
+513,Australia's South West,WA,coastal,61835.5044,2025,Non-employing,1268
+513,Australia's South West,WA,coastal,61835.5044,2025,Micro,844
+513,Australia's South West,WA,coastal,61835.5044,2025,Small,731
+513,Australia's South West,WA,coastal,61835.5044,2025,Medium,209
+513,Australia's South West,WA,coastal,61835.5044,2025,Large,3
+514,Australia's Coral Coast,WA,coastal,197237.7726,2021,All businesses,856
+514,Australia's Coral Coast,WA,coastal,197237.7726,2021,Non-employing,283
+514,Australia's Coral Coast,WA,coastal,197237.7726,2021,Micro,284
+514,Australia's Coral Coast,WA,coastal,197237.7726,2021,Small,233
+514,Australia's Coral Coast,WA,coastal,197237.7726,2021,Medium,55
+514,Australia's Coral Coast,WA,coastal,197237.7726,2021,Large,3
+514,Australia's Coral Coast,WA,coastal,197237.7726,2022,All businesses,845
+514,Australia's Coral Coast,WA,coastal,197237.7726,2022,Non-employing,299
+514,Australia's Coral Coast,WA,coastal,197237.7726,2022,Micro,259
+514,Australia's Coral Coast,WA,coastal,197237.7726,2022,Small,217
+514,Australia's Coral Coast,WA,coastal,197237.7726,2022,Medium,68
+514,Australia's Coral Coast,WA,coastal,197237.7726,2022,Large,0
+514,Australia's Coral Coast,WA,coastal,197237.7726,2023,All businesses,869
+514,Australia's Coral Coast,WA,coastal,197237.7726,2023,Non-employing,313
+514,Australia's Coral Coast,WA,coastal,197237.7726,2023,Micro,259
+514,Australia's Coral Coast,WA,coastal,197237.7726,2023,Small,221
+514,Australia's Coral Coast,WA,coastal,197237.7726,2023,Medium,74
+514,Australia's Coral Coast,WA,coastal,197237.7726,2023,Large,0
+514,Australia's Coral Coast,WA,coastal,197237.7726,2024,All businesses,889
+514,Australia's Coral Coast,WA,coastal,197237.7726,2024,Non-employing,327
+514,Australia's Coral Coast,WA,coastal,197237.7726,2024,Micro,267
+514,Australia's Coral Coast,WA,coastal,197237.7726,2024,Small,223
+514,Australia's Coral Coast,WA,coastal,197237.7726,2024,Medium,70
+514,Australia's Coral Coast,WA,coastal,197237.7726,2024,Large,0
+514,Australia's Coral Coast,WA,coastal,197237.7726,2025,All businesses,891
+514,Australia's Coral Coast,WA,coastal,197237.7726,2025,Non-employing,335
+514,Australia's Coral Coast,WA,coastal,197237.7726,2025,Micro,264
+514,Australia's Coral Coast,WA,coastal,197237.7726,2025,Small,219
+514,Australia's Coral Coast,WA,coastal,197237.7726,2025,Medium,70
+514,Australia's Coral Coast,WA,coastal,197237.7726,2025,Large,3
+610,Hobart and the South,TAS,coastal,22962.1149,2021,All businesses,3460
+610,Hobart and the South,TAS,coastal,22962.1149,2021,Non-employing,1538
+610,Hobart and the South,TAS,coastal,22962.1149,2021,Micro,1015
+610,Hobart and the South,TAS,coastal,22962.1149,2021,Small,743
+610,Hobart and the South,TAS,coastal,22962.1149,2021,Medium,160
+610,Hobart and the South,TAS,coastal,22962.1149,2021,Large,4
+610,Hobart and the South,TAS,coastal,22962.1149,2022,All businesses,3527
+610,Hobart and the South,TAS,coastal,22962.1149,2022,Non-employing,1541
+610,Hobart and the South,TAS,coastal,22962.1149,2022,Micro,1087
+610,Hobart and the South,TAS,coastal,22962.1149,2022,Small,728
+610,Hobart and the South,TAS,coastal,22962.1149,2022,Medium,166
+610,Hobart and the South,TAS,coastal,22962.1149,2022,Large,5
+610,Hobart and the South,TAS,coastal,22962.1149,2023,All businesses,3554
+610,Hobart and the South,TAS,coastal,22962.1149,2023,Non-employing,1621
+610,Hobart and the South,TAS,coastal,22962.1149,2023,Micro,971
+610,Hobart and the South,TAS,coastal,22962.1149,2023,Small,767
+610,Hobart and the South,TAS,coastal,22962.1149,2023,Medium,189
+610,Hobart and the South,TAS,coastal,22962.1149,2023,Large,6
+610,Hobart and the South,TAS,coastal,22962.1149,2024,All businesses,3541
+610,Hobart and the South,TAS,coastal,22962.1149,2024,Non-employing,1610
+610,Hobart and the South,TAS,coastal,22962.1149,2024,Micro,962
+610,Hobart and the South,TAS,coastal,22962.1149,2024,Small,766
+610,Hobart and the South,TAS,coastal,22962.1149,2024,Medium,195
+610,Hobart and the South,TAS,coastal,22962.1149,2024,Large,8
+610,Hobart and the South,TAS,coastal,22962.1149,2025,All businesses,3479
+610,Hobart and the South,TAS,coastal,22962.1149,2025,Non-employing,1628
+610,Hobart and the South,TAS,coastal,22962.1149,2025,Micro,896
+610,Hobart and the South,TAS,coastal,22962.1149,2025,Small,731
+610,Hobart and the South,TAS,coastal,22962.1149,2025,Medium,215
+610,Hobart and the South,TAS,coastal,22962.1149,2025,Large,9
+611,East Coast,TAS,coastal,5830.0401,2021,All businesses,237
+611,East Coast,TAS,coastal,5830.0401,2021,Non-employing,89
+611,East Coast,TAS,coastal,5830.0401,2021,Micro,86
+611,East Coast,TAS,coastal,5830.0401,2021,Small,49
+611,East Coast,TAS,coastal,5830.0401,2021,Medium,13
+611,East Coast,TAS,coastal,5830.0401,2021,Large,0
+611,East Coast,TAS,coastal,5830.0401,2022,All businesses,249
+611,East Coast,TAS,coastal,5830.0401,2022,Non-employing,97
+611,East Coast,TAS,coastal,5830.0401,2022,Micro,88
+611,East Coast,TAS,coastal,5830.0401,2022,Small,54
+611,East Coast,TAS,coastal,5830.0401,2022,Medium,10
+611,East Coast,TAS,coastal,5830.0401,2022,Large,0
+611,East Coast,TAS,coastal,5830.0401,2023,All businesses,248
+611,East Coast,TAS,coastal,5830.0401,2023,Non-employing,100
+611,East Coast,TAS,coastal,5830.0401,2023,Micro,78
+611,East Coast,TAS,coastal,5830.0401,2023,Small,59
+611,East Coast,TAS,coastal,5830.0401,2023,Medium,11
+611,East Coast,TAS,coastal,5830.0401,2023,Large,0
+611,East Coast,TAS,coastal,5830.0401,2024,All businesses,237
+611,East Coast,TAS,coastal,5830.0401,2024,Non-employing,95
+611,East Coast,TAS,coastal,5830.0401,2024,Micro,77
+611,East Coast,TAS,coastal,5830.0401,2024,Small,50
+611,East Coast,TAS,coastal,5830.0401,2024,Medium,15
+611,East Coast,TAS,coastal,5830.0401,2024,Large,0
+611,East Coast,TAS,coastal,5830.0401,2025,All businesses,232
+611,East Coast,TAS,coastal,5830.0401,2025,Non-employing,94
+611,East Coast,TAS,coastal,5830.0401,2025,Micro,67
+611,East Coast,TAS,coastal,5830.0401,2025,Small,59
+611,East Coast,TAS,coastal,5830.0401,2025,Medium,12
+611,East Coast,TAS,coastal,5830.0401,2025,Large,0
+612,Launceston and the North,TAS,coastal,16628.5625,2021,All businesses,1683
+612,Launceston and the North,TAS,coastal,16628.5625,2021,Non-employing,676
+612,Launceston and the North,TAS,coastal,16628.5625,2021,Micro,568
+612,Launceston and the North,TAS,coastal,16628.5625,2021,Small,366
+612,Launceston and the North,TAS,coastal,16628.5625,2021,Medium,68
+612,Launceston and the North,TAS,coastal,16628.5625,2021,Large,5
+612,Launceston and the North,TAS,coastal,16628.5625,2022,All businesses,1736
+612,Launceston and the North,TAS,coastal,16628.5625,2022,Non-employing,718
+612,Launceston and the North,TAS,coastal,16628.5625,2022,Micro,536
+612,Launceston and the North,TAS,coastal,16628.5625,2022,Small,394
+612,Launceston and the North,TAS,coastal,16628.5625,2022,Medium,82
+612,Launceston and the North,TAS,coastal,16628.5625,2022,Large,6
+612,Launceston and the North,TAS,coastal,16628.5625,2023,All businesses,1710
+612,Launceston and the North,TAS,coastal,16628.5625,2023,Non-employing,720
+612,Launceston and the North,TAS,coastal,16628.5625,2023,Micro,503
+612,Launceston and the North,TAS,coastal,16628.5625,2023,Small,393
+612,Launceston and the North,TAS,coastal,16628.5625,2023,Medium,88
+612,Launceston and the North,TAS,coastal,16628.5625,2023,Large,6
+612,Launceston and the North,TAS,coastal,16628.5625,2024,All businesses,1675
+612,Launceston and the North,TAS,coastal,16628.5625,2024,Non-employing,725
+612,Launceston and the North,TAS,coastal,16628.5625,2024,Micro,497
+612,Launceston and the North,TAS,coastal,16628.5625,2024,Small,353
+612,Launceston and the North,TAS,coastal,16628.5625,2024,Medium,94
+612,Launceston and the North,TAS,coastal,16628.5625,2024,Large,6
+612,Launceston and the North,TAS,coastal,16628.5625,2025,All businesses,1625
+612,Launceston and the North,TAS,coastal,16628.5625,2025,Non-employing,696
+612,Launceston and the North,TAS,coastal,16628.5625,2025,Micro,502
+612,Launceston and the North,TAS,coastal,16628.5625,2025,Small,335
+612,Launceston and the North,TAS,coastal,16628.5625,2025,Medium,86
+612,Launceston and the North,TAS,coastal,16628.5625,2025,Large,6
+613,North West,TAS,coastal,12910.6237,2021,All businesses,1079
+613,North West,TAS,coastal,12910.6237,2021,Non-employing,385
+613,North West,TAS,coastal,12910.6237,2021,Micro,363
+613,North West,TAS,coastal,12910.6237,2021,Small,280
+613,North West,TAS,coastal,12910.6237,2021,Medium,51
+613,North West,TAS,coastal,12910.6237,2021,Large,0
+613,North West,TAS,coastal,12910.6237,2022,All businesses,1087
+613,North West,TAS,coastal,12910.6237,2022,Non-employing,391
+613,North West,TAS,coastal,12910.6237,2022,Micro,349
+613,North West,TAS,coastal,12910.6237,2022,Small,290
+613,North West,TAS,coastal,12910.6237,2022,Medium,57
+613,North West,TAS,coastal,12910.6237,2022,Large,0
+613,North West,TAS,coastal,12910.6237,2023,All businesses,1092
+613,North West,TAS,coastal,12910.6237,2023,Non-employing,404
+613,North West,TAS,coastal,12910.6237,2023,Micro,341
+613,North West,TAS,coastal,12910.6237,2023,Small,283
+613,North West,TAS,coastal,12910.6237,2023,Medium,64
+613,North West,TAS,coastal,12910.6237,2023,Large,0
+613,North West,TAS,coastal,12910.6237,2024,All businesses,1082
+613,North West,TAS,coastal,12910.6237,2024,Non-employing,398
+613,North West,TAS,coastal,12910.6237,2024,Micro,327
+613,North West,TAS,coastal,12910.6237,2024,Small,291
+613,North West,TAS,coastal,12910.6237,2024,Medium,66
+613,North West,TAS,coastal,12910.6237,2024,Large,0
+613,North West,TAS,coastal,12910.6237,2025,All businesses,1057
+613,North West,TAS,coastal,12910.6237,2025,Non-employing,381
+613,North West,TAS,coastal,12910.6237,2025,Micro,336
+613,North West,TAS,coastal,12910.6237,2025,Small,280
+613,North West,TAS,coastal,12910.6237,2025,Medium,60
+613,North West,TAS,coastal,12910.6237,2025,Large,0
+614,West Coast,TAS,coastal,9614.4616,2021,All businesses,79
+614,West Coast,TAS,coastal,9614.4616,2021,Non-employing,28
+614,West Coast,TAS,coastal,9614.4616,2021,Micro,25
+614,West Coast,TAS,coastal,9614.4616,2021,Small,23
+614,West Coast,TAS,coastal,9614.4616,2021,Medium,3
+614,West Coast,TAS,coastal,9614.4616,2021,Large,0
+614,West Coast,TAS,coastal,9614.4616,2022,All businesses,79
+614,West Coast,TAS,coastal,9614.4616,2022,Non-employing,25
+614,West Coast,TAS,coastal,9614.4616,2022,Micro,28
+614,West Coast,TAS,coastal,9614.4616,2022,Small,22
+614,West Coast,TAS,coastal,9614.4616,2022,Medium,4
+614,West Coast,TAS,coastal,9614.4616,2022,Large,0
+614,West Coast,TAS,coastal,9614.4616,2023,All businesses,80
+614,West Coast,TAS,coastal,9614.4616,2023,Non-employing,22
+614,West Coast,TAS,coastal,9614.4616,2023,Micro,29
+614,West Coast,TAS,coastal,9614.4616,2023,Small,26
+614,West Coast,TAS,coastal,9614.4616,2023,Medium,3
+614,West Coast,TAS,coastal,9614.4616,2023,Large,0
+614,West Coast,TAS,coastal,9614.4616,2024,All businesses,78
+614,West Coast,TAS,coastal,9614.4616,2024,Non-employing,30
+614,West Coast,TAS,coastal,9614.4616,2024,Micro,23
+614,West Coast,TAS,coastal,9614.4616,2024,Small,20
+614,West Coast,TAS,coastal,9614.4616,2024,Medium,5
+614,West Coast,TAS,coastal,9614.4616,2024,Large,0
+614,West Coast,TAS,coastal,9614.4616,2025,All businesses,72
+614,West Coast,TAS,coastal,9614.4616,2025,Non-employing,27
+614,West Coast,TAS,coastal,9614.4616,2025,Micro,25
+614,West Coast,TAS,coastal,9614.4616,2025,Small,18
+614,West Coast,TAS,coastal,9614.4616,2025,Medium,3
+614,West Coast,TAS,coastal,9614.4616,2025,Large,0
+710,Darwin,NT,coastal,3160.3091,2021,All businesses,1592
+710,Darwin,NT,coastal,3160.3091,2021,Non-employing,687
+710,Darwin,NT,coastal,3160.3091,2021,Micro,471
+710,Darwin,NT,coastal,3160.3091,2021,Small,322
+710,Darwin,NT,coastal,3160.3091,2021,Medium,110
+710,Darwin,NT,coastal,3160.3091,2021,Large,3
+710,Darwin,NT,coastal,3160.3091,2022,All businesses,1728
+710,Darwin,NT,coastal,3160.3091,2022,Non-employing,771
+710,Darwin,NT,coastal,3160.3091,2022,Micro,492
+710,Darwin,NT,coastal,3160.3091,2022,Small,345
+710,Darwin,NT,coastal,3160.3091,2022,Medium,117
+710,Darwin,NT,coastal,3160.3091,2022,Large,3
+710,Darwin,NT,coastal,3160.3091,2023,All businesses,1728
+710,Darwin,NT,coastal,3160.3091,2023,Non-employing,781
+710,Darwin,NT,coastal,3160.3091,2023,Micro,450
+710,Darwin,NT,coastal,3160.3091,2023,Small,355
+710,Darwin,NT,coastal,3160.3091,2023,Medium,139
+710,Darwin,NT,coastal,3160.3091,2023,Large,3
+710,Darwin,NT,coastal,3160.3091,2024,All businesses,1783
+710,Darwin,NT,coastal,3160.3091,2024,Non-employing,826
+710,Darwin,NT,coastal,3160.3091,2024,Micro,440
+710,Darwin,NT,coastal,3160.3091,2024,Small,375
+710,Darwin,NT,coastal,3160.3091,2024,Medium,140
+710,Darwin,NT,coastal,3160.3091,2024,Large,3
+710,Darwin,NT,coastal,3160.3091,2025,All businesses,1770
+710,Darwin,NT,coastal,3160.3091,2025,Non-employing,832
+710,Darwin,NT,coastal,3160.3091,2025,Micro,437
+710,Darwin,NT,coastal,3160.3091,2025,Small,368
+710,Darwin,NT,coastal,3160.3091,2025,Medium,131
+710,Darwin,NT,coastal,3160.3091,2025,Large,3
+711,Barkly,NT,inland,303204.6054,2021,All businesses,37
+711,Barkly,NT,inland,303204.6054,2021,Non-employing,12
+711,Barkly,NT,inland,303204.6054,2021,Micro,11
+711,Barkly,NT,inland,303204.6054,2021,Small,13
+711,Barkly,NT,inland,303204.6054,2021,Medium,0
+711,Barkly,NT,inland,303204.6054,2021,Large,0
+711,Barkly,NT,inland,303204.6054,2022,All businesses,46
+711,Barkly,NT,inland,303204.6054,2022,Non-employing,14
+711,Barkly,NT,inland,303204.6054,2022,Micro,17
+711,Barkly,NT,inland,303204.6054,2022,Small,13
+711,Barkly,NT,inland,303204.6054,2022,Medium,3
+711,Barkly,NT,inland,303204.6054,2022,Large,0
+711,Barkly,NT,inland,303204.6054,2023,All businesses,40
+711,Barkly,NT,inland,303204.6054,2023,Non-employing,10
+711,Barkly,NT,inland,303204.6054,2023,Micro,14
+711,Barkly,NT,inland,303204.6054,2023,Small,13
+711,Barkly,NT,inland,303204.6054,2023,Medium,3
+711,Barkly,NT,inland,303204.6054,2023,Large,0
+711,Barkly,NT,inland,303204.6054,2024,All businesses,35
+711,Barkly,NT,inland,303204.6054,2024,Non-employing,13
+711,Barkly,NT,inland,303204.6054,2024,Micro,8
+711,Barkly,NT,inland,303204.6054,2024,Small,10
+711,Barkly,NT,inland,303204.6054,2024,Medium,4
+711,Barkly,NT,inland,303204.6054,2024,Large,0
+711,Barkly,NT,inland,303204.6054,2025,All businesses,41
+711,Barkly,NT,inland,303204.6054,2025,Non-employing,12
+711,Barkly,NT,inland,303204.6054,2025,Micro,11
+711,Barkly,NT,inland,303204.6054,2025,Small,15
+711,Barkly,NT,inland,303204.6054,2025,Medium,3
+711,Barkly,NT,inland,303204.6054,2025,Large,0
+712,Alice Springs,NT,inland,334.1991,2021,All businesses,375
+712,Alice Springs,NT,inland,334.1991,2021,Non-employing,142
+712,Alice Springs,NT,inland,334.1991,2021,Micro,104
+712,Alice Springs,NT,inland,334.1991,2021,Small,96
+712,Alice Springs,NT,inland,334.1991,2021,Medium,32
+712,Alice Springs,NT,inland,334.1991,2021,Large,0
+712,Alice Springs,NT,inland,334.1991,2022,All businesses,375
+712,Alice Springs,NT,inland,334.1991,2022,Non-employing,145
+712,Alice Springs,NT,inland,334.1991,2022,Micro,107
+712,Alice Springs,NT,inland,334.1991,2022,Small,91
+712,Alice Springs,NT,inland,334.1991,2022,Medium,32
+712,Alice Springs,NT,inland,334.1991,2022,Large,0
+712,Alice Springs,NT,inland,334.1991,2023,All businesses,357
+712,Alice Springs,NT,inland,334.1991,2023,Non-employing,140
+712,Alice Springs,NT,inland,334.1991,2023,Micro,93
+712,Alice Springs,NT,inland,334.1991,2023,Small,87
+712,Alice Springs,NT,inland,334.1991,2023,Medium,37
+712,Alice Springs,NT,inland,334.1991,2023,Large,0
+712,Alice Springs,NT,inland,334.1991,2024,All businesses,337
+712,Alice Springs,NT,inland,334.1991,2024,Non-employing,127
+712,Alice Springs,NT,inland,334.1991,2024,Micro,87
+712,Alice Springs,NT,inland,334.1991,2024,Small,85
+712,Alice Springs,NT,inland,334.1991,2024,Medium,37
+712,Alice Springs,NT,inland,334.1991,2024,Large,0
+712,Alice Springs,NT,inland,334.1991,2025,All businesses,350
+712,Alice Springs,NT,inland,334.1991,2025,Non-employing,145
+712,Alice Springs,NT,inland,334.1991,2025,Micro,94
+712,Alice Springs,NT,inland,334.1991,2025,Small,75
+712,Alice Springs,NT,inland,334.1991,2025,Medium,35
+712,Alice Springs,NT,inland,334.1991,2025,Large,0
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2021,All businesses,111
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2021,Non-employing,35
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2021,Micro,32
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2021,Small,35
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2021,Medium,9
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2021,Large,0
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2022,All businesses,118
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2022,Non-employing,36
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2022,Micro,39
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2022,Small,33
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2022,Medium,10
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2022,Large,0
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2023,All businesses,122
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2023,Non-employing,48
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2023,Micro,31
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2023,Small,28
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2023,Medium,15
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2023,Large,0
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2024,All businesses,126
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2024,Non-employing,53
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2024,Micro,24
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2024,Small,34
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2024,Medium,15
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2024,Large,0
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2025,All businesses,120
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2025,Non-employing,50
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2025,Micro,27
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2025,Small,33
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2025,Medium,10
+713,Litchfield Kakadu Arnhem,NT,coastal,107163.2776,2025,Large,0
+714,Katherine Daly,NT,coastal,364402.734,2021,All businesses,180
+714,Katherine Daly,NT,coastal,364402.734,2021,Non-employing,64
+714,Katherine Daly,NT,coastal,364402.734,2021,Micro,51
+714,Katherine Daly,NT,coastal,364402.734,2021,Small,47
+714,Katherine Daly,NT,coastal,364402.734,2021,Medium,18
+714,Katherine Daly,NT,coastal,364402.734,2021,Large,0
+714,Katherine Daly,NT,coastal,364402.734,2022,All businesses,180
+714,Katherine Daly,NT,coastal,364402.734,2022,Non-employing,58
+714,Katherine Daly,NT,coastal,364402.734,2022,Micro,60
+714,Katherine Daly,NT,coastal,364402.734,2022,Small,42
+714,Katherine Daly,NT,coastal,364402.734,2022,Medium,20
+714,Katherine Daly,NT,coastal,364402.734,2022,Large,0
+714,Katherine Daly,NT,coastal,364402.734,2023,All businesses,179
+714,Katherine Daly,NT,coastal,364402.734,2023,Non-employing,60
+714,Katherine Daly,NT,coastal,364402.734,2023,Micro,52
+714,Katherine Daly,NT,coastal,364402.734,2023,Small,49
+714,Katherine Daly,NT,coastal,364402.734,2023,Medium,18
+714,Katherine Daly,NT,coastal,364402.734,2023,Large,0
+714,Katherine Daly,NT,coastal,364402.734,2024,All businesses,162
+714,Katherine Daly,NT,coastal,364402.734,2024,Non-employing,52
+714,Katherine Daly,NT,coastal,364402.734,2024,Micro,48
+714,Katherine Daly,NT,coastal,364402.734,2024,Small,44
+714,Katherine Daly,NT,coastal,364402.734,2024,Medium,18
+714,Katherine Daly,NT,coastal,364402.734,2024,Large,0
+714,Katherine Daly,NT,coastal,364402.734,2025,All businesses,172
+714,Katherine Daly,NT,coastal,364402.734,2025,Non-employing,64
+714,Katherine Daly,NT,coastal,364402.734,2025,Micro,48
+714,Katherine Daly,NT,coastal,364402.734,2025,Small,41
+714,Katherine Daly,NT,coastal,364402.734,2025,Medium,19
+714,Katherine Daly,NT,coastal,364402.734,2025,Large,0
+715,Lasseter,NT,inland,175244.9246,2021,All businesses,9
+715,Lasseter,NT,inland,175244.9246,2021,Non-employing,3
+715,Lasseter,NT,inland,175244.9246,2021,Micro,3
+715,Lasseter,NT,inland,175244.9246,2021,Small,3
+715,Lasseter,NT,inland,175244.9246,2021,Medium,0
+715,Lasseter,NT,inland,175244.9246,2021,Large,0
+715,Lasseter,NT,inland,175244.9246,2022,All businesses,7
+715,Lasseter,NT,inland,175244.9246,2022,Non-employing,3
+715,Lasseter,NT,inland,175244.9246,2022,Micro,3
+715,Lasseter,NT,inland,175244.9246,2022,Small,3
+715,Lasseter,NT,inland,175244.9246,2022,Medium,0
+715,Lasseter,NT,inland,175244.9246,2022,Large,0
+715,Lasseter,NT,inland,175244.9246,2023,All businesses,11
+715,Lasseter,NT,inland,175244.9246,2023,Non-employing,8
+715,Lasseter,NT,inland,175244.9246,2023,Micro,0
+715,Lasseter,NT,inland,175244.9246,2023,Small,3
+715,Lasseter,NT,inland,175244.9246,2023,Medium,0
+715,Lasseter,NT,inland,175244.9246,2023,Large,0
+715,Lasseter,NT,inland,175244.9246,2024,All businesses,9
+715,Lasseter,NT,inland,175244.9246,2024,Non-employing,5
+715,Lasseter,NT,inland,175244.9246,2024,Micro,0
+715,Lasseter,NT,inland,175244.9246,2024,Small,3
+715,Lasseter,NT,inland,175244.9246,2024,Medium,0
+715,Lasseter,NT,inland,175244.9246,2024,Large,0
+715,Lasseter,NT,inland,175244.9246,2025,All businesses,11
+715,Lasseter,NT,inland,175244.9246,2025,Non-employing,4
+715,Lasseter,NT,inland,175244.9246,2025,Micro,0
+715,Lasseter,NT,inland,175244.9246,2025,Small,5
+715,Lasseter,NT,inland,175244.9246,2025,Medium,0
+715,Lasseter,NT,inland,175244.9246,2025,Large,0
+716,MacDonnell,NT,inland,394048.7516,2021,All businesses,24
+716,MacDonnell,NT,inland,394048.7516,2021,Non-employing,4
+716,MacDonnell,NT,inland,394048.7516,2021,Micro,6
+716,MacDonnell,NT,inland,394048.7516,2021,Small,12
+716,MacDonnell,NT,inland,394048.7516,2021,Medium,3
+716,MacDonnell,NT,inland,394048.7516,2021,Large,0
+716,MacDonnell,NT,inland,394048.7516,2022,All businesses,25
+716,MacDonnell,NT,inland,394048.7516,2022,Non-employing,5
+716,MacDonnell,NT,inland,394048.7516,2022,Micro,5
+716,MacDonnell,NT,inland,394048.7516,2022,Small,13
+716,MacDonnell,NT,inland,394048.7516,2022,Medium,3
+716,MacDonnell,NT,inland,394048.7516,2022,Large,0
+716,MacDonnell,NT,inland,394048.7516,2023,All businesses,27
+716,MacDonnell,NT,inland,394048.7516,2023,Non-employing,8
+716,MacDonnell,NT,inland,394048.7516,2023,Micro,5
+716,MacDonnell,NT,inland,394048.7516,2023,Small,11
+716,MacDonnell,NT,inland,394048.7516,2023,Medium,3
+716,MacDonnell,NT,inland,394048.7516,2023,Large,0
+716,MacDonnell,NT,inland,394048.7516,2024,All businesses,25
+716,MacDonnell,NT,inland,394048.7516,2024,Non-employing,4
+716,MacDonnell,NT,inland,394048.7516,2024,Micro,6
+716,MacDonnell,NT,inland,394048.7516,2024,Small,12
+716,MacDonnell,NT,inland,394048.7516,2024,Medium,3
+716,MacDonnell,NT,inland,394048.7516,2024,Large,0
+716,MacDonnell,NT,inland,394048.7516,2025,All businesses,27
+716,MacDonnell,NT,inland,394048.7516,2025,Non-employing,5
+716,MacDonnell,NT,inland,394048.7516,2025,Micro,6
+716,MacDonnell,NT,inland,394048.7516,2025,Small,12
+716,MacDonnell,NT,inland,394048.7516,2025,Medium,4
+716,MacDonnell,NT,inland,394048.7516,2025,Large,0
+810,Canberra,ACT,inland,2349.4062,2021,All businesses,4317
+810,Canberra,ACT,inland,2349.4062,2021,Non-employing,1827
+810,Canberra,ACT,inland,2349.4062,2021,Micro,1249
+810,Canberra,ACT,inland,2349.4062,2021,Small,939
+810,Canberra,ACT,inland,2349.4062,2021,Medium,286
+810,Canberra,ACT,inland,2349.4062,2021,Large,16
+810,Canberra,ACT,inland,2349.4062,2022,All businesses,4512
+810,Canberra,ACT,inland,2349.4062,2022,Non-employing,1872
+810,Canberra,ACT,inland,2349.4062,2022,Micro,1363
+810,Canberra,ACT,inland,2349.4062,2022,Small,962
+810,Canberra,ACT,inland,2349.4062,2022,Medium,296
+810,Canberra,ACT,inland,2349.4062,2022,Large,19
+810,Canberra,ACT,inland,2349.4062,2023,All businesses,4662
+810,Canberra,ACT,inland,2349.4062,2023,Non-employing,1975
+810,Canberra,ACT,inland,2349.4062,2023,Micro,1348
+810,Canberra,ACT,inland,2349.4062,2023,Small,993
+810,Canberra,ACT,inland,2349.4062,2023,Medium,331
+810,Canberra,ACT,inland,2349.4062,2023,Large,15
+810,Canberra,ACT,inland,2349.4062,2024,All businesses,4800
+810,Canberra,ACT,inland,2349.4062,2024,Non-employing,2094
+810,Canberra,ACT,inland,2349.4062,2024,Micro,1334
+810,Canberra,ACT,inland,2349.4062,2024,Small,1010
+810,Canberra,ACT,inland,2349.4062,2024,Medium,344
+810,Canberra,ACT,inland,2349.4062,2024,Large,18
+810,Canberra,ACT,inland,2349.4062,2025,All businesses,4865
+810,Canberra,ACT,inland,2349.4062,2025,Non-employing,2156
+810,Canberra,ACT,inland,2349.4062,2025,Micro,1342
+810,Canberra,ACT,inland,2349.4062,2025,Small,1033
+810,Canberra,ACT,inland,2349.4062,2025,Medium,316
+810,Canberra,ACT,inland,2349.4062,2025,Large,18

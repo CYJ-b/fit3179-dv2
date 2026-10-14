@@ -1,0 +1,715 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Waterfall chart of coastal tourism businesses by size from 2021 to 2025. A navy bar shows the 2021 total, floating bars show the change in each size band (green for an increase, red for a decrease), and a final navy bar shows the 2025 total. The vertical axis starts at 280,000.",
+  "title": {
+    "text": "Tourism Businesses In 2021 VS 2025",
+    "subtitle": [
+      "Tourism businesses in coastal regions, by number of employees. Totals are the sum of the size bands.",
+      "The vertical axis starts at 280,000 so that the changes are visible."
+    ]
+  },
+  "width": 840,
+  "height": 340,
+  "data": {
+    "url": "data/used/businesses_region_year_size.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "TR_CODE": "number",
+        "area_km2": "number",
+        "year": "number",
+        "businesses": "number"
+      }
+    }
+  },
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 20,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "subtitleFontSize": 13,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "axis": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#5B6770",
+      "titleColor": "#1E2B34",
+      "gridColor": "#E3DED3",
+      "domainColor": "#A8AEB3",
+      "tickColor": "#A8AEB3"
+    },
+    "legend": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "header": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "labelFontWeight": 600
+    },
+    "text": {
+      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "fontSize": 12,
+      "color": "#1E2B34"
+    },
+    "concat": {
+      "spacing": 24
+    },
+    "facet": {
+      "spacing": 24
+    }
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.category == 'coastal' && (datum.year == 2021 || datum.year == 2025) && datum.size_band != 'All businesses'"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "businesses",
+              "as": "n"
+            }
+          ],
+          "groupby": [
+            "size_band",
+            "year"
+          ]
+        },
+        {
+          "pivot": "year",
+          "value": "n",
+          "groupby": [
+            "size_band"
+          ]
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "2021",
+              "as": "t2021"
+            },
+            {
+              "op": "sum",
+              "field": "2025",
+              "as": "t2025"
+            }
+          ]
+        },
+        {
+          "fold": [
+            "t2021",
+            "t2025"
+          ],
+          "as": [
+            "which",
+            "value"
+          ]
+        },
+        {
+          "calculate": "datum.which == 't2021' ? '2021 total' : '2025 total'",
+          "as": "step"
+        },
+        {
+          "calculate": "'Total'",
+          "as": "kind"
+        },
+        {
+          "calculate": "format(datum.value, ',')",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "clip": true,
+        "width": 70
+      },
+      "encoding": {
+        "x": {
+          "field": "step",
+          "type": "ordinal",
+          "title": null,
+          "sort": [
+            "2021 total",
+            "Non-employing",
+            "Micro (1–4 staff)",
+            "Small (5–19)",
+            "Medium (20–199)",
+            "Large (200+)",
+            "2025 total"
+          ],
+          "axis": {
+            "labelAngle": 0,
+            "labelFontSize": 12.5,
+            "labelColor": "#1E2B34",
+            "labelLimit": 300,
+            "ticks": false,
+            "domain": true,
+            "labelPadding": 8
+          }
+        },
+        "y": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              280000,
+              332000
+            ],
+            "nice": false,
+            "clamp": true
+          },
+          "axis": {
+            "title": "Tourism businesses on the coast",
+            "titlePadding": 14,
+            "values": [
+              280000,
+              290000,
+              300000,
+              310000,
+              320000,
+              330000
+            ],
+            "labelExpr": "format(datum.value, ',')",
+            "grid": true
+          },
+          "field": "value"
+        },
+        "y2": {
+          "datum": 280000
+        },
+        "color": {
+          "field": "kind",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Increase",
+              "Decrease",
+              "Total"
+            ],
+            "range": [
+              "#1B998B",
+              "#D1495B",
+              "#23395B"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "symbolType": "square",
+            "symbolSize": 140
+          }
+        },
+        "tooltip": [
+          {
+            "field": "step",
+            "type": "nominal",
+            "title": "Step"
+          },
+          {
+            "field": "value",
+            "type": "quantitative",
+            "title": "Businesses (sum of size bands)",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.category == 'coastal' && (datum.year == 2021 || datum.year == 2025) && datum.size_band != 'All businesses'"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "businesses",
+              "as": "n"
+            }
+          ],
+          "groupby": [
+            "size_band",
+            "year"
+          ]
+        },
+        {
+          "pivot": "year",
+          "value": "n",
+          "groupby": [
+            "size_band"
+          ]
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "2021",
+              "as": "t2021"
+            },
+            {
+              "op": "sum",
+              "field": "2025",
+              "as": "t2025"
+            }
+          ]
+        },
+        {
+          "fold": [
+            "t2021",
+            "t2025"
+          ],
+          "as": [
+            "which",
+            "value"
+          ]
+        },
+        {
+          "calculate": "datum.which == 't2021' ? '2021 total' : '2025 total'",
+          "as": "step"
+        },
+        {
+          "calculate": "'Total'",
+          "as": "kind"
+        },
+        {
+          "calculate": "format(datum.value, ',')",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "baseline": "bottom",
+        "dy": -6,
+        "fontSize": 13,
+        "fontWeight": 700,
+        "color": "#1E2B34"
+      },
+      "encoding": {
+        "x": {
+          "field": "step",
+          "type": "ordinal",
+          "title": null,
+          "sort": [
+            "2021 total",
+            "Non-employing",
+            "Micro (1–4 staff)",
+            "Small (5–19)",
+            "Medium (20–199)",
+            "Large (200+)",
+            "2025 total"
+          ],
+          "axis": {
+            "labelAngle": 0,
+            "labelFontSize": 12.5,
+            "labelColor": "#1E2B34",
+            "labelLimit": 300,
+            "ticks": false,
+            "domain": true,
+            "labelPadding": 8
+          }
+        },
+        "y": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              280000,
+              332000
+            ],
+            "nice": false,
+            "clamp": true
+          },
+          "axis": {
+            "title": "Tourism businesses on the coast",
+            "titlePadding": 14,
+            "values": [
+              280000,
+              290000,
+              300000,
+              310000,
+              320000,
+              330000
+            ],
+            "labelExpr": "format(datum.value, ',')",
+            "grid": true
+          },
+          "field": "value"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.category == 'coastal' && (datum.year == 2021 || datum.year == 2025) && datum.size_band != 'All businesses'"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "businesses",
+              "as": "n"
+            }
+          ],
+          "groupby": [
+            "size_band",
+            "year"
+          ]
+        },
+        {
+          "pivot": "year",
+          "value": "n",
+          "groupby": [
+            "size_band"
+          ]
+        },
+        {
+          "calculate": "datum['2025'] - datum['2021']",
+          "as": "delta"
+        },
+        {
+          "calculate": "({\"Non-employing\": 1, \"Micro\": 2, \"Small\": 3, \"Medium\": 4, \"Large\": 5})[datum.size_band]",
+          "as": "order"
+        },
+        {
+          "calculate": "({\"Non-employing\": \"Non-employing\", \"Micro\": \"Micro (1\\u20134 staff)\", \"Small\": \"Small (5\\u201319)\", \"Medium\": \"Medium (20\\u2013199)\", \"Large\": \"Large (200+)\"})[datum.size_band]",
+          "as": "step"
+        },
+        {
+          "joinaggregate": [
+            {
+              "op": "sum",
+              "field": "2021",
+              "as": "total2021"
+            }
+          ]
+        },
+        {
+          "window": [
+            {
+              "op": "sum",
+              "field": "delta",
+              "as": "cum"
+            }
+          ],
+          "sort": [
+            {
+              "field": "order",
+              "order": "ascending"
+            }
+          ],
+          "frame": [
+            null,
+            0
+          ]
+        },
+        {
+          "calculate": "datum.total2021 + datum.cum",
+          "as": "end"
+        },
+        {
+          "calculate": "datum.end - datum.delta",
+          "as": "start"
+        },
+        {
+          "calculate": "datum.delta >= 0 ? 'Increase' : 'Decrease'",
+          "as": "kind"
+        },
+        {
+          "calculate": "max(datum.start, datum.end)",
+          "as": "top"
+        },
+        {
+          "calculate": "(datum.delta >= 0 ? '+' : '−') + format(abs(datum.delta), ',')",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "clip": true,
+        "width": 70
+      },
+      "encoding": {
+        "x": {
+          "field": "step",
+          "type": "ordinal",
+          "title": null,
+          "sort": [
+            "2021 total",
+            "Non-employing",
+            "Micro (1–4 staff)",
+            "Small (5–19)",
+            "Medium (20–199)",
+            "Large (200+)",
+            "2025 total"
+          ],
+          "axis": {
+            "labelAngle": 0,
+            "labelFontSize": 12.5,
+            "labelColor": "#1E2B34",
+            "labelLimit": 300,
+            "ticks": false,
+            "domain": true,
+            "labelPadding": 8
+          }
+        },
+        "y": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              280000,
+              332000
+            ],
+            "nice": false,
+            "clamp": true
+          },
+          "axis": {
+            "title": "Tourism businesses on the coast",
+            "titlePadding": 14,
+            "values": [
+              280000,
+              290000,
+              300000,
+              310000,
+              320000,
+              330000
+            ],
+            "labelExpr": "format(datum.value, ',')",
+            "grid": true
+          },
+          "field": "start"
+        },
+        "y2": {
+          "field": "end"
+        },
+        "color": {
+          "field": "kind",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Increase",
+              "Decrease",
+              "Total"
+            ],
+            "range": [
+              "#1B998B",
+              "#D1495B",
+              "#23395B"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "symbolType": "square",
+            "symbolSize": 140
+          }
+        },
+        "tooltip": [
+          {
+            "field": "step",
+            "type": "nominal",
+            "title": "Size band"
+          },
+          {
+            "field": "2021",
+            "type": "quantitative",
+            "title": "Businesses in 2021",
+            "format": ","
+          },
+          {
+            "field": "2025",
+            "type": "quantitative",
+            "title": "Businesses in 2025",
+            "format": ","
+          },
+          {
+            "field": "label",
+            "type": "nominal",
+            "title": "Change"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.category == 'coastal' && (datum.year == 2021 || datum.year == 2025) && datum.size_band != 'All businesses'"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "businesses",
+              "as": "n"
+            }
+          ],
+          "groupby": [
+            "size_band",
+            "year"
+          ]
+        },
+        {
+          "pivot": "year",
+          "value": "n",
+          "groupby": [
+            "size_band"
+          ]
+        },
+        {
+          "calculate": "datum['2025'] - datum['2021']",
+          "as": "delta"
+        },
+        {
+          "calculate": "({\"Non-employing\": 1, \"Micro\": 2, \"Small\": 3, \"Medium\": 4, \"Large\": 5})[datum.size_band]",
+          "as": "order"
+        },
+        {
+          "calculate": "({\"Non-employing\": \"Non-employing\", \"Micro\": \"Micro (1\\u20134 staff)\", \"Small\": \"Small (5\\u201319)\", \"Medium\": \"Medium (20\\u2013199)\", \"Large\": \"Large (200+)\"})[datum.size_band]",
+          "as": "step"
+        },
+        {
+          "joinaggregate": [
+            {
+              "op": "sum",
+              "field": "2021",
+              "as": "total2021"
+            }
+          ]
+        },
+        {
+          "window": [
+            {
+              "op": "sum",
+              "field": "delta",
+              "as": "cum"
+            }
+          ],
+          "sort": [
+            {
+              "field": "order",
+              "order": "ascending"
+            }
+          ],
+          "frame": [
+            null,
+            0
+          ]
+        },
+        {
+          "calculate": "datum.total2021 + datum.cum",
+          "as": "end"
+        },
+        {
+          "calculate": "datum.end - datum.delta",
+          "as": "start"
+        },
+        {
+          "calculate": "datum.delta >= 0 ? 'Increase' : 'Decrease'",
+          "as": "kind"
+        },
+        {
+          "calculate": "max(datum.start, datum.end)",
+          "as": "top"
+        },
+        {
+          "calculate": "(datum.delta >= 0 ? '+' : '−') + format(abs(datum.delta), ',')",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "baseline": "bottom",
+        "dy": -6,
+        "fontSize": 13,
+        "fontWeight": 700,
+        "color": "#1E2B34"
+      },
+      "encoding": {
+        "x": {
+          "field": "step",
+          "type": "ordinal",
+          "title": null,
+          "sort": [
+            "2021 total",
+            "Non-employing",
+            "Micro (1–4 staff)",
+            "Small (5–19)",
+            "Medium (20–199)",
+            "Large (200+)",
+            "2025 total"
+          ],
+          "axis": {
+            "labelAngle": 0,
+            "labelFontSize": 12.5,
+            "labelColor": "#1E2B34",
+            "labelLimit": 300,
+            "ticks": false,
+            "domain": true,
+            "labelPadding": 8
+          }
+        },
+        "y": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              280000,
+              332000
+            ],
+            "nice": false,
+            "clamp": true
+          },
+          "axis": {
+            "title": "Tourism businesses on the coast",
+            "titlePadding": 14,
+            "values": [
+              280000,
+              290000,
+              300000,
+              310000,
+              320000,
+              330000
+            ],
+            "labelExpr": "format(datum.value, ',')",
+            "grid": true
+          },
+          "field": "top"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}

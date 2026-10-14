@@ -1,0 +1,240 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Six waffle charts, each a grid of 100 squares where one square is one percentage point. Blue squares are the coastal share and sand squares the inland share of: land area (35%), tourism businesses (88%), international visits (93%), tourism spend (87%), value added (87%) and jobs (86%).",
+  "title": {
+    "text": "Tourism Metrics Proportion: Coastal VS Inland",
+    "subtitle": [
+      "One square = 1 percentage point.",
+      "Land is the combined area of the regions."
+    ]
+  },
+  "data": {
+    "url": "data/used/coastal_share.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "coastal": "number",
+        "inland": "number",
+        "coastal_pct": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "calculate": "({\"Land area (km2)\": \"Land area|all 76 tourism regions\", \"Tourism businesses (2025)\": \"Tourism businesses, 2025|in tourism industries\", \"International visits (2025)\": \"International visits, 2025|overseas visitors only\", \"Tourism spend, $m (2024-25)\": \"Tourism spend, 2024-25|domestic + international\", \"Tourism value added, $m (2024-25)\": \"Tourism value added|(GVA), 2024-25|domestic + international\", \"Tourism jobs, '000 (2024-25)\": \"Tourism jobs, 2024-25|domestic + international\"})[datum.measure]",
+      "as": "panel"
+    },
+    {
+      "calculate": "round(datum.coastal_pct)",
+      "as": "n_coastal"
+    },
+    {
+      "calculate": "format(datum.coastal_pct, '.0f') + '%'",
+      "as": "pct_label"
+    },
+    {
+      "calculate": "sequence(100)",
+      "as": "n"
+    },
+    {
+      "flatten": [
+        "n"
+      ]
+    },
+    {
+      "calculate": "floor(datum.n / 10)",
+      "as": "row"
+    },
+    {
+      "calculate": "datum.n % 10",
+      "as": "col"
+    },
+    {
+      "calculate": "datum.n < datum.n_coastal ? 'Coastal' : 'Inland'",
+      "as": "kind"
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 20,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "subtitleFontSize": 13,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "axis": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#5B6770",
+      "titleColor": "#1E2B34",
+      "gridColor": "#E3DED3",
+      "domainColor": "#A8AEB3",
+      "tickColor": "#A8AEB3"
+    },
+    "legend": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "header": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "labelFontWeight": 600
+    },
+    "text": {
+      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "fontSize": 12,
+      "color": "#1E2B34"
+    },
+    "concat": {
+      "spacing": 24
+    },
+    "facet": {
+      "spacing": 24
+    }
+  },
+  "facet": {
+    "field": "panel",
+    "type": "nominal",
+    "title": null,
+    "sort": [
+      "Land area|all 76 tourism regions",
+      "Tourism businesses, 2025|in tourism industries",
+      "International visits, 2025|overseas visitors only",
+      "Tourism spend, 2024-25|domestic + international",
+      "Tourism value added|(GVA), 2024-25|domestic + international",
+      "Tourism jobs, 2024-25|domestic + international"
+    ],
+    "header": {
+      "labelExpr": "split(datum.label, '|')",
+      "labelFontSize": 13,
+      "labelFontWeight": 600,
+      "labelLineHeight": 16,
+      "labelPadding": 10,
+      "labelAnchor": "start",
+      "labelAlign": "left",
+      "labelLimit": 300
+    }
+  },
+  "columns": 3,
+  "spacing": {
+    "row": 24,
+    "column": 40
+  },
+  "spec": {
+    "width": 195,
+    "height": 150,
+    "layer": [
+      {
+        "mark": {
+          "type": "square",
+          "size": 170,
+          "opacity": 1
+        },
+        "encoding": {
+          "x": {
+            "field": "col",
+            "type": "ordinal",
+            "axis": null
+          },
+          "y": {
+            "field": "row",
+            "type": "ordinal",
+            "axis": null,
+            "sort": "descending"
+          },
+          "color": {
+            "field": "kind",
+            "type": "nominal",
+            "title": null,
+            "scale": {
+              "domain": [
+                "Coastal",
+                "Inland"
+              ],
+              "range": [
+                "#0B5E8E",
+                "#C99A3B"
+              ]
+            },
+            "legend": {
+              "orient": "bottom",
+              "direction": "horizontal",
+              "symbolSize": 200
+            }
+          },
+          "tooltip": [
+            {
+              "field": "panel",
+              "type": "nominal",
+              "title": "Measure"
+            },
+            {
+              "field": "coastal_pct",
+              "type": "quantitative",
+              "title": "Coastal share (%)",
+              "format": ".1f"
+            },
+            {
+              "field": "coastal",
+              "type": "quantitative",
+              "title": "Coastal total",
+              "format": ","
+            },
+            {
+              "field": "inland",
+              "type": "quantitative",
+              "title": "Inland total",
+              "format": ","
+            }
+          ]
+        }
+      },
+      {
+        "transform": [
+          {
+            "filter": "datum.n == 0"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "bottom",
+          "fontSize": 24,
+          "fontWeight": 700,
+          "color": "#0B5E8E",
+          "x": 0,
+          "y": -6
+        },
+        "encoding": {
+          "text": {
+            "field": "pct_label",
+            "type": "nominal"
+          }
+        }
+      }
+    ]
+  }
+}

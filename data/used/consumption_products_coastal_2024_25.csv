@@ -1,0 +1,25 @@
+id,parent,label,group,size,source_product
+root,,All coastal tourism spend,,,
+group_food_and_drink,root,Food and drink,Food and drink,,
+product_restaurants_and_takeaway,group_food_and_drink,Restaurants and takeaway,Food and drink,27582.3313,Takeaway and restaurant meals
+product_groceries,group_food_and_drink,Groceries,Food and drink,13012.4604,Food products
+product_drinks_and_alcohol,group_food_and_drink,Drinks and alcohol,Food and drink,8502.6069,Alcoholic beverages and other beverages
+group_getting_around,root,Getting around,Getting around,,
+product_long_distance_transport,group_getting_around,Long-distance transport,Getting around,26647.3788,Long distance passenger transportation
+product_fuel,group_getting_around,Fuel,Getting around,17316.6651,"Fuel (petrol, diesel)"
+product_car_and_caravan_hire,group_getting_around,Car and caravan hire,Getting around,2610.4928,Motor vehicle (including caravan) hire and lease
+product_taxi_and_ride_share,group_getting_around,Taxi and ride-share,Getting around,2098.2818,Taxi fares (including ride share)
+product_local_transport,group_getting_around,Local transport,Getting around,1279.7921,Local area passenger transportation
+product_vehicle_repairs,group_getting_around,Vehicle repairs,Getting around,1191.1968,Repair and maintenance of motor vehicles
+product_vehicles_caravans_and_boats,group_getting_around,"Vehicles, caravans and boats",Getting around,3438.945,"Motor vehicles, caravans, boats, etc."
+group_stay,root,Stay,Stay,,
+product_accommodation,group_stay,Accommodation,Stay,18688.8349,Accommodation services
+product_holiday_home_rent,group_stay,Holiday-home rent,Stay,13812.5699,Actual and imputed rent on dwellings
+group_shopping_and_fun,root,Shopping and fun,Shopping and fun,,
+product_shopping_and_souvenirs,group_shopping_and_fun,Shopping and souvenirs,Shopping and fun,17843.028,"Shopping, gifts and souvenirs"
+product_recreation_culture_and_sport,group_shopping_and_fun,"Recreation, culture and sport",Shopping and fun,7259.1029,"Recreational, cultural and sporting services"
+product_gambling,group_shopping_and_fun,Gambling,Shopping and fun,659.7239,Gambling and betting services
+group_other_services,root,Other services,Other services,,
+product_travel_agents_and_info_centres,group_other_services,Travel agents and info centres,Other services,10931.8481,Travel agency and information centre services
+product_education,group_other_services,Education,Other services,7571.3054,Education services
+product_other_goods_and_services,group_other_services,Other goods and services,Other services,2252.4844,Other tourism goods and services

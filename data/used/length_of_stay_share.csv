@@ -1,0 +1,21 @@
+category,year,length_of_stay,visitors,share_pct
+coastal,2019,Transit,174360.1,1.13
+coastal,2019,1-7 nights,10997338.2,71.07
+coastal,2019,8-14 nights,1717974.7,11.1
+coastal,2019,15-30 nights,988422.8,6.39
+coastal,2019,31 or more nights,1596878.0,10.32
+coastal,2025,Transit,110924.1,0.84
+coastal,2025,1-7 nights,8495220.7,64.21
+coastal,2025,8-14 nights,1691065.8,12.78
+coastal,2025,15-30 nights,1118700.1,8.46
+coastal,2025,31 or more nights,1814654.0,13.72
+inland,2019,Transit,0.0,0.0
+inland,2019,1-7 nights,1126901.4,78.3
+inland,2019,8-14 nights,89376.8,6.21
+inland,2019,15-30 nights,79023.7,5.49
+inland,2019,31 or more nights,143818.5,9.99
+inland,2025,Transit,0.0,0.0
+inland,2025,1-7 nights,679466.4,67.68
+inland,2025,8-14 nights,86435.6,8.61
+inland,2025,15-30 nights,66137.6,6.59
+inland,2025,31 or more nights,171826.4,17.12

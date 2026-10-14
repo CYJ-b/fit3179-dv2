@@ -1,0 +1,530 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Two aligned time-series panels from January 2018. The top panel shows monthly COVID-19 deaths reported to the WHO worldwide (January 2020 to June 2023); the bottom panel shows monthly overseas visitor arrivals to Australia. Dashed lines mark the border closure on 20 March 2020 and the reopening on 21 February 2022.",
+  "title": {
+    "text": "Number Of Arrivals And Deaths Reported Over Time",
+    "subtitle": "Monthly visitor arrivals to Australia (bottom) and COVID-19 deaths reported to the WHO worldwide (top). Hover to compare any month."
+  },
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 20,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "subtitleFontSize": 13,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "axis": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#5B6770",
+      "titleColor": "#1E2B34",
+      "gridColor": "#E3DED3",
+      "domainColor": "#A8AEB3",
+      "tickColor": "#A8AEB3"
+    },
+    "legend": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "header": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "labelFontWeight": 600
+    },
+    "text": {
+      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "fontSize": 12,
+      "color": "#1E2B34"
+    },
+    "concat": {
+      "spacing": 24
+    },
+    "facet": {
+      "spacing": 24
+    }
+  },
+  "data": {
+    "url": "data/used/covid_monthly.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "arrivals": "number",
+        "who_new_cases": "number",
+        "date": "date:'%Y-%m-%d'",
+        "who_new_deaths": "number"
+      }
+    }
+  },
+  "vconcat": [
+    {
+      "width": 880,
+      "height": 130,
+      "transform": [
+        {
+          "calculate": "isValid(datum.who_new_deaths) ? datum.who_new_deaths / 1000 : null",
+          "as": "who_d"
+        }
+      ],
+      "layer": [
+        {
+          "mark": {
+            "type": "area",
+            "color": "#6E6A66",
+            "opacity": 0.65,
+            "line": {
+              "color": "#6E6A66",
+              "strokeWidth": 1.2
+            }
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "scale": {
+                "domain": [
+                  {
+                    "year": 2018,
+                    "month": "jan",
+                    "date": 1
+                  },
+                  {
+                    "year": 2026,
+                    "month": "oct",
+                    "date": 1
+                  }
+                ]
+              },
+              "title": null,
+              "axis": {
+                "labels": false,
+                "ticks": false,
+                "grid": false,
+                "domain": false,
+                "title": null,
+                "labelPadding": 0,
+                "tickSize": 0
+              }
+            },
+            "y": {
+              "field": "who_d",
+              "type": "quantitative",
+              "title": "WHO deaths (thousands)",
+              "scale": {
+                "domain": [
+                  0,
+                  600
+                ]
+              },
+              "axis": {
+                "tickCount": 5
+              }
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "d": "2020-03-20",
+                "t": "20 Mar 2020: borders close",
+                "align": "left"
+              },
+              {
+                "d": "2022-02-21",
+                "t": "21 Feb 2022: borders reopen",
+                "align": "left"
+              }
+            ]
+          },
+          "mark": {
+            "type": "rule",
+            "stroke": "#1E2B34",
+            "strokeDash": [
+              4,
+              3
+            ],
+            "strokeWidth": 1
+          },
+          "encoding": {
+            "x": {
+              "field": "d",
+              "type": "temporal",
+              "axis": {
+                "labels": false,
+                "ticks": false,
+                "grid": false,
+                "domain": false,
+                "title": null,
+                "labelPadding": 0,
+                "tickSize": 0
+              },
+              "title": null
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "d": "2020-03-20",
+                "t": "20 Mar 2020: borders close",
+                "align": "left"
+              },
+              {
+                "d": "2022-02-21",
+                "t": "21 Feb 2022: borders reopen",
+                "align": "left"
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "top",
+            "dx": 5,
+            "dy": 2,
+            "fontSize": 12,
+            "color": "#1E2B34"
+          },
+          "encoding": {
+            "x": {
+              "field": "d",
+              "type": "temporal",
+              "axis": {
+                "labels": false,
+                "ticks": false,
+                "grid": false,
+                "domain": false,
+                "title": null,
+                "labelPadding": 0,
+                "tickSize": 0
+              },
+              "title": null
+            },
+            "y": {
+              "value": 0
+            },
+            "text": {
+              "field": "t",
+              "type": "nominal"
+            }
+          }
+        },
+        {
+          "params": [
+            {
+              "name": "hover_dth",
+              "select": {
+                "type": "point",
+                "on": "mouseover",
+                "clear": "mouseout",
+                "nearest": true,
+                "fields": [
+                  "date"
+                ]
+              }
+            }
+          ],
+          "mark": {
+            "type": "point",
+            "opacity": 0,
+            "size": 200
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "axis": {
+                "labels": false,
+                "ticks": false,
+                "grid": false,
+                "domain": false,
+                "title": null,
+                "labelPadding": 0,
+                "tickSize": 0
+              },
+              "title": null
+            },
+            "y": {
+              "field": "who_d",
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "date",
+                "type": "temporal",
+                "title": "Month",
+                "format": "%b %Y"
+              },
+              {
+                "field": "arrivals",
+                "type": "quantitative",
+                "title": "Visitor arrivals",
+                "format": ","
+              },
+              {
+                "field": "who_new_cases",
+                "type": "quantitative",
+                "title": "WHO reported new cases",
+                "format": ","
+              },
+              {
+                "field": "who_new_deaths",
+                "type": "quantitative",
+                "title": "WHO reported new deaths",
+                "format": ","
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "rule",
+            "stroke": "#1E2B34",
+            "strokeWidth": 1
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "axis": {
+                "labels": false,
+                "ticks": false,
+                "grid": false,
+                "domain": false,
+                "title": null,
+                "labelPadding": 0,
+                "tickSize": 0
+              },
+              "title": null
+            },
+            "opacity": {
+              "condition": [
+                {
+                  "param": "hover_dth",
+                  "empty": false,
+                  "value": 0.7
+                },
+                {
+                  "param": "hover_arr",
+                  "empty": false,
+                  "value": 0.7
+                }
+              ],
+              "value": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 880,
+      "height": 170,
+      "transform": [
+        {
+          "calculate": "datum.arrivals / 1000",
+          "as": "arr_k"
+        }
+      ],
+      "layer": [
+        {
+          "mark": {
+            "type": "area",
+            "color": "#1B998B",
+            "opacity": 0.35,
+            "line": {
+              "color": "#1B998B",
+              "strokeWidth": 1.8
+            }
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal",
+              "scale": {
+                "domain": [
+                  {
+                    "year": 2018,
+                    "month": "jan",
+                    "date": 1
+                  },
+                  {
+                    "year": 2026,
+                    "month": "oct",
+                    "date": 1
+                  }
+                ]
+              },
+              "title": null,
+              "axis": {
+                "format": "%Y",
+                "tickCount": "year",
+                "grid": false
+              }
+            },
+            "y": {
+              "field": "arr_k",
+              "type": "quantitative",
+              "title": "Arrivals (thousands)",
+              "scale": {
+                "domain": [
+                  0,
+                  1250
+                ]
+              },
+              "axis": {
+                "tickCount": 5
+              }
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "d": "2020-03-20",
+                "t": "20 Mar 2020: borders close",
+                "align": "left"
+              },
+              {
+                "d": "2022-02-21",
+                "t": "21 Feb 2022: borders reopen",
+                "align": "left"
+              }
+            ]
+          },
+          "mark": {
+            "type": "rule",
+            "stroke": "#1E2B34",
+            "strokeDash": [
+              4,
+              3
+            ],
+            "strokeWidth": 1
+          },
+          "encoding": {
+            "x": {
+              "field": "d",
+              "type": "temporal"
+            }
+          }
+        },
+        {
+          "params": [
+            {
+              "name": "hover_arr",
+              "select": {
+                "type": "point",
+                "on": "mouseover",
+                "clear": "mouseout",
+                "nearest": true,
+                "fields": [
+                  "date"
+                ]
+              }
+            }
+          ],
+          "mark": {
+            "type": "point",
+            "opacity": 0,
+            "size": 200
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal"
+            },
+            "y": {
+              "field": "arr_k",
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "date",
+                "type": "temporal",
+                "title": "Month",
+                "format": "%b %Y"
+              },
+              {
+                "field": "arrivals",
+                "type": "quantitative",
+                "title": "Visitor arrivals",
+                "format": ","
+              },
+              {
+                "field": "who_new_cases",
+                "type": "quantitative",
+                "title": "WHO reported new cases",
+                "format": ","
+              },
+              {
+                "field": "who_new_deaths",
+                "type": "quantitative",
+                "title": "WHO reported new deaths",
+                "format": ","
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "rule",
+            "stroke": "#1E2B34",
+            "strokeWidth": 1
+          },
+          "encoding": {
+            "x": {
+              "field": "date",
+              "type": "temporal"
+            },
+            "opacity": {
+              "condition": [
+                {
+                  "param": "hover_dth",
+                  "empty": false,
+                  "value": 0.7
+                },
+                {
+                  "param": "hover_arr",
+                  "empty": false,
+                  "value": 0.7
+                }
+              ],
+              "value": 0
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "spacing": 14,
+  "resolve": {
+    "scale": {
+      "x": "shared"
+    }
+  },
+  "bounds": "flush"
+}

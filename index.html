@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Coast Is Clear | FIT3179 Data Visualisation 2</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@6.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.0.2"></script>
+</head>
+<body>
+
+  <h1>Coastal Tourism - The Bounce Back From COVID-19 <br> and Its Current State</h1>
+  <p>As COVID-19 came into the picture, tourism in Australia, including coastal, dropped as a whole. Later, as the borders open up, tourism regions across Australia saw a recovery.
+    <br><br> However, how much has coastal tourism recovered compared to inland tourism? And how much does it contribute to Australia's economy?
+    <br><br><i>Disclaimer: Tourism regions are determined by Tourism Research Australia. Whether they are coastal or inland was 
+      determined based on the proportion of their borders which touches the sea. (taking the region's area into consideration as well)</i>
+  </p>
+
+  <section id="section-1">
+    <h2>1. The period the world stopped travelling</h2>
+    <div class="block">
+      <div id="c01" class="chart"></div>
+      <p>As the COVID-19 pandemic hit in 2020-2021, the number of visitors across the globe reduced significantly, with Australia's closed borders playing a major role in the reduction during this period.</p>
+    </div>
+    <div class="block">
+      <div id="c02" class="chart"></div>
+      <p>The Australian border closure started on 20 March 2020 as a response to the rising number of cases and deaths across the world. 
+        It was not until 21 February 2022 that the borders reopened for fully vaccinated individual, following a decreasing number of worldwide deaths.</p>
+    </div>
+    <div class="block">
+      <div id="c03" class="chart"></div>
+      <p>After the recovery from the COVID-19 pandemic, it can be seen that China and New Zealand reclaimed their top 2 spots while Malaysia dropped to rank 11. 
+        This indicates that Malaysian's visiting patterns to Australia may not have fully recovered or that it has been altered.</p>
+    </div>
+  </section>
+
+  <section id="section-2">
+    <h2>2. Where visitors go</h2>
+    <div class="block">
+      <div id="c04" class="chart"></div>
+      <p>Almost every international visit lands on the coastal regions, with Perth, Melbourne, Sydney, Brisbane, and Gold Coast being the most popular regions.
+         This seems to hold even across the years.</p>
+    </div>
+    <div class="block side">
+      <p>When comparing 2025 to 2019, the coast has recovered greater than the inland. 
+        This indicates that coastal regions play a more significant role for Australia's tourism industry.</p>
+      <div id="c05" class="chart"></div>
+    </div>
+  </section>
+
+  <section id="section-3">
+    <h2>3. When and why they come</h2>
+    <div class="block side">
+      <p>The number of visits for the top 20 busiest coastal seems to follow seasonal trends. Where most visits seem to happen during the summer, 
+        which is fitting for coastal regions where there are beaches.</p>
+      <div id="c06" class="chart"></div>
+    </div>
+    <div class="block">
+      <div id="c07" class="chart"></div>
+      <p>During the closed borders, visiting friends and relatives briefly became the biggest reason for visits to Australia, overtaking holiday as a reason. 
+        Furthermore, "visiting friends and relatives" also had the quickest recovery after the opening of the borders.
+      </p>
+    </div>
+    <div class="block">
+      <div id="c08" class="chart"></div>
+      <p>Comparing 2025 to 2019, international visitors seem to prefer longer stays compared to having short 1-7 night stays, especially "31 or more nights"
+        which seems to have the highest increase in proportion for both coastal and inland tourism regions.
+      </p>
+    </div>
+  </section>
+
+  <section id="section-4">
+    <h2>4. Where the businesses are</h2>
+    <div class="block">
+      <div id="c09" class="chart"></div>
+      <p>In 2025, the coast is 35% of the land but holds 88% of tourism businesses, 14 times denser than the inland regions. Big cities such as Melbourne has 21 businesses per km² 
+        and Sydney 11, while central regions such as Lasseter have fewer than one per 10,000 km². This highlights the importance of coastal regions compared to inland regions</p>
+    </div>
+    <div class="block">
+      <div id="c10" class="chart"></div>
+      <p>Number of coastal businesses grew by 14,416 (+4.8%) between 2021 and 2025, where sole traders seemingly having the biggest boom,
+         indicating a shift in tourism businesses industry.</p>
+    </div>
+  </section>
+
+  <section id="section-5">
+    <h2>5. What the coast is worth</h2>
+    <div class="block side">
+      <p>The coast holds 35% of the land but 88% of businesses, 93% of international visits, 87% of spend and value added (GVA, the value tourism adds to the local economy), and 86% of jobs.</p>
+      <div id="c11" class="chart"></div>
+    </div>
+    <div class="block side">
+      <p>Furthermore, the coastal regions metrics fell further than inland regions in 2020-21 but ultimately climbed higher by 2024-25 for all metrics, especially tourism spendings and the amount of jobs.
+        In addition, the coastal regions metrics not only bounced back, but rose to higher than before the pandemic (2018-2019)
+      </p>
+      <div id="c12" class="chart"></div>
+    </div>
+    <div class="block side">
+      <p>Coastal tourists spent $182.7 billion in 2024-25. Getting around ($54.6bn) and food and drink ($49.1bn) taking up the majority of this value.
+        The significant proportion towards getting around indicates that coastal tourists do not just stay in one place, but rather like to move around. Additionally,
+        this huge amount shows the economic and impact of coastal tourism to Australia.
+      </p>
+      <div id="c13" class="chart"></div>
+    </div>
+  </section>
+
+  <section id="section-6">
+    <h2>6. Conclusion</h2>
+    <ul>
+      <li>Tourism is a mainly coastal business: 87-93% of visits, spend and jobs.</li>
+      <li>Coastal tourism seems to be recovering well from the impacts of the COVID-19 pandemic, 
+        <br>even supassing the values before the pandemic for some metrics </li>
+      <li>Coastal tourism contributes a significant amount of economic value to Australia</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Author: Yong Jein Chew<br> Date: 14 October 2026<br>Studio Time: Thursday 4pm-6pm</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

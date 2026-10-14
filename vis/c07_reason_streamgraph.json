@@ -1,0 +1,382 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Streamgraph of international visits to coastal tourism regions by main reason for the trip, quarter by quarter from 2018 to the first quarter of 2026. Layers are holiday, visiting friends and relatives, business, education, and employment and other reasons.",
+  "title": {
+    "text": "The Main Reasons For Visiting Coastal Regions Across Time",
+    "subtitle": "International visits to coastal regions by main reason for the trip, each quarter. The thickness of a band is the number of visits."
+  },
+  "width": 880,
+  "height": 380,
+  "data": {
+    "url": "data/used/main_reason_coastal_quarterly.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "visitors": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.main_reason == 'Employment' || datum.main_reason == 'Other reason' ? 'Employment and other' : datum.main_reason",
+      "as": "reason"
+    },
+    {
+      "calculate": "datetime(datum.year, (toNumber(substring(datum.quarter, 1)) - 1) * 3, 1)",
+      "as": "date"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "visitors",
+          "as": "visits"
+        }
+      ],
+      "groupby": [
+        "date",
+        "reason"
+      ]
+    },
+    {
+      "stack": "visits",
+      "groupby": [
+        "date"
+      ],
+      "offset": "center",
+      "sort": [
+        {
+          "field": "reason",
+          "order": "ascending"
+        }
+      ],
+      "as": [
+        "y0",
+        "y1"
+      ]
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 20,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "subtitleFontSize": 13,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "axis": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#5B6770",
+      "titleColor": "#1E2B34",
+      "gridColor": "#E3DED3",
+      "domainColor": "#A8AEB3",
+      "tickColor": "#A8AEB3"
+    },
+    "legend": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "header": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "labelFontWeight": 600
+    },
+    "text": {
+      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "fontSize": 12,
+      "color": "#1E2B34"
+    },
+    "concat": {
+      "spacing": 24
+    },
+    "facet": {
+      "spacing": 24
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "date": "2020-04-01",
+            "date2": "2022-01-01"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "color": "#E3DED3",
+        "opacity": 0.75
+      },
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "title": null,
+          "axis": {
+            "format": "%Y",
+            "tickCount": "year",
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "datum.value > time(datetime(2026, 6, 1)) ? '' : timeFormat(datum.value, '%Y')"
+          }
+        },
+        "x2": {
+          "field": "date2"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "date": "2020-04-01",
+            "pos": 3360000.0,
+            "t": "Apr 2020 to Dec 2021:",
+            "w": 600
+          },
+          {
+            "date": "2020-04-01",
+            "pos": 2940000.0,
+            "t": "almost no visits",
+            "w": 400
+          },
+          {
+            "date": "2020-04-01",
+            "pos": 2519999.9999999995,
+            "t": "(borders closed)",
+            "w": 400
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 12.5,
+        "color": "#1E2B34",
+        "dx": 8,
+        "fontWeight": {
+          "expr": "datum.w"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "title": null,
+          "axis": {
+            "format": "%Y",
+            "tickCount": "year",
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "datum.value > time(datetime(2026, 6, 1)) ? '' : timeFormat(datum.value, '%Y')"
+          }
+        },
+        "y": {
+          "field": "pos",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              4700000.0
+            ],
+            "nice": false
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "area",
+        "interpolate": "monotone",
+        "opacity": 0.95,
+        "stroke": "#FBF8F2",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "title": null,
+          "axis": {
+            "format": "%Y",
+            "tickCount": "year",
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "datum.value > time(datetime(2026, 6, 1)) ? '' : timeFormat(datum.value, '%Y')"
+          },
+          "scale": {
+            "domain": [
+              {
+                "year": 2018,
+                "month": "jan",
+                "date": 1
+              },
+              {
+                "year": 2027,
+                "month": "may",
+                "date": 1
+              }
+            ]
+          }
+        },
+        "y": {
+          "field": "y0",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              4700000.0
+            ],
+            "nice": false
+          },
+          "axis": null
+        },
+        "y2": {
+          "field": "y1"
+        },
+        "color": {
+          "field": "reason",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Holiday",
+              "Visiting friends and relatives",
+              "Business",
+              "Education",
+              "Employment and other"
+            ],
+            "range": [
+              "#56B4E9",
+              "#D55E00",
+              "#CC79A7",
+              "#009E73",
+              "#8C8C8C"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "date",
+            "type": "temporal",
+            "title": "Quarter starting",
+            "format": "%b %Y"
+          },
+          {
+            "field": "reason",
+            "type": "nominal",
+            "title": "Main reason"
+          },
+          {
+            "field": "visits",
+            "type": "quantitative",
+            "title": "Visits",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "time(datum.date) == time(datetime(2026, 0, 1))"
+        },
+        {
+          "calculate": "(datum.y0 + datum.y1) / 2",
+          "as": "mid"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "baseline": "middle",
+        "fontSize": 12.5,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "title": null,
+          "axis": {
+            "format": "%Y",
+            "tickCount": "year",
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "datum.value > time(datetime(2026, 6, 1)) ? '' : timeFormat(datum.value, '%Y')"
+          }
+        },
+        "y": {
+          "field": "mid",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              4700000.0
+            ],
+            "nice": false
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "reason",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "reason",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Holiday",
+              "Visiting friends and relatives",
+              "Business",
+              "Education",
+              "Employment and other"
+            ],
+            "range": [
+              "#56B4E9",
+              "#D55E00",
+              "#CC79A7",
+              "#009E73",
+              "#8C8C8C"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
