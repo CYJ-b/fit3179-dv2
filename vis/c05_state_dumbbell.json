@@ -115,36 +115,6 @@
       }
     },
     {
-      "data": {
-        "values": [
-          {
-            "x": 100,
-            "t": "100% = same as 2019"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "baseline": "bottom",
-        "dx": -5,
-        "dy": -2,
-        "fontSize": 12,
-        "color": "#1E2B34",
-        "y": -2
-      },
-      "encoding": {
-        "x": {
-          "field": "x",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "t",
-          "type": "nominal"
-        }
-      }
-    },
-    {
       "transform": [
         {
           "filter": "datum.year == 2019 || datum.year == 2025"
