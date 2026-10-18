@@ -1,0 +1,25 @@
+category,industry,label,full_time_k,part_time_k,total_k,part_time_pct
+coastal,"Cafes, restaurants and takeaway food services","Cafes, restaurants & takeaway",63.7,117.4,181.1,64.8
+coastal,Retail trade,Retail,52.2,53.7,105.9,50.7
+coastal,Accommodation,Accommodation,51.4,46.3,97.7,47.4
+coastal,Education and training,Education & training,24.7,15.7,40.4,38.8
+coastal,"Clubs, pubs, taverns and bars","Pubs, clubs & bars",17.8,20.5,38.3,53.5
+coastal,"Air, water and other passenger transport","Air, water & other transport",30.9,7.2,38.1,18.9
+coastal,Road passenger transport and transport equipment rental,Road transport & vehicle hire,24.4,11.5,36.0,32.1
+coastal,Sports and recreation services,Sports & recreation,12.6,16.3,28.9,56.4
+coastal,Travel agency and information centre services,Travel agents & info centres,10.5,3.9,14.4,27.3
+coastal,Cultural services,Cultural services,8.5,5.0,13.5,37.2
+coastal,All other industries,All other industries,6.8,3.5,10.2,34.1
+coastal,Casinos and other gambling services,Casinos & gambling,1.2,0.4,1.6,26.4
+inland,"Cafes, restaurants and takeaway food services","Cafes, restaurants & takeaway",10.0,18.7,28.7,65.1
+inland,Retail trade,Retail,9.9,9.7,19.6,49.3
+inland,Accommodation,Accommodation,8.2,7.5,15.7,47.8
+inland,"Clubs, pubs, taverns and bars","Pubs, clubs & bars",2.8,3.2,6.0,53.8
+inland,Sports and recreation services,Sports & recreation,2.3,2.9,5.2,55.8
+inland,"Air, water and other passenger transport","Air, water & other transport",2.7,0.5,3.2,16.2
+inland,Road passenger transport and transport equipment rental,Road transport & vehicle hire,2.2,0.9,3.0,28.4
+inland,Cultural services,Cultural services,1.5,0.9,2.4,36.7
+inland,Education and training,Education & training,1.5,0.8,2.3,35.7
+inland,Travel agency and information centre services,Travel agents & info centres,1.3,0.5,1.8,26.4
+inland,All other industries,All other industries,1.0,0.5,1.6,32.6
+inland,Casinos and other gambling services,Casinos & gambling,0.2,0.1,0.3,25.7

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Proportional symbol map of international visits to each of Australia's 76 tourism regions. Circle area is the number of visits in the selected year and circle colour shows whether the region is coastal (blue) or inland (sand). A year slider moves between 2019 and 2025.",
+  "description": "Proportional symbol map of international visits to each of Australia's 76 tourism regions. Circle area is the number of visits in the selected year and circle colour shows whether the region is coastal (blue) or inland (sand). A year slider moves between 2019 and 2025, a dropdown centres the map on a state or all of Australia, a zoom slider zooms in or out, and a checkbox hides regions outside the chosen state.",
   "title": {
     "text": "Number Of Visits For Each Tourism Region",
     "subtitle": "International visits to each tourism region, by year. A visit is one trip counted once per region visited. Drag the slider to change the year."
@@ -18,17 +18,65 @@
       0,
       0
     ],
-    "center": [
-      0,
-      -27.5
-    ],
-    "scale": 740,
+    "center": {
+      "expr": "({AUS: [0, -27.5], NSW: [15.3, -33], VIC: [13.5, -36.7], QLD: [13.5, -20], SA: [3, -32], WA: [-11, -25], TAS: [14.5, -42.1], NT: [1.5, -18.5]})[state_view]"
+    },
+    "scale": {
+      "expr": "({AUS: 740, NSW: 1900, VIC: 4000, QLD: 1150, SA: 1900, WA: 1000, TAS: 4000, NT: 1400})[state_view] * zoom_level"
+    },
     "translate": [
       489.6,
       240
     ]
   },
   "params": [
+    {
+      "name": "state_view",
+      "value": "AUS",
+      "bind": {
+        "input": "select",
+        "options": [
+          "AUS",
+          "NSW",
+          "VIC",
+          "QLD",
+          "SA",
+          "WA",
+          "TAS",
+          "NT"
+        ],
+        "labels": [
+          "Australia",
+          "New South Wales",
+          "Victoria",
+          "Queensland",
+          "South Australia",
+          "Western Australia",
+          "Tasmania",
+          "Northern Territory"
+        ],
+        "name": "State: "
+      }
+    },
+    {
+      "name": "zoom_level",
+      "value": 1,
+      "bind": {
+        "input": "range",
+        "min": 0.5,
+        "max": 3,
+        "step": 0.1,
+        "name": "Zoom: "
+      }
+    },
+    {
+      "name": "state_filter",
+      "value": true,
+      "bind": {
+        "input": "checkbox",
+        "name": "Selected state only: "
+      }
+    },
     {
       "name": "year_selected",
       "value": 2025,
@@ -205,13 +253,78 @@
       "transform": [
         {
           "filter": "datum.year == year_selected"
+        },
+        {
+          "filter": "!state_filter || state_view == 'AUS' || datum.state == state_view || (state_view == 'NSW' && datum.state == 'ACT')"
+        },
+        {
+          "filter": "indexof([\"Sydney\", \"Melbourne\", \"Brisbane\", \"Destination Perth\", \"Gold Coast\"], datum.TR_NAME) >= 0"
+        },
+        {
+          "calculate": "datum.centre_lon + ({\"Sydney\": 5, \"Melbourne\": -3.8, \"Brisbane\": 5.3, \"Destination Perth\": -4.5, \"Gold Coast\": 5.3})[datum.TR_NAME]",
+          "as": "l_lon"
+        },
+        {
+          "calculate": "datum.centre_lat + ({\"Sydney\": -1, \"Melbourne\": -3, \"Brisbane\": 1.9, \"Destination Perth\": 0, \"Gold Coast\": -1.6})[datum.TR_NAME]",
+          "as": "l_lat"
+        },
+        {
+          "calculate": "({\"Sydney\": \"left\", \"Melbourne\": \"right\", \"Brisbane\": \"left\", \"Destination Perth\": \"right\", \"Gold Coast\": \"left\"})[datum.TR_NAME]",
+          "as": "lab_align"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "stroke": "#1E2B34",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "longitude": {
+          "field": "centre_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "centre_lat",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "l_lon"
+        },
+        "latitude2": {
+          "field": "l_lat"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/used/region_visits.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "TR_CODE": "number",
+            "coastal_ratio": "number",
+            "area_km2": "number",
+            "centre_lon": "number",
+            "centre_lat": "number",
+            "year": "number",
+            "visitors": "number",
+            "pct_of_2019": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year_selected"
+        },
+        {
+          "filter": "!state_filter || state_view == 'AUS' || datum.state == state_view || (state_view == 'NSW' && datum.state == 'ACT')"
         }
       ],
       "mark": {
         "type": "circle",
         "opacity": 0.72,
-        "strokeWidth": 1.3,
-        "stroke": "#FFFFFF"
+        "strokeWidth": 0.6,
+        "stroke": "#000000"
       },
       "encoding": {
         "longitude": {
@@ -227,14 +340,15 @@
           "type": "quantitative",
           "title": "Visits in the year",
           "scale": {
-            "type": "linear",
+            "type": "pow",
+            "exponent": 0.8,
             "domain": [
               0,
               4200000
             ],
             "range": [
               0,
-              3600
+              1500
             ],
             "zero": true
           },
@@ -338,6 +452,9 @@
           "filter": "datum.year == year_selected"
         },
         {
+          "filter": "!state_filter || state_view == 'AUS' || datum.state == state_view || (state_view == 'NSW' && datum.state == 'ACT')"
+        },
+        {
           "filter": "indexof([\"Sydney\", \"Melbourne\", \"Brisbane\", \"Destination Perth\", \"Gold Coast\"], datum.TR_NAME) >= 0"
         },
         {
@@ -345,15 +462,15 @@
           "as": "label"
         },
         {
-          "calculate": "({\"Sydney\": 22, \"Melbourne\": 24, \"Brisbane\": 22, \"Destination Perth\": -16, \"Gold Coast\": 24})[datum.TR_NAME]",
-          "as": "lab_dx"
+          "calculate": "datum.centre_lon + ({\"Sydney\": 5, \"Melbourne\": -3.8, \"Brisbane\": 5.3, \"Destination Perth\": -4.5, \"Gold Coast\": 5.3})[datum.TR_NAME]",
+          "as": "l_lon"
         },
         {
-          "calculate": "({\"Sydney\": 0, \"Melbourne\": 18, \"Brisbane\": -4, \"Destination Perth\": 0, \"Gold Coast\": 14})[datum.TR_NAME]",
-          "as": "lab_dy"
+          "calculate": "datum.centre_lat + ({\"Sydney\": -1, \"Melbourne\": -3, \"Brisbane\": 1.9, \"Destination Perth\": 0, \"Gold Coast\": -1.6})[datum.TR_NAME]",
+          "as": "l_lat"
         },
         {
-          "calculate": "({\"Sydney\": \"left\", \"Melbourne\": \"left\", \"Brisbane\": \"left\", \"Destination Perth\": \"right\", \"Gold Coast\": \"left\"})[datum.TR_NAME]",
+          "calculate": "({\"Sydney\": \"left\", \"Melbourne\": \"right\", \"Brisbane\": \"left\", \"Destination Perth\": \"right\", \"Gold Coast\": \"left\"})[datum.TR_NAME]",
           "as": "lab_align"
         }
       ],
@@ -364,10 +481,7 @@
         "color": "#1E2B34",
         "baseline": "middle",
         "dx": {
-          "expr": "datum.lab_dx"
-        },
-        "dy": {
-          "expr": "datum.lab_dy"
+          "expr": "datum.lab_align == 'left' ? 4 : -4"
         },
         "align": {
           "expr": "datum.lab_align"
@@ -375,11 +489,11 @@
       },
       "encoding": {
         "longitude": {
-          "field": "centre_lon",
+          "field": "l_lon",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "centre_lat",
+          "field": "l_lat",
           "type": "quantitative"
         },
         "text": {

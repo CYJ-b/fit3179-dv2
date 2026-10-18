@@ -191,8 +191,9 @@
             "labelPadding": 6,
             "ticks": false,
             "domain": false,
+            "titleFontSize": 14,
             "titleFontWeight": 400,
-            "titleColor": "#5B6770"
+            "titleColor": "#1E2B34"
           }
         },
         "y": {
@@ -280,8 +281,9 @@
             "labelPadding": 6,
             "ticks": false,
             "domain": false,
+            "titleFontSize": 14,
             "titleFontWeight": 400,
-            "titleColor": "#5B6770"
+            "titleColor": "#1E2B34"
           }
         },
         "y": {

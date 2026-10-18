@@ -10,6 +10,7 @@ body {
 }
 
 h1, h2 { font-family: "Fraunces", Georgia, serif; }
+h1 { text-align: center; }
 
 section { margin-top: 4rem; }
 .block { margin: 2.5rem 0; }
@@ -57,3 +58,36 @@ footer { margin-top: 4rem; font-size: 0.9rem; color: #5b6770; }
   .block.side { grid-template-columns: minmax(0, 1fr); grid-template-areas: "text" "chart"; }
   .block.side > p { margin-top: 0; }
 }
+
+/* c04: Year slider on the left of the controls row under the map, State / Zoom / tick-box to its right */
+#c04 .vega-bindings {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+}
+#c04 .vega-bind { order: 2; }
+#c04 .vega-bind:nth-child(4) { order: 1; margin-right: auto; }
+
+/* fixed-width value read-outs so the sliders don't shift sideways while being dragged */
+#c04 .vega-bind input[type="range"] + span { display: inline-block; min-width: 4ch; }
+
+/* c09: State dropdown and Zoom slider in a row under the map */
+#c09 .vega-bindings {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+}
+#c09 .vega-bind input[type="range"] + span { display: inline-block; min-width: 4ch; }
+
+/* c15 / c15b: State dropdown, Zoom slider and tick-box in a row under the map */
+#c15 .vega-bindings,
+#c15b .vega-bindings {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+}
+#c15 .vega-bind input[type="range"] + span,
+#c15b .vega-bind input[type="range"] + span { display: inline-block; min-width: 4ch; }

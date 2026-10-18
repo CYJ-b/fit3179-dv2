@@ -1,0 +1,353 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Butterfly bar chart of direct tourism jobs in Australia's coastal tourism regions in 2024-25, one row per industry. Full-time jobs extend left and part-time jobs extend right from a shared centre line, in thousand jobs. Rows are sorted by total jobs, and each row is labelled with its part-time share.",
+  "title": {
+    "text": [
+      "Distribution Of Tourism Jobs In Coastal Regions"
+    ],
+    "subtitle": [
+      "Direct tourism jobs in coastal regions, 2024-25, by industry.",
+      "Hover over a bar for details."
+    ]
+  },
+  "width": 520,
+  "height": 360,
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 20,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "subtitleFontSize": 13,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "axis": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#5B6770",
+      "titleColor": "#1E2B34",
+      "gridColor": "#E3DED3",
+      "domainColor": "#A8AEB3",
+      "tickColor": "#A8AEB3"
+    },
+    "legend": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "header": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "labelFontWeight": 600
+    },
+    "text": {
+      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "fontSize": 12,
+      "color": "#1E2B34"
+    },
+    "concat": {
+      "spacing": 24
+    },
+    "facet": {
+      "spacing": 24
+    }
+  },
+  "data": {
+    "url": "data/used/jobs_detail_2024_25.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "full_time_k": "number",
+        "part_time_k": "number",
+        "total_k": "number",
+        "part_time_pct": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.category == 'coastal'"
+    },
+    {
+      "calculate": "-datum.full_time_k",
+      "as": "full_neg"
+    },
+    {
+      "calculate": "format(datum.part_time_pct, '.0f') + '% part-time'",
+      "as": "pt_label"
+    }
+  ],
+  "layer": [
+    {
+      "transform": [
+        {
+          "calculate": "'Full-time'",
+          "as": "series"
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "height": {
+          "band": 0.72
+        },
+        "stroke": "#1E2B34",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "y": {
+          "field": "label",
+          "type": "nominal",
+          "sort": {
+            "field": "total_k",
+            "op": "max",
+            "order": "descending"
+          },
+          "axis": {
+            "title": null,
+            "labelLimit": 220,
+            "labelFontSize": 12,
+            "labelColor": "#1E2B34",
+            "domain": false,
+            "ticks": false
+          }
+        },
+        "x": {
+          "field": "full_neg",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -70,
+              170
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": [
+              "Number of Jobs (in thousands)"
+            ],
+            "labelExpr": "format(abs(datum.value), ',')",
+            "grid": true,
+            "values": [
+              -40,
+              0,
+              40,
+              80,
+              120,
+              160
+            ]
+          }
+        },
+        "color": {
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Full-time",
+              "Part-time"
+            ],
+            "range": [
+              "#C1272D",
+              "#F2C705"
+            ]
+          },
+          "legend": {
+            "title": null,
+            "orient": "top",
+            "symbolType": "square"
+          },
+          "field": "series"
+        },
+        "tooltip": [
+          {
+            "field": "label",
+            "type": "nominal",
+            "title": "Industry"
+          },
+          {
+            "field": "full_time_k",
+            "type": "quantitative",
+            "title": "Full-time (thousand jobs)",
+            "format": ".1f"
+          },
+          {
+            "field": "part_time_k",
+            "type": "quantitative",
+            "title": "Part-time (thousand jobs)",
+            "format": ".1f"
+          },
+          {
+            "field": "total_k",
+            "type": "quantitative",
+            "title": "Total (thousand jobs)",
+            "format": ".1f"
+          },
+          {
+            "field": "part_time_pct",
+            "type": "quantitative",
+            "title": "Part-time share (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "calculate": "'Part-time'",
+          "as": "series"
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "height": {
+          "band": 0.72
+        },
+        "stroke": "#1E2B34",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "y": {
+          "field": "label",
+          "type": "nominal",
+          "sort": {
+            "field": "total_k",
+            "op": "max",
+            "order": "descending"
+          },
+          "axis": {
+            "title": null,
+            "labelLimit": 220,
+            "labelFontSize": 12,
+            "labelColor": "#1E2B34",
+            "domain": false,
+            "ticks": false
+          }
+        },
+        "x": {
+          "field": "part_time_k",
+          "type": "quantitative"
+        },
+        "color": {
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Full-time",
+              "Part-time"
+            ],
+            "range": [
+              "#C1272D",
+              "#F2C705"
+            ]
+          },
+          "legend": {
+            "title": null,
+            "orient": "top",
+            "symbolType": "square"
+          },
+          "field": "series"
+        },
+        "tooltip": [
+          {
+            "field": "label",
+            "type": "nominal",
+            "title": "Industry"
+          },
+          {
+            "field": "full_time_k",
+            "type": "quantitative",
+            "title": "Full-time (thousand jobs)",
+            "format": ".1f"
+          },
+          {
+            "field": "part_time_k",
+            "type": "quantitative",
+            "title": "Part-time (thousand jobs)",
+            "format": ".1f"
+          },
+          {
+            "field": "total_k",
+            "type": "quantitative",
+            "title": "Total (thousand jobs)",
+            "format": ".1f"
+          },
+          {
+            "field": "part_time_pct",
+            "type": "quantitative",
+            "title": "Part-time share (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "stroke": "#1E2B34",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "datum": 0,
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 6,
+        "fontSize": 12,
+        "color": "#1E2B34"
+      },
+      "encoding": {
+        "y": {
+          "field": "label",
+          "type": "nominal",
+          "sort": {
+            "field": "total_k",
+            "op": "max",
+            "order": "descending"
+          },
+          "axis": {
+            "title": null,
+            "labelLimit": 220,
+            "labelFontSize": 12,
+            "labelColor": "#1E2B34",
+            "domain": false,
+            "ticks": false
+          }
+        },
+        "x": {
+          "field": "part_time_k",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "pt_label",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}

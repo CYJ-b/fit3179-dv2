@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Choropleth map of tourism businesses per square kilometre in each of Australia's 76 tourism regions in 2025, in seven classes. Hovering a region highlights it and shows its details.",
+  "description": "Choropleth map of tourism businesses per square kilometre in each of Australia's 76 tourism regions in 2025, in seven classes. Hovering a region highlights it and shows its details. A dropdown centres the map on a state or all of Australia and a zoom slider zooms in or out.",
   "title": {
     "text": "Amount Of Tourism Businesses Across The Tourism Regions In 2025",
-    "subtitle": "Darker means more businesses packed into each square kilometre. Hover over a region for details."
+    "subtitle": "Darker means more businesses packed into each square kilometre. Hover over a region for details, or use the state and zoom controls to look closer."
   },
   "width": 960,
   "height": 480,
@@ -18,11 +18,12 @@
       0,
       0
     ],
-    "center": [
-      0,
-      -27.5
-    ],
-    "scale": 740,
+    "center": {
+      "expr": "({AUS: [0, -27.5], NSW: [15.3, -33], VIC: [13.5, -36.7], QLD: [13.5, -20], SA: [3, -32], WA: [-11, -25], TAS: [14.5, -42.1], NT: [1.5, -18.5]})[state_view]"
+    },
+    "scale": {
+      "expr": "({AUS: 740, NSW: 1900, VIC: 4000, QLD: 1150, SA: 1900, WA: 1000, TAS: 4000, NT: 1400})[state_view] * zoom_level"
+    },
     "translate": [
       489.6,
       240
@@ -559,16 +560,12 @@
       "data": {
         "values": [
           {
-            "lon": 113.2,
-            "lat": -8.7,
-            "dy": 0,
-            "t": "Coast: 0.118 businesses per km²"
+            "t": "Coast: 0.118 businesses per km²",
+            "dy": 0
           },
           {
-            "lon": 113.2,
-            "lat": -8.7,
-            "dy": 17,
-            "t": "Inland: 0.008 (the coast is 14× denser)"
+            "t": "Inland: 0.008 (the coast is 14× denser)",
+            "dy": 17
           }
         ]
       },
@@ -578,23 +575,57 @@
         "baseline": "middle",
         "fontSize": 12.5,
         "color": "#1E2B34",
-        "dy": {
-          "expr": "datum.dy"
+        "x": 6,
+        "y": {
+          "expr": "12 + datum.dy"
         }
       },
       "encoding": {
-        "longitude": {
-          "field": "lon",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "lat",
-          "type": "quantitative"
-        },
         "text": {
           "field": "t",
           "type": "nominal"
         }
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "state_view",
+      "value": "AUS",
+      "bind": {
+        "input": "select",
+        "options": [
+          "AUS",
+          "NSW",
+          "VIC",
+          "QLD",
+          "SA",
+          "WA",
+          "TAS",
+          "NT"
+        ],
+        "labels": [
+          "Australia",
+          "New South Wales",
+          "Victoria",
+          "Queensland",
+          "South Australia",
+          "Western Australia",
+          "Tasmania",
+          "Northern Territory"
+        ],
+        "name": "State: "
+      }
+    },
+    {
+      "name": "zoom_level",
+      "value": 1,
+      "bind": {
+        "input": "range",
+        "min": 0.5,
+        "max": 3,
+        "step": 0.1,
+        "name": "Zoom: "
       }
     }
   ]

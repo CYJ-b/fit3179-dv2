@@ -1,0 +1,153 @@
+TR_CODE,financial_year,consumption_m,TR_NAME,state,category,centre_lon,centre_lat
+110,2018-19,24469.9896,Sydney,NSW,coastal,150.986,-33.682
+110,2024-25,36360.895836,Sydney,NSW,coastal,150.986,-33.682
+111,2018-19,1035.5583,Blue Mountains,NSW,inland,150.127,-33.528
+111,2024-25,1064.572509,Blue Mountains,NSW,inland,150.127,-33.528
+112,2018-19,1204.5294,Southern Tablelands,NSW,inland,149.307,-34.94
+112,2024-25,1500.500335,Southern Tablelands,NSW,inland,149.307,-34.94
+113,2018-19,1433.3217,Central Coast,NSW,coastal,151.279,-33.301
+113,2024-25,2169.202691,Central Coast,NSW,coastal,151.279,-33.301
+114,2018-19,2289.971,Central NSW,NSW,inland,148.466,-32.318
+114,2024-25,2496.213685,Central NSW,NSW,inland,148.466,-32.318
+115,2018-19,3750.787,Hunter,NSW,coastal,151.073,-32.383
+115,2024-25,6280.704397,Hunter,NSW,coastal,151.073,-32.383
+116,2018-19,1221.0635,New England North West,NSW,inland,150.675,-30.065
+116,2024-25,1297.056655,New England North West,NSW,inland,150.675,-30.065
+117,2018-19,5978.4769,North Coast NSW,NSW,coastal,152.748,-30.426
+117,2024-25,6485.906607,North Coast NSW,NSW,coastal,152.748,-30.426
+119,2018-19,446.5514,Outback NSW,NSW,inland,144.365,-31.183
+119,2024-25,232.07544,Outback NSW,NSW,inland,144.365,-31.183
+120,2018-19,839.8341,Riverina,NSW,inland,146.191,-34.735
+120,2024-25,954.089583,Riverina,NSW,inland,146.191,-34.735
+121,2018-19,970.7561,Snowy Mountains,NSW,inland,148.873,-36.469
+121,2024-25,732.986228,Snowy Mountains,NSW,inland,148.873,-36.469
+122,2018-19,3881.6354,South Coast,NSW,coastal,149.96,-35.808
+122,2024-25,5013.621954,South Coast,NSW,coastal,149.96,-35.808
+123,2018-19,812.7705,The Murray,NSW,inland,143.147,-34.434
+123,2024-25,1336.534181,The Murray,NSW,inland,143.147,-34.434
+210,2018-19,21624.9846,Melbourne,VIC,coastal,144.892,-37.808
+210,2024-25,33445.013404,Melbourne,VIC,coastal,144.892,-37.808
+211,2018-19,755.2352,Greater Ballarat,VIC,inland,143.438,-37.376
+211,2024-25,993.661182,Greater Ballarat,VIC,inland,143.438,-37.376
+212,2018-19,963.9002,Greater Bendigo,VIC,inland,144.055,-36.459
+212,2024-25,1010.605215,Greater Bendigo,VIC,inland,144.055,-36.459
+213,2018-19,213.9692,Central Highlands,VIC,inland,142.659,-37.127
+213,2024-25,281.387204,Central Highlands,VIC,inland,142.659,-37.127
+214,2018-19,673.9601,Central Murray,VIC,inland,144.707,-36.274
+214,2024-25,730.809571,Central Murray,VIC,inland,144.707,-36.274
+215,2018-19,1312.6859,Geelong and the Bellarine,VIC,coastal,143.971,-37.921
+215,2024-25,2144.952753,Geelong and the Bellarine,VIC,coastal,143.971,-37.921
+216,2018-19,939.3022,Gippsland,VIC,coastal,146.634,-38.126
+216,2024-25,1049.491309,Gippsland,VIC,coastal,146.634,-38.126
+217,2018-19,560.3683,Goulburn,VIC,inland,145.342,-36.853
+217,2024-25,1264.515837,Goulburn,VIC,inland,145.342,-36.853
+218,2018-19,2173.1347,Victoria's High Country,VIC,inland,146.549,-36.78
+218,2024-25,1545.741246,Victoria's High Country,VIC,inland,146.549,-36.78
+219,2018-19,560.8907,Lakes,VIC,coastal,148.366,-37.327
+219,2024-25,475.349965,Lakes,VIC,coastal,148.366,-37.327
+220,2018-19,255.256,Macedon,VIC,inland,144.64,-37.338
+220,2024-25,273.858792,Macedon,VIC,inland,144.64,-37.338
+221,2018-19,589.9441,Mallee,VIC,inland,142.144,-34.997
+221,2024-25,754.443553,Mallee,VIC,inland,142.144,-34.997
+222,2018-19,911.5776,Yarra Valley and Dandenong Ranges,VIC,inland,145.539,-37.9
+222,2024-25,1262.595769,Yarra Valley and Dandenong Ranges,VIC,inland,145.539,-37.9
+223,2018-19,194.7434,Murray East,VIC,inland,146.908,-36.146
+223,2024-25,239.334431,Murray East,VIC,inland,146.908,-36.146
+224,2018-19,1714.8263,Mornington Peninsula,VIC,coastal,145.121,-38.269
+224,2024-25,2266.539948,Mornington Peninsula,VIC,coastal,145.121,-38.269
+225,2018-19,937.5444,Phillip Island,VIC,coastal,145.552,-38.48
+225,2024-25,840.236962,Phillip Island,VIC,coastal,145.552,-38.48
+226,2018-19,481.1134,Spa Country,VIC,inland,144.05,-37.105
+226,2024-25,248.673535,Spa Country,VIC,inland,144.05,-37.105
+228,2018-19,1963.1553,Great Ocean Road,VIC,coastal,142.446,-38.093
+228,2024-25,2121.002052,Great Ocean Road,VIC,coastal,142.446,-38.093
+229,2018-19,336.7474,Western Grampians,VIC,inland,141.931,-37.204
+229,2024-25,295.682379,Western Grampians,VIC,inland,141.931,-37.204
+230,2018-19,100.9776,Wimmera,VIC,inland,142.224,-36.335
+230,2024-25,159.042452,Wimmera,VIC,inland,142.224,-36.335
+310,2018-19,11253.0796,Brisbane,QLD,coastal,152.904,-27.587
+310,2024-25,18811.188046,Brisbane,QLD,coastal,152.904,-27.587
+311,2018-19,636.1217,Bundaberg,QLD,coastal,151.446,-25.255
+311,2024-25,856.389513,Bundaberg,QLD,coastal,151.446,-25.255
+313,2018-19,1729.9251,Queensland Country,QLD,inland,151.102,-27.384
+313,2024-25,2343.211214,Queensland Country,QLD,inland,151.102,-27.384
+314,2018-19,677.3597,Fraser Coast,QLD,coastal,152.509,-25.586
+314,2024-25,920.016341,Fraser Coast,QLD,coastal,152.509,-25.586
+315,2018-19,7345.8847,Gold Coast,QLD,coastal,153.313,-27.964
+315,2024-25,10326.070317,Gold Coast,QLD,coastal,153.313,-27.964
+316,2018-19,821.7319,Mackay,QLD,coastal,147.778,-22.053
+316,2024-25,1359.106607,Mackay,QLD,coastal,147.778,-22.053
+317,2018-19,1216.6664,Townsville,QLD,coastal,146.073,-20.21
+317,2024-25,1437.001467,Townsville,QLD,coastal,146.073,-20.21
+318,2018-19,1088.9295,Outback Queensland,QLD,inland,142.59,-24.014
+318,2024-25,465.348017,Outback Queensland,QLD,inland,142.59,-24.014
+319,2018-19,4645.8289,Sunshine Coast,QLD,coastal,152.583,-26.367
+319,2024-25,4973.048024,Sunshine Coast,QLD,coastal,152.583,-26.367
+320,2018-19,4131.0921,Tropical North Queensland,QLD,coastal,143.423,-15.179
+320,2024-25,4736.19903,Tropical North Queensland,QLD,coastal,143.423,-15.179
+321,2018-19,978.4113,Whitsundays,QLD,coastal,147.714,-20.7
+321,2024-25,1280.708353,Whitsundays,QLD,coastal,147.714,-20.7
+322,2018-19,1078.8036,Capricorn Coast,QLD,coastal,150.1,-23.011
+322,2024-25,926.335003,Capricorn Coast,QLD,coastal,150.1,-23.011
+323,2018-19,376.4342,Gladstone,QLD,coastal,151.306,-24.157
+323,2024-25,566.898488,Gladstone,QLD,coastal,151.306,-24.157
+410,2018-19,5230.1533,Adelaide,SA,coastal,138.602,-34.871
+410,2024-25,7424.221685,Adelaide,SA,coastal,138.602,-34.871
+411,2018-19,232.1229,Adelaide Hills,SA,inland,138.854,-34.963
+411,2024-25,319.782044,Adelaide Hills,SA,inland,138.854,-34.963
+412,2018-19,290.77,Barossa,SA,inland,138.884,-34.509
+412,2024-25,366.283516,Barossa,SA,inland,138.884,-34.509
+413,2018-19,129.0426,Clare Valley,SA,inland,138.95,-33.755
+413,2024-25,130.275038,Clare Valley,SA,inland,138.95,-33.755
+414,2018-19,668.9573,Eyre Peninsula,SA,coastal,135.586,-33.134
+414,2024-25,537.686638,Eyre Peninsula,SA,coastal,135.586,-33.134
+415,2018-19,764.0278,Fleurieu Peninsula,SA,coastal,138.798,-35.311
+415,2024-25,723.45828,Fleurieu Peninsula,SA,coastal,138.798,-35.311
+416,2018-19,523.2945,Limestone Coast,SA,coastal,140.367,-36.904
+416,2024-25,594.05326,Limestone Coast,SA,coastal,140.367,-36.904
+417,2018-19,332.3992,"Murray River, Lakes and Coorong",SA,coastal,140.06,-35.321
+417,2024-25,451.970319,"Murray River, Lakes and Coorong",SA,coastal,140.06,-35.321
+418,2018-19,276.3931,Riverland,SA,inland,140.033,-34.415
+418,2024-25,343.832323,Riverland,SA,inland,140.033,-34.415
+419,2018-19,305.3083,Yorke Peninsula,SA,coastal,137.724,-34.378
+419,2024-25,528.300655,Yorke Peninsula,SA,coastal,137.724,-34.378
+420,2018-19,700.0235,Flinders Ranges and Outback,SA,inland,135.001,-29.999
+420,2024-25,435.379808,Flinders Ranges and Outback,SA,inland,135.001,-29.999
+421,2018-19,184.7927,Kangaroo Island,SA,coastal,137.338,-35.809
+421,2024-25,146.009459,Kangaroo Island,SA,coastal,137.338,-35.809
+510,2018-19,7434.4151,Destination Perth,WA,coastal,116.492,-32.074
+510,2024-25,14710.09273,Destination Perth,WA,coastal,116.492,-32.074
+511,2018-19,1239.08,Australia's Golden Outback,WA,inland,122.579,-28.856
+511,2024-25,775.782162,Australia's Golden Outback,WA,inland,122.579,-28.856
+512,2018-19,2096.9981,Australia's North West,WA,coastal,125.317,-18.829
+512,2024-25,1382.114226,Australia's North West,WA,coastal,125.317,-18.829
+513,2018-19,3826.0327,Australia's South West,WA,coastal,117.126,-34.059
+513,2024-25,3329.840843,Australia's South West,WA,coastal,117.126,-34.059
+514,2018-19,1353.776,Australia's Coral Coast,WA,coastal,114.551,-26.626
+514,2024-25,887.328231,Australia's Coral Coast,WA,coastal,114.551,-26.626
+610,2018-19,2614.9749,Hobart and the South,TAS,coastal,146.783,-42.671
+610,2024-25,2712.928945,Hobart and the South,TAS,coastal,146.783,-42.671
+611,2018-19,364.5239,East Coast,TAS,coastal,148.206,-41.786
+611,2024-25,461.063901,East Coast,TAS,coastal,148.206,-41.786
+612,2018-19,996.4691,Launceston and the North,TAS,coastal,147.09,-41.509
+612,2024-25,1157.266678,Launceston and the North,TAS,coastal,147.09,-41.509
+613,2018-19,641.9984,North West,TAS,coastal,145.696,-41.189
+613,2024-25,983.966004,North West,TAS,coastal,145.696,-41.189
+614,2018-19,140.7973,West Coast,TAS,coastal,145.673,-42.46
+614,2024-25,86.739589,West Coast,TAS,coastal,145.673,-42.46
+710,2018-19,1278.0281,Darwin,NT,coastal,131.16,-12.498
+710,2024-25,1421.853003,Darwin,NT,coastal,131.16,-12.498
+711,2018-19,112.6689,Barkly,NT,inland,135.01,-19.284
+711,2024-25,57.783736,Barkly,NT,inland,135.01,-19.284
+712,2018-19,391.5649,Alice Springs,NT,inland,133.848,-23.736
+712,2024-25,361.951588,Alice Springs,NT,inland,133.848,-23.736
+713,2018-19,444.7924,Litchfield Kakadu Arnhem,NT,coastal,133.939,-12.729
+713,2024-25,191.091929,Litchfield Kakadu Arnhem,NT,coastal,133.939,-12.729
+714,2018-19,359.5911,Katherine Daly,NT,coastal,132.847,-15.833
+714,2024-25,123.183003,Katherine Daly,NT,coastal,132.847,-15.833
+715,2018-19,538.0643,Lasseter,NT,inland,131.408,-24.927
+715,2024-25,423.115233,Lasseter,NT,inland,131.408,-24.927
+716,2018-19,90.6333,MacDonnell,NT,inland,131.386,-21.509
+716,2024-25,42.651681,MacDonnell,NT,inland,131.386,-21.509
+810,2018-19,3187.4735,Canberra,ACT,inland,148.954,-35.522
+810,2024-25,3701.175411,Canberra,ACT,inland,148.954,-35.522

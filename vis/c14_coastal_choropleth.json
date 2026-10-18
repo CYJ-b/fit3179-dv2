@@ -1,0 +1,357 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Choropleth map of Australia's 76 tourism regions coloured by whether they are coastal (blue) or inland (sand). A region is coastal when the share of its boundary that touches the sea reaches a threshold that rises with the region's size. Hovering a region highlights it and shows its details.",
+  "title": {
+    "text": "Australia's 76 Tourism Regions",
+    "subtitle": [
+      "A region is considered coastal when enough of its boundary touches the sea.",
+      "Hover over a region for details."
+    ]
+  },
+  "width": 640,
+  "height": 395,
+  "projection": {
+    "type": "albers",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -132,
+      0,
+      0
+    ],
+    "center": [
+      0,
+      -27.5
+    ],
+    "scale": 621,
+    "translate": [
+      420,
+      192
+    ]
+  },
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 20,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "subtitleFontSize": 13,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "axis": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#5B6770",
+      "titleColor": "#1E2B34",
+      "gridColor": "#E3DED3",
+      "domainColor": "#A8AEB3",
+      "tickColor": "#A8AEB3"
+    },
+    "legend": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "header": {
+      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "labelFontWeight": 600
+    },
+    "text": {
+      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+      "fontSize": 12,
+      "color": "#1E2B34"
+    },
+    "concat": {
+      "spacing": 24
+    },
+    "facet": {
+      "spacing": 24
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/used/regions_coastal_rule.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "TR_CODE": "number",
+            "coastal_ratio": "number",
+            "area_threshold": "number",
+            "area_km2": "number",
+            "centre_lon": "number",
+            "centre_lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "calculate": "toString(datum.TR_CODE)",
+          "as": "code"
+        },
+        {
+          "lookup": "code",
+          "from": {
+            "data": {
+              "url": "data/used/map_data/tourism_regions_2026.json",
+              "format": {
+                "type": "topojson",
+                "feature": "Tourism_Regions_2026"
+              }
+            },
+            "key": "properties.TR_CODE"
+          },
+          "as": "geo"
+        }
+      ],
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "on": "mouseover",
+            "clear": "mouseout",
+            "fields": [
+              "TR_CODE"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#FFFFFF"
+      },
+      "encoding": {
+        "shape": {
+          "field": "geo",
+          "type": "geojson"
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "title": "Region type (number of regions)",
+          "scale": {
+            "domain": [
+              "coastal",
+              "inland"
+            ],
+            "range": [
+              "#0B5E8E",
+              "#C99A3B"
+            ]
+          },
+          "legend": {
+            "orient": "none",
+            "legendX": 6,
+            "legendY": 60,
+            "labelExpr": "datum.value == 'coastal' ? 'Coastal region (42)' : 'Inland region (34)'",
+            "titleLimit": 260
+          }
+        },
+        "strokeWidth": {
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": 2.4
+          },
+          "value": 0.4
+        },
+        "stroke": {
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": "#1E2B34"
+          },
+          "value": "#FFFFFF"
+        },
+        "tooltip": [
+          {
+            "field": "TR_NAME",
+            "type": "nominal",
+            "title": "Region"
+          },
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "category",
+            "type": "nominal",
+            "title": "Type"
+          },
+          {
+            "field": "coastal_ratio",
+            "type": "quantitative",
+            "title": "Boundary touching the sea",
+            "format": ".1%"
+          },
+          {
+            "field": "area_threshold",
+            "type": "quantitative",
+            "title": "Threshold to count as coastal",
+            "format": ".1%"
+          },
+          {
+            "field": "area_km2",
+            "type": "quantitative",
+            "title": "Area (km²)",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/used/map_data/states_map.json",
+        "format": {
+          "type": "topojson",
+          "feature": "geoBoundaries-AUS-ADM1_simplified"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.shapeName != 'Other Territories'"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#1E2B34",
+        "strokeWidth": 0.8,
+        "opacity": 0.7
+      }
+    },
+    {
+      "data": {
+        "url": "data/used/regions_coastal_rule.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "TR_CODE": "number",
+            "coastal_ratio": "number",
+            "area_threshold": "number",
+            "area_km2": "number",
+            "centre_lon": "number",
+            "centre_lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.TR_NAME == \"Australia's Golden Outback\""
+        },
+        {
+          "calculate": "117.0",
+          "as": "l_lon"
+        },
+        {
+          "calculate": "-39.5",
+          "as": "l_lat"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "stroke": "#1E2B34",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "longitude": {
+          "field": "centre_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "centre_lat",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "l_lon"
+        },
+        "latitude2": {
+          "field": "l_lat"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/used/regions_coastal_rule.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "TR_CODE": "number",
+            "coastal_ratio": "number",
+            "area_threshold": "number",
+            "area_km2": "number",
+            "centre_lon": "number",
+            "centre_lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.TR_NAME == \"Australia's Golden Outback\""
+        },
+        {
+          "calculate": "117.0",
+          "as": "l_lon"
+        },
+        {
+          "calculate": "-39.5",
+          "as": "l_lat"
+        },
+        {
+          "calculate": "[datum.TR_NAME, format(datum.coastal_ratio, '.1~%') + ' sea boundary vs ' + format(datum.area_threshold, '.1~%') + ' threshold', 'so it counts as ' + datum.category]",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "fontSize": 12,
+        "fontWeight": 600,
+        "color": "#1E2B34",
+        "lineHeight": 15,
+        "dx": -4
+      },
+      "encoding": {
+        "longitude": {
+          "field": "l_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "l_lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+TR_CODE,TR_NAME,state,category,coastal_ratio,area_threshold,area_km2,centre_lon,centre_lat
+110,Sydney,NSW,coastal,0.222,0.0678,7352.8,150.986,-33.682
+111,Blue Mountains,NSW,inland,0.0,0.0855,11428.7,150.127,-33.528
+112,Southern Tablelands,NSW,inland,0.0,0.1247,30065.6,149.307,-34.94
+113,Central Coast,NSW,coastal,0.504,0.05,1672.5,151.279,-33.301
+114,Central NSW,NSW,inland,0.0,0.1734,104141.6,148.466,-32.318
+115,Hunter,NSW,coastal,0.1722,0.1164,25106.3,151.073,-32.383
+116,New England North West,NSW,inland,0.0,0.1704,99114.0,150.675,-30.065
+117,North Coast NSW,NSW,coastal,0.4018,0.1338,39708.6,152.748,-30.426
+119,Outback NSW,NSW,inland,0.0,0.2147,297514.7,144.365,-31.183
+120,Riverina,NSW,inland,0.0,0.1589,70884.1,146.191,-34.735
+121,Snowy Mountains,NSW,inland,0.0,0.0958,14290.0,148.873,-36.469
+122,South Coast,NSW,coastal,0.4279,0.0996,15853.1,149.96,-35.808
+123,The Murray,NSW,inland,0.0,0.1656,83893.4,143.147,-34.434
+210,Melbourne,VIC,coastal,0.2393,0.05,3790.5,144.892,-37.808
+211,Greater Ballarat,VIC,inland,0.0,0.0618,6039.7,143.438,-37.376
+212,Greater Bendigo,VIC,inland,0.0,0.0794,9491.1,144.055,-36.459
+213,Central Highlands,VIC,inland,0.0,0.0816,9943.4,142.659,-37.127
+214,Central Murray,VIC,inland,0.0,0.0753,8587.2,144.707,-36.274
+215,Geelong and the Bellarine,VIC,coastal,0.2745,0.05,3973.4,143.971,-37.921
+216,Gippsland,VIC,coastal,0.4681,0.1075,18760.6,146.634,-38.126
+217,Goulburn,VIC,inland,0.0,0.0748,8424.2,145.342,-36.853
+218,Victoria's High Country,VIC,inland,0.0,0.122,27453.7,146.549,-36.78
+219,Lakes,VIC,coastal,0.2718,0.113,21734.8,148.366,-37.327
+220,Macedon,VIC,inland,0.0,0.05,1742.2,144.64,-37.338
+221,Mallee,VIC,inland,0.0,0.1271,31860.0,142.144,-34.997
+222,Yarra Valley and Dandenong Ranges,VIC,inland,0.0358,0.05,4198.3,145.539,-37.9
+223,Murray East,VIC,inland,0.0,0.05,437.8,146.908,-36.146
+224,Mornington Peninsula,VIC,coastal,0.8364,0.05,868.1,145.121,-38.269
+225,Phillip Island,VIC,coastal,0.7394,0.05,1014.1,145.552,-38.48
+226,Spa Country,VIC,inland,0.0,0.0543,5031.3,144.05,-37.105
+228,Great Ocean Road,VIC,coastal,0.3986,0.1121,21051.5,142.446,-38.093
+229,Western Grampians,VIC,inland,0.0,0.086,11087.8,141.931,-37.204
+230,Wimmera,VIC,inland,0.0,0.1278,31948.2,142.224,-36.335
+310,Brisbane,QLD,coastal,0.4456,0.0785,10193.9,152.904,-27.587
+311,Bundaberg,QLD,coastal,0.1291,0.1153,26141.1,151.446,-25.255
+313,Queensland Country,QLD,inland,0.0,0.1864,153574.2,151.102,-27.384
+314,Fraser Coast,QLD,coastal,0.636,0.0626,6974.0,152.509,-25.586
+315,Gold Coast,QLD,coastal,0.4102,0.05,1308.3,153.313,-27.964
+316,Mackay,QLD,coastal,0.1925,0.1516,66215.7,147.778,-22.053
+317,Townsville,QLD,coastal,0.1883,0.1586,80006.9,146.073,-20.21
+318,Outback Queensland,QLD,inland,0.0,0.2582,936140.8,142.59,-24.014
+319,Sunshine Coast,QLD,coastal,0.2844,0.0775,10062.8,152.583,-26.367
+320,Tropical North Queensland,QLD,coastal,0.6476,0.2208,386377.9,143.423,-15.179
+321,Whitsundays,QLD,coastal,0.3793,0.11,23684.2,147.714,-20.7
+322,Capricorn Coast,QLD,coastal,0.5696,0.1004,18290.2,150.1,-23.011
+323,Gladstone,QLD,coastal,0.4938,0.0785,10504.7,151.306,-24.157
+410,Adelaide,SA,coastal,0.3355,0.05,1257.1,138.602,-34.871
+411,Adelaide Hills,SA,inland,0.0,0.05,1383.3,138.854,-34.963
+412,Barossa,SA,inland,0.0,0.05,2127.5,138.884,-34.509
+413,Clare Valley,SA,inland,0.0,0.0736,8491.5,138.95,-33.755
+414,Eyre Peninsula,SA,coastal,0.5814,0.1554,66224.5,135.586,-33.134
+415,Fleurieu Peninsula,SA,coastal,0.4818,0.05,3356.6,138.798,-35.311
+416,Limestone Coast,SA,coastal,0.4049,0.112,21337.6,140.367,-36.904
+417,"Murray River, Lakes and Coorong",SA,coastal,0.1367,0.1168,24504.9,140.06,-35.321
+418,Riverland,SA,inland,0.0,0.0887,12281.9,140.033,-34.415
+419,Yorke Peninsula,SA,coastal,0.7229,0.0906,12897.0,137.724,-34.378
+420,Flinders Ranges and Outback,SA,inland,0.0363,0.2549,825842.5,135.001,-29.999
+421,Kangaroo Island,SA,coastal,1.0,0.05,4420.8,137.338,-35.809
+510,Destination Perth,WA,coastal,0.2543,0.1182,26309.2,116.492,-32.074
+511,Australia's Golden Outback,WA,inland,0.1849,0.2732,1315123.1,122.579,-28.856
+512,Australia's North West,WA,coastal,0.6144,0.2565,925288.1,125.317,-18.829
+513,Australia's South West,WA,coastal,0.5406,0.1532,61835.5,117.126,-34.059
+514,Australia's Coral Coast,WA,coastal,0.4682,0.1965,197237.8,114.551,-26.626
+610,Hobart and the South,TAS,coastal,0.6277,0.1183,22962.1,146.783,-42.671
+611,East Coast,TAS,coastal,0.5141,0.0629,5830.0,148.206,-41.786
+612,Launceston and the North,TAS,coastal,0.448,0.1045,16628.6,147.09,-41.509
+613,North West,TAS,coastal,0.7268,0.0943,12910.6,145.696,-41.189
+614,West Coast,TAS,coastal,0.5443,0.0832,9614.5,145.673,-42.46
+710,Darwin,NT,coastal,0.5141,0.05,3160.3,131.16,-12.498
+711,Barkly,NT,inland,0.0,0.2117,303204.6,135.01,-19.284
+712,Alice Springs,NT,inland,0.0,0.05,334.2,133.848,-23.736
+713,Litchfield Kakadu Arnhem,NT,coastal,0.778,0.1688,107163.3,133.939,-12.729
+714,Katherine Daly,NT,coastal,0.3148,0.2183,364402.7,132.847,-15.833
+715,Lasseter,NT,inland,0.0,0.1914,175244.9,131.408,-24.927
+716,MacDonnell,NT,inland,0.0,0.2229,394048.8,131.386,-21.509
+810,Canberra,ACT,inland,0.0,0.05,2349.4,148.954,-35.522

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Flow map of international visitor arrivals to Australia from the 22 largest origin countries. Line width is the number of arrivals in the selected year. A year slider moves between 2019 and 2025.",
+  "description": "Flow map of international visitor arrivals to Australia from the 22 largest origin countries. Line width is the number of arrivals in the selected year and line colour is that year as a percentage of the same country's 2019 arrivals. A year slider moves between 2019 and 2025.",
   "title": {
     "text": "How Did The Number of Visitors Change Over Time?",
     "subtitle": "Overseas arrivals to Australia by country of residence. Drag the slider to change the year (starts on 2021, the low point)."
@@ -92,6 +92,31 @@
   "layer": [
     {
       "data": {
+        "sphere": true
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#DCE9F2"
+      }
+    },
+    {
+      "data": {
+        "url": "data/used/map_data/world_map_graticules_15.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_graticules_15"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#B8C7D3",
+        "strokeWidth": 0.5,
+        "opacity": 0.5
+      }
+    },
+    {
+      "data": {
         "url": "data/used/map_data/world_map_countries.json",
         "format": {
           "type": "topojson",
@@ -112,30 +137,33 @@
     },
     {
       "data": {
-        "url": "data/used/flow_arrivals.csv",
+        "url": "data/used/flow_curves.csv",
         "format": {
           "type": "csv",
           "parse": {
             "year": "number",
             "arrivals": "number",
+            "pct_of_2019": "number",
+            "seq": "number",
             "lon": "number",
-            "lat": "number",
-            "dest_lon": "number",
-            "dest_lat": "number",
-            "pct_of_2019": "number"
+            "lat": "number"
           }
         }
       },
       "transform": [
         {
           "filter": "datum.year == year_selected"
+        },
+        {
+          "calculate": "datum.pct_of_2019 < 10 ? 'a' : datum.pct_of_2019 < 50 ? 'b' : datum.pct_of_2019 < 90 ? 'c' : datum.pct_of_2019 < 100 ? 'd' : datum.pct_of_2019 < 120 ? 'e' : 'f'",
+          "as": "pct_class"
         }
       ],
       "mark": {
-        "type": "rule",
+        "type": "line",
         "strokeCap": "round",
-        "opacity": 0.9,
-        "color": "#5B6770"
+        "strokeJoin": "round",
+        "opacity": 0.9
       },
       "encoding": {
         "longitude": {
@@ -146,11 +174,34 @@
           "field": "lat",
           "type": "quantitative"
         },
-        "longitude2": {
-          "field": "dest_lon"
+        "color": {
+          "field": "pct_class",
+          "type": "ordinal",
+          "title": "Arrivals as % of 2019",
+          "sort": ["a", "b", "c", "d", "e", "f"],
+          "scale": {
+            "domain": ["a", "b", "c", "d", "e", "f"],
+            "range": ["#4A1F08", "#9A4A14", "#C97F2E", "#E8C27A", "#8460BA", "#43257A"]
+          },
+          "legend": {
+            "orient": "none",
+            "legendX": 745,
+            "legendY": 278,
+            "direction": "vertical",
+            "symbolType": "stroke",
+            "symbolStrokeWidth": 4,
+            "symbolSize": 400,
+            "rowPadding": 3,
+            "labelExpr": "({a: 'Under 10%', b: '10% to 50%', c: '50% to 90%', d: '90% to 100%', e: '100% to 120%', f: '120% or more'})[datum.value]"
+          }
         },
-        "latitude2": {
-          "field": "dest_lat"
+        "detail": {
+          "field": "country",
+          "type": "nominal"
+        },
+        "order": {
+          "field": "seq",
+          "type": "quantitative"
         },
         "strokeWidth": {
           "field": "arrivals",
@@ -281,48 +332,41 @@
           "type": "csv",
           "parse": {
             "year": "number",
-            "arrivals": "number",
             "lon": "number",
-            "lat": "number",
-            "dest_lon": "number",
-            "dest_lat": "number",
-            "pct_of_2019": "number"
+            "lat": "number"
           }
         }
       },
       "transform": [
         {
-          "filter": "datum.year == year_selected"
+          "filter": "datum.year == 2021"
+        },
+        {
+          "filter": "indexof([\"China\", \"Japan\", \"South Korea\", \"India\", \"New Zealand\", \"United States of America\", \"Canada\", \"South Africa\", \"United Kingdom\", \"Ireland\", \"France\", \"Germany\"], datum.country) >= 0"
         },
         {
           "calculate": "datum.country == 'United States of America' ? 'USA' : datum.country",
           "as": "short"
         },
         {
-          "calculate": "indexof([\"China\", \"New Zealand\", \"United States of America\", \"United Kingdom\", \"Japan\", \"Singapore\", \"India\", \"Malaysia\", \"Hong Kong\", \"South Korea\"], datum.country) >= 0",
-          "as": "is_top10"
-        },
-        {
-          "filter": "datum.is_top10"
-        },
-        {
-          "calculate": "({\"China\": -9, \"New Zealand\": 10, \"USA\": 0, \"United Kingdom\": -9, \"Japan\": 10, \"Singapore\": -8, \"India\": -9, \"Malaysia\": -9, \"Hong Kong\": -9, \"South Korea\": 0})[datum.short]",
+          "calculate": "({\"China\": -9, \"Japan\": 9, \"South Korea\": 0, \"India\": -8, \"New Zealand\": 9, \"USA\": 9, \"Canada\": 9, \"South Africa\": 0, \"United Kingdom\": 0, \"Ireland\": -8, \"France\": -14, \"Germany\": 8})[datum.short]",
           "as": "lab_dx"
         },
         {
-          "calculate": "({\"China\": -8, \"New Zealand\": 8, \"USA\": -12, \"United Kingdom\": -6, \"Japan\": 2, \"Singapore\": 12, \"India\": 0, \"Malaysia\": 2, \"Hong Kong\": 4, \"South Korea\": -14})[datum.short]",
+          "calculate": "({\"China\": -2, \"Japan\": -2, \"South Korea\": -12, \"India\": 10, \"New Zealand\": 2, \"USA\": -2, \"Canada\": -2, \"South Africa\": -11, \"United Kingdom\": -11, \"Ireland\": -2, \"France\": 0, \"Germany\": -8})[datum.short]",
           "as": "lab_dy"
         },
         {
-          "calculate": "({\"China\": \"right\", \"New Zealand\": \"left\", \"USA\": \"center\", \"United Kingdom\": \"right\", \"Japan\": \"left\", \"Singapore\": \"right\", \"India\": \"right\", \"Malaysia\": \"right\", \"Hong Kong\": \"right\", \"South Korea\": \"center\"})[datum.short]",
+          "calculate": "({\"China\": \"right\", \"Japan\": \"left\", \"South Korea\": \"center\", \"India\": \"right\", \"New Zealand\": \"left\", \"USA\": \"left\", \"Canada\": \"left\", \"South Africa\": \"center\", \"United Kingdom\": \"center\", \"Ireland\": \"right\", \"France\": \"right\", \"Germany\": \"left\"})[datum.short]",
           "as": "lab_align"
         }
       ],
       "mark": {
         "type": "text",
-        "fontSize": 12,
+        "fontSize": 11,
         "fontWeight": 600,
         "color": "#1E2B34",
+        "baseline": "middle",
         "dx": {
           "expr": "datum.lab_dx"
         },
@@ -331,8 +375,7 @@
         },
         "align": {
           "expr": "datum.lab_align"
-        },
-        "baseline": "middle"
+        }
       },
       "encoding": {
         "longitude": {
@@ -345,6 +388,67 @@
         },
         "text": {
           "field": "short",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/used/flow_arrivals.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "number",
+            "arrivals": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year_selected"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "arrivals",
+              "as": "total"
+            }
+          ]
+        },
+        {
+          "calculate": "105",
+          "as": "lon"
+        },
+        {
+          "calculate": "-45",
+          "as": "lat"
+        },
+        {
+          "calculate": "'Total number of arrivals in ' + year_selected + ' is ' + format(datum.total, ',')",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": 600,
+        "color": "#1E2B34",
+        "align": "center",
+        "baseline": "top",
+        "dy": 6
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
           "type": "nominal"
         }
       }

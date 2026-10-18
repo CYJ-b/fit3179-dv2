@@ -433,12 +433,17 @@
         "fontSize": 12,
         "fontWeight": 600,
         "color": "#1E2B34",
-        "baseline": "middle",
+        "baseline": {
+          "expr": "datum.state == 'WA' && datum.category == 'coastal' ? 'bottom' : 'middle'"
+        },
         "align": {
-          "expr": "datum.category == 'inland' ? 'right' : 'left'"
+          "expr": "datum.state == 'WA' && datum.category == 'coastal' ? 'center' : datum.category == 'inland' ? 'right' : 'left'"
         },
         "dx": {
-          "expr": "datum.category == 'inland' ? -11 : 11"
+          "expr": "datum.state == 'WA' && datum.category == 'coastal' ? 0 : datum.category == 'inland' ? -11 : 11"
+        },
+        "dy": {
+          "expr": "datum.state == 'WA' && datum.category == 'coastal' ? -11 : 0"
         }
       },
       "encoding": {
