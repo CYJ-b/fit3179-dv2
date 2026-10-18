@@ -31,36 +31,18 @@
   "config": {
     "background": "transparent",
     "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
-    "view": {
-      "stroke": null
-    },
     "title": {
       "font": "Fraunces, Georgia, serif",
       "fontSize": 20,
       "fontWeight": 600,
       "color": "#1E2B34",
       "anchor": "start",
-      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "subtitleFontSize": 13,
       "subtitleColor": "#5B6770",
       "subtitlePadding": 4,
       "offset": 12
     },
-    "axis": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleFontWeight": 600,
-      "labelColor": "#5B6770",
-      "titleColor": "#1E2B34",
-      "gridColor": "#E3DED3",
-      "domainColor": "#A8AEB3",
-      "tickColor": "#A8AEB3"
-    },
     "legend": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "labelFontSize": 12,
       "titleFontSize": 12,
       "titleFontWeight": 600,
@@ -68,25 +50,21 @@
       "titleColor": "#1E2B34",
       "padding": 4
     },
-    "header": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 13,
-      "titleFontSize": 13,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "labelFontWeight": 600
-    },
     "text": {
-      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "fontSize": 12,
       "color": "#1E2B34"
-    },
-    "concat": {
-      "spacing": 24
-    },
-    "facet": {
-      "spacing": 24
+    }
+  },
+  "data": {
+    "url": "data/used/flow_arrivals.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "arrivals": "number",
+        "lon": "number",
+        "lat": "number",
+        "pct_of_2019": "number"
+      }
     }
   },
   "layer": [
@@ -178,17 +156,36 @@
           "field": "pct_class",
           "type": "ordinal",
           "title": "Arrivals as % of 2019",
-          "sort": ["a", "b", "c", "d", "e", "f"],
+          "sort": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"
+          ],
           "scale": {
-            "domain": ["a", "b", "c", "d", "e", "f"],
-            "range": ["#4A1F08", "#9A4A14", "#C97F2E", "#E8C27A", "#8460BA", "#43257A"]
+            "domain": [
+              "a",
+              "b",
+              "c",
+              "d",
+              "e",
+              "f"
+            ],
+            "range": [
+              "#4A1F08",
+              "#9A4A14",
+              "#C97F2E",
+              "#E8C27A",
+              "#8460BA",
+              "#43257A"
+            ]
           },
           "legend": {
             "orient": "none",
             "legendX": 745,
             "legendY": 278,
-            "direction": "vertical",
-            "symbolType": "stroke",
             "symbolStrokeWidth": 4,
             "symbolSize": 400,
             "rowPadding": 3,
@@ -225,13 +222,10 @@
               500000,
               1000000
             ],
-            "labelExpr": "format(datum.value, ',')",
-            "symbolType": "stroke",
             "symbolSize": 400,
             "orient": "none",
             "legendX": 6,
             "legendY": 292,
-            "direction": "vertical",
             "rowPadding": 3,
             "symbolStrokeColor": "#5B6770"
           }
@@ -263,21 +257,6 @@
       }
     },
     {
-      "data": {
-        "url": "data/used/flow_arrivals.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "year": "number",
-            "arrivals": "number",
-            "lon": "number",
-            "lat": "number",
-            "dest_lon": "number",
-            "dest_lat": "number",
-            "pct_of_2019": "number"
-          }
-        }
-      },
       "transform": [
         {
           "filter": "datum.year == year_selected"
@@ -326,17 +305,6 @@
       }
     },
     {
-      "data": {
-        "url": "data/used/flow_arrivals.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "year": "number",
-            "lon": "number",
-            "lat": "number"
-          }
-        }
-      },
       "transform": [
         {
           "filter": "datum.year == 2021"
@@ -365,8 +333,6 @@
         "type": "text",
         "fontSize": 11,
         "fontWeight": 600,
-        "color": "#1E2B34",
-        "baseline": "middle",
         "dx": {
           "expr": "datum.lab_dx"
         },
@@ -393,16 +359,6 @@
       }
     },
     {
-      "data": {
-        "url": "data/used/flow_arrivals.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "year": "number",
-            "arrivals": "number"
-          }
-        }
-      },
       "transform": [
         {
           "filter": "datum.year == year_selected"
@@ -433,8 +389,6 @@
         "type": "text",
         "fontSize": 13,
         "fontWeight": 600,
-        "color": "#1E2B34",
-        "align": "center",
         "baseline": "top",
         "dy": 6
       },

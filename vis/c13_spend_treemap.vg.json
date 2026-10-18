@@ -13,7 +13,6 @@
     "type": "pad",
     "contains": "padding"
   },
-  "background": "transparent",
   "title": {
     "text": [
       "Economic Contributions Breakdown By Tourism Industries"

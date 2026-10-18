@@ -32,82 +32,42 @@
   "config": {
     "background": "transparent",
     "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
-    "view": {
-      "stroke": null
-    },
     "title": {
       "font": "Fraunces, Georgia, serif",
       "fontSize": 20,
       "fontWeight": 600,
       "color": "#1E2B34",
       "anchor": "start",
-      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "subtitleFontSize": 13,
       "subtitleColor": "#5B6770",
       "subtitlePadding": 4,
       "offset": 12
     },
-    "axis": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleFontWeight": 600,
-      "labelColor": "#5B6770",
-      "titleColor": "#1E2B34",
-      "gridColor": "#E3DED3",
-      "domainColor": "#A8AEB3",
-      "tickColor": "#A8AEB3"
-    },
-    "legend": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleFontWeight": 600,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "padding": 4
-    },
-    "header": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 13,
-      "titleFontSize": 13,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "labelFontWeight": 600
-    },
     "text": {
-      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "fontSize": 12,
       "color": "#1E2B34"
-    },
-    "concat": {
-      "spacing": 24
-    },
-    "facet": {
-      "spacing": 24
     }
   },
+  "data": {
+    "url": "data/used/businesses_region_year_size.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "TR_CODE": "number",
+        "area_km2": "number",
+        "year": "number",
+        "businesses": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.size_band == 'All businesses' && datum.year == 2025"
+    }
+  ],
   "layer": [
     {
-      "data": {
-        "url": "data/used/businesses_region_year_size.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "TR_CODE": "number",
-            "area_km2": "number",
-            "year": "number",
-            "businesses": "number"
-          }
-        }
-      },
       "transform": [
-        {
-          "filter": "datum.size_band == 'All businesses' && datum.year == 2025"
-        },
         {
           "calculate": "datum.businesses / datum.area_km2",
           "as": "per_km2"
@@ -254,22 +214,7 @@
       }
     },
     {
-      "data": {
-        "url": "data/used/businesses_region_year_size.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "TR_CODE": "number",
-            "area_km2": "number",
-            "year": "number",
-            "businesses": "number"
-          }
-        }
-      },
       "transform": [
-        {
-          "filter": "datum.size_band == 'All businesses' && datum.year == 2025"
-        },
         {
           "filter": "indexof([\"Melbourne\", \"Adelaide\", \"Sydney\", \"Gold Coast\"], datum.TR_NAME) >= 0"
         },
@@ -313,22 +258,7 @@
       }
     },
     {
-      "data": {
-        "url": "data/used/businesses_region_year_size.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "TR_CODE": "number",
-            "area_km2": "number",
-            "year": "number",
-            "businesses": "number"
-          }
-        }
-      },
       "transform": [
-        {
-          "filter": "datum.size_band == 'All businesses' && datum.year == 2025"
-        },
         {
           "filter": "indexof([\"Melbourne\", \"Adelaide\", \"Sydney\", \"Gold Coast\"], datum.TR_NAME) >= 0"
         },
@@ -351,10 +281,7 @@
       ],
       "mark": {
         "type": "text",
-        "fontSize": 12,
         "fontWeight": 600,
-        "color": "#1E2B34",
-        "baseline": "middle",
         "dx": {
           "expr": "datum.l_align == 'left' ? 4 : -4"
         },
@@ -382,38 +309,31 @@
         "values": [
           {
             "i": 0,
-            "v": 0.005,
-            "label": "0.01 or less  (14)"
+            "v": 0.005
           },
           {
             "i": 1,
-            "v": 0.03,
-            "label": "0.01 to 0.05  (24)"
+            "v": 0.03
           },
           {
             "i": 2,
-            "v": 0.15,
-            "label": "0.05 to 0.25  (16)"
+            "v": 0.15
           },
           {
             "i": 3,
-            "v": 0.6,
-            "label": "0.25 to 1  (13)"
+            "v": 0.6
           },
           {
             "i": 4,
-            "v": 3,
-            "label": "1 to 5  (5)"
+            "v": 3
           },
           {
             "i": 5,
-            "v": 7.5,
-            "label": "5 to 10  (1)"
+            "v": 7.5
           },
           {
             "i": 6,
-            "v": 15,
-            "label": "More than 10  (3)"
+            "v": 15
           }
         ]
       },
@@ -432,26 +352,8 @@
         "color": {
           "field": "v",
           "type": "quantitative",
-          "legend": null,
           "scale": {
-            "type": "threshold",
-            "domain": [
-              0.01,
-              0.05,
-              0.25,
-              1,
-              5,
-              10
-            ],
-            "range": [
-              "#deebf7",
-              "#c6dbef",
-              "#9ecae1",
-              "#6baed6",
-              "#4292c6",
-              "#2171b5",
-              "#08306b"
-            ]
+            "type": "threshold"
           }
         }
       }
@@ -461,37 +363,30 @@
         "values": [
           {
             "i": 0,
-            "v": 0.005,
             "label": "0.01 or less  (14)"
           },
           {
             "i": 1,
-            "v": 0.03,
             "label": "0.01 to 0.05  (24)"
           },
           {
             "i": 2,
-            "v": 0.15,
             "label": "0.05 to 0.25  (16)"
           },
           {
             "i": 3,
-            "v": 0.6,
             "label": "0.25 to 1  (13)"
           },
           {
             "i": 4,
-            "v": 3,
             "label": "1 to 5  (5)"
           },
           {
             "i": 5,
-            "v": 7.5,
             "label": "5 to 10  (1)"
           },
           {
             "i": 6,
-            "v": 15,
             "label": "More than 10  (3)"
           }
         ]
@@ -499,9 +394,6 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "baseline": "middle",
-        "fontSize": 12,
-        "color": "#1E2B34",
         "x": 32,
         "y": {
           "expr": "112 + datum.i * 24"
@@ -538,9 +430,6 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "baseline": "middle",
-        "fontSize": 12,
-        "color": "#1E2B34",
         "x": 6,
         "y": {
           "expr": "datum.r == 1 ? 62 : 80"
@@ -572,9 +461,6 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "baseline": "middle",
-        "fontSize": 12,
-        "color": "#1E2B34",
         "x": 6,
         "y": {
           "expr": "12 + datum.dy"

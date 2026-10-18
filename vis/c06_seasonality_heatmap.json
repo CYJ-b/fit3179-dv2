@@ -17,6 +17,42 @@
     "top": 5,
     "bottom": 5
   },
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 20,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFontSize": 13,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#5B6770",
+      "titleColor": "#1E2B34"
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "text": {
+      "fontSize": 12
+    }
+  },
   "data": {
     "url": "data/used/region_quarterly_visits.csv",
     "format": {
@@ -105,67 +141,6 @@
       "as": "qlabel"
     }
   ],
-  "config": {
-    "background": "transparent",
-    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
-    "view": {
-      "stroke": null
-    },
-    "title": {
-      "font": "Fraunces, Georgia, serif",
-      "fontSize": 20,
-      "fontWeight": 600,
-      "color": "#1E2B34",
-      "anchor": "start",
-      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "subtitleFontSize": 13,
-      "subtitleColor": "#5B6770",
-      "subtitlePadding": 4,
-      "offset": 12
-    },
-    "axis": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleFontWeight": 600,
-      "labelColor": "#5B6770",
-      "titleColor": "#1E2B34",
-      "gridColor": "#E3DED3",
-      "domainColor": "#A8AEB3",
-      "tickColor": "#A8AEB3"
-    },
-    "legend": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleFontWeight": 600,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "padding": 4
-    },
-    "header": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 13,
-      "titleFontSize": 13,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "labelFontWeight": 600
-    },
-    "text": {
-      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "fontSize": 12,
-      "color": "#1E2B34"
-    },
-    "concat": {
-      "spacing": 24
-    },
-    "facet": {
-      "spacing": 24
-    }
-  },
   "layer": [
     {
       "mark": {
@@ -190,8 +165,7 @@
             "labelFontSize": 13,
             "labelPadding": 6,
             "ticks": false,
-            "domain": false,
-            "titleColor": "#1E2B34"
+            "domain": false
           }
         },
         "y": {
@@ -204,7 +178,6 @@
             "order": "descending"
           },
           "axis": {
-            "labelFontSize": 12,
             "labelColor": "#1E2B34",
             "ticks": false,
             "domain": false,
@@ -224,10 +197,8 @@
           },
           "legend": {
             "orient": "bottom",
-            "direction": "horizontal",
             "gradientLength": 260,
-            "format": "d",
-            "titleAnchor": "start"
+            "format": "d"
           }
         },
         "tooltip": [
@@ -258,8 +229,7 @@
     },
     {
       "mark": {
-        "type": "text",
-        "fontSize": 12
+        "type": "text"
       },
       "encoding": {
         "x": {
@@ -271,32 +241,13 @@
             "Apr–Jun",
             "Jul–Sep",
             "Oct–Dec"
-          ],
-          "axis": {
-            "orient": "top",
-            "labelAngle": 0,
-            "labelFontSize": 13,
-            "labelPadding": 6,
-            "ticks": false,
-            "domain": false,
-            "titleColor": "#1E2B34"
-          }
+          ]
         },
         "y": {
           "field": "TR_NAME",
           "type": "nominal",
-          "title": null,
           "sort": {
-            "field": "lat",
-            "op": "max",
             "order": "descending"
-          },
-          "axis": {
-            "labelFontSize": 12,
-            "labelColor": "#1E2B34",
-            "ticks": false,
-            "domain": false,
-            "labelLimit": 170
           }
         },
         "text": {

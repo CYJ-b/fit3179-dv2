@@ -11,22 +11,6 @@
   },
   "width": 520,
   "height": 300,
-  "data": {
-    "url": "data/used/region_visits.csv",
-    "format": {
-      "type": "csv",
-      "parse": {
-        "TR_CODE": "number",
-        "coastal_ratio": "number",
-        "area_km2": "number",
-        "centre_lon": "number",
-        "centre_lat": "number",
-        "year": "number",
-        "visitors": "number",
-        "pct_of_2019": "number"
-      }
-    }
-  },
   "config": {
     "background": "transparent",
     "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
@@ -39,15 +23,12 @@
       "fontWeight": 600,
       "color": "#1E2B34",
       "anchor": "start",
-      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "subtitleFontSize": 13,
       "subtitleColor": "#5B6770",
       "subtitlePadding": 4,
       "offset": 12
     },
     "axis": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "labelFontSize": 12,
       "titleFontSize": 12,
       "titleFontWeight": 600,
@@ -58,8 +39,6 @@
       "tickColor": "#A8AEB3"
     },
     "legend": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "labelFontSize": 12,
       "titleFontSize": 12,
       "titleFontWeight": 600,
@@ -67,34 +46,73 @@
       "titleColor": "#1E2B34",
       "padding": 4
     },
-    "header": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 13,
-      "titleFontSize": 13,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "labelFontWeight": 600
-    },
     "text": {
-      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "fontSize": 12,
       "color": "#1E2B34"
-    },
-    "concat": {
-      "spacing": 24
-    },
-    "facet": {
-      "spacing": 24
     }
   },
+  "data": {
+    "url": "data/used/region_visits.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "visitors": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.year == 2019 || datum.year == 2025"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "visitors",
+          "as": "v"
+        }
+      ],
+      "groupby": [
+        "state",
+        "category",
+        "year"
+      ]
+    },
+    {
+      "pivot": "year",
+      "value": "v",
+      "groupby": [
+        "state",
+        "category"
+      ]
+    },
+    {
+      "calculate": "datum['2025'] / datum['2019'] * 100",
+      "as": "pct"
+    },
+    {
+      "pivot": "category",
+      "value": "pct",
+      "groupby": [
+        "state"
+      ]
+    },
+    {
+      "calculate": "isValid(datum.coastal) && isValid(datum.inland) ? datum.coastal - datum.inland : -999",
+      "as": "gap"
+    },
+    {
+      "calculate": "({\"NSW\": \"New South Wales\", \"VIC\": \"Victoria\", \"QLD\": \"Queensland\", \"SA\": \"South Australia\", \"WA\": \"Western Australia\", \"NT\": \"Northern Territory\", \"TAS\": \"Tasmania\", \"ACT\": \"Australian Capital Territory\"})[datum.state]",
+      "as": "state_name"
+    }
+  ],
   "layer": [
     {
       "data": {
         "values": [
           {
-            "x": 100,
-            "t": "100% = same as 2019"
+            "x": 100
           }
         ]
       },
@@ -116,50 +134,6 @@
     },
     {
       "transform": [
-        {
-          "filter": "datum.year == 2019 || datum.year == 2025"
-        },
-        {
-          "aggregate": [
-            {
-              "op": "sum",
-              "field": "visitors",
-              "as": "v"
-            }
-          ],
-          "groupby": [
-            "state",
-            "category",
-            "year"
-          ]
-        },
-        {
-          "pivot": "year",
-          "value": "v",
-          "groupby": [
-            "state",
-            "category"
-          ]
-        },
-        {
-          "calculate": "datum['2025'] / datum['2019'] * 100",
-          "as": "pct"
-        },
-        {
-          "pivot": "category",
-          "value": "pct",
-          "groupby": [
-            "state"
-          ]
-        },
-        {
-          "calculate": "isValid(datum.coastal) && isValid(datum.inland) ? datum.coastal - datum.inland : -999",
-          "as": "gap"
-        },
-        {
-          "calculate": "({\"NSW\": \"New South Wales\", \"VIC\": \"Victoria\", \"QLD\": \"Queensland\", \"SA\": \"South Australia\", \"WA\": \"Western Australia\", \"NT\": \"Northern Territory\", \"TAS\": \"Tasmania\", \"ACT\": \"Australian Capital Territory\"})[datum.state]",
-          "as": "state_name"
-        },
         {
           "filter": "datum.gap > -999"
         }
@@ -194,8 +168,7 @@
             "domain": [
               0,
               120
-            ],
-            "nice": false
+            ]
           },
           "axis": {
             "values": [
@@ -207,7 +180,6 @@
               100
             ],
             "format": "d",
-            "grid": true,
             "title": "Visits in 2025 as a percentage of 2019 visits"
           },
           "field": "inland"
@@ -220,50 +192,6 @@
     {
       "transform": [
         {
-          "filter": "datum.year == 2019 || datum.year == 2025"
-        },
-        {
-          "aggregate": [
-            {
-              "op": "sum",
-              "field": "visitors",
-              "as": "v"
-            }
-          ],
-          "groupby": [
-            "state",
-            "category",
-            "year"
-          ]
-        },
-        {
-          "pivot": "year",
-          "value": "v",
-          "groupby": [
-            "state",
-            "category"
-          ]
-        },
-        {
-          "calculate": "datum['2025'] / datum['2019'] * 100",
-          "as": "pct"
-        },
-        {
-          "pivot": "category",
-          "value": "pct",
-          "groupby": [
-            "state"
-          ]
-        },
-        {
-          "calculate": "isValid(datum.coastal) && isValid(datum.inland) ? datum.coastal - datum.inland : -999",
-          "as": "gap"
-        },
-        {
-          "calculate": "({\"NSW\": \"New South Wales\", \"VIC\": \"Victoria\", \"QLD\": \"Queensland\", \"SA\": \"South Australia\", \"WA\": \"Western Australia\", \"NT\": \"Northern Territory\", \"TAS\": \"Tasmania\", \"ACT\": \"Australian Capital Territory\"})[datum.state]",
-          "as": "state_name"
-        },
-        {
           "fold": [
             "coastal",
             "inland"
@@ -277,250 +205,113 @@
           "filter": "isValid(datum.pct)"
         }
       ],
-      "mark": {
-        "type": "circle",
-        "size": 230,
-        "opacity": 1,
-        "stroke": "#FFFFFF",
-        "strokeWidth": 1.5
-      },
-      "encoding": {
-        "y": {
-          "field": "state_name",
-          "type": "nominal",
-          "title": null,
-          "sort": {
-            "field": "gap",
-            "op": "max",
-            "order": "descending"
+      "layer": [
+        {
+          "mark": {
+            "type": "circle",
+            "size": 230,
+            "opacity": 1,
+            "stroke": "#FFFFFF",
+            "strokeWidth": 1.5
           },
-          "axis": {
-            "labelFontSize": 13,
-            "labelColor": "#1E2B34",
-            "domain": false,
-            "ticks": false,
-            "labelLimit": 400
-          }
-        },
-        "x": {
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              0,
-              120
-            ],
-            "nice": false
-          },
-          "axis": {
-            "values": [
-              0,
-              20,
-              40,
-              60,
-              80,
-              100
-            ],
-            "format": "d",
-            "grid": true,
-            "title": "Visits in 2025 as a percentage of 2019 visits"
-          },
-          "field": "pct"
-        },
-        "color": {
-          "field": "category",
-          "type": "nominal",
-          "title": "Region type",
-          "scale": {
-            "domain": [
-              "coastal",
-              "inland"
-            ],
-            "range": [
-              "#0B5E8E",
-              "#C99A3B"
+          "encoding": {
+            "y": {
+              "field": "state_name",
+              "type": "nominal",
+              "sort": {
+                "field": "gap",
+                "op": "max",
+                "order": "descending"
+              }
+            },
+            "x": {
+              "type": "quantitative",
+              "axis": {
+                "format": "d"
+              },
+              "field": "pct"
+            },
+            "color": {
+              "field": "category",
+              "type": "nominal",
+              "title": "Region type",
+              "scale": {
+                "domain": [
+                  "coastal",
+                  "inland"
+                ],
+                "range": [
+                  "#0B5E8E",
+                  "#C99A3B"
+                ]
+              },
+              "legend": {
+                "orient": "top",
+                "labelExpr": "datum.value == 'coastal' ? 'Coastal regions' : 'Inland regions'",
+                "symbolSize": 160
+              }
+            },
+            "tooltip": [
+              {
+                "field": "state_name",
+                "type": "nominal",
+                "title": "State"
+              },
+              {
+                "field": "category",
+                "type": "nominal",
+                "title": "Region type"
+              },
+              {
+                "field": "pct",
+                "type": "quantitative",
+                "title": "2025 visits as % of 2019",
+                "format": ".1f"
+              }
             ]
-          },
-          "legend": {
-            "orient": "top",
-            "direction": "horizontal",
-            "titleAnchor": "start",
-            "labelExpr": "datum.value == 'coastal' ? 'Coastal regions' : 'Inland regions'",
-            "symbolSize": 160
           }
         },
-        "tooltip": [
-          {
-            "field": "state_name",
-            "type": "nominal",
-            "title": "State"
+        {
+          "mark": {
+            "type": "text",
+            "fontWeight": 600,
+            "baseline": {
+              "expr": "datum.state == 'WA' && datum.category == 'coastal' ? 'bottom' : 'middle'"
+            },
+            "align": {
+              "expr": "datum.state == 'WA' && datum.category == 'coastal' ? 'center' : datum.category == 'inland' ? 'right' : 'left'"
+            },
+            "dx": {
+              "expr": "datum.state == 'WA' && datum.category == 'coastal' ? 0 : datum.category == 'inland' ? -11 : 11"
+            },
+            "dy": {
+              "expr": "datum.state == 'WA' && datum.category == 'coastal' ? -11 : 0"
+            }
           },
-          {
-            "field": "category",
-            "type": "nominal",
-            "title": "Region type"
-          },
-          {
-            "field": "pct",
-            "type": "quantitative",
-            "title": "2025 visits as % of 2019",
-            "format": ".1f"
+          "encoding": {
+            "y": {
+              "field": "state_name",
+              "type": "nominal",
+              "sort": {
+                "op": "max",
+                "order": "descending"
+              }
+            },
+            "x": {
+              "field": "pct",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "pct",
+              "type": "quantitative",
+              "format": ".0f"
+            }
           }
-        ]
-      }
+        }
+      ]
     },
     {
       "transform": [
-        {
-          "filter": "datum.year == 2019 || datum.year == 2025"
-        },
-        {
-          "aggregate": [
-            {
-              "op": "sum",
-              "field": "visitors",
-              "as": "v"
-            }
-          ],
-          "groupby": [
-            "state",
-            "category",
-            "year"
-          ]
-        },
-        {
-          "pivot": "year",
-          "value": "v",
-          "groupby": [
-            "state",
-            "category"
-          ]
-        },
-        {
-          "calculate": "datum['2025'] / datum['2019'] * 100",
-          "as": "pct"
-        },
-        {
-          "pivot": "category",
-          "value": "pct",
-          "groupby": [
-            "state"
-          ]
-        },
-        {
-          "calculate": "isValid(datum.coastal) && isValid(datum.inland) ? datum.coastal - datum.inland : -999",
-          "as": "gap"
-        },
-        {
-          "calculate": "({\"NSW\": \"New South Wales\", \"VIC\": \"Victoria\", \"QLD\": \"Queensland\", \"SA\": \"South Australia\", \"WA\": \"Western Australia\", \"NT\": \"Northern Territory\", \"TAS\": \"Tasmania\", \"ACT\": \"Australian Capital Territory\"})[datum.state]",
-          "as": "state_name"
-        },
-        {
-          "fold": [
-            "coastal",
-            "inland"
-          ],
-          "as": [
-            "category",
-            "pct"
-          ]
-        },
-        {
-          "filter": "isValid(datum.pct)"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "fontSize": 12,
-        "fontWeight": 600,
-        "color": "#1E2B34",
-        "baseline": {
-          "expr": "datum.state == 'WA' && datum.category == 'coastal' ? 'bottom' : 'middle'"
-        },
-        "align": {
-          "expr": "datum.state == 'WA' && datum.category == 'coastal' ? 'center' : datum.category == 'inland' ? 'right' : 'left'"
-        },
-        "dx": {
-          "expr": "datum.state == 'WA' && datum.category == 'coastal' ? 0 : datum.category == 'inland' ? -11 : 11"
-        },
-        "dy": {
-          "expr": "datum.state == 'WA' && datum.category == 'coastal' ? -11 : 0"
-        }
-      },
-      "encoding": {
-        "y": {
-          "field": "state_name",
-          "type": "nominal",
-          "title": null,
-          "sort": {
-            "field": "gap",
-            "op": "max",
-            "order": "descending"
-          },
-          "axis": {
-            "labelFontSize": 13,
-            "labelColor": "#1E2B34",
-            "domain": false,
-            "ticks": false,
-            "labelLimit": 400
-          }
-        },
-        "x": {
-          "field": "pct",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "pct",
-          "type": "quantitative",
-          "format": ".0f"
-        }
-      }
-    },
-    {
-      "transform": [
-        {
-          "filter": "datum.year == 2019 || datum.year == 2025"
-        },
-        {
-          "aggregate": [
-            {
-              "op": "sum",
-              "field": "visitors",
-              "as": "v"
-            }
-          ],
-          "groupby": [
-            "state",
-            "category",
-            "year"
-          ]
-        },
-        {
-          "pivot": "year",
-          "value": "v",
-          "groupby": [
-            "state",
-            "category"
-          ]
-        },
-        {
-          "calculate": "datum['2025'] / datum['2019'] * 100",
-          "as": "pct"
-        },
-        {
-          "pivot": "category",
-          "value": "pct",
-          "groupby": [
-            "state"
-          ]
-        },
-        {
-          "calculate": "isValid(datum.coastal) && isValid(datum.inland) ? datum.coastal - datum.inland : -999",
-          "as": "gap"
-        },
-        {
-          "calculate": "({\"NSW\": \"New South Wales\", \"VIC\": \"Victoria\", \"QLD\": \"Queensland\", \"SA\": \"South Australia\", \"WA\": \"Western Australia\", \"NT\": \"Northern Territory\", \"TAS\": \"Tasmania\", \"ACT\": \"Australian Capital Territory\"})[datum.state]",
-          "as": "state_name"
-        },
         {
           "filter": "datum.gap == -999"
         },
@@ -539,27 +330,16 @@
         "dx": {
           "expr": "datum.state == 'TAS' ? -12 : -34"
         },
-        "fontSize": 12,
         "fontStyle": "italic",
-        "color": "#5B6770",
-        "baseline": "middle"
+        "color": "#5B6770"
       },
       "encoding": {
         "y": {
           "field": "state_name",
           "type": "nominal",
-          "title": null,
           "sort": {
-            "field": "gap",
             "op": "max",
             "order": "descending"
-          },
-          "axis": {
-            "labelFontSize": 13,
-            "labelColor": "#1E2B34",
-            "domain": false,
-            "ticks": false,
-            "labelLimit": 400
           }
         },
         "x": {

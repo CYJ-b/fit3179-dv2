@@ -24,15 +24,12 @@
       "fontWeight": 600,
       "color": "#1E2B34",
       "anchor": "start",
-      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "subtitleFontSize": 13,
       "subtitleColor": "#5B6770",
       "subtitlePadding": 4,
       "offset": 12
     },
     "axis": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "labelFontSize": 12,
       "titleFontSize": 12,
       "titleFontWeight": 600,
@@ -43,34 +40,13 @@
       "tickColor": "#A8AEB3"
     },
     "legend": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleFontWeight": 600,
       "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
       "padding": 4
     },
-    "header": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 13,
-      "titleFontSize": 13,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "labelFontWeight": 600
-    },
     "text": {
-      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "fontSize": 12,
       "color": "#1E2B34"
-    },
-    "concat": {
-      "spacing": 24
-    },
-    "facet": {
-      "spacing": 24
     }
   },
   "data": {
@@ -100,20 +76,6 @@
   ],
   "layer": [
     {
-      "transform": [
-        {
-          "calculate": "'Full-time'",
-          "as": "series"
-        }
-      ],
-      "mark": {
-        "type": "bar",
-        "height": {
-          "band": 0.72
-        },
-        "stroke": "#1E2B34",
-        "strokeWidth": 0.5
-      },
       "encoding": {
         "y": {
           "field": "label",
@@ -126,36 +88,9 @@
           "axis": {
             "title": null,
             "labelLimit": 220,
-            "labelFontSize": 12,
             "labelColor": "#1E2B34",
             "domain": false,
             "ticks": false
-          }
-        },
-        "x": {
-          "field": "full_neg",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              -70,
-              170
-            ],
-            "nice": false
-          },
-          "axis": {
-            "title": [
-              "Number of Jobs (in thousands)"
-            ],
-            "labelExpr": "format(abs(datum.value), ',')",
-            "grid": true,
-            "values": [
-              -40,
-              0,
-              40,
-              80,
-              120,
-              160
-            ]
           }
         },
         "color": {
@@ -172,8 +107,7 @@
           },
           "legend": {
             "title": null,
-            "orient": "top",
-            "symbolType": "square"
+            "orient": "top"
           },
           "field": "series"
         },
@@ -208,96 +142,74 @@
             "format": ".1f"
           }
         ]
-      }
-    },
-    {
-      "transform": [
-        {
-          "calculate": "'Part-time'",
-          "as": "series"
-        }
-      ],
-      "mark": {
-        "type": "bar",
-        "height": {
-          "band": 0.72
-        },
-        "stroke": "#1E2B34",
-        "strokeWidth": 0.5
       },
-      "encoding": {
-        "y": {
-          "field": "label",
-          "type": "nominal",
-          "sort": {
-            "field": "total_k",
-            "op": "max",
-            "order": "descending"
+      "layer": [
+        {
+          "transform": [
+            {
+              "calculate": "'Full-time'",
+              "as": "series"
+            }
+          ],
+          "mark": {
+            "type": "bar",
+            "height": {
+              "band": 0.72
+            },
+            "stroke": "#1E2B34",
+            "strokeWidth": 0.5
           },
-          "axis": {
-            "title": null,
-            "labelLimit": 220,
-            "labelFontSize": 12,
-            "labelColor": "#1E2B34",
-            "domain": false,
-            "ticks": false
+          "encoding": {
+            "x": {
+              "field": "full_neg",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  -70,
+                  170
+                ],
+                "nice": false
+              },
+              "axis": {
+                "title": [
+                  "Number of Jobs (in thousands)"
+                ],
+                "labelExpr": "format(abs(datum.value), ',')",
+                "values": [
+                  -40,
+                  0,
+                  40,
+                  80,
+                  120,
+                  160
+                ]
+              }
+            }
           }
         },
-        "x": {
-          "field": "part_time_k",
-          "type": "quantitative"
-        },
-        "color": {
-          "type": "nominal",
-          "scale": {
-            "domain": [
-              "Full-time",
-              "Part-time"
-            ],
-            "range": [
-              "#C1272D",
-              "#F2C705"
-            ]
+        {
+          "transform": [
+            {
+              "calculate": "'Part-time'",
+              "as": "series"
+            }
+          ],
+          "mark": {
+            "type": "bar",
+            "height": {
+              "band": 0.72
+            },
+            "stroke": "#1E2B34",
+            "strokeWidth": 0.5
           },
-          "legend": {
-            "title": null,
-            "orient": "top",
-            "symbolType": "square"
-          },
-          "field": "series"
-        },
-        "tooltip": [
-          {
-            "field": "label",
-            "type": "nominal",
-            "title": "Industry"
-          },
-          {
-            "field": "full_time_k",
-            "type": "quantitative",
-            "title": "Full-time (thousand jobs)",
-            "format": ".1f"
-          },
-          {
-            "field": "part_time_k",
-            "type": "quantitative",
-            "title": "Part-time (thousand jobs)",
-            "format": ".1f"
-          },
-          {
-            "field": "total_k",
-            "type": "quantitative",
-            "title": "Total (thousand jobs)",
-            "format": ".1f"
-          },
-          {
-            "field": "part_time_pct",
-            "type": "quantitative",
-            "title": "Part-time share (%)",
-            "format": ".1f"
+          "encoding": {
+            "x": {
+              "field": "part_time_k",
+              "type": "quantitative"
+            }
           }
-        ]
-      }
+        }
+      ]
     },
     {
       "mark": {
@@ -316,27 +228,15 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "baseline": "middle",
-        "dx": 6,
-        "fontSize": 12,
-        "color": "#1E2B34"
+        "dx": 6
       },
       "encoding": {
         "y": {
           "field": "label",
           "type": "nominal",
           "sort": {
-            "field": "total_k",
             "op": "max",
             "order": "descending"
-          },
-          "axis": {
-            "title": null,
-            "labelLimit": 220,
-            "labelFontSize": 12,
-            "labelColor": "#1E2B34",
-            "domain": false,
-            "ticks": false
           }
         },
         "x": {

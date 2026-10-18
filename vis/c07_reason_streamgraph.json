@@ -7,6 +7,34 @@
   },
   "width": 880,
   "height": 380,
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 20,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFontSize": 13,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "labelColor": "#5B6770",
+      "domainColor": "#A8AEB3",
+      "tickColor": "#A8AEB3"
+    },
+    "text": {
+      "fontSize": 12,
+      "color": "#1E2B34"
+    }
+  },
   "data": {
     "url": "data/used/main_reason_coastal_quarterly.csv",
     "format": {
@@ -57,67 +85,6 @@
       ]
     }
   ],
-  "config": {
-    "background": "transparent",
-    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
-    "view": {
-      "stroke": null
-    },
-    "title": {
-      "font": "Fraunces, Georgia, serif",
-      "fontSize": 20,
-      "fontWeight": 600,
-      "color": "#1E2B34",
-      "anchor": "start",
-      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "subtitleFontSize": 13,
-      "subtitleColor": "#5B6770",
-      "subtitlePadding": 4,
-      "offset": 12
-    },
-    "axis": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleFontWeight": 600,
-      "labelColor": "#5B6770",
-      "titleColor": "#1E2B34",
-      "gridColor": "#E3DED3",
-      "domainColor": "#A8AEB3",
-      "tickColor": "#A8AEB3"
-    },
-    "legend": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleFontWeight": 600,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "padding": 4
-    },
-    "header": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 13,
-      "titleFontSize": 13,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "labelFontWeight": 600
-    },
-    "text": {
-      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "fontSize": 12,
-      "color": "#1E2B34"
-    },
-    "concat": {
-      "spacing": 24
-    },
-    "facet": {
-      "spacing": 24
-    }
-  },
   "layer": [
     {
       "data": {
@@ -142,7 +109,6 @@
             "format": "%Y",
             "tickCount": "year",
             "grid": false,
-            "labelFontSize": 12,
             "labelExpr": "datum.value > time(datetime(2026, 6, 1)) ? '' : timeFormat(datum.value, '%Y')"
           }
         },
@@ -156,13 +122,13 @@
         "values": [
           {
             "date": "2020-04-01",
-            "pos": 3360000.0,
+            "pos": 3360000,
             "t": "Borders were closed from",
             "w": 600
           },
           {
             "date": "2020-04-01",
-            "pos": 3060000.0,
+            "pos": 3060000,
             "t": "20 Mar 2020 to 21 Feb 2022",
             "w": 400
           }
@@ -171,9 +137,6 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "baseline": "middle",
-        "fontSize": 12,
-        "color": "#1E2B34",
         "dx": 8,
         "fontWeight": {
           "expr": "datum.w"
@@ -183,13 +146,8 @@
         "x": {
           "field": "date",
           "type": "temporal",
-          "title": null,
           "axis": {
-            "format": "%Y",
-            "tickCount": "year",
-            "grid": false,
-            "labelFontSize": 12,
-            "labelExpr": "datum.value > time(datetime(2026, 6, 1)) ? '' : timeFormat(datum.value, '%Y')"
+            "format": "%Y"
           }
         },
         "y": {
@@ -198,7 +156,7 @@
           "scale": {
             "domain": [
               0,
-              4700000.0
+              4700000
             ],
             "nice": false
           },
@@ -222,13 +180,8 @@
         "x": {
           "field": "date",
           "type": "temporal",
-          "title": null,
           "axis": {
-            "format": "%Y",
-            "tickCount": "year",
-            "grid": false,
-            "labelFontSize": 12,
-            "labelExpr": "datum.value > time(datetime(2026, 6, 1)) ? '' : timeFormat(datum.value, '%Y')"
+            "format": "%Y"
           },
           "scale": {
             "domain": [
@@ -247,15 +200,7 @@
         },
         "y": {
           "field": "y0",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              0,
-              4700000.0
-            ],
-            "nice": false
-          },
-          "axis": null
+          "type": "quantitative"
         },
         "y2": {
           "field": "y1"
@@ -316,34 +261,19 @@
         "type": "text",
         "align": "left",
         "dx": 8,
-        "baseline": "middle",
-        "fontSize": 12,
         "fontWeight": 600
       },
       "encoding": {
         "x": {
           "field": "date",
           "type": "temporal",
-          "title": null,
           "axis": {
-            "format": "%Y",
-            "tickCount": "year",
-            "grid": false,
-            "labelFontSize": 12,
-            "labelExpr": "datum.value > time(datetime(2026, 6, 1)) ? '' : timeFormat(datum.value, '%Y')"
+            "format": "%Y"
           }
         },
         "y": {
           "field": "mid",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              0,
-              4700000.0
-            ],
-            "nice": false
-          },
-          "axis": null
+          "type": "quantitative"
         },
         "text": {
           "field": "reason",
@@ -351,24 +281,7 @@
         },
         "color": {
           "field": "reason",
-          "type": "nominal",
-          "legend": null,
-          "scale": {
-            "domain": [
-              "Holiday",
-              "Visiting friends and relatives",
-              "Business",
-              "Education",
-              "Employment and other"
-            ],
-            "range": [
-              "#56B4E9",
-              "#D55E00",
-              "#CC79A7",
-              "#009E73",
-              "#8C8C8C"
-            ]
-          }
+          "type": "nominal"
         }
       }
     }

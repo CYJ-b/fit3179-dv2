@@ -16,16 +16,12 @@
       "fontSize": 20,
       "fontWeight": 600,
       "color": "#1E2B34",
-      "anchor": "start",
-      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "subtitleFontSize": 13,
       "subtitleColor": "#5B6770",
       "subtitlePadding": 4,
       "offset": 12
     },
     "axis": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "labelFontSize": 12,
       "titleFontSize": 12,
       "titleFontWeight": 600,
@@ -35,35 +31,9 @@
       "domainColor": "#A8AEB3",
       "tickColor": "#A8AEB3"
     },
-    "legend": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleFontWeight": 600,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "padding": 4
-    },
-    "header": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 13,
-      "titleFontSize": 13,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "labelFontWeight": 600
-    },
     "text": {
-      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "fontSize": 12,
       "color": "#1E2B34"
-    },
-    "concat": {
-      "spacing": 24
-    },
-    "facet": {
-      "spacing": 24
     }
   },
   "data": {
@@ -77,6 +47,18 @@
         "who_new_deaths": "number"
       }
     }
+  },
+  "datasets": {
+    "events": [
+      {
+        "d": "2020-03-20",
+        "t": "20 Mar 2020: borders close"
+      },
+      {
+        "d": "2022-02-21",
+        "t": "21 Feb 2022: borders reopen"
+      }
+    ]
   },
   "vconcat": [
     {
@@ -122,10 +104,7 @@
                 "labels": false,
                 "ticks": false,
                 "grid": false,
-                "domain": false,
-                "title": null,
-                "labelPadding": 0,
-                "tickSize": 0
+                "domain": false
               }
             },
             "y": {
@@ -146,18 +125,7 @@
         },
         {
           "data": {
-            "values": [
-              {
-                "d": "2020-03-20",
-                "t": "20 Mar 2020: borders close",
-                "align": "left"
-              },
-              {
-                "d": "2022-02-21",
-                "t": "21 Feb 2022: borders reopen",
-                "align": "left"
-              }
-            ]
+            "name": "events"
           },
           "mark": {
             "type": "rule",
@@ -171,58 +139,25 @@
           "encoding": {
             "x": {
               "field": "d",
-              "type": "temporal",
-              "axis": {
-                "labels": false,
-                "ticks": false,
-                "grid": false,
-                "domain": false,
-                "title": null,
-                "labelPadding": 0,
-                "tickSize": 0
-              },
-              "title": null
+              "type": "temporal"
             }
           }
         },
         {
           "data": {
-            "values": [
-              {
-                "d": "2020-03-20",
-                "t": "20 Mar 2020: borders close",
-                "align": "left"
-              },
-              {
-                "d": "2022-02-21",
-                "t": "21 Feb 2022: borders reopen",
-                "align": "left"
-              }
-            ]
+            "name": "events"
           },
           "mark": {
             "type": "text",
             "align": "left",
             "baseline": "top",
             "dx": 5,
-            "dy": 2,
-            "fontSize": 12,
-            "color": "#1E2B34"
+            "dy": 2
           },
           "encoding": {
             "x": {
               "field": "d",
-              "type": "temporal",
-              "axis": {
-                "labels": false,
-                "ticks": false,
-                "grid": false,
-                "domain": false,
-                "title": null,
-                "labelPadding": 0,
-                "tickSize": 0
-              },
-              "title": null
+              "type": "temporal"
             },
             "y": {
               "value": 0
@@ -256,17 +191,7 @@
           "encoding": {
             "x": {
               "field": "date",
-              "type": "temporal",
-              "axis": {
-                "labels": false,
-                "ticks": false,
-                "grid": false,
-                "domain": false,
-                "title": null,
-                "labelPadding": 0,
-                "tickSize": 0
-              },
-              "title": null
+              "type": "temporal"
             },
             "y": {
               "field": "who_d",
@@ -309,17 +234,7 @@
           "encoding": {
             "x": {
               "field": "date",
-              "type": "temporal",
-              "axis": {
-                "labels": false,
-                "ticks": false,
-                "grid": false,
-                "domain": false,
-                "title": null,
-                "labelPadding": 0,
-                "tickSize": 0
-              },
-              "title": null
+              "type": "temporal"
             },
             "opacity": {
               "condition": [
@@ -367,14 +282,11 @@
               "scale": {
                 "domain": [
                   {
-                    "year": 2018,
-                    "month": "jan",
-                    "date": 1
+                    "year": 2018
                   },
                   {
                     "year": 2026,
-                    "month": "oct",
-                    "date": 1
+                    "month": "oct"
                   }
                 ]
               },
@@ -403,18 +315,7 @@
         },
         {
           "data": {
-            "values": [
-              {
-                "d": "2020-03-20",
-                "t": "20 Mar 2020: borders close",
-                "align": "left"
-              },
-              {
-                "d": "2022-02-21",
-                "t": "21 Feb 2022: borders reopen",
-                "align": "left"
-              }
-            ]
+            "name": "events"
           },
           "mark": {
             "type": "rule",
@@ -521,10 +422,5 @@
     }
   ],
   "spacing": 40,
-  "resolve": {
-    "scale": {
-      "x": "shared"
-    }
-  },
   "bounds": "flush"
 }

@@ -92,36 +92,18 @@
   "config": {
     "background": "transparent",
     "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
-    "view": {
-      "stroke": null
-    },
     "title": {
       "font": "Fraunces, Georgia, serif",
       "fontSize": 20,
       "fontWeight": 600,
       "color": "#1E2B34",
       "anchor": "start",
-      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "subtitleFontSize": 13,
       "subtitleColor": "#5B6770",
       "subtitlePadding": 4,
       "offset": 12
     },
-    "axis": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleFontWeight": 600,
-      "labelColor": "#5B6770",
-      "titleColor": "#1E2B34",
-      "gridColor": "#E3DED3",
-      "domainColor": "#A8AEB3",
-      "tickColor": "#A8AEB3"
-    },
     "legend": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "labelFontSize": 12,
       "titleFontSize": 12,
       "titleFontWeight": 600,
@@ -129,27 +111,32 @@
       "titleColor": "#1E2B34",
       "padding": 4
     },
-    "header": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 13,
-      "titleFontSize": 13,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "labelFontWeight": 600
-    },
     "text": {
-      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "fontSize": 12,
       "color": "#1E2B34"
-    },
-    "concat": {
-      "spacing": 24
-    },
-    "facet": {
-      "spacing": 24
     }
   },
+  "data": {
+    "url": "data/used/region_visits.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "centre_lon": "number",
+        "centre_lat": "number",
+        "year": "number",
+        "visitors": "number",
+        "pct_of_2019": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.year == year_selected"
+    },
+    {
+      "filter": "!state_filter || state_view == 'AUS' || datum.state == state_view || (state_view == 'NSW' && datum.state == 'ACT')"
+    }
+  ],
   "layer": [
     {
       "data": {
@@ -175,8 +162,8 @@
       "data": {
         "values": [
           {
-            "lon": 122.0,
-            "lat": -26.0,
+            "lon": 122,
+            "lat": -26,
             "t": "WESTERN AUSTRALIA"
           },
           {
@@ -234,29 +221,7 @@
       }
     },
     {
-      "data": {
-        "url": "data/used/region_visits.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "TR_CODE": "number",
-            "coastal_ratio": "number",
-            "area_km2": "number",
-            "centre_lon": "number",
-            "centre_lat": "number",
-            "year": "number",
-            "visitors": "number",
-            "pct_of_2019": "number"
-          }
-        }
-      },
       "transform": [
-        {
-          "filter": "datum.year == year_selected"
-        },
-        {
-          "filter": "!state_filter || state_view == 'AUS' || datum.state == state_view || (state_view == 'NSW' && datum.state == 'ACT')"
-        },
         {
           "filter": "indexof([\"Sydney\", \"Melbourne\", \"Brisbane\", \"Destination Perth\", \"Gold Coast\"], datum.TR_NAME) >= 0"
         },
@@ -267,10 +232,6 @@
         {
           "calculate": "datum.centre_lat + ({\"Sydney\": -1, \"Melbourne\": -3, \"Brisbane\": 1.9, \"Destination Perth\": 0, \"Gold Coast\": -1.6})[datum.TR_NAME]",
           "as": "l_lat"
-        },
-        {
-          "calculate": "({\"Sydney\": \"left\", \"Melbourne\": \"right\", \"Brisbane\": \"left\", \"Destination Perth\": \"right\", \"Gold Coast\": \"left\"})[datum.TR_NAME]",
-          "as": "lab_align"
         }
       ],
       "mark": {
@@ -296,30 +257,6 @@
       }
     },
     {
-      "data": {
-        "url": "data/used/region_visits.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "TR_CODE": "number",
-            "coastal_ratio": "number",
-            "area_km2": "number",
-            "centre_lon": "number",
-            "centre_lat": "number",
-            "year": "number",
-            "visitors": "number",
-            "pct_of_2019": "number"
-          }
-        }
-      },
-      "transform": [
-        {
-          "filter": "datum.year == year_selected"
-        },
-        {
-          "filter": "!state_filter || state_view == 'AUS' || datum.state == state_view || (state_view == 'NSW' && datum.state == 'ACT')"
-        }
-      ],
       "mark": {
         "type": "circle",
         "opacity": 0.72,
@@ -349,8 +286,7 @@
             "range": [
               0,
               1500
-            ],
-            "zero": true
+            ]
           },
           "legend": {
             "values": [
@@ -359,7 +295,6 @@
               1000000,
               3000000
             ],
-            "labelExpr": "format(datum.value, ',')",
             "orient": "none",
             "legendX": 100,
             "legendY": 300,
@@ -431,29 +366,7 @@
       }
     },
     {
-      "data": {
-        "url": "data/used/region_visits.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "TR_CODE": "number",
-            "coastal_ratio": "number",
-            "area_km2": "number",
-            "centre_lon": "number",
-            "centre_lat": "number",
-            "year": "number",
-            "visitors": "number",
-            "pct_of_2019": "number"
-          }
-        }
-      },
       "transform": [
-        {
-          "filter": "datum.year == year_selected"
-        },
-        {
-          "filter": "!state_filter || state_view == 'AUS' || datum.state == state_view || (state_view == 'NSW' && datum.state == 'ACT')"
-        },
         {
           "filter": "indexof([\"Sydney\", \"Melbourne\", \"Brisbane\", \"Destination Perth\", \"Gold Coast\"], datum.TR_NAME) >= 0"
         },
@@ -476,10 +389,7 @@
       ],
       "mark": {
         "type": "text",
-        "fontSize": 12,
         "fontWeight": 600,
-        "color": "#1E2B34",
-        "baseline": "middle",
         "dx": {
           "expr": "datum.lab_align == 'left' ? 4 : -4"
         },

@@ -34,36 +34,18 @@
   "config": {
     "background": "transparent",
     "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
-    "view": {
-      "stroke": null
-    },
     "title": {
       "font": "Fraunces, Georgia, serif",
       "fontSize": 20,
       "fontWeight": 600,
       "color": "#1E2B34",
       "anchor": "start",
-      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "subtitleFontSize": 13,
       "subtitleColor": "#5B6770",
       "subtitlePadding": 4,
       "offset": 12
     },
-    "axis": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleFontWeight": 600,
-      "labelColor": "#5B6770",
-      "titleColor": "#1E2B34",
-      "gridColor": "#E3DED3",
-      "domainColor": "#A8AEB3",
-      "tickColor": "#A8AEB3"
-    },
     "legend": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "labelFontSize": 12,
       "titleFontSize": 12,
       "titleFontWeight": 600,
@@ -71,43 +53,27 @@
       "titleColor": "#1E2B34",
       "padding": 4
     },
-    "header": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 13,
-      "titleFontSize": 13,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "labelFontWeight": 600
-    },
     "text": {
-      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "fontSize": 12,
       "color": "#1E2B34"
-    },
-    "concat": {
-      "spacing": 24
-    },
-    "facet": {
-      "spacing": 24
+    }
+  },
+  "data": {
+    "url": "data/used/regions_coastal_rule.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "TR_CODE": "number",
+        "coastal_ratio": "number",
+        "area_threshold": "number",
+        "area_km2": "number",
+        "centre_lon": "number",
+        "centre_lat": "number"
+      }
     }
   },
   "layer": [
     {
-      "data": {
-        "url": "data/used/regions_coastal_rule.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "TR_CODE": "number",
-            "coastal_ratio": "number",
-            "area_threshold": "number",
-            "area_km2": "number",
-            "centre_lon": "number",
-            "centre_lat": "number"
-          }
-        }
-      },
       "transform": [
         {
           "calculate": "toString(datum.TR_CODE)",
@@ -247,20 +213,6 @@
       }
     },
     {
-      "data": {
-        "url": "data/used/regions_coastal_rule.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "TR_CODE": "number",
-            "coastal_ratio": "number",
-            "area_threshold": "number",
-            "area_km2": "number",
-            "centre_lon": "number",
-            "centre_lat": "number"
-          }
-        }
-      },
       "transform": [
         {
           "filter": "datum.TR_NAME == \"Australia's Golden Outback\""
@@ -274,84 +226,60 @@
           "as": "l_lat"
         }
       ],
-      "mark": {
-        "type": "rule",
-        "stroke": "#1E2B34",
-        "strokeWidth": 0.8
-      },
-      "encoding": {
-        "longitude": {
-          "field": "centre_lon",
-          "type": "quantitative"
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "stroke": "#1E2B34",
+            "strokeWidth": 0.8
+          },
+          "encoding": {
+            "longitude": {
+              "field": "centre_lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "centre_lat",
+              "type": "quantitative"
+            },
+            "longitude2": {
+              "field": "l_lon"
+            },
+            "latitude2": {
+              "field": "l_lat"
+            }
+          }
         },
-        "latitude": {
-          "field": "centre_lat",
-          "type": "quantitative"
-        },
-        "longitude2": {
-          "field": "l_lon"
-        },
-        "latitude2": {
-          "field": "l_lat"
-        }
-      }
-    },
-    {
-      "data": {
-        "url": "data/used/regions_coastal_rule.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "TR_CODE": "number",
-            "coastal_ratio": "number",
-            "area_threshold": "number",
-            "area_km2": "number",
-            "centre_lon": "number",
-            "centre_lat": "number"
+        {
+          "transform": [
+            {
+              "calculate": "[datum.TR_NAME, format(datum.coastal_ratio, '.1~%') + ' sea boundary vs ' + format(datum.area_threshold, '.1~%') + ' threshold', 'so it counts as ' + datum.category]",
+              "as": "label"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "fontWeight": 600,
+            "lineHeight": 15,
+            "dx": -4
+          },
+          "encoding": {
+            "longitude": {
+              "field": "l_lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "l_lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "label",
+              "type": "nominal"
+            }
           }
         }
-      },
-      "transform": [
-        {
-          "filter": "datum.TR_NAME == \"Australia's Golden Outback\""
-        },
-        {
-          "calculate": "117.0",
-          "as": "l_lon"
-        },
-        {
-          "calculate": "-39.5",
-          "as": "l_lat"
-        },
-        {
-          "calculate": "[datum.TR_NAME, format(datum.coastal_ratio, '.1~%') + ' sea boundary vs ' + format(datum.area_threshold, '.1~%') + ' threshold', 'so it counts as ' + datum.category]",
-          "as": "label"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "baseline": "middle",
-        "fontSize": 12,
-        "fontWeight": 600,
-        "color": "#1E2B34",
-        "lineHeight": 15,
-        "dx": -4
-      },
-      "encoding": {
-        "longitude": {
-          "field": "l_lon",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "l_lat",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "label",
-          "type": "nominal"
-        }
-      }
+      ]
     }
   ]
 }

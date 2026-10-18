@@ -58,16 +58,12 @@
       "fontSize": 20,
       "fontWeight": 600,
       "color": "#1E2B34",
-      "anchor": "start",
-      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "subtitleFontSize": 13,
       "subtitleColor": "#5B6770",
       "subtitlePadding": 4,
       "offset": 12
     },
     "axis": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "labelFontSize": 12,
       "titleFontSize": 12,
       "titleFontWeight": 600,
@@ -77,32 +73,12 @@
       "domainColor": "#A8AEB3",
       "tickColor": "#A8AEB3"
     },
-    "legend": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleFontWeight": 600,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "padding": 4
-    },
     "header": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 13,
-      "titleFontSize": 13,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "labelFontWeight": 600
+      "labelColor": "#1E2B34"
     },
     "text": {
-      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "fontSize": 12,
       "color": "#1E2B34"
-    },
-    "concat": {
-      "spacing": 24
     },
     "facet": {
       "spacing": 24
@@ -120,14 +96,12 @@
       "header": {
         "labelFontSize": 14,
         "labelFontWeight": 700,
-        "labelOrient": "top",
         "labelPadding": 12
       }
     }
   },
   "spec": {
     "width": 400,
-    "height": 300,
     "layer": [
       {
         "mark": {
@@ -142,7 +116,7 @@
             "title": null,
             "scale": {
               "domain": [
-                2018.0,
+                2018,
                 2028.3
               ]
             },
@@ -154,7 +128,6 @@
               "format": "d",
               "labelFontSize": 14,
               "labelFontWeight": 700,
-              "labelAngle": 0,
               "labelPadding": 6,
               "grid": false,
               "orient": "top",
@@ -166,13 +139,6 @@
             "field": "share_pct",
             "type": "quantitative",
             "title": "Share of the group's visits (%)",
-            "scale": {
-              "domain": [
-                0,
-                80
-              ],
-              "nice": false
-            },
             "axis": {
               "values": [
                 0,
@@ -181,15 +147,13 @@
                 60,
                 80
               ],
-              "grid": true,
               "format": "d"
             }
           },
           "color": {
             "field": "hex",
             "type": "nominal",
-            "scale": null,
-            "legend": null
+            "scale": null
           },
           "detail": {
             "field": "length_of_stay",
@@ -207,57 +171,25 @@
           "x": {
             "field": "year",
             "type": "quantitative",
-            "title": null,
             "scale": {
               "domain": [
-                2018.0,
+                2018,
                 2028.3
               ]
-            },
-            "axis": {
-              "values": [
-                2019,
-                2025
-              ],
-              "format": "d",
-              "labelFontSize": 14,
-              "labelFontWeight": 700,
-              "labelAngle": 0,
-              "labelPadding": 6,
-              "grid": false,
-              "orient": "top",
-              "domain": false,
-              "ticks": false
             }
           },
           "y": {
             "field": "share_pct",
             "type": "quantitative",
             "title": "Share of the group's visits (%)",
-            "scale": {
-              "domain": [
-                0,
-                80
-              ],
-              "nice": false
-            },
             "axis": {
-              "values": [
-                0,
-                20,
-                40,
-                60,
-                80
-              ],
-              "grid": true,
               "format": "d"
             }
           },
           "color": {
             "field": "hex",
             "type": "nominal",
-            "scale": null,
-            "legend": null
+            "scale": null
           },
           "tooltip": [
             {
@@ -300,9 +232,7 @@
           "type": "text",
           "align": "right",
           "dx": -10,
-          "fontSize": 12,
           "fontWeight": 600,
-          "baseline": "middle",
           "dy": {
             "expr": "datum.nudge"
           }
@@ -311,49 +241,18 @@
           "x": {
             "field": "year",
             "type": "quantitative",
-            "title": null,
             "scale": {
               "domain": [
-                2018.0,
+                2018,
                 2028.3
               ]
-            },
-            "axis": {
-              "values": [
-                2019,
-                2025
-              ],
-              "format": "d",
-              "labelFontSize": 14,
-              "labelFontWeight": 700,
-              "labelAngle": 0,
-              "labelPadding": 6,
-              "grid": false,
-              "orient": "top",
-              "domain": false,
-              "ticks": false
             }
           },
           "y": {
             "field": "share_pct",
             "type": "quantitative",
             "title": "Share of the group's visits (%)",
-            "scale": {
-              "domain": [
-                0,
-                80
-              ],
-              "nice": false
-            },
             "axis": {
-              "values": [
-                0,
-                20,
-                40,
-                60,
-                80
-              ],
-              "grid": true,
               "format": "d"
             }
           },
@@ -377,9 +276,7 @@
           "type": "text",
           "align": "left",
           "dx": 10,
-          "fontSize": 12,
           "fontWeight": 600,
-          "baseline": "middle",
           "dy": {
             "expr": "datum.nudge"
           }
@@ -388,49 +285,18 @@
           "x": {
             "field": "year",
             "type": "quantitative",
-            "title": null,
             "scale": {
               "domain": [
-                2018.0,
+                2018,
                 2028.3
               ]
-            },
-            "axis": {
-              "values": [
-                2019,
-                2025
-              ],
-              "format": "d",
-              "labelFontSize": 14,
-              "labelFontWeight": 700,
-              "labelAngle": 0,
-              "labelPadding": 6,
-              "grid": false,
-              "orient": "top",
-              "domain": false,
-              "ticks": false
             }
           },
           "y": {
             "field": "share_pct",
             "type": "quantitative",
             "title": "Share of the group's visits (%)",
-            "scale": {
-              "domain": [
-                0,
-                80
-              ],
-              "nice": false
-            },
             "axis": {
-              "values": [
-                0,
-                20,
-                40,
-                60,
-                80
-              ],
-              "grid": true,
               "format": "d"
             }
           },

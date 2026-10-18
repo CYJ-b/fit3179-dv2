@@ -65,51 +65,18 @@
       "fontSize": 20,
       "fontWeight": 600,
       "color": "#1E2B34",
-      "anchor": "start",
-      "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "subtitleFontSize": 13,
       "subtitleColor": "#5B6770",
       "subtitlePadding": 4,
       "offset": 12
     },
-    "axis": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleFontWeight": 600,
-      "labelColor": "#5B6770",
-      "titleColor": "#1E2B34",
-      "gridColor": "#E3DED3",
-      "domainColor": "#A8AEB3",
-      "tickColor": "#A8AEB3"
-    },
     "legend": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
       "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleFontWeight": 600,
       "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
       "padding": 4
     },
     "header": {
-      "labelFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "titleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "labelFontSize": 13,
-      "titleFontSize": 13,
-      "labelColor": "#1E2B34",
-      "titleColor": "#1E2B34",
-      "labelFontWeight": 600
-    },
-    "text": {
-      "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
-      "fontSize": 12,
-      "color": "#1E2B34"
-    },
-    "concat": {
-      "spacing": 24
+      "labelColor": "#1E2B34"
     },
     "facet": {
       "spacing": 24
@@ -132,15 +99,11 @@
       "labelFontSize": 14,
       "labelFontWeight": 700,
       "labelLineHeight": 17,
-      "labelPadding": 10,
-      "labelAnchor": "start",
-      "labelAlign": "left",
-      "labelLimit": 300
+      "labelAnchor": "start"
     }
   },
   "columns": 3,
   "spacing": {
-    "row": 24,
     "column": 40
   },
   "spec": {
@@ -181,7 +144,6 @@
             },
             "legend": {
               "orient": "bottom",
-              "direction": "horizontal",
               "symbolSize": 200
             }
           },
