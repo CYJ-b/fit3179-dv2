@@ -191,8 +191,6 @@
             "labelPadding": 6,
             "ticks": false,
             "domain": false,
-            "titleFontSize": 14,
-            "titleFontWeight": 400,
             "titleColor": "#1E2B34"
           }
         },
@@ -206,7 +204,7 @@
             "order": "descending"
           },
           "axis": {
-            "labelFontSize": 12.5,
+            "labelFontSize": 12,
             "labelColor": "#1E2B34",
             "ticks": false,
             "domain": false,
@@ -281,8 +279,6 @@
             "labelPadding": 6,
             "ticks": false,
             "domain": false,
-            "titleFontSize": 14,
-            "titleFontWeight": 400,
             "titleColor": "#1E2B34"
           }
         },
@@ -296,7 +292,7 @@
             "order": "descending"
           },
           "axis": {
-            "labelFontSize": 12.5,
+            "labelFontSize": 12,
             "labelColor": "#1E2B34",
             "ticks": false,
             "domain": false,

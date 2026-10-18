@@ -129,9 +129,9 @@
     ],
     "header": {
       "labelExpr": "split(datum.label, '|')",
-      "labelFontSize": 13,
-      "labelFontWeight": 600,
-      "labelLineHeight": 16,
+      "labelFontSize": 14,
+      "labelFontWeight": 700,
+      "labelLineHeight": 17,
       "labelPadding": 10,
       "labelAnchor": "start",
       "labelAlign": "left",

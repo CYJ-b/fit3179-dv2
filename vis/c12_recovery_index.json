@@ -154,7 +154,7 @@
         "Filled jobs"
       ],
       "header": {
-        "labelFontSize": 15,
+        "labelFontSize": 14,
         "labelFontWeight": 700,
         "labelOrient": "top",
         "labelPadding": 10

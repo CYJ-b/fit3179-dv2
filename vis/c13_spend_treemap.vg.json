@@ -352,7 +352,7 @@
             "signal": "(datum.maxlen * 6.8 <= (datum.x1 - datum.x0 - 12) && datum.y1 - datum.y0 > 46 + (datum.nl - 1) * 15) ? '$' + format(datum.size / 1000, '.1f') + 'bn' : ''"
           },
           "fontSize": {
-            "value": 12.5
+            "value": 12
           },
           "fill": {
             "signal": "datum.group == 'Food and drink' ? '#1E2B34' : '#FFFFFF'"

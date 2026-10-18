@@ -167,7 +167,7 @@
           ],
           "axis": {
             "labelAngle": 0,
-            "labelFontSize": 12.5,
+            "labelFontSize": 12,
             "labelColor": "#1E2B34",
             "labelLimit": 300,
             "ticks": false,
@@ -309,7 +309,7 @@
         "baseline": "bottom",
         "dy": -6,
         "fontSize": 13,
-        "fontWeight": 700,
+        "fontWeight": 600,
         "color": "#1E2B34"
       },
       "encoding": {
@@ -328,7 +328,7 @@
           ],
           "axis": {
             "labelAngle": 0,
-            "labelFontSize": 12.5,
+            "labelFontSize": 12,
             "labelColor": "#1E2B34",
             "labelLimit": 300,
             "ticks": false,
@@ -475,7 +475,7 @@
           ],
           "axis": {
             "labelAngle": 0,
-            "labelFontSize": 12.5,
+            "labelFontSize": 12,
             "labelColor": "#1E2B34",
             "labelLimit": 300,
             "ticks": false,
@@ -652,7 +652,7 @@
         "baseline": "bottom",
         "dy": -6,
         "fontSize": 13,
-        "fontWeight": 700,
+        "fontWeight": 600,
         "color": "#1E2B34"
       },
       "encoding": {
@@ -671,7 +671,7 @@
           ],
           "axis": {
             "labelAngle": 0,
-            "labelFontSize": 12.5,
+            "labelFontSize": 12,
             "labelColor": "#1E2B34",
             "labelLimit": 300,
             "ticks": false,

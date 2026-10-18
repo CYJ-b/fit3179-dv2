@@ -118,7 +118,7 @@
         "Inland regions"
       ],
       "header": {
-        "labelFontSize": 15,
+        "labelFontSize": 14,
         "labelFontWeight": 700,
         "labelOrient": "top",
         "labelPadding": 12
@@ -301,7 +301,7 @@
           "align": "right",
           "dx": -10,
           "fontSize": 12,
-          "fontWeight": 700,
+          "fontWeight": 600,
           "baseline": "middle",
           "dy": {
             "expr": "datum.nudge"
@@ -378,7 +378,7 @@
           "align": "left",
           "dx": 10,
           "fontSize": 12,
-          "fontWeight": 700,
+          "fontWeight": 600,
           "baseline": "middle",
           "dy": {
             "expr": "datum.nudge"
