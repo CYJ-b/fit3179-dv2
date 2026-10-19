@@ -35,11 +35,11 @@
     "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
     "title": {
       "font": "Fraunces, Georgia, serif",
-      "fontSize": 20,
+      "fontSize": 26,
       "fontWeight": 600,
       "color": "#1E2B34",
       "anchor": "start",
-      "subtitleFontSize": 13,
+      "subtitleFontSize": 18,
       "subtitleColor": "#5B6770",
       "subtitlePadding": 4,
       "offset": 12
@@ -252,7 +252,7 @@
         {
           "transform": [
             {
-              "calculate": "[datum.TR_NAME, format(datum.coastal_ratio, '.1~%') + ' sea boundary vs ' + format(datum.area_threshold, '.1~%') + ' threshold', 'so it counts as ' + datum.category]",
+              "calculate": "[datum.TR_NAME + ':', format(datum.coastal_ratio, '.1~%') + ' sea boundary vs ' + format(datum.area_threshold, '.1~%') + ' threshold,', 'so it counts as ' + datum.category]",
               "as": "label"
             }
           ],

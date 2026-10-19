@@ -3,7 +3,10 @@
   "description": "Bump chart of the ten countries that sent the most visitors to Australia in 2019, showing how each country's rank among all origin countries changed from 2019 to 2025. China, New Zealand and Malaysia are highlighted; the other seven are grey. Hovering a line highlights that country.",
   "title": {
     "text": "Shift In Ranking For The Top 10 Countries From 2019 to 2025",
-    "subtitle": "Rank of each country by number of visitors to Australia. 1 = the most visitors that year. Hover over a line to follow one country."
+    "subtitle": [
+      "Rank of each country by number of visitors to Australia. 1 = the most visitors that year.",
+      "Hover over a line to follow one country."
+    ]
   },
   "config": {
     "background": "transparent",
@@ -13,11 +16,11 @@
     },
     "title": {
       "font": "Fraunces, Georgia, serif",
-      "fontSize": 20,
+      "fontSize": 26,
       "fontWeight": 600,
       "color": "#1E2B34",
       "anchor": "start",
-      "subtitleFontSize": 13,
+      "subtitleFontSize": 18,
       "subtitleColor": "#5B6770",
       "subtitlePadding": 4,
       "offset": 12

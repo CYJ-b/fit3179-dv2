@@ -6,7 +6,8 @@
       "Recovery Of Coastal Regions VS Inland Regions"
     ],
     "subtitle": [
-      "International visits in 2025 as a percentage of 2019, 100% = same as 2019."
+      "International visits in 2025 as a percentage of 2019.",
+      "100% = same as 2019."
     ]
   },
   "width": 520,
@@ -19,11 +20,11 @@
     },
     "title": {
       "font": "Fraunces, Georgia, serif",
-      "fontSize": 20,
+      "fontSize": 26,
       "fontWeight": 600,
       "color": "#1E2B34",
       "anchor": "start",
-      "subtitleFontSize": 13,
+      "subtitleFontSize": 18,
       "subtitleColor": "#5B6770",
       "subtitlePadding": 4,
       "offset": 12

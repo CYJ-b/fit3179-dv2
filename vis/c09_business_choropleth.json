@@ -40,11 +40,11 @@
     "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
     "title": {
       "font": "Fraunces, Georgia, serif",
-      "fontSize": 20,
+      "fontSize": 26,
       "fontWeight": 600,
       "color": "#1E2B34",
       "anchor": "start",
-      "subtitleFontSize": 13,
+      "subtitleFontSize": 18,
       "subtitleColor": "#5B6770",
       "subtitlePadding": 4,
       "offset": 12
@@ -455,12 +455,19 @@
       "data": {
         "values": [
           {
+            "t": "Coast vs inland density",
+            "dy": 0,
+            "head": true
+          },
+          {
             "t": "Coast: 0.118 businesses per km²",
-            "dy": 0
+            "dy": 18,
+            "head": false
           },
           {
             "t": "Inland: 0.008 (the coast is 14× denser)",
-            "dy": 17
+            "dy": 35,
+            "head": false
           }
         ]
       },
@@ -469,7 +476,10 @@
         "align": "left",
         "x": 6,
         "y": {
-          "expr": "12 + datum.dy"
+          "expr": "296 + datum.dy"
+        },
+        "fontWeight": {
+          "expr": "datum.head ? 700 : 400"
         }
       },
       "encoding": {

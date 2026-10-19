@@ -10,7 +10,9 @@ body {
 }
 
 h1, h2 { font-family: "Fraunces", Georgia, serif; }
-h1 { text-align: center; }
+h1 { text-align: center; font-size: 3.2rem; line-height: 1.2; }
+h2 { font-size: 2.2rem; line-height: 1.25; }
+h3 { font-size: 1.6rem; }
 
 section { margin-top: 4rem; }
 /* each chart and its paragraph sit together in their own white card */
@@ -35,6 +37,23 @@ p { max-width: 40em; }
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* chart titles are drawn in HTML (see main.js) so they all start at the card's left edge,
+   whatever the width of the chart under them */
+.chart-title { margin: 0 0 0.75rem; }
+.chart-title-text {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #1e2b34;
+}
+.chart-subtitle {
+  margin-top: 4px;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #5b6770;
 }
 
 /* paragraph box centred under the chart, text stays left-aligned */

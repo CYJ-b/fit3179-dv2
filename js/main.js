@@ -19,12 +19,46 @@ const charts = {
   c16: "vis/c16_jobs_butterfly.json"
 };
 
+// one line per array entry, like Vega does
+function lines(text) {
+  const div = document.createElement("div");
+  [].concat(text).forEach((line, i) => {
+    if (i > 0) div.appendChild(document.createElement("br"));
+    div.appendChild(document.createTextNode(line));
+  });
+  return div;
+}
+
+// Draw the spec's title above the chart in HTML instead of inside the canvas, so every title
+// starts at the card's left edge even though the charts themselves are centred.
+function addTitle(el, title) {
+  if (!title) return;
+  const box = document.createElement("div");
+  box.className = "chart-title";
+  const text = lines(title.text);
+  text.className = "chart-title-text";
+  box.appendChild(text);
+  if (title.subtitle) {
+    const sub = lines(title.subtitle);
+    sub.className = "chart-subtitle";
+    box.appendChild(sub);
+  }
+  // side-by-side cards: the chart already sits at the left of its grid cell, so the title goes inside it
+  if (el.parentElement.classList.contains("side")) el.prepend(box);
+  else el.before(box);
+}
+
 for (const [id, path] of Object.entries(charts)) {
   fetch(path)
     .then(res => {
       if (!res.ok) throw new Error(`HTTP ${res.status} loading ${path}`);
       return res.json();
     })
-    .then(spec => vegaEmbed("#" + id, spec, { actions: false }))
+    .then(spec => {
+      const el = document.getElementById(id);
+      const title = spec.title;
+      delete spec.title;
+      return vegaEmbed(el, spec, { actions: false }).then(() => addTitle(el, title));
+    })
     .catch(err => console.error("Failed to load " + path, err));
 }

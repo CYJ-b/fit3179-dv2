@@ -89,10 +89,11 @@
     },
     "title": {
       "font": "Fraunces, Georgia, serif",
-      "fontSize": 20,
+      "fontSize": 26,
       "fontWeight": 600,
       "color": "#1E2B34",
-      "subtitleFontSize": 13,
+      "subtitleFontSize": 18,
+      "anchor": "start",
       "subtitleColor": "#5B6770",
       "subtitlePadding": 4,
       "offset": 12
