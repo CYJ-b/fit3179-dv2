@@ -3,7 +3,7 @@
   "description": "Proportional symbol map of tourism spend in Australia's 42 coastal tourism regions. Circle area is spend in 2024-25 (domestic and international tourists, $ million) and circle colour is spend in 2024-25 as an index of 2018-19 spend, in five classes. Inland regions are not shown. A State dropdown centres the map on a state or all of Australia, a Zoom slider zooms in or out, and a checkbox hides regions outside the chosen state.",
   "title": {
     "text": [
-      "Coastal Region Spend in 2024-2025"
+      "Coastal Region Spend In 2024-2025"
     ],
     "subtitle": [
       "From both domestic and international tourists.",
@@ -50,8 +50,8 @@
       "offset": 12
     },
     "legend": {
-      "labelFontSize": 12,
-      "titleFontSize": 12,
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": 600,
       "labelColor": "#1E2B34",
       "titleColor": "#1E2B34",

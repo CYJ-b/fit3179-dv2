@@ -45,8 +45,8 @@
       "offset": 12
     },
     "legend": {
-      "labelFontSize": 12,
-      "titleFontSize": 12,
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": 600,
       "labelColor": "#1E2B34",
       "titleColor": "#1E2B34",
@@ -134,7 +134,8 @@
             "legendX": 6,
             "legendY": 60,
             "labelExpr": "datum.value == 'coastal' ? 'Coastal region (42)' : 'Inland region (34)'",
-            "titleLimit": 260
+            "titleLimit": 260,
+            "symbolSize": 150
           }
         },
         "strokeWidth": {

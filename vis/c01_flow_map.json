@@ -49,8 +49,8 @@
       "offset": 12
     },
     "legend": {
-      "labelFontSize": 12,
-      "titleFontSize": 12,
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": 600,
       "labelColor": "#1E2B34",
       "titleColor": "#1E2B34",
@@ -161,7 +161,7 @@
         "color": {
           "field": "pct_class",
           "type": "ordinal",
-          "title": "Arrivals Amount Indexed to 2019",
+          "title": ["Arrivals Amount", "Indexed to 2019"],
           "sort": [
             "a",
             "b",
@@ -190,10 +190,10 @@
           },
           "legend": {
             "orient": "none",
-            "legendX": 745,
-            "legendY": 278,
-            "symbolStrokeWidth": 4,
-            "symbolSize": 400,
+            "legendX": 738,
+            "legendY": 270,
+            "symbolStrokeWidth": 4.5,
+            "symbolSize": 450,
             "rowPadding": 3,
             "labelExpr": "({a: 'Under 10%', b: '10% to 50%', c: '50% to 90%', d: '90% to 100%', e: '100% to 120%', f: '120% or more'})[datum.value]"
           }
@@ -228,10 +228,10 @@
               500000,
               1000000
             ],
-            "symbolSize": 400,
+            "symbolSize": 450,
             "orient": "none",
             "legendX": 6,
-            "legendY": 292,
+            "legendY": 286,
             "rowPadding": 3,
             "symbolStrokeColor": "#5B6770"
           }

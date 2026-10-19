@@ -44,8 +44,8 @@
       "titleColor": "#1E2B34"
     },
     "legend": {
-      "labelFontSize": 12,
-      "titleFontSize": 12,
+      "labelFontSize": 13,
+      "titleFontSize": 13,
       "titleFontWeight": 600,
       "labelColor": "#1E2B34",
       "titleColor": "#1E2B34",
@@ -199,7 +199,7 @@
           },
           "legend": {
             "orient": "bottom",
-            "gradientLength": 260,
+            "gradientLength": 300,
             "format": "d"
           }
         },

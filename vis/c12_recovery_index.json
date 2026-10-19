@@ -109,7 +109,7 @@
       "tickColor": "#A8AEB3"
     },
     "legend": {
-      "labelFontSize": 12,
+      "labelFontSize": 13,
       "labelColor": "#1E2B34",
       "padding": 4
     },
@@ -242,8 +242,8 @@
             "legend": {
               "orient": "top",
               "symbolType": "stroke",
-              "symbolSize": 400,
-              "symbolStrokeWidth": 4,
+              "symbolSize": 450,
+              "symbolStrokeWidth": 4.5,
               "labelExpr": "datum.value == 'coastal' ? 'Coastal regions' : 'Inland regions'"
             }
           }

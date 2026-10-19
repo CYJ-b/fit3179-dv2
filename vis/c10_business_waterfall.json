@@ -41,7 +41,7 @@
       "tickColor": "#A8AEB3"
     },
     "legend": {
-      "labelFontSize": 12,
+      "labelFontSize": 13,
       "labelColor": "#1E2B34",
       "padding": 4
     },
@@ -196,7 +196,7 @@
               },
               "legend": {
                 "orient": "top",
-                "symbolSize": 140,
+                "symbolSize": 180,
                 "symbolStrokeWidth": 0
               }
             },
