@@ -259,10 +259,14 @@
       }
     },
     {
+      "transform": [
+        {
+          "calculate": "indexof([\"Sydney\", \"Melbourne\", \"Brisbane\", \"Destination Perth\", \"Gold Coast\"], datum.TR_NAME) >= 0 ? 'Top 5' : 'Other'",
+          "as": "rank_group"
+        }
+      ],
       "mark": {
         "type": "circle",
-        "opacity": 0.72,
-        "strokeWidth": 0.6,
         "stroke": "#000000"
       },
       "encoding": {
@@ -323,8 +327,27 @@
             "orient": "none",
             "legendX": 100,
             "legendY": 90,
+            "symbolOpacity": 0.9,
             "labelExpr": "datum.value == 'coastal' ? 'Coastal region' : 'Inland region'"
           }
+        },
+        "opacity": {
+          "field": "rank_group",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Top 5", "Other"],
+            "range": [0.9, 0.7]
+          },
+          "legend": null
+        },
+        "strokeWidth": {
+          "field": "rank_group",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Top 5", "Other"],
+            "range": [1.5, 0.5]
+          },
+          "legend": null
         },
         "order": {
           "field": "visitors",

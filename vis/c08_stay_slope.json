@@ -35,6 +35,10 @@
       "as": "band"
     },
     {
+      "calculate": "datum.length_of_stay != '31 or more nights' ? '#1E2B34' : datum.category == 'coastal' ? '#0B5E8E' : '#C99A3B'",
+      "as": "txt_hex"
+    },
+    {
       "calculate": "datum.category == 'coastal' ? 'Coastal regions' : 'Inland regions'",
       "as": "panel"
     },
@@ -260,6 +264,11 @@
           "text": {
             "field": "pct_text",
             "type": "nominal"
+          },
+          "color": {
+            "field": "txt_hex",
+            "type": "nominal",
+            "scale": null
           }
         }
       },
@@ -304,6 +313,11 @@
           "text": {
             "field": "end_label",
             "type": "nominal"
+          },
+          "color": {
+            "field": "txt_hex",
+            "type": "nominal",
+            "scale": null
           }
         }
       }

@@ -196,7 +196,8 @@
               },
               "legend": {
                 "orient": "top",
-                "symbolSize": 140
+                "symbolSize": 140,
+                "symbolStrokeWidth": 0
               }
             },
             "tooltip": [
@@ -316,7 +317,8 @@
           "mark": {
             "type": "bar",
             "clip": true,
-            "width": 70
+            "width": 70,
+            "stroke": "#D55E00"
           },
           "encoding": {
             "x": {
@@ -342,6 +344,13 @@
             "color": {
               "field": "kind",
               "type": "nominal"
+            },
+            "strokeWidth": {
+              "condition": {
+                "test": "indexof(['Non-employing', 'Micro'], datum.size_band) >= 0",
+                "value": 3
+              },
+              "value": 0
             },
             "tooltip": [
               {

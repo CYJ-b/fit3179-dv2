@@ -25,7 +25,7 @@ section { margin-top: 4rem; }
   box-shadow: 0 1px 3px rgba(30, 43, 52, 0.08);
 }
 .block > p { margin-bottom: 0.5rem; }
-p { max-width: 40em; }
+p { max-width: 55ch; } /* ~60 characters of prose per line (ch = width of "0", wider than average text) */
 
 .chart { overflow-x: auto; margin: 0.5rem 0; }
 
@@ -62,19 +62,20 @@ p { max-width: 40em; }
   margin-right: auto;
 }
 
-/* intro paragraph under the main title, box centred, text left-aligned */
-h1 + p {
-  margin-left: auto;
-  margin-right: auto;
-}
+/* first letter of the left-hand paragraph in every two-column text is slightly larger */
+.text-pair > p:first-child::first-letter { font-size: 2em; line-height: 0; } /* line-height 0 so the bigger letter doesn't push the next line down */
 
-/* conclusion list: box centred on the page, bullet text stays left-aligned */
-#section-7 ul {
-  width: fit-content;
-  max-width: 40em;
-  margin-left: auto;
-  margin-right: auto;
+/* long paragraphs split into two columns under a wide chart; stacks into one when there isn't room */
+.text-pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 35ch), 45ch)); /* ~50 characters per line */
+  justify-content: center;
+  gap: 0 2rem;
 }
+.text-pair > p { margin-bottom: 0.5rem; }
+
+/* conclusion lists sit in the same two-column layout; no extra margins so they line up with the columns */
+.text-pair > ul { margin: 0; }
 
 footer { margin-top: 4rem; font-size: 0.9rem; color: #5b6770; }
 

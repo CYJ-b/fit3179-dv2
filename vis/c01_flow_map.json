@@ -2,9 +2,12 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "Flow map of international visitor arrivals to Australia from the 22 largest origin countries. Line width is the number of arrivals in the selected year and line colour is that year as a percentage of the same country's 2019 arrivals. A year slider moves between 2019 and 2025.",
   "title": {
-    "text": "How Did The Number of Visitors Change Over Time?",
+    "text": [
+      "How Did The Number of International Visitors Change",
+      "Over Time?"
+    ],
     "subtitle": [
-      "Overseas arrivals to Australia by country of residence.",
+      "Overseas arrivals to Australia based on country of residence.",
       "Drag the slider to change the year."
     ]
   },
@@ -158,7 +161,7 @@
         "color": {
           "field": "pct_class",
           "type": "ordinal",
-          "title": "Arrivals as % of 2019",
+          "title": "Arrivals Amount Indexed to 2019",
           "sort": [
             "a",
             "b",
