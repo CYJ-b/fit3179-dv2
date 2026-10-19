@@ -6,7 +6,7 @@
     "subtitle": [
       "COVID-19 deaths reported to the WHO worldwide (top).", 
       "Monthly visitor arrivals to Australia (bottom).",
-      "Hover to compare any month."
+      "* Hover over either chart to compare any month."
     ]
   },
   "config": {

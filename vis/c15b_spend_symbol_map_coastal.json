@@ -7,8 +7,8 @@
     ],
     "subtitle": [
       "From both domestic and international tourists.",
-      "Hover over a circle for details.",
-      "Use the State and Zoom controls to look closer."
+      "* Hover over a circle for details.",
+      "* Use the Zoom Centre and Zoom controls to look closer."
     ]
   },
   "width": 960,
@@ -639,7 +639,7 @@
     },
     {
       "name": "state_filter",
-      "value": true,
+      "value": false,
       "bind": {
         "input": "checkbox",
         "name": "Show For Selected Centre Only: "

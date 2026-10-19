@@ -29,6 +29,9 @@ p { max-width: 55ch; } /* ~60 characters of prose per line (ch = width of "0", w
 
 .chart { overflow-x: auto; margin: 0.5rem 0; }
 
+/* short note explaining the * tips under the chart titles */
+.how-to { max-width: none; margin: 1rem 0; font-size: 0.95rem; color: #5b6770; text-align: center; }
+
 /* charts with the paragraph beneath are centred on the page */
 /* the embed element is the .chart div itself (inline-block), so centre it with auto margins */
 .block:not(.side) > .chart {

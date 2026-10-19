@@ -8,7 +8,8 @@
     ],
     "subtitle": [
       "Overseas arrivals to Australia based on country of residence.",
-      "Drag the slider to change the year."
+      "* Hover over a line or dot for details.",
+      "* Drag the slider to change the year."
     ]
   },
   "width": 900,

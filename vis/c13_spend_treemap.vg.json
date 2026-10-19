@@ -18,7 +18,8 @@
       "Economic Contributions Breakdown By Tourism Industries"
     ],
     "subtitle": [
-      "Area = money spent. Hover over a rectangle for details."
+      "Area = money spent.",
+      "* Hover over a rectangle for details."
     ],
     "anchor": "start",
     "font": "Fraunces, Georgia, serif",
