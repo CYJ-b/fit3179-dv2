@@ -148,7 +148,7 @@
         "y": {
           "field": "state_name",
           "type": "nominal",
-          "title": null,
+          "title": "State / territory",
           "sort": {
             "field": "gap",
             "op": "max",

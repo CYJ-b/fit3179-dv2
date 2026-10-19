@@ -2,11 +2,17 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "Choropleth map of tourism businesses per square kilometre in each of Australia's 76 tourism regions in 2025, in seven classes. Hovering a region highlights it and shows its details. A dropdown centres the map on a state or all of Australia and a zoom slider zooms in or out.",
   "title": {
-    "text": "Amount Of Tourism Businesses Across The Tourism Regions In 2025",
-    "subtitle": "Darker means more businesses packed into each square kilometre. Hover over a region for details, or use the state and zoom controls to look closer."
+    "text": [
+      "Amount Of Tourism Businesses Across",
+      "The Tourism Regions In 2025"
+    ],
+    "subtitle": [
+      "Hover over a region for details,",
+      "or use the state and zoom controls to look closer."
+    ]
   },
   "width": 960,
-  "height": 480,
+  "height": 450,
   "projection": {
     "type": "albers",
     "parallels": [
@@ -500,12 +506,12 @@
           "Tasmania",
           "Northern Territory"
         ],
-        "name": "State: "
+        "name": "Zoom Centre: "
       }
     },
     {
       "name": "zoom_level",
-      "value": 1,
+      "value": 0.9,
       "bind": {
         "input": "range",
         "min": 0.5,

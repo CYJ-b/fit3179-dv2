@@ -3,7 +3,11 @@
   "description": "Two aligned time-series panels from January 2018. The top panel shows monthly COVID-19 deaths reported to the WHO worldwide (January 2020 to June 2023); the bottom panel shows monthly overseas visitor arrivals to Australia. Dashed lines mark the border closure on 20 March 2020 and the reopening on 21 February 2022.",
   "title": {
     "text": "Number Of Arrivals And Deaths Reported Over Time",
-    "subtitle": "Monthly visitor arrivals to Australia (bottom) and COVID-19 deaths reported to the WHO worldwide (top). Hover to compare any month."
+    "subtitle": [
+      "COVID-19 deaths reported to the WHO worldwide (top).", 
+      "Monthly visitor arrivals to Australia (bottom).",
+      "Hover to compare any month."
+    ]
   },
   "config": {
     "background": "transparent",
@@ -290,7 +294,7 @@
                   }
                 ]
               },
-              "title": null,
+              "title": "Year",
               "axis": {
                 "format": "%Y",
                 "tickCount": "year",

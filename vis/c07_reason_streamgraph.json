@@ -2,9 +2,15 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "Streamgraph of international visits to coastal tourism regions by main reason for the trip, quarter by quarter from 2018 to the first quarter of 2026. Layers are holiday, visiting friends and relatives, business, education, and employment and other reasons.",
   "title": {
-    "text": "The Main Reasons For Visiting Coastal Regions Across Time",
-    "subtitle": "International visits to coastal regions by main reason for the trip, each quarter. The thickness of a band is the number of visits."
-  },
+    "text": [
+      "The Main Reasons For Visiting Coastal Regions",
+      "Across Time"
+    ],
+    "subtitle": [
+      "Thickness of a band is the number of visits.",
+      "Hover to see further details."
+    ]
+    },
   "width": 880,
   "height": 380,
   "config": {
@@ -27,6 +33,9 @@
     "axis": {
       "labelFontSize": 12,
       "labelColor": "#5B6770",
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "titleColor": "#1E2B34",
       "domainColor": "#A8AEB3",
       "tickColor": "#A8AEB3"
     },
@@ -104,7 +113,7 @@
         "x": {
           "field": "date",
           "type": "temporal",
-          "title": null,
+          "title": "Year",
           "axis": {
             "format": "%Y",
             "tickCount": "year",
@@ -159,8 +168,7 @@
               4700000
             ],
             "nice": false
-          },
-          "axis": null
+          }
         },
         "text": {
           "field": "t",
@@ -200,7 +208,15 @@
         },
         "y": {
           "field": "y0",
-          "type": "quantitative"
+          "type": "quantitative",
+          "axis": {
+            "title": "Visits per quarter (read band thickness)",
+            "format": "~s",
+            "values": [0, 1000000, 2000000, 3000000, 4000000],
+            "grid": true,
+            "gridColor": "#E3DED3",
+            "gridDash": [2, 3]
+          }
         },
         "y2": {
           "field": "y1"

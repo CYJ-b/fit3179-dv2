@@ -13,6 +13,7 @@ const charts = {
   c11: "vis/c11_coastal_waffle.json",
   c12: "vis/c12_recovery_index.json",
   c13: "vis/c13_spend_treemap.vg.json",
+  c13b: "vis/c13b_gva_treemap.vg.json",
   c14: "vis/c14_coastal_choropleth.json",
   c15b: "vis/c15b_spend_symbol_map_coastal.json",
   c16: "vis/c16_jobs_butterfly.json"

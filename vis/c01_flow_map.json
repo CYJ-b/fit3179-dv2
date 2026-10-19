@@ -3,10 +3,13 @@
   "description": "Flow map of international visitor arrivals to Australia from the 22 largest origin countries. Line width is the number of arrivals in the selected year and line colour is that year as a percentage of the same country's 2019 arrivals. A year slider moves between 2019 and 2025.",
   "title": {
     "text": "How Did The Number of Visitors Change Over Time?",
-    "subtitle": "Overseas arrivals to Australia by country of residence. Drag the slider to change the year (starts on 2021, the low point)."
+    "subtitle": [
+      "Overseas arrivals to Australia by country of residence.",
+      "Drag the slider to change the year."
+    ]
   },
   "width": 900,
-  "height": 420,
+  "height": 390,
   "projection": {
     "type": "equalEarth",
     "rotate": [

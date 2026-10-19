@@ -5,7 +5,11 @@
     "text": [
       "Coastal Region Spend in 2024-2025"
     ],
-    "subtitle": "Coastal regions only. Hover over a circle for details. Use the State and Zoom controls to look closer."
+    "subtitle": [
+      "From both domestic and international tourists.",
+      "Hover over a circle for details.",
+      "Use the State and Zoom controls to look closer."
+    ]
   },
   "width": 960,
   "height": 480,
@@ -313,11 +317,11 @@
           "filter": "indexof([\"Sydney\", \"Melbourne\", \"Brisbane\", \"Destination Perth\", \"Gold Coast\"], datum.TR_NAME) >= 0"
         },
         {
-          "calculate": "datum.centre_lon + ({\"Sydney\": 5, \"Melbourne\": -3.8, \"Brisbane\": 5.3, \"Destination Perth\": -4.5, \"Gold Coast\": 5.3})[datum.TR_NAME]",
+          "calculate": "datum.centre_lon + ({\"Sydney\": 5, \"Melbourne\": 4.5, \"Brisbane\": 5.3, \"Destination Perth\": -4.5, \"Gold Coast\": 5.3})[datum.TR_NAME]",
           "as": "l_lon"
         },
         {
-          "calculate": "datum.centre_lat + ({\"Sydney\": -1, \"Melbourne\": -3, \"Brisbane\": 1.9, \"Destination Perth\": 0, \"Gold Coast\": -1.6})[datum.TR_NAME]",
+          "calculate": "datum.centre_lat + ({\"Sydney\": -1, \"Melbourne\": -2.5, \"Brisbane\": 1.9, \"Destination Perth\": 0, \"Gold Coast\": -1.6})[datum.TR_NAME]",
           "as": "l_lat"
         }
       ],
@@ -379,15 +383,15 @@
           "as": "label"
         },
         {
-          "calculate": "datum.centre_lon + ({\"Sydney\": 5, \"Melbourne\": -3.8, \"Brisbane\": 5.3, \"Destination Perth\": -4.5, \"Gold Coast\": 5.3})[datum.TR_NAME]",
+          "calculate": "datum.centre_lon + ({\"Sydney\": 5, \"Melbourne\": 4.5, \"Brisbane\": 5.3, \"Destination Perth\": -4.5, \"Gold Coast\": 5.3})[datum.TR_NAME]",
           "as": "l_lon"
         },
         {
-          "calculate": "datum.centre_lat + ({\"Sydney\": -1, \"Melbourne\": -3, \"Brisbane\": 1.9, \"Destination Perth\": 0, \"Gold Coast\": -1.6})[datum.TR_NAME]",
+          "calculate": "datum.centre_lat + ({\"Sydney\": -1, \"Melbourne\": -2.5, \"Brisbane\": 1.9, \"Destination Perth\": 0, \"Gold Coast\": -1.6})[datum.TR_NAME]",
           "as": "l_lat"
         },
         {
-          "calculate": "({\"Sydney\": \"left\", \"Melbourne\": \"right\", \"Brisbane\": \"left\", \"Destination Perth\": \"right\", \"Gold Coast\": \"left\"})[datum.TR_NAME]",
+          "calculate": "({\"Sydney\": \"left\", \"Melbourne\": \"left\", \"Brisbane\": \"left\", \"Destination Perth\": \"right\", \"Gold Coast\": \"left\"})[datum.TR_NAME]",
           "as": "lab_align"
         }
       ],
@@ -599,7 +603,7 @@
           "Tasmania",
           "Northern Territory"
         ],
-        "name": "State: "
+        "name": "Zoom Centre: "
       }
     },
     {
@@ -618,7 +622,7 @@
       "value": true,
       "bind": {
         "input": "checkbox",
-        "name": "Selected state only: "
+        "name": "Show For Selected Centre Only: "
       }
     }
   ]

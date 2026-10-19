@@ -3,10 +3,11 @@
   "description": "Butterfly bar chart of direct tourism jobs in Australia's coastal tourism regions in 2024-25, one row per industry. Full-time jobs extend left and part-time jobs extend right from a shared centre line, in thousand jobs. Rows are sorted by total jobs, and each row is labelled with its part-time share.",
   "title": {
     "text": [
-      "Distribution Of Tourism Jobs In Coastal Regions"
+      "Distribution Of Tourism Jobs In Coastal Regions",
+      "In 2024-2025"
     ],
     "subtitle": [
-      "Direct tourism jobs in coastal regions, 2024-25, by industry.",
+      "Direct tourism jobs in coastal regions, by industry.",
       "Hover over a bar for details."
     ]
   },
@@ -86,7 +87,7 @@
             "order": "descending"
           },
           "axis": {
-            "title": null,
+            "title": "Industry",
             "labelLimit": 220,
             "labelColor": "#1E2B34",
             "domain": false,

@@ -3,10 +3,12 @@
   "description": "Heatmap of seasonality. Each row is one of the 20 coastal tourism regions with the most international visits in 2025, ordered from north to south. Each column is a quarter of the year and each cell shows the share of the region's yearly visits that fall in that quarter, 2023 to 2025 combined.",
   "title": {
     "text": [
-      "Seasonality Of Amount Of Visits For The Top 20 Coastal Regions"
+      "Seasonality Of Amount Of Visits For The Top 20",
+      "Coastal Regions"
     ],
     "subtitle": [
-      "Share of each region's yearly visits that fall in each quarter (2023–2025 combined)"
+      "Share of each region's yearly visits that",
+      "fall in each quarter (2023–2025 combined)"
     ]
   },
   "width": 480,
@@ -171,7 +173,7 @@
         "y": {
           "field": "TR_NAME",
           "type": "nominal",
-          "title": null,
+          "title": "Region",
           "sort": {
             "field": "lat",
             "op": "max",

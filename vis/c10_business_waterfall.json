@@ -2,10 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "Waterfall chart of coastal tourism businesses by size from 2021 to 2025. A grey bar shows the 2021 total, floating bars show the change in each size band (indigo for an increase, pink for a decrease), and a final grey bar shows the 2025 total. The vertical axis starts at 280,000.",
   "title": {
-    "text": "Tourism Businesses In 2021 VS 2025",
+    "text": "Coastal Tourism Businesses from 2021 to 2025",
     "subtitle": [
-      "Tourism businesses in coastal regions, by number of employees. Totals are the sum of the size bands.",
-      "The vertical axis starts at 280,000 so that the changes are visible."
+      "The vertical axis starts at 280,000 so that",
+      "the changes are visible."
     ]
   },
   "width": 840,

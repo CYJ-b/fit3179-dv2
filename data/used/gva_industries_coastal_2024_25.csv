@@ -1,0 +1,23 @@
+id,parent,label,group,size,source_industry
+root,,All coastal tourism GVA,,,
+group_core_tourism_direct,root,Core tourism (direct),Core tourism (direct),,
+group_connected_and_other_direct,root,Connected and other (direct),Connected and other (direct),,
+group_indirect_supply_chains,root,Indirect (supply chains),Indirect (supply chains),,
+industry_accommodation,group_core_tourism_direct,Accommodation,Core tourism (direct),8466.2107,Accommodation
+industry_air_water_and_other_transport,group_core_tourism_direct,"Air, water and other transport",Core tourism (direct),7822.6026,"Air, water and other passenger transport"
+industry_other_retail,group_connected_and_other_direct,Other retail,Connected and other (direct),7548.8022,Other retail trade
+industry_cafes_and_restaurants,group_core_tourism_direct,Cafes and restaurants,Core tourism (direct),7446.1219,"Cafes, restaurants and takeaway food services"
+industry_ownership_of_dwellings,group_core_tourism_direct,Ownership of dwellings,Core tourism (direct),6870.3124,Ownership of dwellings
+industry_travel_agents_and_info_centres,group_core_tourism_direct,Travel agents and info centres,Core tourism (direct),5073.675,Travel agency and information centre services
+industry_education_and_training,group_connected_and_other_direct,Education and training,Connected and other (direct),5023.8281,Education and training
+industry_pubs_clubs_and_bars,group_core_tourism_direct,"Pubs, clubs and bars",Core tourism (direct),2929.1489,"Clubs, pubs, taverns and bars"
+industry_road_passenger_transport,group_core_tourism_direct,Road passenger transport,Core tourism (direct),2346.3953,Other road passenger transport
+industry_all_other_industries,group_connected_and_other_direct,All other industries,Connected and other (direct),1462.8735,All other industries
+industry_sports_and_recreation,group_core_tourism_direct,Sports and recreation,Core tourism (direct),1434.4784,Sports and recreation services
+industry_cultural_services,group_core_tourism_direct,Cultural services,Core tourism (direct),1137.9657,Cultural services
+industry_rail_passenger_transport,group_core_tourism_direct,Rail passenger transport,Core tourism (direct),957.9113,Rail passenger transport
+industry_transport_equipment_rental,group_core_tourism_direct,Transport equipment rental,Core tourism (direct),913.1727,Transport equipment rental
+industry_fuel_retailing,group_connected_and_other_direct,Fuel retailing,Connected and other (direct),781.041,Automotive fuel retailing
+industry_taxi_transport,group_core_tourism_direct,Taxi transport,Core tourism (direct),638.4865,Taxi transport
+industry_casinos_and_gambling,group_core_tourism_direct,Casinos and gambling,Core tourism (direct),301.6259,Casinos and other gambling services
+indirect_supply_chains,group_indirect_supply_chains,Indirect (supply chains),Indirect (supply chains),61234.3523,Summary INDIRECT

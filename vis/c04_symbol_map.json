@@ -3,10 +3,12 @@
   "description": "Proportional symbol map of international visits to each of Australia's 76 tourism regions. Circle area is the number of visits in the selected year and circle colour shows whether the region is coastal (blue) or inland (sand). A year slider moves between 2019 and 2025, a dropdown centres the map on a state or all of Australia, a zoom slider zooms in or out, and a checkbox hides regions outside the chosen state.",
   "title": {
     "text": "Number Of Visits For Each Tourism Region",
-    "subtitle": "International visits to each tourism region, by year. A visit is one trip counted once per region visited. Drag the slider to change the year."
-  },
+    "subtitle": [
+      "Hover over the circles to see details."
+    ]
+    },
   "width": 960,
-  "height": 480,
+  "height": 450,
   "projection": {
     "type": "albers",
     "parallels": [
@@ -55,12 +57,12 @@
           "Tasmania",
           "Northern Territory"
         ],
-        "name": "State: "
+        "name": "Zoom Centre: "
       }
     },
     {
       "name": "zoom_level",
-      "value": 1,
+      "value": 0.9,
       "bind": {
         "input": "range",
         "min": 0.5,
@@ -74,7 +76,7 @@
       "value": true,
       "bind": {
         "input": "checkbox",
-        "name": "Selected state only: "
+        "name": "Show For Selected Centre Only: "
       }
     },
     {
@@ -226,11 +228,11 @@
           "filter": "indexof([\"Sydney\", \"Melbourne\", \"Brisbane\", \"Destination Perth\", \"Gold Coast\"], datum.TR_NAME) >= 0"
         },
         {
-          "calculate": "datum.centre_lon + ({\"Sydney\": 5, \"Melbourne\": -3.8, \"Brisbane\": 5.3, \"Destination Perth\": -4.5, \"Gold Coast\": 5.3})[datum.TR_NAME]",
+          "calculate": "datum.centre_lon + ({\"Sydney\": 5, \"Melbourne\": 4.5, \"Brisbane\": 5.3, \"Destination Perth\": -4.5, \"Gold Coast\": 5.3})[datum.TR_NAME]",
           "as": "l_lon"
         },
         {
-          "calculate": "datum.centre_lat + ({\"Sydney\": -1, \"Melbourne\": -3, \"Brisbane\": 1.9, \"Destination Perth\": 0, \"Gold Coast\": -1.6})[datum.TR_NAME]",
+          "calculate": "datum.centre_lat + ({\"Sydney\": -1, \"Melbourne\": -2.5, \"Brisbane\": 1.9, \"Destination Perth\": 0, \"Gold Coast\": -1.6})[datum.TR_NAME]",
           "as": "l_lat"
         }
       ],
@@ -375,15 +377,15 @@
           "as": "label"
         },
         {
-          "calculate": "datum.centre_lon + ({\"Sydney\": 5, \"Melbourne\": -3.8, \"Brisbane\": 5.3, \"Destination Perth\": -4.5, \"Gold Coast\": 5.3})[datum.TR_NAME]",
+          "calculate": "datum.centre_lon + ({\"Sydney\": 5, \"Melbourne\": 4.5, \"Brisbane\": 5.3, \"Destination Perth\": -4.5, \"Gold Coast\": 5.3})[datum.TR_NAME]",
           "as": "l_lon"
         },
         {
-          "calculate": "datum.centre_lat + ({\"Sydney\": -1, \"Melbourne\": -3, \"Brisbane\": 1.9, \"Destination Perth\": 0, \"Gold Coast\": -1.6})[datum.TR_NAME]",
+          "calculate": "datum.centre_lat + ({\"Sydney\": -1, \"Melbourne\": -2.5, \"Brisbane\": 1.9, \"Destination Perth\": 0, \"Gold Coast\": -1.6})[datum.TR_NAME]",
           "as": "l_lat"
         },
         {
-          "calculate": "({\"Sydney\": \"left\", \"Melbourne\": \"right\", \"Brisbane\": \"left\", \"Destination Perth\": \"right\", \"Gold Coast\": \"left\"})[datum.TR_NAME]",
+          "calculate": "({\"Sydney\": \"left\", \"Melbourne\": \"left\", \"Brisbane\": \"left\", \"Destination Perth\": \"right\", \"Gold Coast\": \"left\"})[datum.TR_NAME]",
           "as": "lab_align"
         }
       ],

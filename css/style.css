@@ -49,6 +49,14 @@ h1 + p {
   margin-right: auto;
 }
 
+/* conclusion list: box centred on the page, bullet text stays left-aligned */
+#section-7 ul {
+  width: fit-content;
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 footer { margin-top: 4rem; font-size: 0.9rem; color: #5b6770; }
 
 /* chart on the left, paragraph on the right (stacks on narrow screens) */

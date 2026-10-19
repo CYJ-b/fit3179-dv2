@@ -1,0 +1,359 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "Treemap of the value added (GVA) by coastal tourism in 2024-25, $122.4 billion in total. Rectangle area is value added. Half is direct value added in 17 industries, grouped into core tourism industries and connected and other industries. The other half is indirect value added in supplier industries, shown as one block.",
+  "width": 680,
+  "height": 520,
+  "padding": {
+    "left": 2,
+    "right": 2,
+    "top": 6,
+    "bottom": 6
+  },
+  "autosize": {
+    "type": "pad",
+    "contains": "padding"
+  },
+  "title": {
+    "text": [
+      "Direct And Indirect Value Added By Coastal Tourism"
+    ],
+    "subtitle": [
+      "Area = value added (GVA).",
+      "Hover over a rectangle for details."
+    ],
+    "anchor": "start",
+    "font": "Fraunces, Georgia, serif",
+    "fontSize": 20,
+    "fontWeight": 600,
+    "color": "#1E2B34",
+    "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "subtitleFontSize": 13,
+    "subtitleColor": "#5B6770",
+    "subtitlePadding": 4,
+    "offset": 12
+  },
+  "config": {
+    "text": {
+      "font": "'Source Sans 3', Helvetica, Arial, sans-serif"
+    }
+  },
+  "data": [
+    {
+      "name": "tree",
+      "url": "data/used/gva_industries_coastal_2024_25.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "size": "number"
+        }
+      },
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "size",
+          "method": "squarify",
+          "round": true,
+          "ratio": 1.3,
+          "sort": {
+            "field": "size",
+            "order": "descending"
+          },
+          "paddingInner": 3,
+          "paddingOuter": 3,
+          "paddingTop": 24,
+          "size": [
+            {
+              "signal": "width"
+            },
+            {
+              "signal": "height"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "!datum.children"
+        },
+        {
+          "type": "formula",
+          "as": "lines",
+          "expr": "({'Air, water and other transport': ['Air, water','and other','transport'], 'Travel agents and info centres': ['Travel agents', 'and info', 'centres'], 'Transport equipment rental': ['Transport', 'equipment', 'rental'], 'Rail passenger transport': ['Rail passenger', 'transport'], 'Road passenger transport': ['Road passenger', 'transport'], 'Ownership of dwellings': ['Ownership of', 'dwellings'], 'Education and training': ['Education', 'and training'], 'Cafes and restaurants': ['Cafes and', 'restaurants'], 'Other retail': ['Other', 'retail'], 'Pubs, clubs and bars': ['Pubs, clubs', 'and bars'], 'Sports and recreation': ['Sports and', 'recreation'], 'Indirect (supply chains)': ['Indirect', '(supply chains)']})[datum.label] || [datum.label]"
+        },
+        {
+          "type": "formula",
+          "as": "nl",
+          "expr": "length(datum.lines)"
+        },
+        {
+          "type": "formula",
+          "as": "maxlen",
+          "expr": "max(length(datum.lines[0]), length(datum.lines[1] || ''), length(datum.lines[2] || ''))"
+        }
+      ]
+    },
+    {
+      "name": "group_totals",
+      "source": "leaves",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": [
+            "group"
+          ],
+          "fields": [
+            "size"
+          ],
+          "ops": [
+            "sum"
+          ],
+          "as": [
+            "total"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "grand",
+      "source": "leaves",
+      "transform": [
+        {
+          "type": "aggregate",
+          "fields": [
+            "size"
+          ],
+          "ops": [
+            "sum"
+          ],
+          "as": [
+            "total"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "groups",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.depth == 1"
+        },
+        {
+          "type": "lookup",
+          "from": "group_totals",
+          "key": "group",
+          "fields": [
+            "group"
+          ],
+          "values": [
+            "total"
+          ],
+          "as": [
+            "total"
+          ]
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "colour",
+      "type": "ordinal",
+      "domain": [
+        "Core tourism (direct)",
+        "Connected and other (direct)",
+        "Indirect (supply chains)"
+      ],
+      "range": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {
+        "data": "groups"
+      },
+      "encode": {
+        "enter": {
+          "tooltip": {
+            "signal": "{'Group': datum.label, 'Value added (GVA)': '$' + format(datum.total / 1000, '.1f') + ' billion', 'Share of coastal tourism GVA': format(datum.total / data('grand')[0].total, '.0%')}"
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "scale": "colour",
+            "field": "group"
+          },
+          "fillOpacity": {
+            "value": 0.22
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "groups"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0 + 6"
+          },
+          "y": {
+            "signal": "datum.y0 + 4"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "text": {
+            "signal": "length(datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn (' + format(datum.total / data('grand')[0].total, '.0%') + ')') * 7.4 <= (datum.x1 - datum.x0 - 12) ? datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn (' + format(datum.total / data('grand')[0].total, '.0%') + ')' : (length(datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn') * 7.4 <= (datum.x1 - datum.x0 - 12) ? datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn' : (length(datum.label) * 7.4 <= (datum.x1 - datum.x0 - 12) ? datum.label : ''))"
+          },
+          "fontSize": {
+            "value": 13
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#1E2B34"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "enter": {
+          "tooltip": {
+            "signal": "datum.label == 'Indirect (supply chains)' ? {'Type': 'Indirect', 'Value added (GVA)': '$' + format(datum.size / 1000, '.1f') + ' billion', 'Share of coastal tourism GVA': format(datum.size / data('grand')[0].total, '.1%'), 'What it is': 'Value added by the suppliers that serve tourism businesses. The source does not split it by industry'} : {'Industry': datum.label, 'Group': datum.group, 'Value added (GVA)': '$' + format(datum.size / 1000, '.1f') + ' billion', 'Share of coastal tourism GVA': format(datum.size / data('grand')[0].total, '.1%')}"
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "scale": "colour",
+            "field": "group"
+          },
+          "stroke": {
+            "value": "#FBF8F2"
+          },
+          "strokeWidth": {
+            "value": 1.5
+          }
+        },
+        "hover": {
+          "stroke": {
+            "value": "#1E2B34"
+          },
+          "strokeWidth": {
+            "value": 2.5
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0 + 7"
+          },
+          "y": {
+            "signal": "datum.y0 + 7"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "text": {
+            "signal": "(datum.maxlen * 6.8 <= (datum.x1 - datum.x0 - 12) && datum.y1 - datum.y0 > 34 + (datum.nl - 1) * 15) ? datum.lines : ''"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "signal": "datum.group == 'Indirect (supply chains)' ? '#1E2B34' : '#FFFFFF'"
+          },
+          "lineHeight": {
+            "value": 15
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0 + 7"
+          },
+          "y": {
+            "signal": "datum.y0 + 10 + datum.nl * 15"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "text": {
+            "signal": "(datum.maxlen * 6.8 <= (datum.x1 - datum.x0 - 12) && datum.y1 - datum.y0 > 46 + (datum.nl - 1) * 15) ? '$' + format(datum.size / 1000, '.1f') + 'bn' : ''"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "signal": "datum.group == 'Indirect (supply chains)' ? '#1E2B34' : '#FFFFFF'"
+          }
+        }
+      }
+    }
+  ]
+}
