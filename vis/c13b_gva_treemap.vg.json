@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v6.json",
-  "description": "Treemap of the value added (GVA) by coastal tourism in 2024-25, $122.4 billion in total. Rectangle area is value added. Half is direct value added in 17 industries, grouped into core tourism industries and connected and other industries. The other half is indirect value added in supplier industries, shown as one block.",
+  "description": "Treemap of the value added (GVA) by coastal tourism in 2024-25, $122.4 billion in total. Rectangle area is value added. Half is direct value added in 17 industries, nested in one Direct block and grouped into core tourism industries and connected and other industries. The other half is indirect value added in supplier industries, shown as one block.",
   "width": 680,
   "height": 520,
   "padding": {
@@ -92,6 +92,11 @@
         },
         {
           "type": "formula",
+          "as": "top",
+          "expr": "datum.group == 'Indirect (supply chains)' ? datum.group : 'Direct'"
+        },
+        {
+          "type": "formula",
           "as": "nl",
           "expr": "length(datum.lines)"
         },
@@ -110,6 +115,27 @@
           "type": "aggregate",
           "groupby": [
             "group"
+          ],
+          "fields": [
+            "size"
+          ],
+          "ops": [
+            "sum"
+          ],
+          "as": [
+            "total"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "top_totals",
+      "source": "leaves",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": [
+            "top"
           ],
           "fields": [
             "size"
@@ -147,7 +173,7 @@
       "transform": [
         {
           "type": "filter",
-          "expr": "datum.depth == 1"
+          "expr": "datum.children && datum.depth >= 1"
         },
         {
           "type": "lookup",
@@ -162,6 +188,31 @@
           "as": [
             "total"
           ]
+        },
+        {
+          "type": "lookup",
+          "from": "top_totals",
+          "key": "top",
+          "fields": [
+            "label"
+          ],
+          "values": [
+            "total"
+          ],
+          "as": [
+            "top_total"
+          ]
+        },
+        {
+          "type": "formula",
+          "as": "total",
+          "expr": "datum.total != null ? datum.total : datum.top_total"
+        },
+        {
+          "type": "collect",
+          "sort": {
+            "field": "depth"
+          }
         }
       ]
     }
@@ -176,9 +227,9 @@
         "Indirect (supply chains)"
       ],
       "range": [
-        "#0072B2",
-        "#009E73",
-        "#E69F00"
+        "#7B4FA6",
+        "#6F7D1F",
+        "#8C5A2B"
       ]
     }
   ],
@@ -207,12 +258,36 @@
           "y2": {
             "field": "y1"
           },
-          "fill": {
-            "scale": "colour",
-            "field": "group"
-          },
-          "fillOpacity": {
-            "value": 0.22
+          "fill": [
+            {
+              "test": "datum.label == 'Direct'",
+              "value": "#1E2B34"
+            },
+            {
+              "scale": "colour",
+              "field": "group"
+            }
+          ],
+          "fillOpacity": [
+            {
+              "test": "datum.label == 'Direct'",
+              "value": 0.07
+            },
+            {
+              "value": 0.22
+            }
+          ],
+          "stroke": [
+            {
+              "test": "datum.label == 'Direct'",
+              "value": "#1E2B34"
+            },
+            {
+              "value": null
+            }
+          ],
+          "strokeWidth": {
+            "value": 1.5
           }
         }
       }
@@ -234,10 +309,10 @@
             "value": "top"
           },
           "text": {
-            "signal": "length(datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn (' + format(datum.total / data('grand')[0].total, '.0%') + ')') * 7.4 <= (datum.x1 - datum.x0 - 12) ? datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn (' + format(datum.total / data('grand')[0].total, '.0%') + ')' : (length(datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn') * 7.4 <= (datum.x1 - datum.x0 - 12) ? datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn' : (length(datum.label) * 7.4 <= (datum.x1 - datum.x0 - 12) ? datum.label : ''))"
+            "signal": "length(datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn (' + format(datum.total / data('grand')[0].total, '.0%') + ')') * (datum.depth == 1 ? 7.8 : 7.4) <= (datum.x1 - datum.x0 - 12) ? datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn (' + format(datum.total / data('grand')[0].total, '.0%') + ')' : (length(datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn') * (datum.depth == 1 ? 7.8 : 7.4) <= (datum.x1 - datum.x0 - 12) ? datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn' : (length(datum.label) * (datum.depth == 1 ? 7.8 : 7.4) <= (datum.x1 - datum.x0 - 12) ? datum.label : ''))"
           },
           "fontSize": {
-            "value": 13
+            "signal": "datum.depth == 1 ? 16 : 13"
           },
           "fontWeight": {
             "value": "bold"
@@ -319,7 +394,7 @@
             "value": "bold"
           },
           "fill": {
-            "signal": "datum.group == 'Indirect (supply chains)' ? '#1E2B34' : '#FFFFFF'"
+            "value": "#FFFFFF"
           },
           "lineHeight": {
             "value": 15
@@ -350,7 +425,7 @@
             "value": 12
           },
           "fill": {
-            "signal": "datum.group == 'Indirect (supply chains)' ? '#1E2B34' : '#FFFFFF'"
+            "value": "#FFFFFF"
           }
         }
       }

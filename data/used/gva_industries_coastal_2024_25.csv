@@ -1,7 +1,8 @@
 id,parent,label,group,size,source_industry
 root,,All coastal tourism GVA,,,
-group_core_tourism_direct,root,Core tourism (direct),Core tourism (direct),,
-group_connected_and_other_direct,root,Connected and other (direct),Connected and other (direct),,
+group_direct,root,Direct,Direct,,
+group_core_tourism_direct,group_direct,Core tourism,Core tourism (direct),,
+group_connected_and_other_direct,group_direct,Connected and other,Connected and other (direct),,
 group_indirect_supply_chains,root,Indirect (supply chains),Indirect (supply chains),,
 industry_accommodation,group_core_tourism_direct,Accommodation,Core tourism (direct),8466.2107,Accommodation
 industry_air_water_and_other_transport,group_core_tourism_direct,"Air, water and other transport",Core tourism (direct),7822.6026,"Air, water and other passenger transport"

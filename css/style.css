@@ -29,6 +29,15 @@ p { max-width: 55ch; } /* ~60 characters of prose per line (ch = width of "0", w
 
 .chart { overflow-x: auto; margin: 0.5rem 0; }
 
+/* words in the paragraphs coloured to match the charts (inland, holiday, parttime and decrease are darker shades of the chart colours so they stay readable on white) */
+.coastal   { color: #0b5e8e; font-weight: 700; }
+.inland    { color: #9a7015; font-weight: 700; }
+.vfr       { color: #d55e00; font-weight: 700; }
+.holiday   { color: #1f7fb5; font-weight: 700; }
+.parttime  { color: #d9ad00; font-weight: 700; }
+.increase  { color: #3d2e8f; font-weight: 700; }
+.decrease  { color: #c2506f; font-weight: 700; }
+
 /* short note explaining the * tips under the chart titles */
 .how-to { max-width: none; margin: 1rem 0; font-size: 0.95rem; color: #5b6770; text-align: center; }
 
