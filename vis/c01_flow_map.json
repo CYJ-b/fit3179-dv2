@@ -36,6 +36,9 @@
     }
   ],
   "config": {
+    "view": {
+      "stroke": null
+    },
     "background": "transparent",
     "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
     "title": {
@@ -362,6 +365,33 @@
         "text": {
           "field": "short",
           "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "rect",
+        "fill": "white",
+        "fillOpacity": 0.6,
+        "stroke": "#B8C7D3",
+        "strokeWidth": 1,
+        "cornerRadius": 4
+      },
+      "encoding": {
+        "x": {
+          "value": 230
+        },
+        "x2": {
+          "value": 495
+        },
+        "y": {
+          "value": 322
+        },
+        "y2": {
+          "value": 345
         }
       }
     },
