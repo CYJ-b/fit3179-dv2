@@ -1,0 +1,705 @@
+// c15b spend symbol map - layered + interactive
+// zoom: projection center/scale + zoom_level
+// dropdown: state_view (params at the bottom of the file)
+// checkbox: state_filter (used in the filters)
+// layers: base map (topojson, own data) first, csv circles on top
+// circles: layer 3 (size = spend, colour = index in 5 classes, threshold scale)
+// my own legend: the last 3 layers
+// layers, bottom to top:
+//   1. grey region shapes (all 76 regions)
+//   2. state names (annotation)
+//   3. circles (csv) (main layer)
+//   4. leader lines for the top 5 (annotation)
+//   5. labels for the top 5 (annotation)
+//   6. legend circles (my own legend)
+//   7. legend text
+//   8. legend title
+// main layers: 3 (the circles). 1 is the base map, 2, 4 and 5 are annotations, 6 to 8 are the
+//   legend.
+//
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Proportional symbol map of tourism spend in Australia's 42 coastal tourism regions. Circle area is spend in 2024-25 (domestic and international tourists, $ million) and circle colour is spend in 2024-25 as an index of 2018-19 spend, in five classes. Inland regions are not shown. A State dropdown centres the map on a state or all of Australia, a Zoom slider zooms in or out, and a checkbox hides regions outside the chosen state.",
+  "title": {
+    "text": [
+      "Coastal Region Spend In 2024-2025"
+    ],
+    "subtitle": [
+      "From both domestic and international tourists.",
+      "* Hover over a circle for details.",
+      "* Use the Zoom Centre and Zoom controls to look closer."
+    ]
+  },
+  "width": 960,
+  "height": 480,
+  // albers with expressions: centre and scale depend on state_view (dropdown) and zoom_level
+  //   (slider)
+  "projection": {
+    "type": "albers",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -132,
+      0,
+      0
+    ],
+    // centre: looks up state_view in an object of [lon, lat]
+    "center": {
+      "expr": "({AUS: [0, -27.5], NSW: [15.3, -33], VIC: [13.5, -36.7], QLD: [13.5, -20], SA: [3, -32], WA: [-11, -25], TAS: [14.5, -42.1], NT: [1.5, -18.5]})[state_view]"
+    },
+    // scale = base scale for the state x zoom_level
+    "scale": {
+      "expr": "({AUS: 740, NSW: 1900, VIC: 4000, QLD: 1150, SA: 1900, WA: 1000, TAS: 4000, NT: 1400})[state_view] * zoom_level"
+    },
+    // where the centre is drawn on the canvas (pixels)
+    "translate": [
+      489.6,
+      240
+    ]
+  },
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 26,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFontSize": 18,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "legend": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "text": {
+      "fontSize": 12,
+      "color": "#1E2B34"
+    }
+  },
+  // main data, tourism spend per region per financial year. layers without their own data use it
+  "data": {
+    "url": "data/used/tsa_spend_two_years.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "TR_CODE": "number",
+        "consumption_m": "number",
+        "centre_lon": "number",
+        "centre_lat": "number"
+      }
+    }
+  },
+  // top level filter: coastal regions only (inland ones don't get circles)
+  "transform": [
+    {
+      "filter": "datum.category == 'coastal'"
+    }
+  ],
+  // 1 region shapes (grey base map), 2 state names, 3 circles (csv), 4 leader lines, 5 top 5
+  //   labels, 6 legend circles, 7 legend text, 8 legend title
+  "layer": [
+    {
+      // layer 1: own data (topojson of all 76 regions), that's why the inland regions still show up
+      //   as plain grey
+      "data": {
+        "url": "data/used/map_data/tourism_regions_2026.json",
+        "format": {
+          "type": "topojson",
+          "feature": "Tourism_Regions_2026"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.TR_CODE != ''"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#E9E4D8",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 0.6
+      }
+    },
+    // layer 2: state names from inline values
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 122,
+            "lat": -26,
+            "t": "WESTERN AUSTRALIA"
+          },
+          {
+            "lon": 133.5,
+            "lat": -19.8,
+            "t": "NORTHERN TERRITORY"
+          },
+          {
+            "lon": 143.4,
+            "lat": -22.5,
+            "t": "QUEENSLAND"
+          },
+          {
+            "lon": 135.2,
+            "lat": -30.2,
+            "t": "SOUTH AUSTRALIA"
+          },
+          {
+            "lon": 146.6,
+            "lat": -31.6,
+            "t": "NEW SOUTH WALES"
+          },
+          {
+            "lon": 140.6,
+            "lat": -39.6,
+            "t": "VICTORIA"
+          },
+          {
+            "lon": 146.6,
+            "lat": -43.8,
+            "t": "TASMANIA"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#9A9486",
+        "opacity": 0.9
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        }
+      }
+    },
+    // layer 3: the circles (csv)
+    {
+      // pivot turns the 2018-19 and 2024-25 rows into two columns, then the index is worked out.
+      //   the filter is the checkbox/dropdown, rank_group marks the top 5
+      "transform": [
+        {
+          "filter": "datum.financial_year == '2018-19' || datum.financial_year == '2024-25'"
+        },
+        // pivot: one row per region with a '2018-19' and a '2024-25' column
+        {
+          "pivot": "financial_year",
+          "value": "consumption_m",
+          "groupby": [
+            "TR_CODE",
+            "TR_NAME",
+            "state",
+            "category",
+            "centre_lon",
+            "centre_lat"
+          ]
+        },
+        {
+          "calculate": "datum['2018-19']",
+          "as": "spend_1819"
+        },
+        {
+          "calculate": "datum['2024-25']",
+          "as": "spend_2425"
+        },
+        {
+          "calculate": "datum['2024-25'] / datum['2018-19'] * 100",
+          "as": "spend_idx"
+        },
+        // if the box is ticked only keep the chosen state (ACT with NSW)
+        {
+          "filter": "!state_filter || state_view == 'AUS' || datum.state == state_view || (state_view == 'NSW' && datum.state == 'ACT')"
+        },
+        {
+          "calculate": "indexof([\"Sydney\", \"Melbourne\", \"Brisbane\", \"Destination Perth\", \"Gold Coast\"], datum.TR_NAME) >= 0 ? 'Top 5' : 'Other'",
+          "as": "rank_group"
+        }
+      ],
+      // circle mark placed with longitude/latitude
+      "mark": {
+        "type": "circle",
+        "stroke": "#000000"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "centre_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "centre_lat",
+          "type": "quantitative"
+        },
+        // circle area = spend 2024-25. linear scale, range is the min/max area. legend shows sample
+        //   values
+        "size": {
+          "field": "spend_2425",
+          "type": "quantitative",
+          "title": [
+            "Tourism spend 2024-25",
+            "($ million)"
+          ],
+          "scale": {
+            "type": "linear",
+            "domain": [
+              0,
+              40000
+            ],
+            "range": [
+              0,
+              3400
+            ]
+          },
+          "legend": {
+            "values": [
+              1000,
+              5000,
+              20000
+            ],
+            "orient": "none",
+            "legendX": 6,
+            "legendY": 290,
+            "symbolFillColor": "#FFFFFF00",
+            "symbolStrokeColor": "#1E2B34",
+            "rowPadding": 6
+          }
+        },
+        // colour = spend index. threshold scale: 4 cut points = 5 colours. legend null because I
+        //   made my own legend
+        "color": {
+          "field": "spend_idx",
+          "type": "quantitative",
+          "legend": null,
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              80,
+              100,
+              120,
+              150
+            ],
+            "range": [
+              "#7A1A45",
+              "#D98BA3",
+              "#C9D77A",
+              "#7F9A22",
+              "#3F5210"
+            ]
+          }
+        },
+        // opacity and strokeWidth come from rank_group so the top 5 are bolder
+        "opacity": {
+          "field": "rank_group",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Top 5", "Other"],
+            "range": [0.9, 0.6]
+          },
+          "legend": null
+        },
+        "strokeWidth": {
+          "field": "rank_group",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Top 5", "Other"],
+            "range": [1.5, 0.5]
+          },
+          "legend": null
+        },
+        // biggest circles drawn first so the small ones aren't covered
+        "order": {
+          "field": "spend_2425",
+          "type": "quantitative",
+          "sort": "descending"
+        },
+        // hover info
+        "tooltip": [
+          {
+            "field": "TR_NAME",
+            "type": "nominal",
+            "title": "Region"
+          },
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "category",
+            "type": "nominal",
+            "title": "Type"
+          },
+          {
+            "field": "spend_2425",
+            "type": "quantitative",
+            "title": "Spend 2024-25 ($m)",
+            "format": ",.0f"
+          },
+          {
+            "field": "spend_1819",
+            "type": "quantitative",
+            "title": "Spend 2018-19 ($m)",
+            "format": ",.0f"
+          },
+          {
+            "field": "spend_idx",
+            "type": "quantitative",
+            "title": "Index (2018-19 = 100)",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    // layer 4: leader lines for the top 5. has the same filters so the lines go away when the
+    //   checkbox hides a region
+    {
+      "transform": [
+        {
+          "filter": "datum.financial_year == '2024-25'"
+        },
+        {
+          "filter": "!state_filter || state_view == 'AUS' || datum.state == state_view || (state_view == 'NSW' && datum.state == 'ACT')"
+        },
+        {
+          "filter": "indexof([\"Sydney\", \"Melbourne\", \"Brisbane\", \"Destination Perth\", \"Gold Coast\"], datum.TR_NAME) >= 0"
+        },
+        {
+          "calculate": "datum.centre_lon + ({\"Sydney\": 5, \"Melbourne\": 4.5, \"Brisbane\": 5.3, \"Destination Perth\": -4.5, \"Gold Coast\": 5.3})[datum.TR_NAME]",
+          "as": "l_lon"
+        },
+        {
+          "calculate": "datum.centre_lat + ({\"Sydney\": -1, \"Melbourne\": -2.5, \"Brisbane\": 1.9, \"Destination Perth\": 0, \"Gold Coast\": -1.6})[datum.TR_NAME]",
+          "as": "l_lat"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "stroke": "#1E2B34",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "longitude": {
+          "field": "centre_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "centre_lat",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "l_lon"
+        },
+        "latitude2": {
+          "field": "l_lat"
+        }
+      }
+    },
+    // layer 5: labels for the top 5 (name + spend + index)
+    {
+      "transform": [
+        {
+          "filter": "datum.financial_year == '2018-19' || datum.financial_year == '2024-25'"
+        },
+        {
+          "pivot": "financial_year",
+          "value": "consumption_m",
+          "groupby": [
+            "TR_CODE",
+            "TR_NAME",
+            "state",
+            "category",
+            "centre_lon",
+            "centre_lat"
+          ]
+        },
+        {
+          "calculate": "datum['2024-25']",
+          "as": "spend_2425"
+        },
+        {
+          "calculate": "datum['2024-25'] / datum['2018-19'] * 100",
+          "as": "spend_idx"
+        },
+        {
+          "filter": "!state_filter || state_view == 'AUS' || datum.state == state_view || (state_view == 'NSW' && datum.state == 'ACT')"
+        },
+        {
+          "filter": "indexof([\"Sydney\", \"Melbourne\", \"Brisbane\", \"Destination Perth\", \"Gold Coast\"], datum.TR_NAME) >= 0"
+        },
+        {
+          "calculate": "[({\"Sydney\": \"Sydney\", \"Melbourne\": \"Melbourne\", \"Brisbane\": \"Brisbane\", \"Destination Perth\": \"Perth\", \"Gold Coast\": \"Gold Coast\"})[datum.TR_NAME], '$' + format(datum.spend_2425 / 1000, '.1f') + 'bn, index ' + format(datum.spend_idx, '.0f')]",
+          "as": "label"
+        },
+        {
+          "calculate": "datum.centre_lon + ({\"Sydney\": 5, \"Melbourne\": 4.5, \"Brisbane\": 5.3, \"Destination Perth\": -4.5, \"Gold Coast\": 5.3})[datum.TR_NAME]",
+          "as": "l_lon"
+        },
+        {
+          "calculate": "datum.centre_lat + ({\"Sydney\": -1, \"Melbourne\": -2.5, \"Brisbane\": 1.9, \"Destination Perth\": 0, \"Gold Coast\": -1.6})[datum.TR_NAME]",
+          "as": "l_lat"
+        },
+        {
+          "calculate": "({\"Sydney\": \"left\", \"Melbourne\": \"left\", \"Brisbane\": \"left\", \"Destination Perth\": \"right\", \"Gold Coast\": \"left\"})[datum.TR_NAME]",
+          "as": "lab_align"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontWeight": 600,
+        "dx": {
+          "expr": "datum.lab_align == 'left' ? 4 : -4"
+        },
+        "align": {
+          "expr": "datum.lab_align"
+        }
+      },
+      "encoding": {
+        "longitude": {
+          "field": "l_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "l_lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    },
+    // layers 6 to 8 are my own legend. layer 6 = the five coloured circles. inline data, x/y in
+    //   pixels, uses the same colour scale as layer 3
+    {
+      "data": {
+        "values": [
+          {
+            "i": 0,
+            "v": 50
+          },
+          {
+            "i": 1,
+            "v": 90
+          },
+          {
+            "i": 2,
+            "v": 110
+          },
+          {
+            "i": 3,
+            "v": 135
+          },
+          {
+            "i": 4,
+            "v": 170
+          }
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "size": 190,
+        "opacity": 0.72,
+        "stroke": "#000000",
+        "strokeWidth": 0.6,
+        "x": 16,
+        "y": {
+          "expr": "112 + datum.i * 24"
+        }
+      },
+      "encoding": {
+        "color": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold"
+          }
+        }
+      }
+    },
+    // layer 7: legend text. counts the regions in each class (aggregate), fills empty classes with
+    //   0 (impute), then builds the label. no data of its own so it uses the top level csv
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "x": 32,
+        "y": {
+          "expr": "112 + datum.i * 24"
+        }
+      },
+      "encoding": {
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.financial_year == '2018-19' || datum.financial_year == '2024-25'"
+        },
+        {
+          "pivot": "financial_year",
+          "value": "consumption_m",
+          "groupby": [
+            "TR_CODE",
+            "TR_NAME",
+            "state",
+            "category",
+            "centre_lon",
+            "centre_lat"
+          ]
+        },
+        {
+          "calculate": "datum['2024-25'] / datum['2018-19'] * 100",
+          "as": "spend_idx"
+        },
+        {
+          "filter": "!state_filter || state_view == 'AUS' || datum.state == state_view || (state_view == 'NSW' && datum.state == 'ACT')"
+        },
+        {
+          "calculate": "datum.spend_idx < 80 ? 0 : datum.spend_idx < 100 ? 1 : datum.spend_idx < 120 ? 2 : datum.spend_idx < 150 ? 3 : 4",
+          "as": "i"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "count",
+              "as": "n"
+            }
+          ],
+          "groupby": [
+            "i"
+          ]
+        },
+        {
+          "impute": "n",
+          "key": "i",
+          "keyvals": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "value": 0
+        },
+        {
+          "calculate": "[\"Under 80: much lower\", \"80 to 100: a little lower\", \"100 to 120: a little higher\", \"120 to 150: higher\", \"150 or more: much higher\"][datum.i] + ' (' + datum.n + ')'",
+          "as": "label"
+        }
+      ]
+    },
+    // layer 8: legend title
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Spend 2024-25 indexed to 2018-19"
+          },
+          {
+            "t": "(numebr of regions)"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "window": [
+            {
+              "op": "row_number",
+              "as": "r"
+            }
+          ]
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "x": 6,
+        "y": {
+          "expr": "datum.r == 1 ? 62 : 80"
+        },
+        "fontWeight": {
+          "expr": "datum.r == 1 ? 700 : 400"
+        }
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  // my controls (used by the projection and filters above)
+  "params": [
+    {
+      // state_view. select = dropdown, options are the values and labels are what the user sees
+      "name": "state_view",
+      "value": "AUS",
+      "bind": {
+        "input": "select",
+        "options": [
+          "AUS",
+          "NSW",
+          "VIC",
+          "QLD",
+          "SA",
+          "WA",
+          "TAS",
+          "NT"
+        ],
+        "labels": [
+          "Australia",
+          "New South Wales",
+          "Victoria",
+          "Queensland",
+          "South Australia",
+          "Western Australia",
+          "Tasmania",
+          "Northern Territory"
+        ],
+        "name": "Zoom Centre: "
+      }
+    },
+    // zoom_level, a slider that scales the map
+    {
+      "name": "zoom_level",
+      "value": 1,
+      "bind": {
+        "input": "range",
+        "min": 0.5,
+        "max": 3,
+        "step": 0.1,
+        "name": "Zoom: "
+      }
+    },
+    // state_filter, only show circles for the selected state
+    {
+      "name": "state_filter",
+      "value": false,
+      "bind": {
+        "input": "checkbox",
+        "name": "Show For Selected Centre Only: "
+      }
+    }
+  ]
+}

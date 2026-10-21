@@ -1,0 +1,321 @@
+// c14 coastal choropleth - layered + hover
+// layers: the csv is the main data. layer 1 joins the topojson shapes into the csv rows with
+//   lookup, then state borders and an annotation go on top
+// hover highlight: param hover + conditional stroke
+// no zoom or dropdown here, the projection is fixed
+// layers, bottom to top:
+//   1. coloured regions (csv + lookup) (main layer)
+//   2. state outlines
+//   3. leader line to the Golden Outback label (annotation, inside a nested layer)
+//   4. Golden Outback label (annotation, same nested layer)
+// main layers: 1 (the coloured regions). 2 is the state outlines, 3 and 4 are the annotation.
+//
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Choropleth map of Australia's 76 tourism regions coloured by whether they are coastal (blue) or inland (sand). A region is coastal when the share of its boundary that touches the sea reaches a threshold that rises with the region's size. Hovering a region highlights it and shows its details.",
+  "title": {
+    "text": "Australia's 76 Tourism Regions",
+    "subtitle": [
+      "* Hover over a region for details."
+    ]
+  },
+  "width": 640,
+  "height": 395,
+  // fixed albers projection (plain numbers, no expressions, so no zoom controls)
+  "projection": {
+    "type": "albers",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -132,
+      0,
+      0
+    ],
+    "center": [
+      0,
+      -27.5
+    ],
+    "scale": 621,
+    "translate": [
+      420,
+      192
+    ]
+  },
+  // global styling
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 26,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFontSize": 18,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "legend": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "text": {
+      "fontSize": 12,
+      "color": "#1E2B34"
+    }
+  },
+  // main data, one row per tourism region with the coastal rule values. no geometry in it
+  "data": {
+    "url": "data/used/regions_coastal_rule.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "TR_CODE": "number",
+        "coastal_ratio": "number",
+        "area_threshold": "number",
+        "area_km2": "number",
+        "centre_lon": "number",
+        "centre_lat": "number"
+      }
+    }
+  },
+  // 1 coloured regions (csv + lookup), 2 state borders, 3 leader line, 4 label (3 and 4 are the
+  //   annotation for one region, inside a nested layer)
+  "layer": [
+    // layer 1: the coloured regions (csv + lookup)
+    {
+      // layer 1: make a text key from TR_CODE, then LOOKUP the geometry
+      "transform": [
+        {
+          "calculate": "toString(datum.TR_CODE)",
+          "as": "code"
+        },
+        // for each csv row find the topojson feature with properties.TR_CODE equal to 'code' and
+        //   store the shape in 'geo'
+        {
+          "lookup": "code",
+          "from": {
+            "data": {
+              "url": "data/used/map_data/tourism_regions_2026.json",
+              "format": {
+                "type": "topojson",
+                "feature": "Tourism_Regions_2026"
+              }
+            },
+            "key": "properties.TR_CODE"
+          },
+          "as": "geo"
+        }
+      ],
+      // selection param, highlights the hovered region (see strokeWidth / stroke below)
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "on": "mouseover",
+            "clear": "mouseout",
+            "fields": [
+              "TR_CODE"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#FFFFFF"
+      },
+      "encoding": {
+        // shape with type geojson draws the geometry from 'geo'
+        "shape": {
+          "field": "geo",
+          "type": "geojson"
+        },
+        // colour = coastal/inland. legend placed by hand (orient none) and labelExpr adds the
+        //   counts to the labels
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "title": "Region type (number of regions)",
+          "scale": {
+            "domain": [
+              "coastal",
+              "inland"
+            ],
+            "range": [
+              "#0B5E8E",
+              "#C99A3B"
+            ]
+          },
+          "legend": {
+            "orient": "none",
+            "legendX": 6,
+            "legendY": 60,
+            "labelExpr": "datum.value == 'coastal' ? 'Coastal region (42)' : 'Inland region (34)'",
+            "titleLimit": 260,
+            "symbolSize": 150
+          }
+        },
+        // condition on the hover param: thick dark outline for the hovered region, thin white
+        //   otherwise
+        "strokeWidth": {
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": 2.4
+          },
+          "value": 0.4
+        },
+        "stroke": {
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": "#1E2B34"
+          },
+          "value": "#FFFFFF"
+        },
+        // hover info
+        "tooltip": [
+          {
+            "field": "TR_NAME",
+            "type": "nominal",
+            "title": "Region"
+          },
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "category",
+            "type": "nominal",
+            "title": "Type"
+          },
+          {
+            "field": "coastal_ratio",
+            "type": "quantitative",
+            "title": "Boundary touching the sea",
+            "format": ".1%"
+          },
+          {
+            "field": "area_threshold",
+            "type": "quantitative",
+            "title": "Threshold to count as coastal",
+            "format": ".1%"
+          },
+          {
+            "field": "area_km2",
+            "type": "quantitative",
+            "title": "Area (km²)",
+            "format": ","
+          }
+        ]
+      }
+    },
+    // layer 2: state outlines on top (fill null so only the border shows)
+    {
+      "data": {
+        "url": "data/used/map_data/states_map.json",
+        "format": {
+          "type": "topojson",
+          "feature": "geoBoundaries-AUS-ADM1_simplified"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.shapeName != 'Other Territories'"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#1E2B34",
+        "strokeWidth": 0.8,
+        "opacity": 0.7
+      }
+    },
+    // layers 3 and 4: annotation for Australia's Golden Outback only. the transform filters to that
+    //   region and sets where the label goes (l_lon, l_lat)
+    {
+      "transform": [
+        {
+          "filter": "datum.TR_NAME == \"Australia's Golden Outback\""
+        },
+        {
+          "calculate": "117.0",
+          "as": "l_lon"
+        },
+        {
+          "calculate": "-39.5",
+          "as": "l_lat"
+        }
+      ],
+      // nested layer, layers 3 and 4 share the transform above
+      "layer": [
+        {
+          // layer 3: leader line from the region centre to the label (rule with
+          //   longitude2/latitude2)
+          "mark": {
+            "type": "rule",
+            "stroke": "#1E2B34",
+            "strokeWidth": 0.8
+          },
+          "encoding": {
+            "longitude": {
+              "field": "centre_lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "centre_lat",
+              "type": "quantitative"
+            },
+            "longitude2": {
+              "field": "l_lon"
+            },
+            "latitude2": {
+              "field": "l_lat"
+            }
+          }
+        },
+        // layer 4: the label (annotation). calculate gives an array of strings, which makes it a
+        //   multi line label
+        {
+          "transform": [
+            {
+              "calculate": "[datum.TR_NAME + ':', format(datum.coastal_ratio, '.1~%') + ' sea boundary vs ' + format(datum.area_threshold, '.1~%') + ' threshold,', 'so it counts as ' + datum.category]",
+              "as": "label"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "fontWeight": 600,
+            "lineHeight": 15,
+            "dx": -4
+          },
+          "encoding": {
+            "longitude": {
+              "field": "l_lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "l_lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "label",
+              "type": "nominal"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

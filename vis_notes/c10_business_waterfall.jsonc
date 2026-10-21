@@ -1,0 +1,462 @@
+// c10 waterfall - nested layers
+// grey total bars: layer 1 (bars + labels)
+// floating change bars: layer 2, y = start and y2 = end
+// running total: window sum with frame [null, 0]
+// layers, bottom to top:
+//   1. total bars (2021 and 2025) (main layer)
+//   2. value labels on the total bars (annotation)
+//   3. floating change bars (main layer)
+//   4. change labels (annotation)
+//   (1 and 2 are one nested layer, 3 and 4 are another)
+// main layers: 1 (total bars) and 3 (floating change bars). 2 and 4 are their value labels.
+//
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Waterfall chart of coastal tourism businesses by size from 2021 to 2025. A grey bar shows the 2021 total, floating bars show the change in each size band (indigo for an increase, pink for a decrease), and a final grey bar shows the 2025 total. The vertical axis starts at 280,000.",
+  "title": {
+    "text": [
+      "Change In Coastal Tourism Businesses From",
+      "2021 To 2025"
+    ],
+    "subtitle": [
+      "The vertical axis starts at 280,000 so that",
+      "the changes are visible.",
+      "* Hover over a bar for details."
+    ]
+  },
+  "width": 840,
+  "height": 340,
+  // global styling
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 26,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFontSize": 18,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#5B6770",
+      "titleColor": "#1E2B34",
+      "gridColor": "#E3DED3",
+      "domainColor": "#A8AEB3",
+      "tickColor": "#A8AEB3"
+    },
+    "legend": {
+      "labelFontSize": 13,
+      "labelColor": "#1E2B34",
+      "padding": 4
+    },
+    "text": {
+      "color": "#1E2B34"
+    }
+  },
+  // one row per region, year and size band
+  "data": {
+    "url": "data/used/businesses_region_year_size.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "businesses": "number"
+      }
+    }
+  },
+  // shared by both layers. ends up as one row per size band with a '2021' and a '2025' column
+  "transform": [
+    // coastal, 2021 and 2025 only, and drop the 'All businesses' row
+    {
+      "filter": "datum.category == 'coastal' && (datum.year == 2021 || datum.year == 2025) && datum.size_band != 'All businesses'"
+    },
+    // aggregate: sum per size band + year
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "businesses",
+          "as": "n"
+        }
+      ],
+      "groupby": [
+        "size_band",
+        "year"
+      ]
+    },
+    // pivot: the years become columns
+    {
+      "pivot": "year",
+      "value": "n",
+      "groupby": [
+        "size_band"
+      ]
+    }
+  ],
+  // 1 total bars (2021 and 2025), 2 labels on the total bars, 3 floating change bars, 4 change
+  //   labels. (1 and 2 are one nested layer, 3 and 4 are another)
+  "layer": [
+    // layers 1 and 2: the grey total bars + their labels (a nested layer)
+    {
+      // layers 1 and 2: add up all the size bands, then fold the two totals into rows so I get two
+      //   bars
+      "transform": [
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "2021",
+              "as": "t2021"
+            },
+            {
+              "op": "sum",
+              "field": "2025",
+              "as": "t2025"
+            }
+          ]
+        },
+        // fold: columns t2021 and t2025 become rows (which, value)
+        {
+          "fold": [
+            "t2021",
+            "t2025"
+          ],
+          "as": [
+            "which",
+            "value"
+          ]
+        },
+        {
+          "calculate": "datum.which == 't2021' ? '2021 total' : '2025 total'",
+          "as": "step"
+        },
+        {
+          "calculate": "'Total'",
+          "as": "kind"
+        },
+        {
+          "calculate": "format(datum.value, ',')",
+          "as": "label"
+        }
+      ],
+      // layer 1 = the bar, layer 2 = its label
+      "layer": [
+        // layer 1: the total bars
+        {
+          "mark": {
+            "type": "bar",
+            // clip true cuts off anything outside the axis range (my axis starts at 280,000 instead
+            //   of 0)
+            "clip": true,
+            "width": 70
+          },
+          "encoding": {
+            "x": {
+              "field": "step",
+              "type": "ordinal",
+              "title": null,
+              "sort": [
+                "2021 total",
+                "Non-employing",
+                "Micro (1–4 staff)",
+                "Small (5–19)",
+                "Medium (20–199)",
+                "Large (200+)",
+                "2025 total"
+              ],
+              "axis": {
+                "labelAngle": 0,
+                "labelColor": "#1E2B34",
+                "ticks": false,
+                "labelPadding": 8
+              }
+            },
+            // fixed domain and nice false so the axis isn't rounded automatically
+            "y": {
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  280000,
+                  332000
+                ],
+                "nice": false
+              },
+              "axis": {
+                "title": "Tourism businesses on the coast",
+                "titlePadding": 14,
+                "values": [
+                  280000,
+                  290000,
+                  300000,
+                  310000,
+                  320000,
+                  330000
+                ]
+              },
+              "field": "value"
+            },
+            // y2 = bottom of the bar. datum is a constant, here the start of the axis (280000)
+            "y2": {
+              "datum": 280000
+            },
+            // colour by kind (Increase / Decrease / Total), fixed colours
+            "color": {
+              "field": "kind",
+              "type": "nominal",
+              "title": null,
+              "scale": {
+                "domain": [
+                  "Increase",
+                  "Decrease",
+                  "Total"
+                ],
+                "range": [
+                  "#3D2E8F",
+                  "#F4A6B8",
+                  "#7D8388"
+                ]
+              },
+              "legend": {
+                "orient": "top",
+                "symbolSize": 180,
+                "symbolStrokeWidth": 0
+              }
+            },
+            // hover info
+            "tooltip": [
+              {
+                "field": "step",
+                "type": "nominal",
+                "title": "Step"
+              },
+              {
+                "field": "value",
+                "type": "quantitative",
+                "title": "Businesses (sum of size bands)",
+                "format": ","
+              }
+            ]
+          }
+        },
+        // layer 2: value label above each total bar (annotation)
+        {
+          "mark": {
+            "type": "text",
+            "baseline": "bottom",
+            "dy": -6,
+            "fontSize": 13,
+            "fontWeight": 600
+          },
+          "encoding": {
+            "x": {
+              "field": "step",
+              "type": "ordinal",
+              "sort": [
+                "2021 total",
+                "Non-employing",
+                "Micro (1–4 staff)",
+                "Small (5–19)",
+                "Medium (20–199)",
+                "Large (200+)",
+                "2025 total"
+              ]
+            },
+            "y": {
+              "type": "quantitative",
+              "field": "value"
+            },
+            "text": {
+              "field": "label",
+              "type": "nominal"
+            }
+          }
+        }
+      ]
+    },
+    // layers 3 and 4: the change bars (the waterfall part, a nested layer)
+    {
+      // delta = 2025 - 2021, joinaggregate gets the 2021 total, window makes the running sum, end =
+      //   total + running sum, start = end - delta
+      "transform": [
+        {
+          "calculate": "datum['2025'] - datum['2021']",
+          "as": "delta"
+        },
+        {
+          "calculate": "({\"Non-employing\": 1, \"Micro\": 2, \"Small\": 3, \"Medium\": 4, \"Large\": 5})[datum.size_band]",
+          "as": "order"
+        },
+        {
+          "calculate": "({\"Non-employing\": \"Non-employing\", \"Micro\": \"Micro (1\\u20134 staff)\", \"Small\": \"Small (5\\u201319)\", \"Medium\": \"Medium (20\\u2013199)\", \"Large\": \"Large (200+)\"})[datum.size_band]",
+          "as": "step"
+        },
+        {
+          "joinaggregate": [
+            {
+              "op": "sum",
+              "field": "2021",
+              "as": "total2021"
+            }
+          ]
+        },
+        // window sum with frame [null, 0] = from the first row up to the current row, so it's a
+        //   cumulative sum (sorted by 'order')
+        {
+          "window": [
+            {
+              "op": "sum",
+              "field": "delta",
+              "as": "cum"
+            }
+          ],
+          "sort": [
+            {
+              "field": "order",
+              "order": "ascending"
+            }
+          ],
+          "frame": [
+            null,
+            0
+          ]
+        },
+        {
+          "calculate": "datum.total2021 + datum.cum",
+          "as": "end"
+        },
+        {
+          "calculate": "datum.end - datum.delta",
+          "as": "start"
+        },
+        {
+          "calculate": "datum.delta >= 0 ? 'Increase' : 'Decrease'",
+          "as": "kind"
+        },
+        {
+          "calculate": "max(datum.start, datum.end)",
+          "as": "top"
+        },
+        {
+          "calculate": "(datum.delta >= 0 ? '+' : '−') + format(abs(datum.delta), ',')",
+          "as": "label"
+        }
+      ],
+      // layer 3 = floating bars, layer 4 = labels
+      "layer": [
+        // layer 3: the floating change bars
+        {
+          "mark": {
+            "type": "bar",
+            "clip": true,
+            "width": 70,
+            "stroke": "#D55E00"
+          },
+          "encoding": {
+            "x": {
+              "field": "step",
+              "type": "ordinal",
+              "sort": [
+                "2021 total",
+                "Non-employing",
+                "Micro (1–4 staff)",
+                "Small (5–19)",
+                "Medium (20–199)",
+                "Large (200+)",
+                "2025 total"
+              ]
+            },
+            // y = start and y2 = end, so the bar floats between them
+            "y": {
+              "type": "quantitative",
+              "field": "start"
+            },
+            "y2": {
+              "field": "end"
+            },
+            "color": {
+              "field": "kind",
+              "type": "nominal"
+            },
+            // conditional stroke width: Non-employing and Micro get a 3px outline, the others none.
+            //   test is an expression
+            "strokeWidth": {
+              "condition": {
+                "test": "indexof(['Non-employing', 'Micro'], datum.size_band) >= 0",
+                "value": 3
+              },
+              "value": 0
+            },
+            // hover info
+            "tooltip": [
+              {
+                "field": "step",
+                "type": "nominal",
+                "title": "Size band"
+              },
+              {
+                "field": "2021",
+                "type": "quantitative",
+                "title": "Businesses in 2021",
+                "format": ","
+              },
+              {
+                "field": "2025",
+                "type": "quantitative",
+                "title": "Businesses in 2025",
+                "format": ","
+              },
+              {
+                "field": "label",
+                "type": "nominal",
+                "title": "Change"
+              }
+            ]
+          }
+        },
+        // layer 4: the change labels (+ / -) above the bars (annotation)
+        {
+          "mark": {
+            "type": "text",
+            "baseline": "bottom",
+            "dy": -6,
+            "fontSize": 13,
+            "fontWeight": 600
+          },
+          "encoding": {
+            "x": {
+              "field": "step",
+              "type": "ordinal",
+              "sort": [
+                "2021 total",
+                "Non-employing",
+                "Micro (1–4 staff)",
+                "Small (5–19)",
+                "Medium (20–199)",
+                "Large (200+)",
+                "2025 total"
+              ]
+            },
+            "y": {
+              "type": "quantitative",
+              "field": "top"
+            },
+            "text": {
+              "field": "label",
+              "type": "nominal"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

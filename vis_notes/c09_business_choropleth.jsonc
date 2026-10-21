@@ -1,0 +1,592 @@
+// c09 choropleth - layered + interactive
+// zoom: projection center/scale + zoom_level (params are at the bottom of the file)
+// dropdown: state_view (bottom of the file)
+// layers: the csv is the main data. layer 1 joins the topojson shapes into the csv rows with
+//   lookup, then borders, labels and my own legend go on top
+// hover highlight: param 'hover' + conditional stroke
+// colour classes: color scale type threshold (7 colours, 6 cut points)
+// layers, bottom to top:
+//   1. coloured regions (csv + lookup) (main layer)
+//   2. state borders
+//   3. leader lines for the city labels (annotation)
+//   4. city labels (annotation)
+//   5. legend squares (my own legend)
+//   6. legend text
+//   7. legend title
+//   8. coast vs inland text (annotation)
+// main layers: 1 (the coloured regions). 2 is the state borders, 3 and 4 are annotations, 5 to 8
+//   are the legend and summary text.
+//
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Choropleth map of tourism businesses per square kilometre in each of Australia's 76 tourism regions in 2025, in seven classes. Hovering a region highlights it and shows its details. A dropdown centres the map on a state or all of Australia and a zoom slider zooms in or out.",
+  "title": {
+    "text": [
+      "Amount Of Tourism Businesses Across",
+      "The Tourism Regions In 2025"
+    ],
+    "subtitle": [
+      "* Hover over a region for details.",
+      "* Use the Zoom Centre and Zoom controls to look closer."
+    ]
+  },
+  "width": 960,
+  "height": 450,
+  // albers for Australia. center and scale are expressions that depend on the dropdown (state_view)
+  //   and the zoom slider (zoom_level)
+  "projection": {
+    "type": "albers",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -132,
+      0,
+      0
+    ],
+    // centre: looks up the state_view in an object of [lon, lat]
+    "center": {
+      "expr": "({AUS: [0, -27.5], NSW: [15.3, -33], VIC: [13.5, -36.7], QLD: [13.5, -20], SA: [3, -32], WA: [-11, -25], TAS: [14.5, -42.1], NT: [1.5, -18.5]})[state_view]"
+    },
+    // scale = base scale for the state x zoom_level
+    "scale": {
+      "expr": "({AUS: 740, NSW: 1900, VIC: 4000, QLD: 1150, SA: 1900, WA: 1000, TAS: 4000, NT: 1400})[state_view] * zoom_level"
+    },
+    // where the centre is drawn on the canvas (pixels)
+    "translate": [
+      489.6,
+      240
+    ]
+  },
+  // global styling
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 26,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFontSize": 18,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "text": {
+      "fontSize": 12,
+      "color": "#1E2B34"
+    }
+  },
+  // main data, businesses per region/year/size. there's no geometry in this csv, it gets joined in
+  //   layer 1
+  "data": {
+    "url": "data/used/businesses_region_year_size.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "TR_CODE": "number",
+        "area_km2": "number",
+        "year": "number",
+        "businesses": "number"
+      }
+    }
+  },
+  // top level filter: all businesses, 2025 (so one row per region)
+  "transform": [
+    {
+      "filter": "datum.size_band == 'All businesses' && datum.year == 2025"
+    }
+  ],
+  // 1 coloured regions (csv + lookup), 2 state borders, 3 leader lines, 4 city labels, 5 legend
+  //   squares, 6 legend text, 7 legend title, 8 coast vs inland text
+  "layer": [
+    // layer 1: the coloured regions (csv + lookup)
+    {
+      // layer 1: work out density per km2, make a text key, then LOOKUP the geometry
+      "transform": [
+        {
+          "calculate": "datum.businesses / datum.area_km2",
+          "as": "per_km2"
+        },
+        {
+          "calculate": "toString(datum.TR_CODE)",
+          "as": "code"
+        },
+        // join. for each csv row find the topojson feature where properties.TR_CODE matches 'code'
+        //   and store the shape in a new field 'geo'. this is how the csv gets its map shapes
+        {
+          "lookup": "code",
+          "from": {
+            "data": {
+              "url": "data/used/map_data/tourism_regions_2026.json",
+              "format": {
+                "type": "topojson",
+                "feature": "Tourism_Regions_2026"
+              }
+            },
+            "key": "properties.TR_CODE"
+          },
+          "as": "geo"
+        }
+      ],
+      // selection param called hover: point selection on mouseover, cleared on mouseout, by
+      //   TR_CODE. the stroke conditions below use it to highlight the region
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "on": "mouseover",
+            "clear": "mouseout",
+            "fields": [
+              "TR_CODE"
+            ]
+          }
+        }
+      ],
+      // geoshape draws the polygons
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#FFFFFF"
+      },
+      "encoding": {
+        // shape channel with type geojson draws the geometry I stored in 'geo'
+        "shape": {
+          "field": "geo",
+          "type": "geojson"
+        },
+        // threshold scale: the cut points in domain split the values into classes, 6 cut points = 7
+        //   colours. legend null because I made my own legend in layers 5 to 7
+        "color": {
+          "field": "per_km2",
+          "type": "quantitative",
+          "title": "Businesses per km²",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              0.01,
+              0.05,
+              0.25,
+              1,
+              5,
+              10
+            ],
+            "range": [
+              "#deebf7",
+              "#c6dbef",
+              "#9ecae1",
+              "#6baed6",
+              "#4292c6",
+              "#2171b5",
+              "#08306b"
+            ]
+          },
+          "legend": null
+        },
+        // condition: if it's the hovered region (param hover) use the thick dark outline, else the
+        //   thin white one. empty false = no hover means no highlight
+        "strokeWidth": {
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": 2.4
+          },
+          "value": 0.6
+        },
+        "stroke": {
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": "#1E2B34"
+          },
+          "value": "#FFFFFF"
+        },
+        // hover info for each region
+        "tooltip": [
+          {
+            "field": "TR_NAME",
+            "type": "nominal",
+            "title": "Region"
+          },
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "category",
+            "type": "nominal",
+            "title": "Type"
+          },
+          {
+            "field": "businesses",
+            "type": "quantitative",
+            "title": "Tourism businesses",
+            "format": ","
+          },
+          {
+            "field": "per_km2",
+            "type": "quantitative",
+            "title": "Businesses per km²",
+            "format": ".3f"
+          },
+          {
+            "field": "area_km2",
+            "type": "quantitative",
+            "title": "Area (km²)",
+            "format": ","
+          }
+        ]
+      }
+    },
+    // layer 2: state outlines on top of the regions (own topojson data, fill null so only the
+    //   border shows)
+    {
+      "data": {
+        "url": "data/used/map_data/states_map.json",
+        "format": {
+          "type": "topojson",
+          "feature": "geoBoundaries-AUS-ADM1_simplified"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.shapeName != 'Other Territories'"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#1E2B34",
+        "strokeWidth": 0.9,
+        "opacity": 0.55
+      }
+    },
+    // layer 3: leader lines for the 4 labelled cities (rule with longitude2/latitude2)
+    {
+      "transform": [
+        {
+          "filter": "indexof([\"Melbourne\", \"Adelaide\", \"Sydney\", \"Gold Coast\"], datum.TR_NAME) >= 0"
+        },
+        {
+          "calculate": "({\"Melbourne\": 144.89, \"Adelaide\": 138.6, \"Sydney\": 150.99, \"Gold Coast\": 153.31})[datum.TR_NAME]",
+          "as": "c_lon"
+        },
+        {
+          "calculate": "({\"Melbourne\": -37.81, \"Adelaide\": -34.87, \"Sydney\": -33.68, \"Gold Coast\": -27.96})[datum.TR_NAME]",
+          "as": "c_lat"
+        },
+        {
+          "calculate": "({\"Melbourne\": 139.3, \"Adelaide\": 133.6, \"Sydney\": 155.6, \"Gold Coast\": 156.4})[datum.TR_NAME]",
+          "as": "l_lon"
+        },
+        {
+          "calculate": "({\"Melbourne\": -40.6, \"Adelaide\": -37.6, \"Sydney\": -35.9, \"Gold Coast\": -29.9})[datum.TR_NAME]",
+          "as": "l_lat"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "stroke": "#1E2B34",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "longitude": {
+          "field": "c_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "c_lat",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "l_lon"
+        },
+        "latitude2": {
+          "field": "l_lat"
+        }
+      }
+    },
+    // layer 4: city labels, alignment from expressions
+    {
+      "transform": [
+        {
+          "filter": "indexof([\"Melbourne\", \"Adelaide\", \"Sydney\", \"Gold Coast\"], datum.TR_NAME) >= 0"
+        },
+        {
+          "calculate": "({\"Melbourne\": 139.3, \"Adelaide\": 133.6, \"Sydney\": 155.6, \"Gold Coast\": 156.4})[datum.TR_NAME]",
+          "as": "l_lon"
+        },
+        {
+          "calculate": "({\"Melbourne\": -40.6, \"Adelaide\": -37.6, \"Sydney\": -35.9, \"Gold Coast\": -29.9})[datum.TR_NAME]",
+          "as": "l_lat"
+        },
+        {
+          "calculate": "({\"Melbourne\": \"right\", \"Adelaide\": \"right\", \"Sydney\": \"left\", \"Gold Coast\": \"left\"})[datum.TR_NAME]",
+          "as": "l_align"
+        },
+        {
+          "calculate": "datum.TR_NAME + ' ' + format(datum.businesses / datum.area_km2, '.1f')",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontWeight": 600,
+        "dx": {
+          "expr": "datum.l_align == 'left' ? 4 : -4"
+        },
+        "align": {
+          "expr": "datum.l_align"
+        }
+      },
+      "encoding": {
+        "longitude": {
+          "field": "l_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "l_lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    },
+    // layers 5 to 7 are my own legend, so I can put the number of regions in each class in the
+    //   labels (layer 1 has legend null). layer 5 = the coloured squares. inline data, and x/y are
+    //   pixel positions, not lon/lat. it uses the same colour scale as layer 1 because scales are
+    //   shared between layers
+    {
+      "data": {
+        "values": [
+          {
+            "i": 0,
+            "v": 0.005
+          },
+          {
+            "i": 1,
+            "v": 0.03
+          },
+          {
+            "i": 2,
+            "v": 0.15
+          },
+          {
+            "i": 3,
+            "v": 0.6
+          },
+          {
+            "i": 4,
+            "v": 3
+          },
+          {
+            "i": 5,
+            "v": 7.5
+          },
+          {
+            "i": 6,
+            "v": 15
+          }
+        ]
+      },
+      "mark": {
+        "type": "square",
+        "size": 300,
+        "opacity": 1,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 0.5,
+        "x": 16,
+        "y": {
+          "expr": "112 + datum.i * 24"
+        }
+      },
+      "encoding": {
+        "color": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold"
+          }
+        }
+      }
+    },
+    // layer 6: legend text for each class (with the number of regions)
+    {
+      "data": {
+        "values": [
+          {
+            "i": 0,
+            "label": "0.01 or less  (14)"
+          },
+          {
+            "i": 1,
+            "label": "0.01 to 0.05  (24)"
+          },
+          {
+            "i": 2,
+            "label": "0.05 to 0.25  (16)"
+          },
+          {
+            "i": 3,
+            "label": "0.25 to 1  (13)"
+          },
+          {
+            "i": 4,
+            "label": "1 to 5  (5)"
+          },
+          {
+            "i": 5,
+            "label": "5 to 10  (1)"
+          },
+          {
+            "i": 6,
+            "label": "More than 10  (3)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "x": 32,
+        "y": {
+          "expr": "112 + datum.i * 24"
+        }
+      },
+      "encoding": {
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    },
+    // layer 7: legend title. window row_number numbers the rows so the first one can be bold and
+    //   higher up
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Tourism businesses per km²"
+          },
+          {
+            "t": "(number of regions in each class)"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "window": [
+            {
+              "op": "row_number",
+              "as": "r"
+            }
+          ]
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "x": 6,
+        "y": {
+          "expr": "datum.r == 1 ? 62 : 80"
+        },
+        "fontWeight": {
+          "expr": "datum.r == 1 ? 700 : 400"
+        }
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        }
+      }
+    },
+    // layer 8: coast vs inland summary text
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Coast vs inland density",
+            "dy": 0,
+            "head": true
+          },
+          {
+            "t": "Coast: 0.118 businesses per km²",
+            "dy": 18,
+            "head": false
+          },
+          {
+            "t": "Inland: 0.008 (the coast is 14× denser)",
+            "dy": 35,
+            "head": false
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "x": 6,
+        "y": {
+          "expr": "296 + datum.dy"
+        },
+        "fontWeight": {
+          "expr": "datum.head ? 700 : 400"
+        }
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  // my controls. they're defined down here but used in the projection at the top
+  "params": [
+    {
+      // state_view. select = dropdown, options are the values, labels are what the user sees
+      "name": "state_view",
+      "value": "AUS",
+      "bind": {
+        "input": "select",
+        "options": [
+          "AUS",
+          "NSW",
+          "VIC",
+          "QLD",
+          "SA",
+          "WA",
+          "TAS",
+          "NT"
+        ],
+        "labels": [
+          "Australia",
+          "New South Wales",
+          "Victoria",
+          "Queensland",
+          "South Australia",
+          "Western Australia",
+          "Tasmania",
+          "Northern Territory"
+        ],
+        "name": "Zoom Centre: "
+      }
+    },
+    // zoom_level, a slider that scales the map
+    {
+      "name": "zoom_level",
+      "value": 0.9,
+      "bind": {
+        "input": "range",
+        "min": 0.5,
+        "max": 3,
+        "step": 0.1,
+        "name": "Zoom: "
+      }
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+// c05 dumbbell - layered, nested layers
+// data reshaping: the transform at the top (aggregate, pivot, calculate, pivot)
+// bar joining the dots: layer 2 (rule with x and x2)
+// the dots: layer 3, value labels: layer 4 (inside a nested layer, fold makes coastal/inland into
+//   rows)
+// 100% line: layer 1
+// layers, bottom to top:
+//   1. dashed line at 100%
+//   2. bar joining coastal and inland (main layer)
+//   3. the dots (inside a nested layer, with fold) (main layer)
+//   4. value labels (annotation, same nested layer)
+//   5. 'No inland / No coastal' notes (annotation)
+// main layers: 2 and 3 (the bar and the dots). 1 is the 100% reference line, 4 and 5 are
+//   annotations.
+//
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Dumbbell chart for each Australian state and territory. One dot shows visits to coastal regions in 2025 as a percentage of 2019 and the other shows the same for inland regions, joined by a line. In every state that has both, the coastal dot is further right, so coastal regions have recovered further.",
+  "title": {
+    "text": [
+      "Recovery Of Coastal Regions VS Inland Regions"
+    ],
+    "subtitle": [
+      "International visits in 2025 as a percentage of 2019.",
+      "100% = same as 2019.",
+      "* Hover over a dot for details."
+    ]
+  },
+  "width": 520,
+  "height": 300,
+  // global styling
+  "config": {
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 26,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFontSize": 18,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "labelColor": "#5B6770",
+      "titleColor": "#1E2B34",
+      "gridColor": "#E3DED3",
+      "domainColor": "#A8AEB3",
+      "tickColor": "#A8AEB3"
+    },
+    "legend": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "text": {
+      "fontSize": 12,
+      "color": "#1E2B34"
+    }
+  },
+  // one row per region per year
+  "data": {
+    "url": "data/used/region_visits.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "visitors": "number"
+      }
+    }
+  },
+  // shared by every layer. goal is one row per state with a coastal column and an inland column
+  //   (2025 as % of 2019)
+  "transform": [
+    // keep 2019 and 2025 only
+    {
+      "filter": "datum.year == 2019 || datum.year == 2025"
+    },
+    // aggregate: add up visitors for each state + category + year (groupby)
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "visitors",
+          "as": "v"
+        }
+      ],
+      "groupby": [
+        "state",
+        "category",
+        "year"
+      ]
+    },
+    // pivot: the years become columns
+    {
+      "pivot": "year",
+      "value": "v",
+      "groupby": [
+        "state",
+        "category"
+      ]
+    },
+    // 2025 as a percentage of 2019
+    {
+      "calculate": "datum['2025'] / datum['2019'] * 100",
+      "as": "pct"
+    },
+    // pivot again, this time category becomes columns (coastal, inland)
+    {
+      "pivot": "category",
+      "value": "pct",
+      "groupby": [
+        "state"
+      ]
+    },
+    // gap = coastal - inland, I use it for sorting. -999 is a marker for states missing coastal or
+    //   inland
+    {
+      "calculate": "isValid(datum.coastal) && isValid(datum.inland) ? datum.coastal - datum.inland : -999",
+      "as": "gap"
+    },
+    // full state names, using an object lookup
+    {
+      "calculate": "({\"NSW\": \"New South Wales\", \"VIC\": \"Victoria\", \"QLD\": \"Queensland\", \"SA\": \"South Australia\", \"WA\": \"Western Australia\", \"NT\": \"Northern Territory\", \"TAS\": \"Tasmania\", \"ACT\": \"Australian Capital Territory\"})[datum.state]",
+      "as": "state_name"
+    }
+  ],
+  // 1 dashed line at 100%, 2 bar joining the two values, 3 the dots, 4 value labels, 5 'No
+  //   inland/coastal' notes (3 and 4 are inside a nested layer)
+  "layer": [
+    {
+      // layer 1 uses inline data (just x = 100) to draw a reference line
+      "data": {
+        "values": [
+          {
+            "x": 100
+          }
+        ]
+      },
+      // rule = line, dashed with strokeDash
+      "mark": {
+        "type": "rule",
+        "stroke": "#1E2B34",
+        "strokeDash": [
+          5,
+          4
+        ],
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        }
+      }
+    },
+    // layer 2: the bar of the dumbbell. a rule from x (inland) to x2 (coastal) for each state
+    {
+      "transform": [
+        {
+          "filter": "datum.gap > -999"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "stroke": "#8A9399",
+        "strokeWidth": 3,
+        "strokeCap": "round"
+      },
+      "encoding": {
+        "y": {
+          "field": "state_name",
+          "type": "nominal",
+          "title": "State / territory",
+          // sort the states by another field (gap), biggest gap at the top. op max picks one value
+          //   per state
+          "sort": {
+            "field": "gap",
+            "op": "max",
+            "order": "descending"
+          },
+          "axis": {
+            "labelFontSize": 13,
+            "labelColor": "#1E2B34",
+            "domain": false,
+            "ticks": false,
+            "labelLimit": 400
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              120
+            ]
+          },
+          "axis": {
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80,
+              100
+            ],
+            "format": "d",
+            "title": "Visits in 2025 as a percentage of 2019 visits"
+          },
+          "field": "inland"
+        },
+        "x2": {
+          "field": "coastal"
+        }
+      }
+    },
+    // layers 3 and 4 are inside a nested layer, the transform in the parent is shared by both
+    {
+      "transform": [
+        // fold turns the coastal and inland columns into rows (category, pct), so each state gets 2
+        //   dots
+        {
+          "fold": [
+            "coastal",
+            "inland"
+          ],
+          "as": [
+            "category",
+            "pct"
+          ]
+        },
+        {
+          "filter": "isValid(datum.pct)"
+        }
+      ],
+      // layer 3 = the circles, layer 4 = the value text on top
+      "layer": [
+        // layer 3: the dots
+        {
+          "mark": {
+            "type": "circle",
+            "size": 230,
+            "opacity": 1,
+            "stroke": "#FFFFFF",
+            "strokeWidth": 1.5
+          },
+          "encoding": {
+            "y": {
+              "field": "state_name",
+              "type": "nominal",
+              "sort": {
+                "field": "gap",
+                "op": "max",
+                "order": "descending"
+              }
+            },
+            "x": {
+              "type": "quantitative",
+              "axis": {
+                "format": "d"
+              },
+              "field": "pct"
+            },
+            // colour = category, legend moved to the top and labelExpr renames the entries
+            "color": {
+              "field": "category",
+              "type": "nominal",
+              "title": "Region type",
+              "scale": {
+                "domain": [
+                  "coastal",
+                  "inland"
+                ],
+                "range": [
+                  "#0B5E8E",
+                  "#C99A3B"
+                ]
+              },
+              "legend": {
+                "orient": "top",
+                "labelExpr": "datum.value == 'coastal' ? 'Coastal regions' : 'Inland regions'",
+                "symbolSize": 200
+              }
+            },
+            // hover info
+            "tooltip": [
+              {
+                "field": "state_name",
+                "type": "nominal",
+                "title": "State"
+              },
+              {
+                "field": "category",
+                "type": "nominal",
+                "title": "Region type"
+              },
+              {
+                "field": "pct",
+                "type": "quantitative",
+                "title": "2025 visits as % of 2019",
+                "format": ".1f"
+              }
+            ]
+          }
+        },
+        // layer 4: value labels (annotation). baseline/align/dx/dy are expressions so the label is
+        //   left or right of its dot (WA coastal is moved above)
+        {
+          "mark": {
+            "type": "text",
+            "fontWeight": 600,
+            "baseline": {
+              "expr": "datum.state == 'WA' && datum.category == 'coastal' ? 'bottom' : 'middle'"
+            },
+            "align": {
+              "expr": "datum.state == 'WA' && datum.category == 'coastal' ? 'center' : datum.category == 'inland' ? 'right' : 'left'"
+            },
+            "dx": {
+              "expr": "datum.state == 'WA' && datum.category == 'coastal' ? 0 : datum.category == 'inland' ? -11 : 11"
+            },
+            "dy": {
+              "expr": "datum.state == 'WA' && datum.category == 'coastal' ? -11 : 0"
+            }
+          },
+          "encoding": {
+            "y": {
+              "field": "state_name",
+              "type": "nominal",
+              "sort": {
+                "op": "max",
+                "order": "descending"
+              }
+            },
+            "x": {
+              "field": "pct",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "pct",
+              "type": "quantitative",
+              "format": ".0f"
+            }
+          }
+        }
+      ]
+    },
+    // layer 5: italic note for the states missing one category (gap == -999)
+    {
+      "transform": [
+        {
+          "filter": "datum.gap == -999"
+        },
+        {
+          "calculate": "datum.state == 'TAS' ? 'No inland regions' : 'No coastal region'",
+          "as": "note"
+        },
+        {
+          "calculate": "isValid(datum.coastal) ? datum.coastal : datum.inland",
+          "as": "anchor"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": {
+          "expr": "datum.state == 'TAS' ? -12 : -34"
+        },
+        "fontStyle": "italic",
+        "color": "#5B6770"
+      },
+      "encoding": {
+        "y": {
+          "field": "state_name",
+          "type": "nominal",
+          "sort": {
+            "op": "max",
+            "order": "descending"
+          }
+        },
+        "x": {
+          "field": "anchor",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "note",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}

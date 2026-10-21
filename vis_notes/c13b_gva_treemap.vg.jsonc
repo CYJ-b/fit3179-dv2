@@ -1,0 +1,483 @@
+// c13b treemap - this one is plain Vega, not Vega-Lite
+// (see $schema). Vega is lower level: you write data + scales + marks yourself.
+// Vega-Lite is data + mark + encoding and it makes the scales/axes/legends for me.
+// treemap layout: data 'tree' with the stratify and treemap transforms
+// rectangles: marks, rect (groups) and rect (leaves)
+// hover highlight: leaves rect, encode hover
+// tooltip: encode enter tooltip (signal)
+// colours: scales, 'colour'
+// layers, bottom to top:
+//   in Vega the layers are the marks, bottom to top:
+//   1. group rectangles (main layer)
+//   2. group titles (text)
+//   3. industry rectangles (main layer)
+//   4. industry names (text)
+//   5. industry values (text)
+// main layers: 1 and 3 (the group and industry rectangles). 2, 4 and 5 are text.
+//
+{
+  // this is Vega v6, not Vega-Lite
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "Treemap of the value added (GVA) by coastal tourism in 2024-25, $122.4 billion in total. Rectangle area is value added. Half is direct value added in 17 industries, nested in one Direct block and grouped into core tourism industries and connected and other industries. The other half is indirect value added in supplier industries, shown as one block.",
+  // chart size, width and height are also available as signals in Vega
+  "width": 680,
+  "height": 520,
+  "padding": {
+    "left": 2,
+    "right": 2,
+    "top": 6,
+    "bottom": 6
+  },
+  // pad keeps the size I asked for, contains padding means width/height include the padding
+  "autosize": {
+    "type": "pad",
+    "contains": "padding"
+  },
+  // title in Vega style, all the options sit on the title object
+  "title": {
+    "text": [
+      "Direct And Indirect Value Added By Coastal Tourism"
+    ],
+    "subtitle": [
+      "Area = gross value added (GVA).",
+      "* Hover over a rectangle for details."
+    ],
+    "anchor": "start",
+    "font": "Fraunces, Georgia, serif",
+    "fontSize": 26,
+    "fontWeight": 600,
+    "color": "#1E2B34",
+    "subtitleFont": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "subtitleFontSize": 18,
+    "subtitleColor": "#5B6770",
+    "subtitlePadding": 4,
+    "offset": 12
+  },
+  // just the font
+  "config": {
+    "text": {
+      "font": "'Source Sans 3', Helvetica, Arial, sans-serif"
+    }
+  },
+  // in Vega data is a list of named datasets. one can be built from another with source and then
+  //   changed with transform
+  "data": [
+    {
+      // dataset 'tree': the csv (one row per node with id, parent, size)
+      "name": "tree",
+      "url": "data/used/gva_industries_coastal_2024_25.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "size": "number"
+        }
+      },
+      "transform": [
+        // stratify turns the flat id/parent table into a tree
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        // treemap works out the rectangle (x0, y0, x1, y1) for every node. squarify is the layout
+        //   method, size is [width, height], the padding leaves room for the group titles
+        {
+          "type": "treemap",
+          "field": "size",
+          "method": "squarify",
+          "round": true,
+          "ratio": 1.3,
+          "sort": {
+            "field": "size",
+            "order": "descending"
+          },
+          "paddingInner": 3,
+          "paddingOuter": 3,
+          "paddingTop": 24,
+          "size": [
+            {
+              "signal": "width"
+            },
+            {
+              "signal": "height"
+            }
+          ]
+        }
+      ]
+    },
+    // dataset 'leaves': from 'tree', only the nodes with no children (the actual industries), and
+    //   formula adds helper fields (label lines, top group, text length)
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "!datum.children"
+        },
+        {
+          "type": "formula",
+          "as": "lines",
+          "expr": "({'Air, water and other transport': ['Air, water','and other','transport'], 'Travel agents and info centres': ['Travel agents', 'and info', 'centres'], 'Transport equipment rental': ['Transport', 'equipment', 'rental'], 'Rail passenger transport': ['Rail passenger', 'transport'], 'Road passenger transport': ['Road passenger', 'transport'], 'Ownership of dwellings': ['Ownership of', 'dwellings'], 'Education and training': ['Education', 'and training'], 'Cafes and restaurants': ['Cafes and', 'restaurants'], 'Other retail': ['Other', 'retail'], 'Pubs, clubs and bars': ['Pubs, clubs', 'and bars'], 'Sports and recreation': ['Sports and', 'recreation'], 'Indirect (supply chains)': ['Indirect', '(supply chains)']})[datum.label] || [datum.label]"
+        },
+        {
+          "type": "formula",
+          "as": "top",
+          "expr": "datum.group == 'Indirect (supply chains)' ? datum.group : 'Direct'"
+        },
+        {
+          "type": "formula",
+          "as": "nl",
+          "expr": "length(datum.lines)"
+        },
+        {
+          "type": "formula",
+          "as": "maxlen",
+          "expr": "max(length(datum.lines[0]), length(datum.lines[1] || ''), length(datum.lines[2] || ''))"
+        }
+      ]
+    },
+    // dataset 'group_totals': aggregate sums size per group (for labels and tooltips)
+    {
+      "name": "group_totals",
+      "source": "leaves",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": [
+            "group"
+          ],
+          "fields": [
+            "size"
+          ],
+          "ops": [
+            "sum"
+          ],
+          "as": [
+            "total"
+          ]
+        }
+      ]
+    },
+    // dataset 'top_totals': sum for each top block (Direct / Indirect)
+    {
+      "name": "top_totals",
+      "source": "leaves",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": [
+            "top"
+          ],
+          "fields": [
+            "size"
+          ],
+          "ops": [
+            "sum"
+          ],
+          "as": [
+            "total"
+          ]
+        }
+      ]
+    },
+    // dataset 'grand': the grand total, to work out each share
+    {
+      "name": "grand",
+      "source": "leaves",
+      "transform": [
+        {
+          "type": "aggregate",
+          "fields": [
+            "size"
+          ],
+          "ops": [
+            "sum"
+          ],
+          "as": [
+            "total"
+          ]
+        }
+      ]
+    },
+    // dataset 'groups': the parent nodes (blocks that contain others). lookup copies in the totals
+    //   from above
+    {
+      "name": "groups",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.children && datum.depth >= 1"
+        },
+        {
+          "type": "lookup",
+          "from": "group_totals",
+          "key": "group",
+          "fields": [
+            "group"
+          ],
+          "values": [
+            "total"
+          ],
+          "as": [
+            "total"
+          ]
+        },
+        {
+          "type": "lookup",
+          "from": "top_totals",
+          "key": "top",
+          "fields": [
+            "label"
+          ],
+          "values": [
+            "total"
+          ],
+          "as": [
+            "top_total"
+          ]
+        },
+        {
+          "type": "formula",
+          "as": "total",
+          "expr": "datum.total != null ? datum.total : datum.top_total"
+        },
+        {
+          "type": "collect",
+          "sort": {
+            "field": "depth"
+          }
+        }
+      ]
+    }
+  ],
+  // in Vega I write the scales myself. 'colour' is an ordinal scale, each group name gets a hex
+  //   colour
+  "scales": [
+    {
+      "name": "colour",
+      "type": "ordinal",
+      "domain": [
+        "Core tourism (direct)",
+        "Connected and other (direct)",
+        "Indirect (supply chains)"
+      ],
+      "range": [
+        "#7B4FA6",
+        "#6F7D1F",
+        "#8C5A2B"
+      ]
+    }
+  ],
+  // marks are drawn in order (first = bottom): 1 group rectangles, 2 group titles, 3 industry
+  //   rectangles, 4 industry names, 5 industry values
+  "marks": [
+    {
+      // layer 1: rect for each group node. from.data says which dataset it draws
+      "type": "rect",
+      "from": {
+        "data": "groups"
+      },
+      "encode": {
+        // enter = set once when the mark is created. here it's the tooltip (a signal = an
+        //   expression)
+        "enter": {
+          "tooltip": {
+            "signal": "{'Group': datum.label, 'Value added (GVA)': '$' + format(datum.total / 1000, '.1f') + ' billion', 'Share of coastal tourism GVA': format(datum.total / data('grand')[0].total, '.0%')}"
+          }
+        },
+        // update = the normal properties: position from the treemap fields (x0, y0, x1, y1), fill
+        //   from the scale, with conditions using test
+        "update": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": [
+            {
+              "test": "datum.label == 'Direct'",
+              "value": "#1E2B34"
+            },
+            {
+              "scale": "colour",
+              "field": "group"
+            }
+          ],
+          "fillOpacity": [
+            {
+              "test": "datum.label == 'Direct'",
+              "value": 0.07
+            },
+            {
+              "value": 0.22
+            }
+          ],
+          "stroke": [
+            {
+              "test": "datum.label == 'Direct'",
+              "value": "#1E2B34"
+            },
+            {
+              "value": null
+            }
+          ],
+          "strokeWidth": {
+            "value": 1.5
+          }
+        }
+      }
+    },
+    // layer 2: group title text. the long signal picks the longest label that fits in the rectangle
+    {
+      "type": "text",
+      "from": {
+        "data": "groups"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0 + 6"
+          },
+          "y": {
+            "signal": "datum.y0 + 4"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "text": {
+            "signal": "length(datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn (' + format(datum.total / data('grand')[0].total, '.0%') + ')') * (datum.depth == 1 ? 7.8 : 7.4) <= (datum.x1 - datum.x0 - 12) ? datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn (' + format(datum.total / data('grand')[0].total, '.0%') + ')' : (length(datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn') * (datum.depth == 1 ? 7.8 : 7.4) <= (datum.x1 - datum.x0 - 12) ? datum.label + '  $' + format(datum.total / 1000, '.1f') + 'bn' : (length(datum.label) * (datum.depth == 1 ? 7.8 : 7.4) <= (datum.x1 - datum.x0 - 12) ? datum.label : ''))"
+          },
+          "fontSize": {
+            "signal": "datum.depth == 1 ? 16 : 13"
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#1E2B34"
+          }
+        }
+      }
+    },
+    // layer 3: the industry rectangles (leaves)
+    {
+      "type": "rect",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "enter": {
+          "tooltip": {
+            "signal": "datum.label == 'Indirect (supply chains)' ? {'Type': 'Indirect', 'Value added (GVA)': '$' + format(datum.size / 1000, '.1f') + ' billion', 'Share of coastal tourism GVA': format(datum.size / data('grand')[0].total, '.1%'), 'What it is': 'Value added by the suppliers that serve tourism businesses. The source does not split it by industry'} : {'Industry': datum.label, 'Group': datum.group, 'Value added (GVA)': '$' + format(datum.size / 1000, '.1f') + ' billion', 'Share of coastal tourism GVA': format(datum.size / data('grand')[0].total, '.1%')}"
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "scale": "colour",
+            "field": "group"
+          },
+          "stroke": {
+            "value": "#FBF8F2"
+          },
+          "strokeWidth": {
+            "value": 1.5
+          }
+        },
+        // hover = properties used while the mouse is over the mark (dark, thicker outline)
+        "hover": {
+          "stroke": {
+            "value": "#1E2B34"
+          },
+          "strokeWidth": {
+            "value": 2.5
+          }
+        }
+      }
+    },
+    // layer 4: industry name in white, only shown if it fits in the rectangle
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0 + 7"
+          },
+          "y": {
+            "signal": "datum.y0 + 7"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "text": {
+            "signal": "(datum.maxlen * 6.8 <= (datum.x1 - datum.x0 - 12) && datum.y1 - datum.y0 > 34 + (datum.nl - 1) * 15) ? datum.lines : ''"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#FFFFFF"
+          },
+          "lineHeight": {
+            "value": 15
+          }
+        }
+      }
+    },
+    // layer 5: the value ($bn) under the name
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0 + 7"
+          },
+          "y": {
+            "signal": "datum.y0 + 10 + datum.nl * 15"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "text": {
+            "signal": "(datum.maxlen * 6.8 <= (datum.x1 - datum.x0 - 12) && datum.y1 - datum.y0 > 46 + (datum.nl - 1) * 15) ? '$' + format(datum.size / 1000, '.1f') + 'bn' : ''"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#FFFFFF"
+          }
+        }
+      }
+    }
+  ]
+}

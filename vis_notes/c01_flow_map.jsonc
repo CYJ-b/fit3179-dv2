@@ -1,0 +1,517 @@
+// c01 flow map - layered Vega-Lite map
+// year slider: params, year_selected
+// layer order: base map first, csv layers on top
+// flow lines: layer 4, projection is near the top
+// curved lines: the curve points are made in python, see layer 4
+// no zoom or dropdown in this one (those are in c04, c09, c15b)
+// layers, bottom to top:
+//   1. ocean (sphere)
+//   2. graticule grid lines
+//   3. country shapes
+//   4. flow lines (csv, curve points made in python) (main layer)
+//   5. dots at the origin countries (csv) (main layer)
+//   6. country name labels (annotation)
+//   7. white box behind the total text (annotation)
+//   8. total arrivals text (annotation)
+// main layers: 4 and 5 (the flow lines and the dots). 1 to 3 are the base map, 6 to 8 are
+//   annotations.
+//
+{
+  // which vega-lite version I'm using (v6)
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Flow map of international visitor arrivals to Australia from the 22 largest origin countries. Line width is the number of arrivals in the selected year and line colour is that year as a percentage of the same country's 2019 arrivals. A year slider moves between 2019 and 2025.",
+  // title + subtitle, an array makes it go onto several lines
+  "title": {
+    "text": [
+      "How Did The Number of International Visitors Change",
+      "Over Time?"
+    ],
+    "subtitle": [
+      "Overseas arrivals to Australia based on country of residence.",
+      "* Hover over a line or dot for details.",
+      "* Drag the slider to change the year."
+    ]
+  },
+  // size of the chart in pixels
+  "width": 900,
+  "height": 390,
+  // turns lon/lat into x/y. equalEarth is a world map projection, and I rotated it so Australia is
+  //   in the middle instead of being cut off at the edge
+  "projection": {
+    "type": "equalEarth",
+    "rotate": [
+      -150,
+      0,
+      0
+    ]
+  },
+  // a param is just a variable. the bind makes it an html slider, and when it moves year_selected
+  //   changes so every filter that uses it runs again
+  "params": [
+    {
+      "name": "year_selected",
+      "value": 2021,
+      "bind": {
+        "input": "range",
+        "min": 2019,
+        "max": 2025,
+        "step": 1,
+        "name": "Year: "
+      }
+    }
+  ],
+  // global styling (fonts, title, legend) so I don't repeat it everywhere
+  "config": {
+    // view stroke null removes the border around the chart
+    "view": {
+      "stroke": null
+    },
+    "background": "transparent",
+    "font": "'Source Sans 3', Helvetica, Arial, sans-serif",
+    "title": {
+      "font": "Fraunces, Georgia, serif",
+      "fontSize": 26,
+      "fontWeight": 600,
+      "color": "#1E2B34",
+      "anchor": "start",
+      "subtitleFontSize": 18,
+      "subtitleColor": "#5B6770",
+      "subtitlePadding": 4,
+      "offset": 12
+    },
+    "legend": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 600,
+      "labelColor": "#1E2B34",
+      "titleColor": "#1E2B34",
+      "padding": 4
+    },
+    "text": {
+      "color": "#1E2B34"
+    }
+  },
+  // main csv, one row per country per year. layers without their own data use this one (dots,
+  //   labels, total text). parse is there because csv values come in as strings
+  "data": {
+    "url": "data/used/flow_arrivals.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "arrivals": "number",
+        "lon": "number",
+        "lat": "number",
+        "pct_of_2019": "number"
+      }
+    }
+  },
+  // layers draw in order, first = bottom. mine: 1 sphere (ocean), 2 graticule, 3 countries, 4 flow
+  //   lines, 5 dots, 6 country names, 7 white box behind the total, 8 total text. so the base map
+  //   goes first and the csv data goes on top
+  "layer": [
+    {
+      // layer 1: sphere:true is the outline of the whole globe, I use it as the ocean
+      "data": {
+        "sphere": true
+      },
+      // geoshape is the mark for map shapes
+      "mark": {
+        "type": "geoshape",
+        "fill": "#DCE9F2"
+      }
+    },
+    // layer 2: grid lines (graticule) from a topojson file. feature is the name of the object
+    //   inside the file
+    {
+      "data": {
+        "url": "data/used/map_data/world_map_graticules_15.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_graticules_15"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#B8C7D3",
+        "strokeWidth": 0.5,
+        "opacity": 0.5
+      }
+    },
+    // layer 3: countries, the filter takes out Antarctica
+    {
+      "data": {
+        "url": "data/used/map_data/world_map_countries.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_admin_0_countries"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.NAME != 'Antarctica'"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#E9E4D8",
+        "stroke": "#FBF8F2",
+        "strokeWidth": 0.6
+      }
+    },
+    // layer 4: the flow lines. own data (flow_curves.csv), every curve is lots of lon/lat points
+    {
+      // how the lines are curved: not done in vega-lite. I made the curve points in python
+      //   (prep/build_flow_curves.py) and saved them in flow_curves.csv, 41 points per line. each
+      //   point is one row and seq is the order. a 'bend' value for each country decides how much
+      //   and which way the line curves. vega-lite just joins the points with a line
+      "data": {
+        "url": "data/used/flow_curves.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "number",
+            "arrivals": "number",
+            "pct_of_2019": "number",
+            "seq": "number",
+            "lon": "number",
+            "lat": "number"
+          }
+        }
+      },
+      // these run top to bottom
+      "transform": [
+        {
+          // only keep the year from the slider
+          "filter": "datum.year == year_selected"
+        },
+        // calculate makes a new field, here it puts pct_of_2019 into classes a to f for the colour
+        {
+          "calculate": "datum.pct_of_2019 < 10 ? 'a' : datum.pct_of_2019 < 50 ? 'b' : datum.pct_of_2019 < 90 ? 'c' : datum.pct_of_2019 < 100 ? 'd' : datum.pct_of_2019 < 120 ? 'e' : 'f'",
+          "as": "pct_class"
+        }
+      ],
+      // line mark joins the points of each curve in order. the curve look comes from having 41
+      //   points per line, a straight line would only need 2
+      "mark": {
+        "type": "line",
+        "strokeCap": "round",
+        "strokeJoin": "round",
+        "opacity": 0.9
+      },
+      // encoding = which field goes to which visual channel
+      "encoding": {
+        // longitude/latitude = where it goes on the map (goes through the projection)
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        // colour by class. scale domain/range sets which class gets which colour. labelExpr changes
+        //   a/b/c into proper text. orient none + legendX/legendY is how I placed the legend by
+        //   hand
+        "color": {
+          "field": "pct_class",
+          "type": "ordinal",
+          "title": ["Arrivals Amount", "Indexed to 2019"],
+          "sort": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"
+          ],
+          "scale": {
+            "domain": [
+              "a",
+              "b",
+              "c",
+              "d",
+              "e",
+              "f"
+            ],
+            "range": [
+              "#4A1F08",
+              "#9A4A14",
+              "#C97F2E",
+              "#E8C27A",
+              "#8460BA",
+              "#43257A"
+            ]
+          },
+          "legend": {
+            "orient": "none",
+            "legendX": 738,
+            "legendY": 270,
+            "symbolStrokeWidth": 4.5,
+            "symbolSize": 450,
+            "rowPadding": 3,
+            "labelExpr": "({a: 'Under 10%', b: '10% to 50%', c: '50% to 90%', d: '90% to 100%', e: '100% to 120%', f: '120% or more'})[datum.value]"
+          }
+        },
+        // detail makes one line per country without needing a visible channel for it
+        "detail": {
+          "field": "country",
+          "type": "nominal"
+        },
+        // order = seq, the position of each point along the curve, so the points get joined in the
+        //   right sequence
+        "order": {
+          "field": "seq",
+          "type": "quantitative"
+        },
+        // line thickness = arrivals, sqrt scale so small ones are still visible. legend values =
+        //   the example sizes shown
+        "strokeWidth": {
+          "field": "arrivals",
+          "type": "quantitative",
+          "title": "Number of Arrivals",
+          "scale": {
+            "type": "sqrt",
+            "domain": [
+              0,
+              1450000
+            ],
+            "range": [
+              0.8,
+              11
+            ]
+          },
+          "legend": {
+            "values": [
+              10000,
+              100000,
+              500000,
+              1000000
+            ],
+            "symbolSize": 450,
+            "orient": "none",
+            "legendX": 6,
+            "legendY": 286,
+            "rowPadding": 3,
+            "symbolStrokeColor": "#5B6770"
+          }
+        },
+        // fields shown when hovering. format is d3 format, ',' is thousands separator and '.0f' is
+        //   no decimals
+        "tooltip": [
+          {
+            "field": "country",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "arrivals",
+            "type": "quantitative",
+            "title": "Arrivals",
+            "format": ","
+          },
+          {
+            "field": "pct_of_2019",
+            "type": "quantitative",
+            "title": "% of 2019 arrivals",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    // layer 5: dots at each origin country, uses the top level csv. tooltip is here too so hovering
+    //   the dot works
+    {
+      "transform": [
+        {
+          "filter": "datum.year == year_selected"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 55,
+        "stroke": "white",
+        "strokeWidth": 1,
+        "color": "#5B6770"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "country",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "arrivals",
+            "type": "quantitative",
+            "title": "Arrivals",
+            "format": ","
+          },
+          {
+            "field": "pct_of_2019",
+            "type": "quantitative",
+            "title": "% of 2019 arrivals",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    // layer 6: country names. year 2021 is only there to get one row per country. lab_dx, lab_dy
+    //   and lab_align are offsets I tuned by hand so the labels don't overlap
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2021"
+        },
+        {
+          "filter": "indexof([\"China\", \"Japan\", \"South Korea\", \"India\", \"New Zealand\", \"United States of America\", \"Canada\", \"South Africa\", \"United Kingdom\", \"Ireland\", \"France\", \"Germany\"], datum.country) >= 0"
+        },
+        {
+          "calculate": "datum.country == 'United States of America' ? 'USA' : datum.country",
+          "as": "short"
+        },
+        {
+          "calculate": "({\"China\": -9, \"Japan\": 9, \"South Korea\": 0, \"India\": -8, \"New Zealand\": 9, \"USA\": 9, \"Canada\": 9, \"South Africa\": 0, \"United Kingdom\": 0, \"Ireland\": -8, \"France\": -14, \"Germany\": 8})[datum.short]",
+          "as": "lab_dx"
+        },
+        {
+          "calculate": "({\"China\": -2, \"Japan\": -2, \"South Korea\": -12, \"India\": 10, \"New Zealand\": 2, \"USA\": -2, \"Canada\": -2, \"South Africa\": -11, \"United Kingdom\": -11, \"Ireland\": -2, \"France\": 0, \"Germany\": -8})[datum.short]",
+          "as": "lab_dy"
+        },
+        {
+          "calculate": "({\"China\": \"right\", \"Japan\": \"left\", \"South Korea\": \"center\", \"India\": \"right\", \"New Zealand\": \"left\", \"USA\": \"left\", \"Canada\": \"left\", \"South Africa\": \"center\", \"United Kingdom\": \"center\", \"Ireland\": \"right\", \"France\": \"right\", \"Germany\": \"left\"})[datum.short]",
+          "as": "lab_align"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": 600,
+        // expr = value worked out per row from the data
+        "dx": {
+          "expr": "datum.lab_dx"
+        },
+        "dy": {
+          "expr": "datum.lab_dy"
+        },
+        "align": {
+          "expr": "datum.lab_align"
+        }
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "short",
+          "type": "nominal"
+        }
+      }
+    },
+    // layer 7: white semi-transparent box behind the total text so it is easier to read. rect mark,
+    //   data values [{}] is one empty row just so the rect gets drawn once, and x/x2/y/y2 are fixed
+    //   pixel values so it stays in place and doesn't move with the map
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "rect",
+        "fill": "white",
+        "fillOpacity": 0.6,
+        "stroke": "#B8C7D3",
+        "strokeWidth": 1,
+        "cornerRadius": 4
+      },
+      "encoding": {
+        "x": {
+          "value": 230
+        },
+        "x2": {
+          "value": 495
+        },
+        "y": {
+          "value": 322
+        },
+        "y2": {
+          "value": 345
+        }
+      }
+    },
+    // layer 8: the 'total arrivals' text. aggregate sums everything into one row, lon/lat are fixed
+    //   to place it, and the text uses year_selected
+    {
+      "transform": [
+        {
+          "filter": "datum.year == year_selected"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "arrivals",
+              "as": "total"
+            }
+          ]
+        },
+        {
+          "calculate": "105",
+          "as": "lon"
+        },
+        {
+          "calculate": "-45",
+          "as": "lat"
+        },
+        {
+          "calculate": "'Total number of arrivals in ' + year_selected + ' is ' + format(datum.total, ',')",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": 600,
+        "baseline": "top",
+        "dy": 6
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}
