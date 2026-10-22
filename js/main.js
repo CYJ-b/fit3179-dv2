@@ -28,7 +28,7 @@ function lines(text) {
 }
 
 // Draw the spec's title above the chart in HTML instead of inside the canvas, so every title
-// starts at the card's left edge even though the charts themselves are centred.
+// starts at the left edge of its chart rather than floating at the card's edge.
 function addTitle(el, title) {
   if (!title) return;
   const box = document.createElement("div");
@@ -41,9 +41,8 @@ function addTitle(el, title) {
     sub.className = "chart-subtitle";
     box.appendChild(sub);
   }
-  // side-by-side cards: the chart already sits at the left of its grid cell, so the title goes inside it
-  if (el.parentElement.classList.contains("side")) el.prepend(box);
-  else el.before(box);
+  // inside the chart element, so the title starts at the chart's own left edge (the chart is centred in the card)
+  el.prepend(box);
 }
 
 for (const [id, path] of Object.entries(charts)) {

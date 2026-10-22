@@ -51,9 +51,9 @@ p { max-width: 55ch; } /* ~60 characters of prose per line (ch = width of "0", w
   margin-right: auto;
 }
 
-/* chart titles are drawn in HTML (see main.js) so they all start at the card's left edge,
-   whatever the width of the chart under them */
-.chart-title { margin: 0 0 0.75rem; }
+/* chart titles are drawn in HTML (see main.js) inside the chart element, so they start at the chart's left edge.
+   width 0 + min-width 100% stops a long title from making the chart element wider than the chart */
+.chart-title { width: 0; min-width: 100%; box-sizing: border-box; margin: 0 0 0.75rem; padding-left: 5px; }
 .chart-title-text {
   font-family: "Fraunces", Georgia, serif;
   font-size: 26px;
@@ -89,7 +89,18 @@ p { max-width: 55ch; } /* ~60 characters of prose per line (ch = width of "0", w
 /* conclusion lists sit in the same two-column layout; no extra margins so they line up with the columns */
 .text-pair > ul { margin: 0; }
 
-footer { margin-top: 4rem; font-size: 0.9rem; color: #5b6770; }
+/* author details spread across a single line; wraps on narrow screens */
+footer {
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #5b6770;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 2rem;
+}
+footer > p { margin: 0; }
 
 /* chart on the left, paragraph on the right (stacks on narrow screens) */
 .block.side {
@@ -106,6 +117,9 @@ footer { margin-top: 4rem; font-size: 0.9rem; color: #5b6770; }
   .block.side { grid-template-columns: minmax(0, 1fr); grid-template-areas: "text" "chart"; }
   .block.side > p { margin-top: 0; }
 }
+
+/* c04: title nudged right so it lines up better with the map */
+#c04 .chart-title { padding-left: 100px; }
 
 /* c04: Year slider on the left of the controls row under the map, State / Zoom / tick-box to its right */
 #c04 .vega-bindings {
