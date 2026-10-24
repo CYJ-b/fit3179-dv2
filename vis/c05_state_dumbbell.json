@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Dumbbell chart for each Australian state and territory. One dot shows visits to coastal regions in 2025 as a percentage of 2019 and the other shows the same for inland regions, joined by a line. In every state that has both, the coastal dot is further right, so coastal regions have recovered further.",
+  "description": "Dumbbell chart for each Australian state and territory. One dot shows visitors to coastal regions in 2025 as a percentage of 2019 and the other shows the same for inland regions, joined by a line. In every state that has both, the coastal dot is further right, so coastal regions have recovered further.",
   "title": {
     "text": [
       "Recovery Of Coastal Regions VS Inland Regions"
     ],
     "subtitle": [
-      "International visits in 2025 as a percentage of 2019.",
+      "International visitors in 2025 as a percentage of 2019.",
       "100% = same as 2019.",
       "* Hover over a dot for details."
     ]
@@ -182,7 +182,7 @@
               100
             ],
             "format": "d",
-            "title": "Visits in 2025 as a percentage of 2019 visits"
+            "title": "Visitors in 2025 as a percentage of 2019 visitors"
           },
           "field": "inland"
         },
@@ -267,7 +267,7 @@
               {
                 "field": "pct",
                 "type": "quantitative",
-                "title": "2025 visits as % of 2019",
+                "title": "2025 visitors as % of 2019",
                 "format": ".1f"
               }
             ]

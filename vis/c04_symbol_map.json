@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Proportional symbol map of international visits to each of Australia's 76 tourism regions. Circle area is the number of visits in the selected year and circle colour shows whether the region is coastal (blue) or inland (sand). A year slider moves between 2019 and 2025, a dropdown centres the map on a state or all of Australia, a zoom slider zooms in or out, and a checkbox hides regions outside the chosen state.",
+  "description": "Proportional symbol map of international visitors to each of Australia's 76 tourism regions. Circle area is the number of visitors in the selected year and circle colour shows whether the region is coastal (blue) or inland (sand). A year slider moves between 2019 and 2025, a dropdown centres the map on a state or all of Australia, a zoom slider zooms in or out, and a checkbox hides regions outside the chosen state.",
   "title": {
-    "text": "Number Of Visits For Each Tourism Region",
+    "text": "Number Of Visitors For Each Tourism Region",
     "subtitle": [
       "* Hover over a circle for details.",
       "* Use the Year, Zoom Centre and Zoom controls to look closer."
@@ -282,7 +282,7 @@
         "size": {
           "field": "visitors",
           "type": "quantitative",
-          "title": "Visits in the year",
+          "title": "Visitors in the year",
           "scale": {
             "type": "pow",
             "exponent": 0.8,
@@ -380,13 +380,13 @@
           {
             "field": "visitors",
             "type": "quantitative",
-            "title": "Visits",
+            "title": "Visitors",
             "format": ","
           },
           {
             "field": "pct_of_2019",
             "type": "quantitative",
-            "title": "% of 2019 visits",
+            "title": "% of 2019 visitors",
             "format": ".0f"
           }
         ]

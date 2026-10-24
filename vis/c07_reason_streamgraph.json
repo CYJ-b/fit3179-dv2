@@ -1,13 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Streamgraph of international visits to coastal tourism regions by main reason for the trip, quarter by quarter from 2018 to the first quarter of 2026. Layers are holiday, visiting friends and relatives, business, education, and employment and other reasons.",
+  "description": "Streamgraph of international visitors to coastal tourism regions by main reason for the trip, quarter by quarter from 2018 to the first quarter of 2026. Layers are holiday, visiting friends and relatives, business, education, and employment and other reasons.",
   "title": {
     "text": [
       "The Main Reasons For Visiting Coastal Regions",
       "Across Time"
     ],
     "subtitle": [
-      "Thickness of a band is the number of international visits.",
+      "Thickness of a band is the number of international visitors.",
       "* Hover over a band for details."
     ]
     },
@@ -210,7 +210,7 @@
           "field": "y0",
           "type": "quantitative",
           "axis": {
-            "title": "Visits per quarter (read band thickness)",
+            "title": "Visitors per quarter (read band thickness)",
             "format": "~s",
             "values": [0, 1000000, 2000000, 3000000, 4000000],
             "grid": true,
@@ -257,7 +257,7 @@
           {
             "field": "visits",
             "type": "quantitative",
-            "title": "Visits",
+            "title": "Visitors",
             "format": ","
           }
         ]

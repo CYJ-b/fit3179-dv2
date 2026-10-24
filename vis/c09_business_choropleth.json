@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Choropleth map of tourism businesses per square kilometre in each of Australia's 76 tourism regions in 2025, in five classes. Hovering a region highlights it and shows its details. A dropdown centres the map on a state or all of Australia and a zoom slider zooms in or out.",
+  "description": "Choropleth map of tourism businesses per 100 square kilometres in each of Australia's 76 tourism regions in 2025, in five classes. Hovering a region highlights it and shows its details. A dropdown centres the map on a state or all of Australia and a zoom slider zooms in or out.",
   "title": {
     "text": [
       "Amount Of Tourism Businesses Across",
@@ -75,8 +75,8 @@
     {
       "transform": [
         {
-          "calculate": "datum.businesses / datum.area_km2",
-          "as": "per_km2"
+          "calculate": "datum.businesses / datum.area_km2 * 100",
+          "as": "per_100km2"
         },
         {
           "calculate": "toString(datum.TR_CODE)",
@@ -120,16 +120,16 @@
           "type": "geojson"
         },
         "color": {
-          "field": "per_km2",
+          "field": "per_100km2",
           "type": "quantitative",
-          "title": "Businesses per km²",
+          "title": "Businesses per 100 km²",
           "scale": {
             "type": "threshold",
             "domain": [
-              0.02,
-              0.1,
-              0.5,
-              2
+              2,
+              10,
+              50,
+              200
             ],
             "range": [
               "#deebf7",
@@ -180,10 +180,10 @@
             "format": ","
           },
           {
-            "field": "per_km2",
+            "field": "per_100km2",
             "type": "quantitative",
-            "title": "Businesses per km²",
-            "format": ".3f"
+            "title": "Businesses per 100 km²",
+            "format": ".1f"
           },
           {
             "field": "area_km2",
@@ -277,7 +277,7 @@
           "as": "l_align"
         },
         {
-          "calculate": "datum.TR_NAME + ' ' + format(datum.businesses / datum.area_km2, '.1f')",
+          "calculate": "datum.TR_NAME + ' ' + format(datum.businesses / datum.area_km2 * 100, ',.0f')",
           "as": "label"
         }
       ],
@@ -311,23 +311,23 @@
         "values": [
           {
             "i": 0,
-            "v": 0.01
-          },
-          {
-            "i": 1,
-            "v": 0.05
-          },
-          {
-            "i": 2,
-            "v": 0.25
-          },
-          {
-            "i": 3,
             "v": 1
           },
           {
-            "i": 4,
+            "i": 1,
             "v": 5
+          },
+          {
+            "i": 2,
+            "v": 25
+          },
+          {
+            "i": 3,
+            "v": 100
+          },
+          {
+            "i": 4,
+            "v": 500
           }
         ]
       },
@@ -357,23 +357,23 @@
         "values": [
           {
             "i": 0,
-            "label": "Less than 0.02  (18)"
+            "label": "Less than 2  (18)"
           },
           {
             "i": 1,
-            "label": "0.02 to 0.1  (26)"
+            "label": "2 to 10  (26)"
           },
           {
             "i": 2,
-            "label": "0.1 to 0.5  (14)"
+            "label": "10 to 50  (14)"
           },
           {
             "i": 3,
-            "label": "0.5 to 2  (10)"
+            "label": "50 to 200  (10)"
           },
           {
             "i": 4,
-            "label": "2 or more  (8)"
+            "label": "200 or more  (8)"
           }
         ]
       },
@@ -396,7 +396,7 @@
       "data": {
         "values": [
           {
-            "t": "Tourism businesses per km²"
+            "t": "Tourism businesses per 100 km²"
           },
           {
             "t": "(number of regions in each class)"
@@ -435,17 +435,17 @@
       "data": {
         "values": [
           {
-            "t": "Coast vs inland density",
+            "t": "Average density: coast vs inland ",
             "dy": 0,
             "head": true
           },
           {
-            "t": "Coast: 0.118 businesses per km²",
+            "t": "Coast: 11.8 businesses per 100 km²",
             "dy": 18,
             "head": false
           },
           {
-            "t": "Inland: 0.008 (the coast is 14× denser)",
+            "t": "Inland: 0.8 (the coast is 14× denser)",
             "dy": 35,
             "head": false
           }

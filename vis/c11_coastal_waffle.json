@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Six waffle charts, each a grid of 100 squares where one square is one percentage point. Blue squares are the coastal share and sand squares the inland share of: land area (35%), tourism businesses (88%), international visits (93%), tourism spend (87%), value added (87%) and jobs (86%).",
+  "description": "Six waffle charts, each a grid of 100 squares where one square is one percentage point. Blue squares are the coastal share and sand squares the inland share of: land area (35%), tourism businesses (88%), international visitors (93%), tourism spend (87%), value added (87%) and jobs (86%).",
   "title": {
     "text": "Tourism Metrics Proportion: Coastal VS Inland",
     "subtitle": [
@@ -22,7 +22,7 @@
   },
   "transform": [
     {
-      "calculate": "({\"Land area (km2)\": \"Land area|all 76 tourism regions\", \"Tourism businesses (2025)\": \"Tourism businesses, 2025|in tourism industries\", \"International visits (2025)\": \"International visits, 2025|overseas visitors only\", \"Tourism spend, $m (2024-25)\": \"Tourism spend, 2024-25|domestic + international\", \"Tourism value added, $m (2024-25)\": \"Tourism value added|(GVA), 2024-25|domestic + international\", \"Tourism jobs, '000 (2024-25)\": \"Tourism jobs, 2024-25|domestic + international\"})[datum.measure]",
+      "calculate": "({\"Land area (km2)\": \"Land area|all 76 tourism regions\", \"Tourism businesses (2025)\": \"Tourism businesses, 2025|in tourism industries\", \"International visits (2025)\": \"International visitors, 2025|overseas visitors only\", \"Tourism spend, $m (2024-25)\": \"Tourism spend, 2024-25|domestic + international\", \"Tourism value added, $m (2024-25)\": \"Tourism value added|(GVA), 2024-25|domestic + international\", \"Tourism jobs, '000 (2024-25)\": \"Tourism jobs, 2024-25|domestic + international\"})[datum.measure]",
       "as": "panel"
     },
     {
@@ -91,7 +91,7 @@
     "sort": [
       "Land area|all 76 tourism regions",
       "Tourism businesses, 2025|in tourism industries",
-      "International visits, 2025|overseas visitors only",
+      "International visitors, 2025|overseas visitors only",
       "Tourism spend, 2024-25|domestic + international",
       "Tourism value added|(GVA), 2024-25|domestic + international",
       "Tourism jobs, 2024-25|domestic + international"

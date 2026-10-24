@@ -55,7 +55,7 @@ for (const [id, path] of Object.entries(charts)) {
       const el = document.getElementById(id);
       const title = spec.title;
       delete spec.title;
-      return vegaEmbed(el, spec, { actions: true }).then(() => addTitle(el, title));
+      return vegaEmbed(el, spec, { actions: false }).then(() => addTitle(el, title));
     })
     .catch(err => console.error("Failed to load " + path, err));
 }

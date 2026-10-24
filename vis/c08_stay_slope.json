@@ -1,10 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Slope graph with two panels, coastal and inland regions. Each line shows how the share of international visits with one length of stay (1 to 7 nights, 8 to 14, 15 to 30, 31 or more) changed between 2019 and 2025.",
+  "description": "Slope graph with two panels, coastal and inland regions. Each line shows how the share of international visitors with one length of stay (1 to 7 nights, 8 to 14, 15 to 30, 31 or more) changed between 2019 and 2025.",
   "title": {
     "text": "Length Of Stay In 2019 VS 2025",
     "subtitle": [
-      "For international visits.",
+      "For international visitors.",
       "* Hover over a line or dot for details."
     ]
   },
@@ -144,7 +144,7 @@
           "y": {
             "field": "share_pct",
             "type": "quantitative",
-            "title": "Share of the group's visits (%)",
+            "title": "Share of the group's visitors (%)",
             "axis": {
               "values": [
                 0,
@@ -187,7 +187,7 @@
           "y": {
             "field": "share_pct",
             "type": "quantitative",
-            "title": "Share of the group's visits (%)",
+            "title": "Share of the group's visitors (%)",
             "axis": {
               "format": "d"
             }
@@ -216,13 +216,13 @@
             {
               "field": "share_pct",
               "type": "quantitative",
-              "title": "Share of visits (%)",
+              "title": "Share of visitors (%)",
               "format": ".1f"
             },
             {
               "field": "visitors",
               "type": "quantitative",
-              "title": "Visits",
+              "title": "Visitors",
               "format": ","
             }
           ]
@@ -257,7 +257,7 @@
           "y": {
             "field": "share_pct",
             "type": "quantitative",
-            "title": "Share of the group's visits (%)",
+            "title": "Share of the group's visitors (%)",
             "axis": {
               "format": "d"
             }
@@ -306,7 +306,7 @@
           "y": {
             "field": "share_pct",
             "type": "quantitative",
-            "title": "Share of the group's visits (%)",
+            "title": "Share of the group's visitors (%)",
             "axis": {
               "format": "d"
             }
